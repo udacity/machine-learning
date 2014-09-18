@@ -1,3 +1,6 @@
 tools/feature_format.pyc
+tools/parse_out_email_text.pyc
 enron_mail_20110402.tgz
 enron_mail_20110402/
+text_learning/word_data.pkl
+text_learning/email_authors.pkl
