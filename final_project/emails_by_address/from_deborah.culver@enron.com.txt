@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/beck-s/all_documents/172.
+enron_mail_20110402/maildir/beck-s/congratulations/54.
+enron_mail_20110402/maildir/beck-s/discussion_threads/153.
+enron_mail_20110402/maildir/hodge-j/all_documents/338.
+enron_mail_20110402/maildir/hodge-j/notes_inbox/53.
+enron_mail_20110402/maildir/rapp-b/deleted_items/124.
+enron_mail_20110402/maildir/rapp-b/deleted_items/125.
+enron_mail_20110402/maildir/rapp-b/inbox/22.
+enron_mail_20110402/maildir/stclair-c/all_documents/2642.
+enron_mail_20110402/maildir/stclair-c/notes_inbox/74.
+enron_mail_20110402/maildir/taylor-m/all_documents/1727.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/394.

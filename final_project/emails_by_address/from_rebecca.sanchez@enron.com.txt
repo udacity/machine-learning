@@ -1,0 +1,16 @@
+enron_mail_20110402/maildir/davis-d/2_trash/3.
+enron_mail_20110402/maildir/davis-d/all_documents/185.
+enron_mail_20110402/maildir/davis-d/all_documents/306.
+enron_mail_20110402/maildir/davis-d/all_documents/313.
+enron_mail_20110402/maildir/davis-d/all_documents/334.
+enron_mail_20110402/maildir/davis-d/all_documents/352.
+enron_mail_20110402/maildir/davis-d/all_documents/369.
+enron_mail_20110402/maildir/davis-d/church/12.
+enron_mail_20110402/maildir/davis-d/dana_s_extras/9.
+enron_mail_20110402/maildir/davis-d/discussion_threads/185.
+enron_mail_20110402/maildir/davis-d/discussion_threads/24.
+enron_mail_20110402/maildir/davis-d/discussion_threads/40.
+enron_mail_20110402/maildir/davis-d/discussion_threads/77.
+enron_mail_20110402/maildir/davis-d/discussion_threads/84.
+enron_mail_20110402/maildir/davis-d/personal/31.
+enron_mail_20110402/maildir/davis-d/sap/8.

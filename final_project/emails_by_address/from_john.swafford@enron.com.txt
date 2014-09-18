@@ -1,0 +1,17 @@
+enron_mail_20110402/maildir/fischer-m/deleted_items/108.
+enron_mail_20110402/maildir/fischer-m/deleted_items/15.
+enron_mail_20110402/maildir/fischer-m/deleted_items/16.
+enron_mail_20110402/maildir/fischer-m/deleted_items/21.
+enron_mail_20110402/maildir/fischer-m/deleted_items/23.
+enron_mail_20110402/maildir/fischer-m/deleted_items/4.
+enron_mail_20110402/maildir/fischer-m/deleted_items/44.
+enron_mail_20110402/maildir/fischer-m/deleted_items/77.
+enron_mail_20110402/maildir/fischer-m/deleted_items/84.
+enron_mail_20110402/maildir/fischer-m/inbox/16.
+enron_mail_20110402/maildir/fischer-m/inbox/19.
+enron_mail_20110402/maildir/fischer-m/inbox/31.
+enron_mail_20110402/maildir/fischer-m/inbox/33.
+enron_mail_20110402/maildir/fischer-m/inbox/39.
+enron_mail_20110402/maildir/fischer-m/inbox/47.
+enron_mail_20110402/maildir/fischer-m/inbox/51.
+enron_mail_20110402/maildir/fischer-m/inbox/9.

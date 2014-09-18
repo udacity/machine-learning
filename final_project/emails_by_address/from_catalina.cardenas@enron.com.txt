@@ -1,0 +1,11 @@
+enron_mail_20110402/maildir/holst-k/deleted_items/58.
+enron_mail_20110402/maildir/holst-k/deleted_items/71.
+enron_mail_20110402/maildir/kuykendall-t/deleted_items/42.
+enron_mail_20110402/maildir/kuykendall-t/deleted_items/64.
+enron_mail_20110402/maildir/parks-j/inbox/770.
+enron_mail_20110402/maildir/reitmeyer-j/inbox/28.
+enron_mail_20110402/maildir/reitmeyer-j/inbox/35.
+enron_mail_20110402/maildir/reitmeyer-j/inbox/90.
+enron_mail_20110402/maildir/smith-m/inbox/153.
+enron_mail_20110402/maildir/smith-m/inbox/246.
+enron_mail_20110402/maildir/smith-m/inbox/34.

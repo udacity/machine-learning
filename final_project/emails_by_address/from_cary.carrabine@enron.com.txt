@@ -1,0 +1,11 @@
+enron_mail_20110402/maildir/lewis-a/all_documents/8.
+enron_mail_20110402/maildir/lewis-a/discussion_threads/8.
+enron_mail_20110402/maildir/lewis-a/old_messages/1.
+enron_mail_20110402/maildir/lewis-a/old_messages/20.
+enron_mail_20110402/maildir/shively-h/deleted_items/334.
+enron_mail_20110402/maildir/shively-h/deleted_items/501.
+enron_mail_20110402/maildir/shively-h/deleted_items/532.
+enron_mail_20110402/maildir/sturm-f/all_documents/92.
+enron_mail_20110402/maildir/sturm-f/all_documents/95.
+enron_mail_20110402/maildir/sturm-f/discussion_threads/13.
+enron_mail_20110402/maildir/sturm-f/discussion_threads/15.

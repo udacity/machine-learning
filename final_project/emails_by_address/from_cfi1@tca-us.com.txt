@@ -1,0 +1,16 @@
+enron_mail_20110402/maildir/badeer-r/all_documents/109.
+enron_mail_20110402/maildir/badeer-r/discussion_threads/171.
+enron_mail_20110402/maildir/badeer-r/notes_inbox/95.
+enron_mail_20110402/maildir/dasovich-j/all_documents/7866.
+enron_mail_20110402/maildir/dasovich-j/notes_inbox/6063.
+enron_mail_20110402/maildir/hain-m/all_documents/1317.
+enron_mail_20110402/maildir/hain-m/all_documents/1318.
+enron_mail_20110402/maildir/hain-m/all_documents/1320.
+enron_mail_20110402/maildir/hain-m/all_documents/1321.
+enron_mail_20110402/maildir/hain-m/all_documents/938.
+enron_mail_20110402/maildir/hain-m/discussion_threads/34.
+enron_mail_20110402/maildir/hain-m/discussion_threads/35.
+enron_mail_20110402/maildir/hain-m/discussion_threads/350.
+enron_mail_20110402/maildir/hain-m/discussion_threads/37.
+enron_mail_20110402/maildir/hain-m/discussion_threads/38.
+enron_mail_20110402/maildir/hain-m/notes_inbox/794.

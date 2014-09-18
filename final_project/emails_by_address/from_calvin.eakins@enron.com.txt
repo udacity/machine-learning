@@ -1,0 +1,15 @@
+enron_mail_20110402/maildir/kean-s/all_documents/1732.
+enron_mail_20110402/maildir/kean-s/archiving/untitled/595.
+enron_mail_20110402/maildir/kean-s/calendar/untitled/1733.
+enron_mail_20110402/maildir/kean-s/discussion_threads/1477.
+enron_mail_20110402/maildir/kean-s/enron_property_services/1.
+enron_mail_20110402/maildir/lay-k/all_documents/345.
+enron_mail_20110402/maildir/lay-k/all_documents/685.
+enron_mail_20110402/maildir/lay-k/discussion_threads/251.
+enron_mail_20110402/maildir/lay-k/discussion_threads/550.
+enron_mail_20110402/maildir/lay-k/notes_inbox/149.
+enron_mail_20110402/maildir/lay-k/notes_inbox/471.
+enron_mail_20110402/maildir/lokey-t/inbox/203.
+enron_mail_20110402/maildir/lokey-t/inbox/40.
+enron_mail_20110402/maildir/ring-r/deleted_items/102.
+enron_mail_20110402/maildir/skilling-j/deleted_items/267.

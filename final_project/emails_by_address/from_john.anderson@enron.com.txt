@@ -1,0 +1,15 @@
+enron_mail_20110402/maildir/dean-c/deleted_items/89.
+enron_mail_20110402/maildir/gang-l/deleted_items/545.
+enron_mail_20110402/maildir/gang-l/deleted_items/549.
+enron_mail_20110402/maildir/kaminski-v/all_documents/5955.
+enron_mail_20110402/maildir/kaminski-v/discussion_threads/7989.
+enron_mail_20110402/maildir/kaminski-v/notes_inbox/137.
+enron_mail_20110402/maildir/meyers-a/deleted_items/374.
+enron_mail_20110402/maildir/meyers-a/deleted_items/802.
+enron_mail_20110402/maildir/solberg-g/deleted_items/669.
+enron_mail_20110402/maildir/solberg-g/inbox/114.
+enron_mail_20110402/maildir/williams-w3/bill_williams_iii/494.
+enron_mail_20110402/maildir/williams-w3/inbox/102.
+enron_mail_20110402/maildir/williams-w3/inbox/93.
+enron_mail_20110402/maildir/williams-w3/inbox/95.
+enron_mail_20110402/maildir/williams-w3/inbox/98.

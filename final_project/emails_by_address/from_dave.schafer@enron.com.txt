@@ -1,0 +1,13 @@
+enron_mail_20110402/maildir/hayslett-r/all_documents/148.
+enron_mail_20110402/maildir/hayslett-r/discussion_threads/136.
+enron_mail_20110402/maildir/hayslett-r/projects/recruiting/1.
+enron_mail_20110402/maildir/horton-s/all_documents/120.
+enron_mail_20110402/maildir/horton-s/all_documents/289.
+enron_mail_20110402/maildir/horton-s/all_documents/318.
+enron_mail_20110402/maildir/horton-s/all_documents/329.
+enron_mail_20110402/maildir/horton-s/all_documents/344.
+enron_mail_20110402/maildir/horton-s/discussion_threads/115.
+enron_mail_20110402/maildir/horton-s/discussion_threads/272.
+enron_mail_20110402/maildir/horton-s/discussion_threads/298.
+enron_mail_20110402/maildir/horton-s/discussion_threads/307.
+enron_mail_20110402/maildir/horton-s/discussion_threads/319.

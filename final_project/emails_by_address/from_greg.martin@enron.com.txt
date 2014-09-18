@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/cuilla-m/10_fantasy/18.
+enron_mail_20110402/maildir/cuilla-m/10_fantasy/43.
+enron_mail_20110402/maildir/cuilla-m/12_fantasy/1.
+enron_mail_20110402/maildir/cuilla-m/all_documents/149.
+enron_mail_20110402/maildir/cuilla-m/all_documents/16.
+enron_mail_20110402/maildir/cuilla-m/all_documents/96.
+enron_mail_20110402/maildir/cuilla-m/deleted_items/71.
+enron_mail_20110402/maildir/cuilla-m/discussion_threads/15.
+enron_mail_20110402/maildir/cuilla-m/discussion_threads/32.
+enron_mail_20110402/maildir/cuilla-m/discussion_threads/84.
+enron_mail_20110402/maildir/cuilla-m/inbox/1.
+enron_mail_20110402/maildir/hodge-j/all_documents/111.

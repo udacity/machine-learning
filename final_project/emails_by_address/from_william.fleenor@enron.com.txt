@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/mann-k/all_documents/5240.
+enron_mail_20110402/maildir/mann-k/all_documents/6248.
+enron_mail_20110402/maildir/mann-k/all_documents/6348.
+enron_mail_20110402/maildir/mann-k/all_documents/6398.
+enron_mail_20110402/maildir/mann-k/discussion_threads/3660.
+enron_mail_20110402/maildir/mann-k/discussion_threads/4561.
+enron_mail_20110402/maildir/mann-k/discussion_threads/4659.
+enron_mail_20110402/maildir/mann-k/discussion_threads/4706.
+enron_mail_20110402/maildir/mann-k/notes_inbox/174.
+enron_mail_20110402/maildir/mann-k/notes_inbox/199.
+enron_mail_20110402/maildir/mann-k/notes_inbox/252.
+enron_mail_20110402/maildir/mann-k/yazoo_city/74.

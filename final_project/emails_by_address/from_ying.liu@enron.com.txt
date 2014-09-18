@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/griffith-j/all_documents/21.
+enron_mail_20110402/maildir/griffith-j/all_documents/266.
+enron_mail_20110402/maildir/griffith-j/all_documents/273.
+enron_mail_20110402/maildir/griffith-j/all_documents/31.
+enron_mail_20110402/maildir/griffith-j/discussion_threads/21.
+enron_mail_20110402/maildir/griffith-j/discussion_threads/247.
+enron_mail_20110402/maildir/griffith-j/indeck_corinth/1.
+enron_mail_20110402/maildir/griffith-j/indeck_corinth/4.
+enron_mail_20110402/maildir/griffith-j/oyster_creek/1.
+enron_mail_20110402/maildir/griffith-j/oyster_creek/2.
+enron_mail_20110402/maildir/hodge-j/all_documents/84.
+enron_mail_20110402/maildir/hodge-j/discussion_threads/64.

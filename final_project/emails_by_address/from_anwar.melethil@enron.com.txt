@@ -1,0 +1,11 @@
+enron_mail_20110402/maildir/farmer-d/inbox/61.
+enron_mail_20110402/maildir/farmer-d/inbox/63.
+enron_mail_20110402/maildir/farmer-d/inbox/9.
+enron_mail_20110402/maildir/farmer-d/unify/1.
+enron_mail_20110402/maildir/farmer-d/unify/2.
+enron_mail_20110402/maildir/staab-t/deleted_items/186.
+enron_mail_20110402/maildir/staab-t/deleted_items/212.
+enron_mail_20110402/maildir/staab-t/deleted_items/48.
+enron_mail_20110402/maildir/staab-t/deleted_items/55.
+enron_mail_20110402/maildir/staab-t/inbox/78.
+enron_mail_20110402/maildir/staab-t/inbox/87.

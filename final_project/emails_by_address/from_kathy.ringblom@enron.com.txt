@@ -1,0 +1,17 @@
+enron_mail_20110402/maildir/fossum-d/all_documents/1001.
+enron_mail_20110402/maildir/fossum-d/all_documents/572.
+enron_mail_20110402/maildir/fossum-d/all_documents/732.
+enron_mail_20110402/maildir/fossum-d/all_documents/868.
+enron_mail_20110402/maildir/fossum-d/all_documents/987.
+enron_mail_20110402/maildir/fossum-d/discussion_threads/485.
+enron_mail_20110402/maildir/fossum-d/discussion_threads/627.
+enron_mail_20110402/maildir/fossum-d/discussion_threads/738.
+enron_mail_20110402/maildir/fossum-d/discussion_threads/739.
+enron_mail_20110402/maildir/fossum-d/notes_inbox/185.
+enron_mail_20110402/maildir/fossum-d/notes_inbox/297.
+enron_mail_20110402/maildir/fossum-d/notes_inbox/76.
+enron_mail_20110402/maildir/fossum-d/notes_inbox/89.
+enron_mail_20110402/maildir/lay-k/inbox/1076.
+enron_mail_20110402/maildir/scott-s/all_documents/743.
+enron_mail_20110402/maildir/scott-s/discussion_threads/609.
+enron_mail_20110402/maildir/scott-s/notes_inbox/161.
