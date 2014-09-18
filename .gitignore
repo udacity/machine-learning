@@ -4,5 +4,5 @@ outliers/outlier_cleaner.pyc
 choose_your_own/prep_terrain_data.pyc
 enron_mail_20110402.tgz
 enron_mail_20110402/
-text_learning/word_data.pkl
-text_learning/email_authors.pkl
+text_learning/your_word_data.pkl
+text_learning/your_email_authors.pkl
