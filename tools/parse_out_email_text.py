@@ -42,6 +42,13 @@ def parseOutText(f):
 
     
 
+def main():
+    ff = open("../text_learning/test_email.txt", "r")
+    text = parseOutText(ff)
+    print text
 
 
+
+if __name__ == '__main__':
+    main()
 
