@@ -54,10 +54,24 @@ features_list = [poi, feature_1, feature_2]
 data = featureFormat(data_dict, features_list )
 poi, finance_features = targetFeatureSplit( data )
 
+
+### in the "clustering with 3 features" part of the mini-project,
+### you'll want to change this line to 
+### for f1, f2, _ in finance_features:
+### (as it's currently written, line below assumes 2 features)
 for f1, f2 in finance_features:
     plt.scatter( f1, f2 )
 plt.show()
 
+
+
+from sklearn.cluster import KMeans
+features_list = ["poi", feature_1, feature_2]
+data2 = featureFormat(data_dict, features_list )
+poi, finance_features = targetFeatureSplit( data2 )
+clf = KMeans(n_clusters=2)
+pred = clf.fit_predict( finance_features )
+Draw(pred, finance_features, poi, name="clusters_before_scaling.pdf", f1_name=feature_1, f2_name=feature_2)
 
 
 ### cluster here; create predictions of the cluster labels
