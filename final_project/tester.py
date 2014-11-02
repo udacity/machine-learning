@@ -30,10 +30,16 @@ labels, features = targetFeatureSplit(data)
 
 
 
-### train/test split--randomization in the splitting
-### means that rerunning this code multiple times
-### will likely give several different precision/recall
-### scores below
+### stratified k-fold cross-validation is a form of 
+### CV where instances of each class are equally apportioned--
+### e.g. if you have 10% of one class and 90% of the other,
+### stratification means each fold will have 10% of one
+### class and 90% of the other
+###
+### this is helpful when you don't have a lot of instances
+### of one class or the other, because in that case the 
+### low-frequency class can become lopsided in the training-test
+### split skew the results
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.cross_validation import StratifiedKFold
@@ -57,6 +63,7 @@ for train_idx, test_idx in skf:
     pred = clf.predict(features_test)
 
 
+    ### for each fold, print some metrics
     print
     print "precision score: ", precision_score( labels_test, pred )
     print "recall score: ", recall_score( labels_test, pred )
@@ -64,12 +71,11 @@ for train_idx, test_idx in skf:
     precisions.append( precision_score(labels_test, pred) )
     recalls.append( recall_score(labels_test, pred) )
 
-### print evaluation metrics
+### aggregate precision and recall over all folds
 print "average precision: ", sum(precisions)/3.
 print "average recall: ", sum(recalls)/3.
 
 
-#labels_train, labels_test, features_train, features_test = train_test_split(features, labels, test_size=0.3)
 
 
 
