@@ -1,4 +1,4 @@
-ud421-projects
+ud120-projects
 ==============
 
-Starter project code for students taking Udacity ud421
+Starter project code for students taking Udacity ud120
