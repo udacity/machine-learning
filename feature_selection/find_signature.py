@@ -6,8 +6,8 @@ numpy.random.seed(42)
 
 
 ### the words (features) and authors (labels), already largely processed
-words_file = "word_data.pkl" ### you made this in previous mini-project
-authors_file = "email_authors.pkl"  ### this too
+words_file = "word_data_overfit.pkl" ### like the file you made in the last mini-project 
+authors_file = "email_authors_overfit.pkl"  ### this too
 word_data = pickle.load( open(words_file, "r"))
 authors = pickle.load( open(authors_file, "r") )
 
