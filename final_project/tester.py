@@ -11,8 +11,6 @@
 
 """
 
-
-
 import pickle
 import sys
 from sklearn.metrics import precision_score
@@ -23,10 +21,19 @@ sys.path.append("../tools/")
 
 from feature_format import featureFormat, targetFeatureSplit
 
+PERF_FORMAT_STRING = "\
+Accuracy: {:>0.{display_precision}f}\tPrecision: {:>0.{display_precision}f}\t\
+Recall: {:>0.{display_precision}f}\tF1: {:>0.{display_precision}f}\tF2: {:>0.{display_precision}f}"
+
+RESULTS_FORMAT_STRING = "Total predictions: {:4d}\tTrue positives: {:4d}\tFalse positives: {:4d}\tFalse negatives: {:4d}\tFalse negatives: {:4d}"
+
+
 def test_classifier(clf, features, labels, folds = 1000):
     cv = StratifiedShuffleSplit(labels, folds, random_state = 42)
-    precisions = []
-    recalls = []
+    true_negatives = 0
+    false_negatives = 0
+    true_positives = 0
+    false_positives = 0
     for train_idx, test_idx in cv: 
         features_train = []
         features_test  = []
@@ -42,19 +49,29 @@ def test_classifier(clf, features, labels, folds = 1000):
         ### fit the classifier using training set, and test on test set
         clf.fit(features_train, labels_train)
         pred = clf.predict(features_test)
+        predictions = clf.predict(features_test)
+        for prediction, truth in zip(predictions, labels_test):
+            if prediction == 0 and truth == 0:
+                true_negatives += 1
+            elif prediction == 0 and truth == 1:
+                false_negatives += 1
+            elif prediction == 1 and truth == 0:
+                false_positives += 1
+            else:
+                true_positives += 1
+    try:
+        total_predictions = true_negatives + false_negatives + false_positives + true_positives
+        accuracy = 1.0*(true_positives + true_negatives)/total_predictions
+        precision = 1.0*true_positives/(true_positives+false_positives)
+        recall = 1.0*true_positives/(true_positives+false_negatives)
+        f1 = 2.0 * true_positives/(2*true_positives + false_positives+false_negatives)
+        f2 = (1+2.0*2.0) * precision*recall/(4*precision + recall)
 
-
-        ### for each fold, print some metrics
-        # print
-        # print "precision score: ", precision_score( labels_test, pred )
-        # print "recall score: ", recall_score( labels_test, pred )
-
-        precisions.append( precision_score(labels_test, pred) )
-        recalls.append( recall_score(labels_test, pred) )
-
-    ### aggregate precision and recall over all folds
-    print "average precision: ", sum(precisions)/folds
-    print "average recall: ", sum(recalls)/folds
+        print PERF_FORMAT_STRING.format(accuracy, precision, recall, f1, f2, display_precision = 5)
+        print RESULTS_FORMAT_STRING.format(total_predictions, true_positives, false_positives, false_negatives, true_negatives)
+        print ""
+    except:
+        print "Got a divide by zero when trying out:", name
 
 def main():
     ### load up student's classifier, dataset, and feature_list
