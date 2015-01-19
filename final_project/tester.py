@@ -8,7 +8,6 @@
     my_feature_list.pkl, respectively
 
     that process should happen at the end of poi_id.py
-
 """
 
 import pickle
@@ -16,19 +15,17 @@ import sys
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.cross_validation import StratifiedShuffleSplit
-
 sys.path.append("../tools/")
-
 from feature_format import featureFormat, targetFeatureSplit
 
 PERF_FORMAT_STRING = "\
 Accuracy: {:>0.{display_precision}f}\tPrecision: {:>0.{display_precision}f}\t\
 Recall: {:>0.{display_precision}f}\tF1: {:>0.{display_precision}f}\tF2: {:>0.{display_precision}f}"
-
 RESULTS_FORMAT_STRING = "Total predictions: {:4d}\tTrue positives: {:4d}\tFalse positives: {:4d}\tFalse negatives: {:4d}\tFalse negatives: {:4d}"
 
-
-def test_classifier(clf, features, labels, folds = 1000):
+def test_classifier(clf, dataset, feature_list, folds = 1000):
+    data = featureFormat(dataset, feature_list)
+    labels, features = targetFeatureSplit(data)
     cv = StratifiedShuffleSplit(labels, folds, random_state = 42)
     true_negatives = 0
     false_negatives = 0
@@ -73,21 +70,26 @@ def test_classifier(clf, features, labels, folds = 1000):
     except:
         print "Got a divide by zero when trying out:", name
 
+CLF_PICKLE_FILENAME = "my_classifier.pkl"
+DATASET_PICKLE_FILENAME = "my_dataset.pkl"
+FEATURE_LIST_FILENAME = "my_feature_list.pkl"
+
+def dump_classifier_and_data(clf, dataset, feature_list):
+    pickle.dump(clf, open(CLF_PICKLE_FILENAME, "w") )
+    pickle.dump(dataset, open(DATASET_PICKLE_FILENAME, "w") )
+    pickle.dump(feature_list, open(FEATURE_LIST_FILENAME, "w") )
+
+def load_classifier_and_data():
+    clf = pickle.load(open(CLF_PICKLE_FILENAME, "r") )
+    dataset = pickle.load(open(DATASET_PICKLE_FILENAME, "r") )
+    feature_list = pickle.load(open(FEATURE_LIST_FILENAME, "r"))
+    return clf, dataset, feature_list
+
 def main():
     ### load up student's classifier, dataset, and feature_list
-    clf = pickle.load(open("my_classifier.pkl", "r") )
-    dataset = pickle.load(open("my_dataset.pkl", "r") )
-    feature_list = pickle.load(open("my_feature_list.pkl", "r"))
-
-    ### print basic info about the algorithm/parameters used
-    print clf
-
-    ### prepare data for training/testing
-    data = featureFormat(dataset, feature_list)
-    labels, features = targetFeatureSplit(data)
-    test_classifier(clf, features, labels)
-
+    clf, dataset, feature_list = load_classifier_and_data()
+    ### Run testing script
+    test_classifier(clf, dataset, feature_list)
 
 if __name__ == '__main__':
     main()
-

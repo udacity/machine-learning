@@ -1,57 +1,47 @@
 #!/usr/bin/python
 
-import matplotlib.pyplot as plt
 import sys
 import pickle
 sys.path.append("../tools/")
 
-from feature_format import featureFormat
-from feature_format import targetFeatureSplit
+from feature_format import featureFormat, targetFeatureSplit
+from tester import test_classifier, dump_classifier_and_data
 
-### features_list is a list of strings, each of which is a feature name
-### first feature must be "poi", as this will be singled out as the label
-features_list = ["poi"]
+### Task 1: Select what features you'll use.
+### features_list is a list of strings, each of which is a feature name.
+### The first feature must be "poi".
+features_list = ['poi','salary'] # You will need to use more features
 
-
-### load the dictionary containing the dataset
+### Load the dictionary containing the dataset
 data_dict = pickle.load(open("final_project_dataset.pkl", "r") )
 
-### we suggest removing any outliers before proceeding further
-
-### if you are creating any new features, you might want to do that here
-### store to my_dataset for easy export below
+### Task 2: Remove outliers
+### Task 3: Create new feature(s)
+### Store to my_dataset for easy export below.
 my_dataset = data_dict
 
-
-
-### these two lines extract the features specified in features_list
-### and extract them from data_dict, returning a numpy array
+### Extract features and labels from dataset for local testing
 data = featureFormat(my_dataset, features_list)
-
-
-
-### if you are creating new features, could also do that here
-
-
-
-### split into labels and features (this line assumes that the first
-### feature in the array is the label, which is why "poi" must always
-### be first in features_list
 labels, features = targetFeatureSplit(data)
 
+### Task 4: Try a varity of classifiers
+### Please name your classifier clf for easy export below.
+### Note that if you want to do PCA or other multi-stage operations,
+### you'll need to use Pipelines. For more info:
+### http://scikit-learn.org/stable/modules/pipeline.html
 
+from sklearn.naive_bayes import GaussianNB
+clf = GaussianNB()    # Provided to give you a starting point. Try a varity of classifiers.
 
-### machine learning goes here!
-### please name your classifier clf for easy export below
+### Task 5: Tune your classifier to achieve better than .3 precision and recall 
+### using our testing script.
+### Because of the small size of the dataset, the script uses stratified
+### shuffle split cross validation. For more info: 
+### http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.StratifiedShuffleSplit.html
 
-clf = None    ### get rid of this line!  just here to keep code from crashing out-of-box
+test_classifier(clf, my_dataset, features_list)
 
+### Dump your classifier, dataset, and features_list so 
+### anyone can run/check your results.
 
-### dump your classifier, dataset and features_list so 
-### anyone can run/check your results
-pickle.dump(clf, open("my_classifier.pkl", "w") )
-pickle.dump(data_dict, open("my_dataset.pkl", "w") )
-pickle.dump(features_list, open("my_feature_list.pkl", "w") )
-
-
-
+dump_classifier_and_data(clf, my_dataset, features_list)
