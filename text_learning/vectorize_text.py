@@ -1,9 +1,9 @@
 #!/usr/bin/python
 
-import pickle
-import sys
-import re
 import os
+import pickle
+import re
+import sys
 
 sys.path.append( "../tools/" )
 from parse_out_email_text import parseOutText
@@ -42,7 +42,7 @@ for name, from_person in [("sara", from_sara), ("chris", from_chris)]:
         ### once everything is working, remove this line to run over full dataset
         temp_counter += 1
         if temp_counter < 200:
-            path = os.path.join('..', 'tools', path[:-1])
+            path = os.path.join('..', path[:-1])
             print path
             email = open(path, "r")
 
