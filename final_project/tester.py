@@ -19,9 +19,9 @@ sys.path.append("../tools/")
 from feature_format import featureFormat, targetFeatureSplit
 
 PERF_FORMAT_STRING = "\
-Accuracy: {:>0.{display_precision}f}\tPrecision: {:>0.{display_precision}f}\t\
+\tAccuracy: {:>0.{display_precision}f}\tPrecision: {:>0.{display_precision}f}\t\
 Recall: {:>0.{display_precision}f}\tF1: {:>0.{display_precision}f}\tF2: {:>0.{display_precision}f}"
-RESULTS_FORMAT_STRING = "Total predictions: {:4d}\tTrue positives: {:4d}\tFalse positives: {:4d}\tFalse negatives: {:4d}\tFalse negatives: {:4d}"
+RESULTS_FORMAT_STRING = "\tTotal predictions: {:4d}\tTrue positives: {:4d}\tFalse positives: {:4d}\tFalse negatives: {:4d}\tFalse negatives: {:4d}"
 
 def test_classifier(clf, dataset, feature_list, folds = 1000):
     data = featureFormat(dataset, feature_list)
@@ -63,7 +63,7 @@ def test_classifier(clf, dataset, feature_list, folds = 1000):
         recall = 1.0*true_positives/(true_positives+false_negatives)
         f1 = 2.0 * true_positives/(2*true_positives + false_positives+false_negatives)
         f2 = (1+2.0*2.0) * precision*recall/(4*precision + recall)
-
+        print clf
         print PERF_FORMAT_STRING.format(accuracy, precision, recall, f1, f2, display_precision = 5)
         print RESULTS_FORMAT_STRING.format(total_predictions, true_positives, false_positives, false_negatives, true_negatives)
         print ""
