@@ -68,7 +68,7 @@ def test_classifier(clf, dataset, feature_list, folds = 1000):
         print RESULTS_FORMAT_STRING.format(total_predictions, true_positives, false_positives, false_negatives, true_negatives)
         print ""
     except:
-        print "Got a divide by zero when trying out:", name
+        print "Got a divide by zero when trying out:", clf
 
 CLF_PICKLE_FILENAME = "my_classifier.pkl"
 DATASET_PICKLE_FILENAME = "my_dataset.pkl"
