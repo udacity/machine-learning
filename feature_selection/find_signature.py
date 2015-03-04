@@ -6,8 +6,9 @@ numpy.random.seed(42)
 
 
 ### the words (features) and authors (labels), already largely processed
-words_file = "word_data_overfit.pkl" ### like the file you made in the last mini-project 
-authors_file = "email_authors_overfit.pkl"  ### this too
+### these files should have been created from the previous (Lesson 10) mini-project.
+words_file = "../text_learning/word_data_overfit.pkl" 
+authors_file = "../text_learning/email_authors_overfit.pkl"
 word_data = pickle.load( open(words_file, "r"))
 authors = pickle.load( open(authors_file, "r") )
 
