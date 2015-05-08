@@ -52,7 +52,6 @@ def featureFormat( dictionary, features, remove_NaN=True, remove_all_zeroes=True
 
     for key in keys:
         tmp_list = []
-        append = False
         for feature in features:
             try:
                 dictionary[key][feature]
@@ -64,24 +63,25 @@ def featureFormat( dictionary, features, remove_NaN=True, remove_all_zeroes=True
                 value = 0
             tmp_list.append( float(value) )
 
+        # Logic for deciding whether or not to add the data point.
+        append = True
         ### if all features are zero and you want to remove
         ### data points that are all zero, do that here
         if remove_all_zeroes:
-            all_zeroes = True
+            append = False
             for item in tmp_list:
                 if item != 0 and item != "NaN":
                     append = True
-
+                    break
         ### if any features for a given data point are zero
         ### and you want to remove data points with any zeroes,
         ### handle that here
         if remove_any_zeroes:
-            any_zeroes = False
             if 0 in tmp_list or "NaN" in tmp_list:
                 append = False
+        ### Append the data point if flagged for addition.
         if append:
             return_list.append( np.array(tmp_list) )
-
 
     return np.array(return_list)
 
