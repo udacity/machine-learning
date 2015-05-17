@@ -71,11 +71,16 @@ def featureFormat( dictionary, features, remove_NaN=True, remove_all_zeroes=True
 
         # Logic for deciding whether or not to add the data point.
         append = True
+        # exclude 'poi' class as criteria.
+        if features[0] == 'poi':
+            test_list = tmp_list[1:]
+        else:
+            test_list = tmp_list
         ### if all features are zero and you want to remove
         ### data points that are all zero, do that here
         if remove_all_zeroes:
             append = False
-            for item in tmp_list[1:]:
+            for item in test_list:
                 if item != 0 and item != "NaN":
                     append = True
                     break
@@ -83,7 +88,7 @@ def featureFormat( dictionary, features, remove_NaN=True, remove_all_zeroes=True
         ### and you want to remove data points with any zeroes,
         ### handle that here
         if remove_any_zeroes:
-            if 0 in tmp_list[1:] or "NaN" in tmp_list[1:]:
+            if 0 in test_list or "NaN" in test_list:
                 append = False
         ### Append the data point if flagged for addition.
         if append:
