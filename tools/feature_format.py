@@ -52,8 +52,8 @@ def featureFormat( dictionary, features, remove_NaN=True, remove_all_zeroes=True
         keys = sorted(dictionary.keys())
     else:
         # key orders will be different for Python 2 and Python 3; for Python 3
-        # users, load key order from 'python2_datadictkeys.pkl' using pickle to
-        # complete assignments.
+        # users, load key order from 'python2_lesson##_keys.pkl' using pickle 
+        # to complete assignments.
         keys = dictionary.keys()
 
     for key in keys:
