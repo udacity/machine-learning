@@ -35,11 +35,15 @@ import numpy as np
 
 def featureFormat( dictionary, features, remove_NaN=True, remove_all_zeroes=True, remove_any_zeroes=False, sort_keys = False):
     """ convert dictionary to numpy array of features
-        remove_NaN=True will convert "NaN" string to 0.0
-        remove_all_zeroes=True will omit any data points for which
+        remove_NaN = True will convert "NaN" string to 0.0
+        remove_all_zeroes = True will omit any data points for which
             all the features you seek are 0.0
-        remove_any_zeroes=True will omit any data points for which
+        remove_any_zeroes = True will omit any data points for which
             any of the features you seek are 0.0
+        sort_keys = True sorts keys by alphabetical order. Setting the value as
+            a string opens the corresponding pickle file with a preset key
+            order (this is used for Python 3 compatibility, and sort_keys
+            should be left as False for the course mini-projects).
         NOTE: first feature is assumed to be 'poi' and is not checked for
             removal for zero or missing values.
     """
@@ -47,13 +51,14 @@ def featureFormat( dictionary, features, remove_NaN=True, remove_all_zeroes=True
 
     return_list = []
 
-    if sort_keys:
-        # keys sorted in alphabetical order for final project compatibility
+    # Key order - first branch is for Python 3 compatibility on mini-projects,
+    # second branch is for compatibility on final project.
+    if isinstance(sort_keys, str):
+        import pickle
+        keys = pickle.load(open(sort_keys, "rb"))
+    elif sort_keys:
         keys = sorted(dictionary.keys())
     else:
-        # key orders will be different for Python 2 and Python 3; for Python 3
-        # users, load key order from 'python2_lesson##_keys.pkl' using pickle 
-        # to complete assignments.
         keys = dictionary.keys()
 
     for key in keys:
