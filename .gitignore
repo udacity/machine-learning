@@ -1,9 +1,8 @@
-tools/feature_format.pyc
-tools/parse_out_email_text.pyc
-outliers/outlier_cleaner.pyc
-choose_your_own/prep_terrain_data.pyc
+*.pyc
 enron_mail_20110402.tgz
 enron_mail_20110402/
+enron_mail_20150507.tgz
+maildir/
 text_learning/your_word_data.pkl
 text_learning/your_email_authors.pkl
 my_classifier.pkl
