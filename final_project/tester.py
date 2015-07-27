@@ -53,8 +53,13 @@ def test_classifier(clf, dataset, feature_list, folds = 1000):
                 false_negatives += 1
             elif prediction == 1 and truth == 0:
                 false_positives += 1
-            else:
+            elif prediction == 1 and truth == 1:
                 true_positives += 1
+            else:
+                print "Warning: Found a predicted label not == 0 or 1."
+                print "All predictions should take value 0 or 1."
+                print "Evaluating performance for processed predictions:"
+                break
     try:
         total_predictions = true_negatives + false_negatives + false_positives + true_positives
         accuracy = 1.0*(true_positives + true_negatives)/total_predictions
