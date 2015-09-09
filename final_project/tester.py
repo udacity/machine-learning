@@ -12,8 +12,6 @@
 
 import pickle
 import sys
-from sklearn.metrics import precision_score
-from sklearn.metrics import recall_score
 from sklearn.cross_validation import StratifiedShuffleSplit
 sys.path.append("../tools/")
 from feature_format import featureFormat, targetFeatureSplit
@@ -73,6 +71,7 @@ def test_classifier(clf, dataset, feature_list, folds = 1000):
         print ""
     except:
         print "Got a divide by zero when trying out:", clf
+        print "Precision or recall may be undefined due to a lack of true positive predicitons."
 
 CLF_PICKLE_FILENAME = "my_classifier.pkl"
 DATASET_PICKLE_FILENAME = "my_dataset.pkl"
