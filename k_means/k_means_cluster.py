@@ -1,8 +1,7 @@
 #!/usr/bin/python 
 
 """ 
-    skeleton code for k-means clustering mini-project
-
+    Skeleton code for k-means clustering mini-project.
 """
 
 
@@ -22,7 +21,7 @@ def Draw(pred, features, poi, mark_poi=False, name="image.png", f1_name="feature
     """ some plotting code designed to help you visualize your clusters """
 
     ### plot each cluster with a different color--add more colors for
-    ### drawing more than 4 clusters
+    ### drawing more than five clusters
     colors = ["b", "c", "k", "m", "g"]
     for ii, pp in enumerate(pred):
         plt.scatter(features[ii][0], features[ii][1], color = colors[pred[ii]])
@@ -58,7 +57,7 @@ poi, finance_features = targetFeatureSplit( data )
 ### in the "clustering with 3 features" part of the mini-project,
 ### you'll want to change this line to 
 ### for f1, f2, _ in finance_features:
-### (as it's currently written, line below assumes 2 features)
+### (as it's currently written, the line below assumes 2 features)
 for f1, f2 in finance_features:
     plt.scatter( f1, f2 )
 plt.show()

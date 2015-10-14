@@ -1,13 +1,11 @@
 #!/usr/bin/python
 
 """ 
-    this is the code to accompany the Lesson 3 (decision tree) mini-project
+    This is the code to accompany the Lesson 3 (decision tree) mini-project.
 
-    use an DT to identify emails from the Enron corpus by their authors
-    
+    Use a Decision Tree to identify emails from the Enron corpus by author:    
     Sara has label 0
     Chris has label 1
-
 """
     
 import sys

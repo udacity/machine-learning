@@ -37,15 +37,14 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
 
 ###############################################################################
 # Download the data, if not already on disk and load it as numpy arrays
-
 lfw_people = fetch_lfw_people(min_faces_per_person=70, resize=0.4)
 
 # introspect the images arrays to find the shapes (for plotting)
 n_samples, h, w = lfw_people.images.shape
 np.random.seed(42)
 
-# fot machine learning we use the 2 data directly (as relative pixel
-# positions info is ignored by this model)
+# for machine learning we use the data directly (as relative pixel
+# position info is ignored by this model)
 X = lfw_people.data
 n_features = X.shape[1]
 
@@ -61,11 +60,8 @@ print "n_classes: %d" % n_classes
 
 
 ###############################################################################
-# Split into a training set and a test set using a stratified k fold
-
-# split into a training and testing set
+# Split into a training and testing set
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
-
 
 ###############################################################################
 # Compute a PCA (eigenfaces) on the face dataset (treated as unlabeled

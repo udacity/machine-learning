@@ -1,13 +1,11 @@
 #!/usr/bin/python
 
 """ 
-    this is the code to accompany the Lesson 2 (SVM) mini-project
+    This is the code to accompany the Lesson 2 (SVM) mini-project.
 
-    use an SVM to identify emails from the Enron corpus by their authors
-    
+    Use a SVM to identify emails from the Enron corpus by their authors:    
     Sara has label 0
     Chris has label 1
-
 """
     
 import sys

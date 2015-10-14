@@ -2,14 +2,13 @@
 
 
 """
-    starter code for the evaluation mini-project
-    start by copying your trained/tested POI identifier from
-    that you built in the validation mini-project
+    Starter code for the evaluation mini-project.
+    Start by copying your trained/tested POI identifier from
+    that which you built in the validation mini-project.
 
-    the second step toward building your POI identifier!
+    This is the second step toward building your POI identifier!
 
-    start by loading/formatting the data
-
+    Start by loading/formatting the data...
 """
 
 import pickle

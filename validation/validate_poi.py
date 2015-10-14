@@ -2,12 +2,12 @@
 
 
 """
-    starter code for the validation mini-project
-    the first step toward building your POI identifier!
+    Starter code for the validation mini-project.
+    The first step toward building your POI identifier!
 
-    start by loading/formatting the data
+    Start by loading/formatting the data
 
-    after that, it's not our code anymore--it's yours!
+    After that, it's not our code anymore--it's yours!
 """
 
 import pickle

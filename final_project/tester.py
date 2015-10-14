@@ -19,7 +19,8 @@ from feature_format import featureFormat, targetFeatureSplit
 PERF_FORMAT_STRING = "\
 \tAccuracy: {:>0.{display_precision}f}\tPrecision: {:>0.{display_precision}f}\t\
 Recall: {:>0.{display_precision}f}\tF1: {:>0.{display_precision}f}\tF2: {:>0.{display_precision}f}"
-RESULTS_FORMAT_STRING = "\tTotal predictions: {:4d}\tTrue positives: {:4d}\tFalse positives: {:4d}\tFalse negatives: {:4d}\tTrue negatives: {:4d}"
+RESULTS_FORMAT_STRING = "\tTotal predictions: {:4d}\tTrue positives: {:4d}\tFalse positives: {:4d}\
+\tFalse negatives: {:4d}\tTrue negatives: {:4d}"
 
 def test_classifier(clf, dataset, feature_list, folds = 1000):
     data = featureFormat(dataset, feature_list, sort_keys = True)
