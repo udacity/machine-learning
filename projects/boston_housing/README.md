@@ -1,29 +1,30 @@
-# Predict Boston Housing Prices
-
-Model Evaluation and Validation Project
+# Predicting Boston Housing Prices
+# Model Evaluation & Validation Project
 
 ## Install
 
 This project requires Python 2.7 and the following Python libraries installed:
 
-- NumPy
-- scikit-learn
+- [NumPy](http://www.numpy.org/)
+- [scikit-learn](http://scikit-learn.org/stable/)
+
+In addition, you will need to be able to run an iPython Notebook to complete this project.
 
 ## Code
 
-Template code is provided in `boston_housing.py`. While some code has already been implemented to get you started, you will need to implement additional functionality, as indicated using `TODO` comments.
+Template code is provided in the `boston_housing.ipynb` notebook file. While some code has already been implemented to get you started, you will need to implement additional functionality when requested throughout the notebook.
 
 ## Run
 
 In a terminal/command window, go to the top-level project directory `boston_housing/` (that contains this README). Then run:
 
-```python boston_housing.py```
+```ipython notebook boston_housing.ipynb```
 
 ## Data
 
 The dataset used in this project is included with the scikit-learn library ([`sklearn.datasets.load_boston`](http://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_boston.html#sklearn.datasets.load_boston)). You do not have to download it separately.
 
-It contains the following atributes for each housing area, including median value (which you will try to predict):
+It contains the following attributes for each housing area, including median value (which you will try to predict):
 
 - CRIM: per capita crime rate by town
 - ZN: proportion of residential land zoned for lots over 25,000 sq.ft.
