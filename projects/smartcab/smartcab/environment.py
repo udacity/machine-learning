@@ -239,7 +239,7 @@ class DummyAgent(Agent):
         if self.next_waypoint == 'right':
             if inputs['light'] == 'red' and inputs['left'] == 'forward':
                 action_okay = False
-        elif self.next_waypoint == 'straight':
+        elif self.next_waypoint == 'forward':
             if inputs['light'] == 'red':
                 action_okay = False
         elif self.next_waypoint == 'left':
