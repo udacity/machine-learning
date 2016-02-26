@@ -158,6 +158,7 @@ class Environment(object):
         location = state['location']
         heading = state['heading']
         light = 'green' if (self.intersections[location].state and heading[1] != 0) or ((not self.intersections[location].state) and heading[0] != 0) else 'red'
+        sense = self.sense(agent)
 
         # Move agent if within bounds and obeys traffic rules
         reward = 0  # reward/penalty
@@ -165,12 +166,12 @@ class Environment(object):
         if action == 'forward':
             if light != 'green':
                 move_okay = False
-        elif action == 'left':
+        elif action == 'left' and sense['oncoming']==None:
             if light == 'green':
                 heading = (heading[1], -heading[0])
             else:
                 move_okay = False
-        elif action == 'right':
+        elif action == 'right' and sense['left']==None:
             heading = (-heading[1], heading[0])
 
         if action is not None:
