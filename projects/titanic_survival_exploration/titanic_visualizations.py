@@ -12,7 +12,9 @@ def filter_data(data, condition):
     
     Example: ["Sex == 'male'", 'Age < 18']
     """
+
     field, op, value = condition.split(" ")
+    
     # convert value into number or strip excess quotes if string
     try:
         value = float(value)
@@ -36,7 +38,7 @@ def filter_data(data, condition):
         raise Exception("Invalid comparison operator. Only >, <, >=, <=, ==, != allowed.")
     
     # filter data and outcomes
-    data = data[matches].reset_index()
+    data = data[matches].reset_index(drop = True)
     return data
 
 def survival_stats(data, outcomes, key, filters = []):
@@ -44,6 +46,18 @@ def survival_stats(data, outcomes, key, filters = []):
     Print out selected statistics regarding survival, given a feature of
     interest and any number of filters (including no filters)
     """
+    
+    # Check that the key exists
+    if key not in data.columns.values :
+        print "'{}' is not a feature of the Titanic data. Did you spell something wrong?".format(key)
+        return False
+
+    # Return the function before visualizing if 'Cabin' or 'Ticket'
+    # is selected: too many unique categories to display
+    if(key == 'Cabin' or key == 'PassengerId' or key == 'Ticket'):
+        print "'{}' has too many unique categories to display! Try a different feature.".format(key)
+        return False
+
     # Merge data and outcomes into single dataframe
     all_data = pd.concat([data, outcomes], axis = 1)
     
@@ -52,65 +66,75 @@ def survival_stats(data, outcomes, key, filters = []):
         all_data = filter_data(all_data, condition)
     all_data = all_data[[key, 'Survived']]
     
-    # Create different plot depending on if key takes string values
-    # or numeric values.
+    # Create plotting figure
     plt.figure(figsize=(8,6))
-    if isinstance(all_data[key][0] , str):
-        # For strings, collect unique strings and then count number of
-        # outcomes for survival and non-survival.
-        
-        # Summarize dataframe to get counts in each group
-        all_data['count'] = 1
-        all_data = all_data.groupby([key, 'Survived'], as_index = False).count()
-        
-        levels = all_data[key].unique()
-        n_levels = len(levels)
-        bar_width = 0.4
-        
-        for i in range(n_levels):
-            # bars should be paired with non-survived first followed by survived.
-            nonsurv_bar = plt.bar(i-bar_width, all_data.loc[2*i]['count'], width = bar_width,
-                    color = 'r')
-            surv_bar = plt.bar(i, all_data.loc[2*i+1]['count'], width = bar_width,
-                    color = 'g')
-        
-        # add labels to ticks for each group of bars.
-        plt.xticks(range(n_levels), levels)
-        
-        # add legend to plot.    
-        plt.legend((nonsurv_bar[0], surv_bar[0]),('Did not survive', 'Survived'), framealpha = 0.8)
-        
-    else:
-        # For numbers, divide the range of data into bins and count
-        # number of outcomes for survival and non-survival in each bin.
-        
-        # Get range of data, split data into bins for reporting.
+
+    # 'Numerical' features
+    if(key == 'Age' or key == 'Fare'):
+       
+        # Divide the range of data into bins and count survival rates
         min_value = all_data[key].min()
         max_value = all_data[key].max()
         value_range = max_value - min_value
-        n_bins = 8
-        bin_size = float(value_range) / n_bins
-        bins = [i*bin_size + min_value for i in range(n_bins+1)]
+
+        # 'Fares' has larger range of values than 'Age' so create more bins
+        if(key == 'Fare'):
+            bins = np.arange(0, all_data['Fare'].max() + 20, 20)
+        if(key == 'Age'):
+            bins = np.arange(0, all_data['Age'].max() + 10, 10)
         
-        # plot the data
+        # Overlay each bin's survival rates
         nonsurv_vals = all_data[all_data['Survived'] == 0][key].reset_index(drop = True)
         surv_vals = all_data[all_data['Survived'] == 1][key].reset_index(drop = True)
         plt.hist(nonsurv_vals, bins = bins, alpha = 0.6,
                  color = 'red', label = 'Did not survive')
         plt.hist(surv_vals, bins = bins, alpha = 0.6,
                  color = 'green', label = 'Survived')
-        
-        # add legend to plot.
+    
+        # Add legend to plot
+        plt.xlim(0, bins.max())
         plt.legend(framealpha = 0.8)
-        
-    # common attributes for plot formatting
+    
+    # 'Categorical' features
+    else:
+       
+        # Set the various categories
+        if(key == 'Pclass'):
+            values = np.arange(1,4)
+        if(key == 'Parch' or key == 'SibSp'):
+            values = np.arange(0,np.max(data[key]) + 1)
+        if(key == 'Embarked'):
+            values = ['C', 'Q', 'S']
+        if(key == 'Sex'):
+            values = ['male', 'female']
+
+        # Create DataFrame containing categories and count of each
+        frame = pd.DataFrame(index = np.arange(len(values)), columns=(key,'Survived','NSurvived'))
+        for i, value in enumerate(values):
+            frame.loc[i] = [value, \
+                   len(all_data[(all_data['Survived'] == 1) & (all_data[key] == value)]), \
+                   len(all_data[(all_data['Survived'] == 0) & (all_data[key] == value)])]
+
+        # Set the width of each bar
+        bar_width = 0.4
+
+        # Display each category's survival rates
+        for i in np.arange(len(frame)):
+            nonsurv_bar = plt.bar(i-bar_width, frame.loc[i]['NSurvived'], width = bar_width, color = 'r')
+            surv_bar = plt.bar(i, frame.loc[i]['Survived'], width = bar_width, color = 'g')
+
+            plt.xticks(np.arange(len(frame)), values)
+            plt.legend((nonsurv_bar[0], surv_bar[0]),('Did not survive', 'Survived'), framealpha = 0.8)
+
+    # Common attributes for plot formatting
     plt.xlabel(key)
-    plt.ylabel('Count')
+    plt.ylabel('Number of Passengers')
+    plt.title('Passenger Survival Statistics With \'%s\' Feature'%(key))
     plt.show()
 
-    # Report number of points with missing values.
+    # Report number of passengers with missing values
     if sum(pd.isnull(all_data[key])):
         nan_outcomes = all_data[pd.isnull(all_data[key])]['Survived']
-        print '# of persons with missing values: {}'.format(len(nan_outcomes))
-        print '  # that survived: {}'.format(sum(nan_outcomes == 1))
-        print '  # that did not survive: {}'.format(sum(nan_outcomes == 0))
+        print "Passengers with missing '{}' values: {} ({} survived, {} did not survive)".format( \
+              key, len(nan_outcomes), sum(nan_outcomes == 1), sum(nan_outcomes == 0))
+
