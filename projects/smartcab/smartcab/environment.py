@@ -166,26 +166,33 @@ class Environment(object):
         if action == 'forward':
             if light != 'green':
                 move_okay = False
-        elif action == 'left' and sense['oncoming']==None:
-            if light == 'green':
+        elif action == 'left':
+            if light == 'green' and (sense['oncoming'] == None or sense['oncoming'] == 'left'):
                 heading = (heading[1], -heading[0])
             else:
                 move_okay = False
-        elif action == 'right' and sense['left']==None:
-            heading = (-heading[1], heading[0])
+        elif action == 'right':
+            if light == 'green' or sense['left'] != 'straight':
+                heading = (-heading[1], heading[0])
+            else:
+                move_okay = False
 
-        if action is not None:
-            if move_okay:
+        if move_okay:
+            # Valid move (could be null)
+            if action is not None:
+                # Valid non-null move
                 location = ((location[0] + heading[0] - self.bounds[0]) % (self.bounds[2] - self.bounds[0] + 1) + self.bounds[0],
                             (location[1] + heading[1] - self.bounds[1]) % (self.bounds[3] - self.bounds[1] + 1) + self.bounds[1])  # wrap-around
                 #if self.bounds[0] <= location[0] <= self.bounds[2] and self.bounds[1] <= location[1] <= self.bounds[3]:  # bounded
                 state['location'] = location
                 state['heading'] = heading
-                reward = 2 if action == agent.get_next_waypoint() else 0.5
+                reward = 2.0 if action == agent.get_next_waypoint() else -0.5  # valid, but is it correct? (as per waypoint)
             else:
-                reward = -1
+                # Valid null move
+                reward = 0.0
         else:
-            reward = 1
+            # Invalid move
+            reward = -1.0
 
         if agent is self.primary_agent:
             if state['location'] == state['destination']:
