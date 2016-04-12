@@ -64,6 +64,8 @@ def survival_stats(data, outcomes, key, filters = []):
     # Apply filters to data
     for condition in filters:
         all_data = filter_data(all_data, condition)
+
+    # Create outcomes DataFrame
     all_data = all_data[[key, 'Survived']]
     
     # Create plotting figure
@@ -71,7 +73,10 @@ def survival_stats(data, outcomes, key, filters = []):
 
     # 'Numerical' features
     if(key == 'Age' or key == 'Fare'):
-       
+        
+        # Remove NaN values from Age data
+        all_data = all_data[~np.isnan(all_data[key])]
+        
         # Divide the range of data into bins and count survival rates
         min_value = all_data[key].min()
         max_value = all_data[key].max()
