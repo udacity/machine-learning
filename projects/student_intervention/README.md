@@ -6,6 +6,7 @@
 This project requires **Python 2.7** and the following Python libraries installed:
 
 - [NumPy](http://www.numpy.org/)
+- [Pandas](http://pandas.pydata.org)
 - [scikit-learn](http://scikit-learn.org/stable/)
 
 You will also need to have software installed to run and execute an [iPython Notebook](http://ipython.org/notebook.html)
@@ -20,7 +21,7 @@ Template code is provided in the notebook `student_intervention.ipynb` notebook 
 
 In a terminal or command window, navigate to the top-level project directory `student_intervention/` (that contains this README) and run one of the following commands:
 
-```ipython notebook student_intervention.ipynb```
+```ipython notebook student_intervention.ipynb```  
 ```jupyter notebook student_intervention.ipynb```
 
 This will open the iPython Notebook software and project file in your browser.
@@ -35,8 +36,8 @@ The dataset used in this project is included as `student-data.csv`. This dataset
 - `address` ? student's home address type (binary: "U" - urban or "R" - rural)
 - `famsize` ? family size (binary: "LE3" - less or equal to 3 or "GT3" - greater than 3)
 - `Pstatus` ? parent's cohabitation status (binary: "T" - living together or "A" - apart)
-- `Medu` ? mother's education (numeric: 0 - none,  1 - primary education (4th grade), 2 -€“ 5th to 9th grade, 3 - secondary education or 4 -€“ higher education)
-- `Fedu` ? father's education (numeric: 0 - none,  1 - primary education (4th grade), 2 - 5th to 9th grade, 3 - secondary education or 4 -€“ higher education)
+- `Medu` ? mother's education (numeric: 0 - none,  1 - primary education (4th grade), 2 -â‚¬â€œ 5th to 9th grade, 3 - secondary education or 4 -â‚¬â€œ higher education)
+- `Fedu` ? father's education (numeric: 0 - none,  1 - primary education (4th grade), 2 - 5th to 9th grade, 3 - secondary education or 4 -â‚¬â€œ higher education)
 - `Mjob` ? mother's job (nominal: "teacher", "health" care related, civil "services" (e.g. administrative or police), "at_home" or "other")
 - `Fjob` ? father's job (nominal: "teacher", "health" care related, civil "services" (e.g. administrative or police), "at_home" or "other")
 - `reason` ? reason to choose this school (nominal: close to "home", school "reputation", "course" preference or "other")
