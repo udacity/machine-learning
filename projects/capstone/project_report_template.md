@@ -3,7 +3,7 @@
 Joe Udacity  
 December 31st, 2050
 
-## Definition
+## I. Definition
 _(approx. 1-2 pages)_
 
 ### Project Overview
@@ -23,7 +23,7 @@ In this section, you will need to clearly define the metrics or calculations you
 - _Have you provided reasonable justification for the metrics chosen based on the problem and solution?_
 
 
-## Analysis
+## II. Analysis
 _(approx. 2-4 pages)_
 
 ### Data Exploration
@@ -51,7 +51,7 @@ In this section, you will need to provide a clearly defined benchmark result or 
 - _Is it clear how this result or value was obtained (whether by data or by hypothesis)?_
 
 
-## Methodology
+## III. Methodology
 _(approx. 3-5 pages)_
 
 ### Data Preprocessing
@@ -73,7 +73,7 @@ In this section, you will need to discuss the process of improvement you made up
 - _Are intermediate and final solutions clearly reported as the process is improved?_
 
 
-## Results
+## IV. Results
 _(approx. 2-3 pages)_
 
 ### Model Evaluation and Validation
@@ -90,7 +90,7 @@ In this section, your model’s final solution and its results should be compare
 - _Is the final solution significant enough to have solved the problem?_
 
 
-## Conclusion
+## V. Conclusion
 _(approx. 1-2 pages)_
 
 ### Free-Form Visualization
