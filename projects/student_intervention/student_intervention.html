@@ -307,16 +307,15 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># TODO: Calculate number of students</span>
-<span class="n">n_students</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">n_students</span> <span class="o">=</span> <span class="n">student_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c"># TODO: Calculate number of features</span>
-<span class="n">n_features</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">n_features</span> <span class="o">=</span> <span class="n">student_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span>    <span class="c"># &quot;passed&quot; column is target</span>
 
-<span class="n">n_students</span><span class="p">,</span> <span class="n">n_features</span> <span class="o">=</span> <span class="n">student_data</span><span class="o">.</span><span class="n">shape</span>
 
 <span class="c"># TODO: Calculate passing students</span>
 <span class="n">n_passed</span> <span class="o">=</span> <span class="n">student_data</span><span class="o">.</span><span class="n">passed</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="s">&#39;yes&#39;</span><span class="p">]</span>
@@ -346,7 +345,7 @@ div#notebook {
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Total number of students: 395
-Number of features: 31
+Number of features: 30
 Number of students who passed: 265
 Number of students who failed: 130
 Graduation rate of the class: 67.09%
@@ -372,7 +371,7 @@ Graduation rate of the class: 67.09%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Extract feature columns</span>
@@ -454,7 +453,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">preprocess_features</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -525,7 +524,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># TODO: Import any additional functionality you may need here</span>
@@ -596,9 +595,9 @@ Testing set has 95 samples.
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
 <ol>
-<li>SVM. It can be applied to binary classification as well as regression. It is able to tackle small sample size problems and unlinear issues. And it's memory efficient.But it's sensitive to missing data and noise. And it works not well in big data set, as it's computation intensive. In this project, the data set is not very big, so we might have a try of it.</li>
-<li>KNN. It can be applied to binary or multiclass classification and regression. With a simple princple, it can get a really high accuracy, but it need to store all the training data in memory and do a lot of computation.</li>
-<li>Decision Tree. Again, DT can be applied to binary or multiclass classification and regression. Its advantages include simple to understand and to interpret, the logarithmic time cost in the number of train data points, capable to process both numerical and categorical data while its drawbacks are it's prone to overfit and can be unstable. </li>
+<li>SVM. It can be applied to binary classification as well as regression, such as image classification and handwriting recognition. It is able to tackle small sample size problems and unlinear issues. And it's memory efficient.But it's sensitive to missing data and noise. And it works not well in big data set, as it's computation intensive. In this project, the data set is not very big, so we might have a try of it.</li>
+<li>KNN. It can be applied to binary or multiclass classification and regression, including text classification and fraud detection. With a simple princple, it can get a really high accuracy, but it need to store all the training data in memory and do a lot of computation.</li>
+<li>Decision Tree. Again, DT can be applied to binary or multiclass classification and regression, e.g. customer segment. Its advantages include simple to understand and to interpret, the logarithmic time cost in the number of train data points, capable to process both numerical and categorical data while its drawbacks are it's prone to overfit and can be unstable. </li>
 </ol>
 
 </div>
@@ -624,7 +623,7 @@ Testing set has 95 samples.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">train_classifier</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">):</span>
@@ -697,7 +696,7 @@ Testing set has 95 samples.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[98]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># TODO: Import the three supervised learning models from sklearn</span>
@@ -740,10 +739,10 @@ Testing set has 95 samples.
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training a DecisionTreeClassifier using a training set size of 300. . .
-Trained model in 0.0040 seconds
+Trained model in 0.0060 seconds
 Made predictions in 0.0010 seconds.
 F1 score for training set: 1.0000.
-Made predictions in 0.0010 seconds.
+Made predictions in 0.0000 seconds.
 F1 score for test set: 0.6613.
 </pre>
 </div>
@@ -957,7 +956,7 @@ Whenever we get our fence built, we can make a prediction. That is, an animal st
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># TODO: Import &#39;GridSearchCV&#39; and &#39;make_scorer&#39;</span>
@@ -966,7 +965,7 @@ Whenever we get our fence built, we can make a prediction. That is, an animal st
 
 
 <span class="c"># TODO: Create the parameters list you wish to tune</span>
-<span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;kernel&#39;</span><span class="p">:(</span><span class="s">&#39;linear&#39;</span><span class="p">,</span> <span class="s">&#39;rbf&#39;</span><span class="p">,</span> <span class="s">&#39;poly&#39;</span><span class="p">,</span><span class="s">&#39;sigmoid&#39;</span><span class="p">),</span> <span class="s">&#39;C&#39;</span><span class="p">:[</span> <span class="mf">0.1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">],</span> <span class="s">&#39;gamma&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1e-3</span><span class="p">,</span> <span class="mf">1e-4</span><span class="p">,</span> <span class="mf">1e-5</span><span class="p">]}</span>
+<span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;kernel&#39;</span><span class="p">:(</span><span class="s">&#39;linear&#39;</span><span class="p">,</span> <span class="s">&#39;rbf&#39;</span><span class="p">,</span> <span class="s">&#39;poly&#39;</span><span class="p">,</span><span class="s">&#39;sigmoid&#39;</span><span class="p">),</span> <span class="s">&#39;C&#39;</span><span class="p">:[</span> <span class="mf">0.087</span><span class="p">,</span> <span class="mf">0.089</span><span class="p">,</span> <span class="mf">0.09</span><span class="p">,</span> <span class="mf">0.091</span><span class="p">,</span> <span class="mf">0.092</span><span class="p">],</span> <span class="s">&#39;gamma&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1e-3</span><span class="p">,</span> <span class="mf">1e-4</span><span class="p">,</span> <span class="mf">1e-5</span><span class="p">]}</span>
 
 <span class="c"># TODO: Initialize the classifier</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
@@ -998,10 +997,10 @@ Whenever we get our fence built, we can make a prediction. That is, an animal st
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Made predictions in 0.0070 seconds.
-Tuned model has a training F1 score of 0.8493.
-Made predictions in 0.0010 seconds.
-Tuned model has a testing F1 score of 0.7943.
+<pre>Made predictions in 0.0050 seconds.
+Tuned model has a training F1 score of 0.8481.
+Made predictions in 0.0020 seconds.
+Tuned model has a testing F1 score of 0.8028.
 </pre>
 </div>
 </div>
@@ -1012,7 +1011,7 @@ Tuned model has a testing F1 score of 0.7943.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">clf</span><span class="o">.</span><span class="n">get_params</span>
@@ -1026,11 +1025,11 @@ Tuned model has a testing F1 score of 0.7943.
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[59]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;bound method SVC.get_params of SVC(C=0.1, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+<pre>&lt;bound method SVC.get_params of SVC(C=0.087, cache_size=200, class_weight=None, coef0=0.0, degree=3,
   gamma=0.001, kernel=&apos;linear&apos;, max_iter=-1, probability=False,
   random_state=42, shrinking=True, tol=0.001, verbose=False)&gt;</pre>
 </div>
@@ -1056,7 +1055,7 @@ Tuned model has a testing F1 score of 0.7943.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong>The final F<sub>1</sub> score for training and testing is 0.8493 and 0.7943 respectively. The training score dips slightly from 0.8761, while the test one gets a small gain comparing to 0.7838. It seems like that the untuned model is kind of overfitting.</p>
+<p><strong>Answer: </strong>The final F<sub>1</sub> score for training and testing is 0.8481 and 0.8028 respectively. The training score dips slightly from 0.8761, while the test one gets a small gain comparing to 0.7838. It seems like that the untuned model is kind of overfitting.</p>
 
 </div>
 </div>
