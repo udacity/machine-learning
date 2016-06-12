@@ -235,6 +235,10 @@ div#notebook {
 <span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">f1_score</span>
 
+<span class="c"># Define a random state to seed your algorithms</span>
+<span class="n">ran_state</span> <span class="o">=</span> <span class="mi">42</span>
+
+
 <span class="c"># Read student data</span>
 <span class="n">student_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">&quot;student-data.csv&quot;</span><span class="p">)</span>
 <span class="k">print</span> <span class="s">&quot;Student data read successfully!&quot;</span>
@@ -541,7 +545,7 @@ Feature values:
 <span class="n">X_test</span> <span class="o">=</span> <span class="bp">None</span>
 <span class="n">y_train</span> <span class="o">=</span> <span class="bp">None</span>
 <span class="n">y_test</span> <span class="o">=</span> <span class="bp">None</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_all</span><span class="p">,</span> <span class="n">y_all</span><span class="p">,</span> <span class="n">train_size</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_all</span><span class="p">,</span> <span class="n">y_all</span><span class="p">,</span> <span class="n">train_size</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span> <span class="n">ran_state</span> <span class="p">)</span>
 
 <span class="c"># Show the results of the split</span>
 <span class="k">print</span> <span class="s">&quot;Training set has {} samples.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -595,9 +599,9 @@ Testing set has 95 samples.
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
 <ol>
-<li>SVM. It can be applied to binary classification as well as regression, such as image classification and handwriting recognition. It is able to tackle small sample size problems and unlinear issues. And it's memory efficient.But it's sensitive to missing data and noise. And it works not well in big data set, as it's computation intensive. In this project, the data set is not very big, so we might have a try of it.</li>
-<li>KNN. It can be applied to binary or multiclass classification and regression, including text classification and fraud detection. With a simple princple, it can get a really high accuracy, but it need to store all the training data in memory and do a lot of computation.</li>
-<li>Decision Tree. Again, DT can be applied to binary or multiclass classification and regression, e.g. customer segment. Its advantages include simple to understand and to interpret, the logarithmic time cost in the number of train data points, capable to process both numerical and categorical data while its drawbacks are it's prone to overfit and can be unstable. </li>
+<li>SVM. It can be applied to binary classification as well as regression, such as image classification and handwriting recognition. It is able to tackle small sample size problems and unlinear issues. And it's memory efficient.But it's sensitive to missing data and noise. And it works not well in big data set, as it's computation intensive. In this project, the data set has 395 samples in total, not very big, according to the scikit-learn algorithm cheatsheet, SVM should be the first choice, so we might have a try of it.</li>
+<li>KNN. It can be applied to binary or multiclass classification and regression, including text classification and fraud detection. With a simple princple, it can get a really high accuracy, but it need to store all the training data in memory and do a lot of computation. As all the features have been turned into numerical, KNN could be applied to this problem too.</li>
+<li>Decision Tree. Again, DT can be applied to binary or multiclass classification and regression, e.g. customer segment. Its advantages include simple to understand and to interpret, the logarithmic time cost in the number of train data points,  while its drawbacks are it's prone to overfit and can be unstable. As it is able to deal with both numeric and categorical data, it can be chosen for this project.</li>
 </ol>
 
 </div>
@@ -708,10 +712,10 @@ Testing set has 95 samples.
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
 
 <span class="c"># TODO: Initialize the three models</span>
-<span class="n">clf_A</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
+<span class="n">clf_A</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="n">ran_state</span><span class="p">)</span>
 <span class="n">neighbors</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">clf_B</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="n">neighbors</span><span class="p">)</span>
-<span class="n">clf_C</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
+<span class="n">clf_C</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="n">ran_state</span> <span class="p">)</span>
 
 <span class="c"># TODO: Set up the training set sizes</span>
 <span class="n">X_train_100</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[:</span><span class="mi">100</span><span class="p">]</span>
@@ -968,7 +972,7 @@ Whenever we get our fence built, we can make a prediction. That is, an animal st
 <span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;kernel&#39;</span><span class="p">:(</span><span class="s">&#39;linear&#39;</span><span class="p">,</span> <span class="s">&#39;rbf&#39;</span><span class="p">,</span> <span class="s">&#39;poly&#39;</span><span class="p">,</span><span class="s">&#39;sigmoid&#39;</span><span class="p">),</span> <span class="s">&#39;C&#39;</span><span class="p">:[</span> <span class="mf">0.087</span><span class="p">,</span> <span class="mf">0.089</span><span class="p">,</span> <span class="mf">0.09</span><span class="p">,</span> <span class="mf">0.091</span><span class="p">,</span> <span class="mf">0.092</span><span class="p">],</span> <span class="s">&#39;gamma&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1e-3</span><span class="p">,</span> <span class="mf">1e-4</span><span class="p">,</span> <span class="mf">1e-5</span><span class="p">]}</span>
 
 <span class="c"># TODO: Initialize the classifier</span>
-<span class="n">clf</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="n">ran_state</span><span class="p">)</span>
 
 <span class="c"># TODO: Make an f1 scoring function using &#39;make_scorer&#39; </span>
 <span class="n">f1_scorer</span> <span class="o">=</span><span class="n">make_scorer</span><span class="p">(</span><span class="n">f1_score</span><span class="p">,</span> <span class="n">pos_label</span><span class="o">=</span> <span class="s">&#39;yes&#39;</span><span class="p">)</span>
