@@ -1,20 +1,21 @@
 # 项目 0: 入门与基础
 ## 预测泰坦尼克乘客存活率
-​
+
 ### 安装要求
 ​
 这个项目要求使用 **Python 2.7** 以及安装下列python库
-​
+
 - [NumPy](http://www.numpy.org/)
 - [Pandas](http://pandas.pydata.org)
 - [matplotlib](http://matplotlib.org/)
 - [scikit-learn](http://scikit-learn.org/stable/)
 ​
+
 你还需要安装和运行[Jupyter Notebook](http://jupyter.readthedocs.io/en/latest/install.html#optional-for-experienced-python-developers-installing-jupyter-with-pip)
 ​
+
 Udacity推荐学生安装 [Anaconda](https://www.continuum.io/downloads), 一个包含了项目需要的所有库和软件的python发行版本。
 
-​
 ### 代码
 ​
 事例代码可以在`titanic_survival_exploration_cn.ipynb`文件中. 辅助代码在`titanic_visualizations.py`。尽管已经提供了一些代码帮助你上手，你还是需要补充些代码使得项目要求的功能能够成功实现。
@@ -27,9 +28,9 @@ Udacity推荐学生安装 [Anaconda](https://www.continuum.io/downloads), 一个
 ​
 这会启动 Jupyter Notebook 把项目文件打开在你的浏览器中。
 ​
-## 数据
+### 数据
 ​
-这个项目的数据包含在`titanic_data.csv`文件中。. 文件包含下列特征:
+这个项目的数据包含在`titanic_data.csv`文件中。文件包含下列特征:
 ​
 - **Survived**：是否存活（0代表否，1代表是）
 - **Pclass**：社会阶级（1代表上层阶级，2代表中层阶级，3代表底层阶级）
