@@ -14,15 +14,15 @@
 你还需要安装和运行[Jupyter Notebook](http://jupyter.readthedocs.io/en/latest/install.html#optional-for-experienced-python-developers-installing-jupyter-with-pip)
 ​
 
-Udacity推荐学生安装 [Anaconda](https://www.continuum.io/downloads), 一个包含了项目需要的所有库和软件的python发行版本。
+Udacity推荐学生安装 [Anaconda](https://www.continuum.io/downloads)，一个包含了项目需要的所有库和软件的python发行版本。
 
 ### 代码
 ​
-事例代码可以在`titanic_survival_exploration_cn.ipynb`文件中. 辅助代码在`titanic_visualizations.py`。尽管已经提供了一些代码帮助你上手，你还是需要补充些代码使得项目要求的功能能够成功实现。
+事例代码在`titanic_survival_exploration_cn.ipynb`文件中，辅助代码在`titanic_visualizations.py`文件中。尽管已经提供了一些代码帮助你上手，你还是需要补充些代码使得项目要求的功能能够成功实现。
 ​
 ### 运行
 ​
-在命令行中，确保当前目录为`titanic_survival_exploration/`文件夹的最顶层（目录包涵这个README文件），运行下列命令。
+在命令行中，确保当前目录为`titanic_survival_exploration/`文件夹的最顶层（目录包含本README文件），运行下列命令。
 ​
 ```jupyter notebook titanic_survival_exploration.ipynb```
 ​
@@ -30,16 +30,16 @@ Udacity推荐学生安装 [Anaconda](https://www.continuum.io/downloads), 一个
 ​
 ### 数据
 ​
-这个项目的数据包含在`titanic_data.csv`文件中。文件包含下列特征:
+这个项目的数据包含在`titanic_data.csv`文件中。文件包含下列特征：
 ​
 - **Survived**：是否存活（0代表否，1代表是）
 - **Pclass**：社会阶级（1代表上层阶级，2代表中层阶级，3代表底层阶级）
 - **Name**：船上乘客的名字
 - **Sex**：船上乘客的性别
-- **Age**:船上乘客的年龄（可能存在`NaN`）
+- **Age**：船上乘客的年龄（可能存在`NaN`）
 - **SibSp**：乘客在船上的兄弟姐妹和配偶的数量
-- **Parch**:乘客在船上的父母以及小孩的数量
-- **Ticket**:乘客船票的编号
-- **Fare**:乘客为船票支付的费用
-- **Cabin**:乘客所在船舱的编号（可能存在`NaN`）
-- **Embarked**:乘客上船的港口（C代表从 Cherbourg登船，Q代表从Queenstown登船，S代表从Southampton登船）
+- **Parch**：乘客在船上的父母以及小孩的数量
+- **Ticket**：乘客船票的编号
+- **Fare**：乘客为船票支付的费用
+- **Cabin**：乘客所在船舱的编号（可能存在`NaN`）
+- **Embarked**：乘客上船的港口（C代表从 Cherbourg登船，Q代表从Queenstown登船，S代表从Southampton登船）
