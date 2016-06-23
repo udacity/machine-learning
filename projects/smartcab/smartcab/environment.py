@@ -150,7 +150,7 @@ class Environment(object):
                 if left != 'forward':  # we don't want to override left == 'forward'
                     left = other_heading
 
-        return {'light': light, 'oncoming': oncoming, 'left': left, 'right': right}  # TODO: make this a namedtuple
+        return {'light': light, 'oncoming': oncoming, 'left': left, 'right': right}
 
     def get_deadline(self, agent):
         return self.agent_states[agent]['deadline'] if agent is self.primary_agent else None
@@ -163,7 +163,7 @@ class Environment(object):
         location = state['location']
         heading = state['heading']
         light = 'green' if (self.intersections[location].state and heading[1] != 0) or ((not self.intersections[location].state) and heading[0] != 0) else 'red'
-        sense = self.sense(agent)
+        inputs = self.sense(agent)
 
         # Move agent if within bounds and obeys traffic rules
         reward = 0  # reward/penalty
@@ -172,12 +172,12 @@ class Environment(object):
             if light != 'green':
                 move_okay = False
         elif action == 'left':
-            if light == 'green' and (sense['oncoming'] == None or sense['oncoming'] == 'left'):
+            if light == 'green' and (inputs['oncoming'] == None or inputs['oncoming'] == 'left'):
                 heading = (heading[1], -heading[0])
             else:
                 move_okay = False
         elif action == 'right':
-            if light == 'green' or sense['left'] != 'straight':
+            if light == 'green' or (inputs['oncoming'] != 'left' and inputs['left'] != 'forward'):
                 heading = (-heading[1], heading[0])
             else:
                 move_okay = False
