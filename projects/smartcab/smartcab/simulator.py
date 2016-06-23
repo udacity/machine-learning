@@ -3,6 +3,10 @@ import time
 import random
 import importlib
 
+import numpy as np
+
+from analysis import Reporter
+
 class Simulator(object):
     """Simulates agents in a dynamic smartcab environment.
 
@@ -21,7 +25,7 @@ class Simulator(object):
         'orange'  : (255, 128,   0)
     }
 
-    def __init__(self, env, size=None, update_delay=1.0, display=True):
+    def __init__(self, env, size=None, update_delay=1.0, display=True, live_plot=False):
         self.env = env
         self.size = size if size is not None else ((self.env.grid_size[0] + 1) * self.env.block_size, (self.env.grid_size[1] + 1) * self.env.block_size)
         self.width, self.height = self.size
@@ -34,7 +38,7 @@ class Simulator(object):
         self.start_time = None
         self.current_time = 0.0
         self.last_updated = 0.0
-        self.update_delay = update_delay
+        self.update_delay = update_delay  # duration between each step (in secs)
 
         self.display = display
         if self.display:
@@ -59,8 +63,14 @@ class Simulator(object):
                 self.display = False
                 print "Simulator.__init__(): Error initializing GUI objects; display disabled.\n{}: {}".format(e.__class__.__name__, e)
 
+        # Setup metrics to report
+        self.live_plot = live_plot
+        self.rep = Reporter(metrics=['net_reward', 'avg_net_reward', 'final_deadline', 'success'], live_plot=self.live_plot)
+        self.avg_net_reward_window = 10
+
     def run(self, n_trials=1):
         self.quit = False
+        self.rep.reset()
         for trial in xrange(n_trials):
             print "Simulator.run(): Trial {}".format(trial)  # [debug]
             self.env.reset()
@@ -90,6 +100,7 @@ class Simulator(object):
                     # Update environment
                     if self.current_time - self.last_updated >= self.update_delay:
                         self.env.step()
+                        # TODO: Log step data
                         self.last_updated = self.current_time
 
                     # Render GUI and sleep
@@ -104,6 +115,22 @@ class Simulator(object):
 
             if self.quit:
                 break
+
+            # Collect/update metrics
+            self.rep.collect('net_reward', trial, self.env.trial_data['net_reward'])  # total reward obtained in this trial
+            self.rep.collect('avg_net_reward', trial, np.mean(self.rep.metrics['net_reward'].ydata[-self.avg_net_reward_window:]))  # rolling mean of reward
+            self.rep.collect('final_deadline', trial, self.env.trial_data['final_deadline'])  # final deadline value (time remaining)
+            self.rep.collect('success', trial, self.env.trial_data['success'])
+            if self.live_plot:
+                self.rep.refresh_plot()  # autoscales axes, draws stuff and flushes events
+
+        # Report final metrics
+        if self.display:
+            self.pygame.display.quit()  # need to shutdown pygame before showing metrics plot
+            # TODO: Figure out why having both game and plot displays makes things crash!
+
+        if self.live_plot:
+            self.rep.show_plot()  # holds till user closes plot window
 
     def render(self):
         # Clear screen
