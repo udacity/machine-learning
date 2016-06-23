@@ -28,7 +28,8 @@ class Environment(object):
 
     valid_actions = [None, 'forward', 'left', 'right']
     valid_inputs = {'light': TrafficLight.valid_states, 'oncoming': valid_actions, 'left': valid_actions, 'right': valid_actions}
-    valid_headings = [(1, 0), (0, -1), (-1, 0), (0, 1)]  # ENWS
+    EAST, WEST, NORTH, SOUTH = (1, 0), (-1, 0), (0, -1), (0, 1)
+    valid_headings = [EAST, WEST, NORTH, SOUTH]
     hard_time_limit = -100  # even if enforce_deadline is False, end trial when deadline reaches this value (to avoid deadlocks)
 
     def __init__(self):
@@ -165,6 +166,9 @@ class Environment(object):
         light = 'green' if (self.intersections[location].state and heading[1] != 0) or ((not self.intersections[location].state) and heading[0] != 0) else 'red'
         sense = self.sense(agent)
 
+        LEFT, RIGHT = 1, -1
+        turn = lambda h, a: (h[1] * a, -h[0] * a)
+
         # Move agent if within bounds and obeys traffic rules
         reward = 0  # reward/penalty
         move_okay = True
@@ -172,13 +176,13 @@ class Environment(object):
             if light != 'green':
                 move_okay = False
         elif action == 'left':
-            if light == 'green' and (sense['oncoming'] == None or sense['oncoming'] == 'left'):
-                heading = (heading[1], -heading[0])
+            if light == 'green' and sense['oncoming'] != 'forward':
+                heading = turn(heading, LEFT)
             else:
-                move_okay = False
+                move_okay = False                
         elif action == 'right':
-            if light == 'green' or sense['left'] != 'straight':
-                heading = (-heading[1], heading[0])
+            if light == 'green' or (sense['left'] != 'forward' and sense['oncoming'] != 'left'):
+                heading = turn(heading, RIGHT)
             else:
                 move_okay = False
 
