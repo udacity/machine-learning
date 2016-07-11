@@ -33,11 +33,19 @@ $ pip install numpy pandas matplotlib scikit-learn scipy jupyter
 
 ### 运行
 ​
-在命令行中，确保当前目录为 `titanic_survival_exploration/` 文件夹的最顶层（目录包含本 README 文件），运行下列命令。
-​
-```jupyter notebook titanic_survival_exploration.ipynb```
+在命令行中，确保当前目录为 `titanic_survival_exploration/` 文件夹的最顶层（目录包含本 README 文件），运行下列命令：
+
+```bash
+$ jupyter notebook titanic_survival_exploration.ipynb
+```
 ​
 这会启动 Jupyter Notebook 把项目文件打开在你的浏览器中。
+
+对jupyter不熟悉的同学可以看一下这两个链接：
+
+- [jupyter使用](http://cn-static.udacity.com/mlnd/how_to_use_jupyter.mp4)
+- [为什么使用jupyter？](https://www.zhihu.com/question/37490497)
+​
 ​
 ### 数据
 ​
