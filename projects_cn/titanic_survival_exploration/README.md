@@ -43,7 +43,7 @@ $ jupyter notebook titanic_survival_exploration.ipynb
 
 对jupyter不熟悉的同学可以看一下这两个链接：
 
-- [jupyter使用](http://cn-static.udacity.com/mlnd/how_to_use_jupyter.mp4)
+- [Jupyter使用视频教程](http://cn-static.udacity.com/mlnd/how_to_use_jupyter.mp4)
 - [为什么使用jupyter？](https://www.zhihu.com/question/37490497)
 ​
 ​
