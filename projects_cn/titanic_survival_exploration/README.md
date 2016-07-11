@@ -47,6 +47,19 @@ $ jupyter notebook titanic_survival_exploration.ipynb
 - [为什么使用jupyter？](https://www.zhihu.com/question/37490497)
 ​
 ​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+
 ### 数据
 ​
 这个项目的数据包含在 `titanic_data.csv` 文件中。文件包含下列特征：
