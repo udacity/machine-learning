@@ -13,7 +13,19 @@
 你还需要安装和运行 [Jupyter Notebook](http://jupyter.readthedocs.io/en/latest/install.html#optional-for-experienced-python-developers-installing-jupyter-with-pip)。
 
 
-优达学城推荐学生安装 [Anaconda](https://www.continuum.io/downloads)，一个包含了项目需要的所有库和软件的 Python 发行版本。
+优达学城推荐学生安装 [Anaconda](https://www.continuum.io/downloads)，一个包含了项目需要的所有库和软件的 Python 发行版本。[这里](https://classroom.udacity.com/nanodegrees/nd002/parts/0021345403/modules/317671873575460/lessons/5430778793/concepts/54140889150923)介绍了如何安装Anaconda。
+
+如果你使用macOS系统并且对命令行比较熟悉，可以安装[homebrew](http://brew.sh/)，以及brew版python
+
+```bash
+$ brew install python
+```
+
+再用下列命令安装所需要的python库
+
+```bash
+$ pip install numpy pandas matplotlib scikit-learn scipy jupyter
+```
 
 ### 代码
 ​
