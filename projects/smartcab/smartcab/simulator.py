@@ -68,18 +68,18 @@ class Simulator(object):
         self.log_metrics = log_metrics
         if self.log_metrics:
             self.log_filename = os.path.join("logs", "trials_{}.csv".format(time.strftime("%Y-%m-%d_%H-%M-%S")))
-            self.log_fields = ['trial', 'net_reward', 'final_deadline', 'success']
+            self.log_fields = ['trial', 'initial_distance', 'initial_deadline', 'net_reward', 'final_deadline', 'success']
             self.log_file = open(self.log_filename, 'wb')
             self.log_writer = csv.DictWriter(self.log_file, fieldnames=self.log_fields)
             self.log_writer.writeheader()
         self.live_plot = live_plot
-        self.rep = Reporter(metrics=['net_reward', 'avg_net_reward', 'final_deadline', 'success'], live_plot=self.live_plot)
+        self.rep = Reporter(metrics=['initial_distance', 'initial_deadline', 'net_reward', 'avg_net_reward', 'final_deadline', 'success'], live_plot=self.live_plot)
         self.avg_net_reward_window = 10
 
     def run(self, n_trials=1):
         self.quit = False
         self.rep.reset()
-        for trial in xrange(n_trials):
+        for trial in xrange(1, n_trials + 1):
             print "Simulator.run(): Trial {}".format(trial)  # [debug]
             self.env.reset()
             self.current_time = 0.0
@@ -125,6 +125,8 @@ class Simulator(object):
                 break
 
             # Collect/update metrics
+            self.rep.collect('initial_distance', trial, self.env.trial_data['initial_distance'])  # initial L1 distance value (start to destination)
+            self.rep.collect('initial_deadline', trial, self.env.trial_data['initial_deadline'])  # initial deadline value (time allotted)
             self.rep.collect('net_reward', trial, self.env.trial_data['net_reward'])  # total reward obtained in this trial
             self.rep.collect('avg_net_reward', trial, np.mean(self.rep.metrics['net_reward'].ydata[-self.avg_net_reward_window:]))  # rolling mean of reward
             self.rep.collect('final_deadline', trial, self.env.trial_data['final_deadline'])  # final deadline value (time remaining)
@@ -132,6 +134,8 @@ class Simulator(object):
             if self.log_metrics:
                 self.log_writer.writerow({
                     'trial': trial,
+                    'initial_distance': self.env.trial_data['initial_distance'],
+                    'initial_deadline': self.env.trial_data['initial_deadline'],
                     'net_reward': self.env.trial_data['net_reward'],
                     'final_deadline': self.env.trial_data['final_deadline'],
                     'success': self.env.trial_data['success']
