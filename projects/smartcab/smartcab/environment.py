@@ -33,7 +33,7 @@ class Environment(object):
 
     def __init__(self, num_dummies=6):
         self.num_dummies = num_dummies  # no. of dummy agents
-        
+
         # Initialize simulation variables
         self.done = False
         self.t = 0
@@ -77,8 +77,10 @@ class Environment(object):
 
         # Trial data (updated at the end of each trial)
         self.trial_data = {
+            'initial_distance': 0,  # L1 distance from start to destination
+            'initial_deadline': 0,  # given deadline (time steps) to start with
             'net_reward': 0.0,  # total reward earned in current trial
-            'final_deadline': None,  # deadline value (time remaining)
+            'final_deadline': None,  # deadline value (time remaining) at the end
             'success': 0  # whether the agent reached the destination in time
         }
 
@@ -109,7 +111,8 @@ class Environment(object):
             destination = random.choice(self.intersections.keys())
 
         start_heading = random.choice(self.valid_headings)
-        deadline = self.compute_dist(start, destination) * 5
+        distance = self.compute_dist(start, destination)
+        deadline = distance * 5
         print "Environment.reset(): Trial set up with start = {}, destination = {}, deadline = {}".format(start, destination, deadline)
 
         # Initialize agent(s)
@@ -122,6 +125,8 @@ class Environment(object):
             agent.reset(destination=(destination if agent is self.primary_agent else None))
             if agent is self.primary_agent:
                 # Reset metrics for this trial (step data will be set during the step)
+                self.trial_data['initial_distance'] = distance
+                self.trial_data['initial_deadline'] = deadline
                 self.trial_data['net_reward'] = 0.0
                 self.trial_data['final_deadline'] = deadline
                 self.trial_data['success'] = 0
