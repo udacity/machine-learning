@@ -1,31 +1,31 @@
-# Project 1: Model Evaluation & Validation
-## Predicting Boston Housing Prices
+# 项目1：模型评估与验证
+## 波士顿房价预测
 
-### Install
+### 准备工作
 
-This project requires **Python 2.7** and the following Python libraries installed:
+这个项目需要安装**Python 2.7**和以下的Python函数库：
 
 - [NumPy](http://www.numpy.org/)
 - [matplotlib](http://matplotlib.org/)
 - [scikit-learn](http://scikit-learn.org/stable/)
 
-You will also need to have software installed to run and execute an [iPython Notebook](http://ipython.org/notebook.html)
+你还需要安装一个软件，以运行和编辑[ipynb](http://jupyter.org/)文件。
 
-Udacity recommends our students install [Anaconda](https://www.continuum.io/downloads), a pre-packaged Python distribution that contains all of the necessary libraries and software for this project. 
+优达学城推荐学生安装 [Anaconda](https://www.continuum.io/downloads)，这是一个常用的Python集成编译环境，且已包含了本项目中所需的全部函数库。我们在P0项目中也有讲解[如何搭建学习环境](https://github.com/udacity/machine-learning/blob/master/projects_cn/titanic_survival_exploration/README.md)。
 
-### Code
+### 编码
 
-Template code is provided in the `boston_housing.ipynb` notebook file. You will also be required to use the included `visuals.py` Python file and the `housing.csv` dataset file to complete your work. While some code has already been implemented to get you started, you will need to implement additional functionality when requested to successfully complete the project.
+代码的模版已经在`boston_housing.ipynb`文件中给出。你还会用到`visuals.py`和名为`housing.csv`的数据文件来完成这个项目。我们已经为你提供了一部分代码，但还有些功能需要你来实现才能以完成这个项目。
 
-### Run
+### 运行
 
-In a terminal or command window, navigate to the top-level project directory `boston_housing/` (that contains this README) and run one of the following commands:
+在终端或命令行窗口中，选定`boston_housing/`的目录下（包含此README文件），运行下方的命令：
 
-```ipython notebook boston_housing.ipynb```  
 ```jupyter notebook boston_housing.ipynb```
 
-This will open the iPython Notebook software and project file in your browser.
+这样就能够启动jupyter notebook软件，并在你的浏览器中打开文件。
 
-### Data
+### 数据
 
-The dataset used in this project is included with the scikit-learn library ([`sklearn.datasets.load_boston`](http://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_boston.html#sklearn.datasets.load_boston)). You do not have to download it separately. You can find more information on this dataset from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Housing) page.
+
+本项目中使用的数据均包含在scikit-learn数据库([`sklearn.datasets.load_boston`] (http://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_boston.html#sklearn.datasets.load_boston))中，你无需额外下载。关于数据的更多信息，你可以访问[UCI机器学习库](https://archive.ics.uci.edu/ml/datasets/Housing)。
