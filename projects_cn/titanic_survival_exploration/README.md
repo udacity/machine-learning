@@ -13,7 +13,19 @@
 你还需要安装和运行 [Jupyter Notebook](http://jupyter.readthedocs.io/en/latest/install.html#optional-for-experienced-python-developers-installing-jupyter-with-pip)。
 
 
-优达学城推荐学生安装 [Anaconda](https://www.continuum.io/downloads)，一个包含了项目需要的所有库和软件的 Python 发行版本。
+优达学城推荐学生安装 [Anaconda](https://www.continuum.io/downloads)，一个包含了项目需要的所有库和软件的 Python 发行版本。[这里](https://classroom.udacity.com/nanodegrees/nd002/parts/0021345403/modules/317671873575460/lessons/5430778793/concepts/54140889150923)介绍了如何安装Anaconda。
+
+如果你使用macOS系统并且对命令行比较熟悉，可以安装[homebrew](http://brew.sh/)，以及brew版python
+
+```bash
+$ brew install python
+```
+
+再用下列命令安装所需要的python库
+
+```bash
+$ pip install numpy pandas matplotlib scikit-learn scipy jupyter
+```
 
 ### 代码
 ​
@@ -21,12 +33,33 @@
 
 ### 运行
 ​
-在命令行中，确保当前目录为 `titanic_survival_exploration/` 文件夹的最顶层（目录包含本 README 文件），运行下列命令。
-​
-```jupyter notebook titanic_survival_exploration.ipynb```
+在命令行中，确保当前目录为 `titanic_survival_exploration/` 文件夹的最顶层（目录包含本 README 文件），运行下列命令：
+
+```bash
+$ jupyter notebook titanic_survival_exploration.ipynb
+```
 ​
 这会启动 Jupyter Notebook 把项目文件打开在你的浏览器中。
+
+对jupyter不熟悉的同学可以看一下这两个链接：
+
+- [Jupyter使用视频教程](http://cn-static.udacity.com/mlnd/how_to_use_jupyter.mp4)
+- [为什么使用jupyter？](https://www.zhihu.com/question/37490497)
 ​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+
 ### 数据
 ​
 这个项目的数据包含在 `titanic_data.csv` 文件中。文件包含下列特征：
