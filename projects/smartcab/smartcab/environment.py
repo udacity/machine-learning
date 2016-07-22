@@ -65,23 +65,6 @@ class Environment(object):
         self.primary_agent = None  # to be set explicitly
         self.enforce_deadline = False
 
-        # Step data (updated after each environment step)
-        self.step_data = {
-            't': 0,
-            'deadline': 0,
-            'waypoint': None,
-            'inputs': None,
-            'action': None,
-            'reward': 0.0
-        }
-
-        # Trial data (updated at the end of each trial)
-        self.trial_data = {
-            'net_reward': 0.0,  # total reward earned in current trial
-            'final_deadline': None,  # deadline value (time remaining)
-            'success': 0  # whether the agent reached the destination in time
-        }
-
     def create_agent(self, agent_class, *args, **kwargs):
         agent = agent_class(self, *args, **kwargs)
         self.agent_states[agent] = {'location': random.choice(self.intersections.keys()), 'heading': (0, 1)}
@@ -120,11 +103,6 @@ class Environment(object):
                 'destination': destination if agent is self.primary_agent else None,
                 'deadline': deadline if agent is self.primary_agent else None}
             agent.reset(destination=(destination if agent is self.primary_agent else None))
-            if agent is self.primary_agent:
-                # Reset metrics for this trial (step data will be set during the step)
-                self.trial_data['net_reward'] = 0.0
-                self.trial_data['final_deadline'] = deadline
-                self.trial_data['success'] = 0
 
     def step(self):
         #print "Environment.step(): t = {}".format(self.t)  # [debug]
@@ -231,21 +209,10 @@ class Environment(object):
             if state['location'] == state['destination']:
                 if state['deadline'] >= 0:
                     reward += 10  # bonus
-                    self.trial_data['success'] = 1
                 self.done = True
                 print "Environment.act(): Primary agent has reached destination!"  # [debug]
             self.status_text = "state: {}\naction: {}\nreward: {}".format(agent.get_state(), action, reward)
             #print "Environment.act() [POST]: location: {}, heading: {}, action: {}, reward: {}".format(location, heading, action, reward)  # [debug]
-
-            # Update metrics
-            self.step_data['t'] = self.t
-            self.trial_data['final_deadline'] = self.step_data['deadline'] = state['deadline']
-            self.step_data['waypoint'] = agent.get_next_waypoint()
-            self.step_data['inputs'] = inputs
-            self.step_data['action'] = action
-            self.step_data['reward'] = reward
-            self.trial_data['net_reward'] += reward
-            print "Environment.act(): Step data: {}".format(self.step_data)  # [debug]
 
         return reward
 
