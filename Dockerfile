@@ -1,3 +1,3 @@
-FROM jupyter/scipy-notebook
+FROM jupyter/datascience-notebook
 MAINTAINER @udacity
 ADD . /home/jovyan/work
