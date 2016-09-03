@@ -31,7 +31,10 @@ class Environment(object):
     valid_headings = [(1, 0), (0, -1), (-1, 0), (0, 1)]  # ENWS
     hard_time_limit = -100  # even if enforce_deadline is False, end trial when deadline reaches this value (to avoid deadlocks)
 
-    def __init__(self):
+    def __init__(self, num_dummies=3):
+        self.num_dummies = num_dummies  # no. of dummy agents
+        
+        # Initialize simulation variables
         self.done = False
         self.t = 0
         self.agent_states = OrderedDict()
@@ -55,11 +58,10 @@ class Environment(object):
                     self.roads.append((a, b))
 
         # Dummy agents
-        self.num_dummies = 3  # no. of dummy agents
         for i in xrange(self.num_dummies):
             self.create_agent(DummyAgent)
 
-        # Primary agent
+        # Primary agent and associated parameters
         self.primary_agent = None  # to be set explicitly
         self.enforce_deadline = False
 
@@ -113,7 +115,9 @@ class Environment(object):
         for agent in self.agent_states.iterkeys():
             agent.update(self.t)
 
-        self.t += 1
+        if self.done:
+            return  # primary agent might have reached destination
+
         if self.primary_agent is not None:
             agent_deadline = self.agent_states[self.primary_agent]['deadline']
             if agent_deadline <= self.hard_time_limit:
@@ -123,6 +127,8 @@ class Environment(object):
                 self.done = True
                 print "Environment.step(): Primary agent ran out of time! Trial aborted."
             self.agent_states[self.primary_agent]['deadline'] = agent_deadline - 1
+
+        self.t += 1
 
     def sense(self, agent):
         assert agent in self.agent_states, "Unknown agent!"
@@ -150,7 +156,7 @@ class Environment(object):
                 if left != 'forward':  # we don't want to override left == 'forward'
                     left = other_heading
 
-        return {'light': light, 'oncoming': oncoming, 'left': left, 'right': right}  # TODO: make this a namedtuple
+        return {'light': light, 'oncoming': oncoming, 'left': left, 'right': right}
 
     def get_deadline(self, agent):
         return self.agent_states[agent]['deadline'] if agent is self.primary_agent else None
@@ -163,7 +169,7 @@ class Environment(object):
         location = state['location']
         heading = state['heading']
         light = 'green' if (self.intersections[location].state and heading[1] != 0) or ((not self.intersections[location].state) and heading[0] != 0) else 'red'
-        sense = self.sense(agent)
+        inputs = self.sense(agent)
 
         # Move agent if within bounds and obeys traffic rules
         reward = 0  # reward/penalty
@@ -172,12 +178,12 @@ class Environment(object):
             if light != 'green':
                 move_okay = False
         elif action == 'left':
-            if light == 'green' and (sense['oncoming'] == None or sense['oncoming'] == 'left'):
+            if light == 'green' and (inputs['oncoming'] == None or inputs['oncoming'] == 'left'):
                 heading = (heading[1], -heading[0])
             else:
                 move_okay = False
         elif action == 'right':
-            if light == 'green' or sense['left'] != 'straight':
+            if light == 'green' or inputs['left'] != 'forward':
                 heading = (-heading[1], heading[0])
             else:
                 move_okay = False
