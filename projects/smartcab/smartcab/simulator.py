@@ -23,17 +23,22 @@ class Simulator(object):
         'cyan'    : (  0, 200, 200),
         'magenta' : (200,   0, 200),
         'yellow'  : (255, 255,   0),
-        'orange'  : (255, 128,   0)
+        'mustard' : (200, 200,   0),
+        'orange'  : (255, 128,   0),
+        'gray'    : (155, 155, 155)
     }
 
     def __init__(self, env, size=None, update_delay=1.0, display=True, log_metrics=False, live_plot=False):
         self.env = env
-        self.size = size if size is not None else ((self.env.grid_size[0] + 1) * self.env.block_size, (self.env.grid_size[1] + 1) * self.env.block_size)
+        self.size = size if size is not None else ((self.env.grid_size[0] + 1) * self.env.block_size, (self.env.grid_size[1] + 2) * self.env.block_size)
         self.width, self.height = self.size
         
-        self.bg_color = self.colors['white']
-        self.road_width = 5
+        self.bg_color = self.colors['gray']
+        self.road_width = 44
         self.road_color = self.colors['black']
+        self.line_color = self.colors['mustard']
+        self.stop_color = self.colors['red']
+        self.boundary = self.colors['black']
 
         self.quit = False
         self.start_time = None
@@ -50,12 +55,12 @@ class Simulator(object):
 
                 self.frame_delay = max(1, int(self.update_delay * 1000))  # delay between GUI frames in ms (min: 1)
                 self.agent_sprite_size = (32, 32)
-                self.agent_circle_radius = 10  # radius of circle, when using simple representation
+                self.agent_circle_radius = 20  # radius of circle, when using simple representation
                 for agent in self.env.agent_states:
                     agent._sprite = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("images", "car-{}.png".format(agent.color))), self.agent_sprite_size)
                     agent._sprite_size = (agent._sprite.get_width(), agent._sprite.get_height())
 
-                self.font = self.pygame.font.Font(None, 28)
+                self.font = self.pygame.font.Font(None, 20)
                 self.paused = False
             except ImportError as e:
                 self.display = False
@@ -113,7 +118,7 @@ class Simulator(object):
 
                     # Render GUI and sleep
                     if self.display:
-                        self.render()
+                        self.render(trial)
                         self.pygame.time.wait(self.frame_delay)
                 except KeyboardInterrupt:
                     self.quit = True
@@ -155,30 +160,42 @@ class Simulator(object):
         if self.live_plot:
             self.rep.show_plot()  # holds till user closes plot window
 
-    def render(self):
+    def render(self, trial):
         # Clear screen
         self.screen.fill(self.bg_color)
 
         # Draw elements
         # * Static elements
-        for road in self.env.roads:
-            self.pygame.draw.line(self.screen, self.road_color, (road[0][0] * self.env.block_size, road[0][1] * self.env.block_size), (road[1][0] * self.env.block_size, road[1][1] * self.env.block_size), self.road_width)
 
+        # Boundary
+        self.pygame.draw.rect(self.screen, self.boundary, ((self.env.bounds[0] - self.env.hang)*self.env.block_size, (self.env.bounds[1]-self.env.hang)*self.env.block_size, (self.env.bounds[2] + self.env.hang/3)*self.env.block_size, (self.env.bounds[3] - 1 + self.env.hang/3)*self.env.block_size), 4)
+        
+        for road in self.env.roads:
+            # Road
+            self.pygame.draw.line(self.screen, self.road_color, (road[0][0] * self.env.block_size, road[0][1] * self.env.block_size), (road[1][0] * self.env.block_size, road[1][1] * self.env.block_size), self.road_width)
+            # Center line
+            self.pygame.draw.line(self.screen, self.line_color, (road[0][0] * self.env.block_size, road[0][1] * self.env.block_size), (road[1][0] * self.env.block_size, road[1][1] * self.env.block_size), 2)
+        
         for intersection, traffic_light in self.env.intersections.iteritems():
-            self.pygame.draw.circle(self.screen, self.road_color, (intersection[0] * self.env.block_size, intersection[1] * self.env.block_size), 10)
-            if traffic_light.state:  # North-South is open
-                self.pygame.draw.line(self.screen, self.colors['green'],
-                    (intersection[0] * self.env.block_size, intersection[1] * self.env.block_size - 15),
-                    (intersection[0] * self.env.block_size, intersection[1] * self.env.block_size + 15), self.road_width)
-            else:  # East-West is open
-                self.pygame.draw.line(self.screen, self.colors['green'],
-                    (intersection[0] * self.env.block_size - 15, intersection[1] * self.env.block_size),
-                    (intersection[0] * self.env.block_size + 15, intersection[1] * self.env.block_size), self.road_width)
+            self.pygame.draw.circle(self.screen, self.road_color, (intersection[0] * self.env.block_size, intersection[1] * self.env.block_size), self.road_width/2)
+            
+            # Draw stop lines for traffic
+            for i in [-1, 1]:
+                if traffic_light.state: # North-South is open
+                    self.pygame.draw.line(self.screen, self.stop_color, (intersection[0] * self.env.block_size - i * self.road_width/2, intersection[1] * self.env.block_size), (intersection[0] * self.env.block_size - i * self.road_width/2, intersection[1] * self.env.block_size + i * self.road_width/2), 4)
+                else: # East-West is open
+                    self.pygame.draw.line(self.screen, self.stop_color, (intersection[0] * self.env.block_size, intersection[1] * self.env.block_size - i * self.road_width/2), (intersection[0] * self.env.block_size - i * self.road_width/2, intersection[1] * self.env.block_size - i * self.road_width/2), 4)
+
 
         # * Dynamic elements
+        self.font = self.pygame.font.Font(None, 20)
         for agent, state in self.env.agent_states.iteritems():
             # Compute precise agent location here (back from the intersection some)
-            agent_offset = (2 * state['heading'][0] * self.agent_circle_radius, 2 * state['heading'][1] * self.agent_circle_radius)
+            agent_offset = (2 * state['heading'][0] * self.agent_circle_radius + self.agent_circle_radius * state['heading'][1] * 0.5, \
+                            2 * state['heading'][1] * self.agent_circle_radius - self.agent_circle_radius * state['heading'][0] * 0.5)
+
+
+            #agent_offset = (2 * state['heading'][0] * self.agent_circle_radius, 2 * state['heading'][1] * self.agent_circle_radius)
             agent_pos = (state['location'][0] * self.env.block_size - agent_offset[0], state['location'][1] * self.env.block_size - agent_offset[1])
             agent_color = self.colors[agent.color]
             if hasattr(agent, '_sprite') and agent._sprite is not None:
@@ -192,16 +209,22 @@ class Simulator(object):
                 self.pygame.draw.circle(self.screen, agent_color, agent_pos, self.agent_circle_radius)
                 self.pygame.draw.line(self.screen, agent_color, agent_pos, state['location'], self.road_width)
             if agent.get_next_waypoint() is not None:
-                self.screen.blit(self.font.render(agent.get_next_waypoint(), True, agent_color, self.bg_color), (agent_pos[0] + 10, agent_pos[1] + 10))
+                self.screen.blit(self.font.render(agent.get_next_waypoint(), True, self.colors['white']), (agent_pos[0] + 10, agent_pos[1] + 10))
             if state['destination'] is not None:
                 self.pygame.draw.circle(self.screen, agent_color, (state['destination'][0] * self.env.block_size, state['destination'][1] * self.env.block_size), 6)
                 self.pygame.draw.circle(self.screen, agent_color, (state['destination'][0] * self.env.block_size, state['destination'][1] * self.env.block_size), 15, 2)
 
         # * Overlays
-        text_y = 10
+        self.font = self.pygame.font.Font(None, 50)
+        self.screen.blit(self.font.render("Simulation Trial %s"%(trial), True, self.colors['black'], self.bg_color), (300, 10))
+        
+        self.font = self.pygame.font.Font(None, 30)
+        
+        text_y = 50
         for text in self.env.status_text.split('\n'):
-            self.screen.blit(self.font.render(text, True, self.colors['red'], self.bg_color), (100, text_y))
-            text_y += 20
+            self.screen.blit(self.font.render(text, True, self.colors['white'], self.bg_color), (300, text_y))
+            text_y += 28
+        
 
         # Flip buffers
         self.pygame.display.flip()
@@ -209,7 +232,7 @@ class Simulator(object):
     def pause(self):
         abs_pause_time = time.time()
         pause_text = "[PAUSED] Press any key to continue..."
-        self.screen.blit(self.font.render(pause_text, True, self.colors['cyan'], self.bg_color), (100, self.height - 40))
+        self.screen.blit(self.font.render(pause_text, True, self.colors['cyan'], self.bg_color), (300, self.height - 40))
         self.pygame.display.flip()
         print pause_text  # [debug]
         while self.paused:
@@ -217,5 +240,5 @@ class Simulator(object):
                 if event.type == self.pygame.KEYDOWN:
                     self.paused = False
             self.pygame.time.wait(self.frame_delay)
-        self.screen.blit(self.font.render(pause_text, True, self.bg_color, self.bg_color), (100, self.height - 40))
+        self.screen.blit(self.font.render(pause_text, True, self.bg_color, self.bg_color), (300, self.height - 40))
         self.start_time += (time.time() - abs_pause_time)

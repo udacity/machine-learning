@@ -1,8 +1,8 @@
 import time
 import random
 from collections import OrderedDict
-
 from simulator import Simulator
+
 
 class TrafficLight(object):
     """A traffic light that switches periodically."""
@@ -31,7 +31,7 @@ class Environment(object):
     valid_headings = [(1, 0), (0, -1), (-1, 0), (0, 1)]  # ENWS
     hard_time_limit = -100  # even if enforce_deadline is False, end trial when deadline reaches this value (to avoid deadlocks)
 
-    def __init__(self, num_dummies=6):
+    def __init__(self, num_dummies=25):
         self.num_dummies = num_dummies  # no. of dummy agents
 
         # Initialize simulation variables
@@ -42,8 +42,9 @@ class Environment(object):
 
         # Road network
         self.grid_size = (8, 6)  # (cols, rows)
-        self.bounds = (1, 1, self.grid_size[0], self.grid_size[1])
+        self.bounds = (1, 2, self.grid_size[0], self.grid_size[1] + 1)
         self.block_size = 100
+        self.hang = 0.6
         self.intersections = OrderedDict()
         self.roads = []
         for x in xrange(self.bounds[0], self.bounds[2] + 1):
@@ -56,6 +57,15 @@ class Environment(object):
                     continue
                 if (abs(a[0] - b[0]) + abs(a[1] - b[1])) == 1:  # L1 distance = 1
                     self.roads.append((a, b))
+
+        # Add edges
+        for x in xrange(self.bounds[0], self.bounds[2] + 1):
+            self.roads.append(((x, self.bounds[1] - self.hang), (x, self.bounds[1])))
+            self.roads.append(((x, self.bounds[3] + self.hang), (x, self.bounds[3])))
+        for y in xrange(self.bounds[1], self.bounds[3] + 1):
+            self.roads.append(((self.bounds[0] - self.hang, y), (self.bounds[0], y)))
+            self.roads.append(((self.bounds[2] + self.hang, y), (self.bounds[2], y)))    
+
 
         # Dummy agents
         for i in xrange(self.num_dummies):
@@ -199,7 +209,7 @@ class Environment(object):
         inputs = self.sense(agent)
 
         # Move agent if within bounds and obeys traffic rules
-        reward = 0  # reward/penalty
+        reward = 0.0 + (random.random() - 0.5) # reward/penalty
         move_okay = True
         if action == 'forward':
             if light != 'green':
@@ -224,13 +234,13 @@ class Environment(object):
                 #if self.bounds[0] <= location[0] <= self.bounds[2] and self.bounds[1] <= location[1] <= self.bounds[3]:  # bounded
                 state['location'] = location
                 state['heading'] = heading
-                reward = 2.0 if action == agent.get_next_waypoint() else -0.5  # valid, but is it correct? (as per waypoint)
+                reward = (1.0 + (random.random() - 0.5)) if action == agent.get_next_waypoint() else (-0.5 + (random.random() - 0.5))  # valid, but is it correct? (as per waypoint)
             else:
                 # Valid null move
-                reward = 0.0
+                reward = 0.0 + (random.random() - 0.5)
         else:
             # Invalid move
-            reward = -1.0
+            reward = -1.0 + (random.random() - 0.5)
 
         if agent is self.primary_agent:
             if state['location'] == state['destination']:
@@ -282,7 +292,7 @@ class Agent(object):
 
 
 class DummyAgent(Agent):
-    color_choices = ['blue', 'cyan', 'magenta', 'orange']
+    color_choices = ['blue', 'cyan', 'green', 'orange', 'red', 'yellow'] #, 'magenta', 'orange', 'green', 'yellow']
 
     def __init__(self, env):
         super(DummyAgent, self).__init__(env)  # sets self.env = env, state = None, next_waypoint = None, and a default color
