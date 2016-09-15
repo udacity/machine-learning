@@ -19,12 +19,14 @@ class Simulator(object):
         'white'   : (255, 255, 255),
         'red'     : (255,   0,   0),
         'green'   : (  0, 255,   0),
+        'dgreen'  : (  0, 228,   0),
         'blue'    : (  0,   0, 255),
         'cyan'    : (  0, 200, 200),
         'magenta' : (200,   0, 200),
         'yellow'  : (255, 255,   0),
         'mustard' : (200, 200,   0),
         'orange'  : (255, 128,   0),
+        'maroon'  : (228,   0,   0),
         'gray'    : (155, 155, 155)
     }
 
@@ -32,12 +34,13 @@ class Simulator(object):
         self.env = env
         self.size = size if size is not None else ((self.env.grid_size[0] + 1) * self.env.block_size, (self.env.grid_size[1] + 2) * self.env.block_size)
         self.width, self.height = self.size
-        
-        self.bg_color = self.colors['gray']
         self.road_width = 44
+
+        self.bg_color = self.colors['gray']
         self.road_color = self.colors['black']
         self.line_color = self.colors['mustard']
         self.stop_color = self.colors['red']
+        self.go_color = self.colors['green']
         self.boundary = self.colors['black']
 
         self.quit = False
@@ -52,6 +55,10 @@ class Simulator(object):
                 self.pygame = importlib.import_module('pygame')
                 self.pygame.init()
                 self.screen = self.pygame.display.set_mode(self.size)
+                self._logo = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("images", "logo.png")), (self.road_width, self.road_width))
+
+                self._ew = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("images", "east-west.png")), (self.road_width, self.road_width))
+                self._ns = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("images", "north-south.png")), (self.road_width, self.road_width))
 
                 self.frame_delay = max(1, int(self.update_delay * 1000))  # delay between GUI frames in ms (min: 1)
                 self.agent_sprite_size = (32, 32)
@@ -178,14 +185,22 @@ class Simulator(object):
         
         for intersection, traffic_light in self.env.intersections.iteritems():
             self.pygame.draw.circle(self.screen, self.road_color, (intersection[0] * self.env.block_size, intersection[1] * self.env.block_size), self.road_width/2)
-            
+            """
             # Draw stop lines for traffic
             for i in [-1, 1]:
                 if traffic_light.state: # North-South is open
-                    self.pygame.draw.line(self.screen, self.stop_color, (intersection[0] * self.env.block_size - i * self.road_width/2, intersection[1] * self.env.block_size), (intersection[0] * self.env.block_size - i * self.road_width/2, intersection[1] * self.env.block_size + i * self.road_width/2), 4)
+                    self.pygame.draw.line(self.screen, self.stop_color, (intersection[0] * self.env.block_size - i * self.road_width/2, intersection[1] * self.env.block_size), (intersection[0] * self.env.block_size - i * self.road_width/2, intersection[1] * self.env.block_size + i * self.road_width/2), 2)
+                    self.pygame.draw.line(self.screen, self.go_color, (intersection[0] * self.env.block_size, intersection[1] * self.env.block_size - i * self.road_width/2), (intersection[0] * self.env.block_size - i * self.road_width/2, intersection[1] * self.env.block_size - i * self.road_width/2), 2)
                 else: # East-West is open
-                    self.pygame.draw.line(self.screen, self.stop_color, (intersection[0] * self.env.block_size, intersection[1] * self.env.block_size - i * self.road_width/2), (intersection[0] * self.env.block_size - i * self.road_width/2, intersection[1] * self.env.block_size - i * self.road_width/2), 4)
-
+                    self.pygame.draw.line(self.screen, self.stop_color, (intersection[0] * self.env.block_size, intersection[1] * self.env.block_size - i * self.road_width/2), (intersection[0] * self.env.block_size - i * self.road_width/2, intersection[1] * self.env.block_size - i * self.road_width/2), 2)
+                    self.pygame.draw.line(self.screen, self.go_color, (intersection[0] * self.env.block_size - i * self.road_width/2, intersection[1] * self.env.block_size), (intersection[0] * self.env.block_size - i * self.road_width/2, intersection[1] * self.env.block_size + i * self.road_width/2), 2)
+            """
+            if traffic_light.state: #North-South is open
+                self.screen.blit(self._ns,
+                    self.pygame.rect.Rect(intersection[0]*self.env.block_size - self.road_width/2, intersection[1]*self.env.block_size - self.road_width/2, intersection[0]*self.env.block_size + self.road_width, intersection[1]*self.env.block_size + self.road_width/2))
+            else:
+                self.screen.blit(self._ew,
+                    self.pygame.rect.Rect(intersection[0]*self.env.block_size - self.road_width/2, intersection[1]*self.env.block_size - self.road_width/2, intersection[0]*self.env.block_size + self.road_width, intersection[1]*self.env.block_size + self.road_width/2))
 
         # * Dynamic elements
         self.font = self.pygame.font.Font(None, 20)
@@ -208,31 +223,52 @@ class Simulator(object):
                 # Draw simple agent (circle with a short line segment poking out to indicate heading)
                 self.pygame.draw.circle(self.screen, agent_color, agent_pos, self.agent_circle_radius)
                 self.pygame.draw.line(self.screen, agent_color, agent_pos, state['location'], self.road_width)
-            if agent.get_next_waypoint() is not None:
-                self.screen.blit(self.font.render(agent.get_next_waypoint(), True, self.colors['white']), (agent_pos[0] + 10, agent_pos[1] + 10))
+            
+
             if state['destination'] is not None:
-                self.pygame.draw.circle(self.screen, agent_color, (state['destination'][0] * self.env.block_size, state['destination'][1] * self.env.block_size), 6)
-                self.pygame.draw.circle(self.screen, agent_color, (state['destination'][0] * self.env.block_size, state['destination'][1] * self.env.block_size), 15, 2)
+                self.screen.blit(self._logo,
+                    self.pygame.rect.Rect(state['destination'][0] * self.env.block_size - self.road_width/2, \
+                        state['destination'][1] * self.env.block_size - self.road_width/2, \
+                        state['destination'][0]*self.env.block_size + self.road_width/2, \
+                        state['destination'][1]*self.env.block_size + self.road_width/2))
+                #self.pygame.draw.circle(self.screen, agent_color, (state['destination'][0] * self.env.block_size, state['destination'][1] * self.env.block_size), self.road_width/2 - 3, 1)
 
         # * Overlays
         self.font = self.pygame.font.Font(None, 50)
-        self.screen.blit(self.font.render("Simulation Trial %s"%(trial), True, self.colors['black'], self.bg_color), (300, 10))
-        
+        self.screen.blit(self.font.render("Simulation Trial %s"%(trial), True, self.colors['black'], self.bg_color), (10, 10))
+                
+        # Denote whether a trial was a success or failure
+        if state['destination'] != state['location'] and state['deadline'] > 0:
+            self.font = self.pygame.font.Font(None, 40)
+            if self.env.success == True:
+                self.screen.blit(self.font.render("Trial %s: Success"%(trial-1), True, self.colors['dgreen'], self.bg_color), (10, 50))
+            if self.env.success == False:
+                self.screen.blit(self.font.render("Trial %s: Failure"%(trial-1), True, self.colors['maroon'], self.bg_color), (10, 50))
+
         self.font = self.pygame.font.Font(None, 30)
-        
-        text_y = 50
-        for text in self.env.status_text.split('\n'):
-            self.screen.blit(self.font.render(text, True, self.colors['white'], self.bg_color), (300, text_y))
-            text_y += 28
-        
+
+        # Print statistics
+        status = self.env.status_text
+        if status:
+            self.screen.blit(self.font.render("Previous State: {}".format(status['state']), True, self.colors['white'], self.bg_color), (350, 10))
+            if status['okay'] == True:
+                self.screen.blit(self.font.render("Legal Action: {}".format(status['action']), True, self.colors['dgreen'], self.bg_color), (350, 40))
+            else:
+                self.screen.blit(self.font.render("Illegal Action: {}".format(status['action']), True, self.colors['maroon'], self.bg_color), (350, 40))
+            self.screen.blit(self.font.render("Action Reward: {:.4f}".format(status['reward']), True, \
+                self.colors['maroon'] if status['reward'] < 0 else self.colors['dgreen'], self.bg_color), (350, 70))
+            self.screen.blit(self.font.render("Time Remaining: {:.0f}%".format(status['time']), True, self.colors['black'], self.bg_color), (350, 100))
+
+        else:
+            self.pygame.rect.Rect(350, 10, self.width, 200)
 
         # Flip buffers
         self.pygame.display.flip()
 
     def pause(self):
         abs_pause_time = time.time()
-        pause_text = "[PAUSED] Press any key to continue..."
-        self.screen.blit(self.font.render(pause_text, True, self.colors['cyan'], self.bg_color), (300, self.height - 40))
+        pause_text = "Simulation Paused. Press any key to continue. . ."
+        self.screen.blit(self.font.render(pause_text, True, self.colors['red'], self.bg_color), (400, self.height - 30))
         self.pygame.display.flip()
         print pause_text  # [debug]
         while self.paused:
@@ -240,5 +276,5 @@ class Simulator(object):
                 if event.type == self.pygame.KEYDOWN:
                     self.paused = False
             self.pygame.time.wait(self.frame_delay)
-        self.screen.blit(self.font.render(pause_text, True, self.bg_color, self.bg_color), (300, self.height - 40))
+        self.screen.blit(self.font.render(pause_text, True, self.bg_color, self.bg_color), (400, self.height - 30))
         self.start_time += (time.time() - abs_pause_time)
