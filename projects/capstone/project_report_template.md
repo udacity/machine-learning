@@ -1,5 +1,5 @@
-# Capstone Project
-## Machine Learning Engineer Nanodegree
+# Machine Learning Engineer Nanodegree
+## Capstone Project
 Joe Udacity  
 December 31st, 2050
 

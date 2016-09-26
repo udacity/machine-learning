@@ -1,3 +1,3 @@
 # Machine Learning Engineer Nanodegree
 # Specializations
-## Project: Capstone
+## Project: Capstone Proposal
