@@ -1,5 +1,6 @@
-# Project 1: Model Evaluation & Validation
-## Predicting Boston Housing Prices
+# Machine Learning Engineer Nanodegree
+# Supervised Learning
+## Project: Finding Donors for CharityML
 
 ### Install
 
