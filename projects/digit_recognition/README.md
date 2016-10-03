@@ -1,6 +1,6 @@
 # Machine Learning Engineer Nanodegree
 # Deep Learning
-## Project: Build a Character Recognition Program
+## Project: Build a Digit Recognition Program
 
 ### Install
 
@@ -41,18 +41,18 @@ conda install -c menpo opencv=2.4.11
 
 ### Code
 
-A template notebook is provided as `character_recognition.ipynb`. While no code is included in the notebook, you will be required to use the notebook to implement the basic functionality of your project and answer questions about your implementation and results. 
+A template notebook is provided as `digit_recognition.ipynb`. While no code is included in the notebook, you will be required to use the notebook to implement the basic functionality of your project and answer questions about your implementation and results. 
 
 ### Run
 
-In a terminal or command window, navigate to the top-level project directory `character_recognition/` (that contains this README) and run one of the following commands:
+In a terminal or command window, navigate to the top-level project directory `digit_recognition/` (that contains this README) and run one of the following commands:
 
 ```bash
-ipython notebook character_recognition.ipynb
+ipython notebook digit_recognition.ipynb
 ```  
 or
 ```bash
-jupyter notebook character_recognition.ipynb
+jupyter notebook digit_recognition.ipynb
 ```
 
 This will open the Jupyter Notebook software and notebook file in your browser.
