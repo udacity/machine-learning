@@ -11,6 +11,7 @@ This project uses the following software and Python libraries:
 - [Python 2.7](https://www.python.org/download/releases/2.7/)
 - [NumPy](http://www.numpy.org/)
 - [SciPy](https://www.scipy.org/)
+- [scikit-learn](http://scikit-learn.org/0.17/install.html) (v0.17)
 - [TensorFlow](http://tensorflow.org)
 
 You will also need to have software installed to run and execute a [Jupyter Notebook](http://ipython.org/notebook.html).
