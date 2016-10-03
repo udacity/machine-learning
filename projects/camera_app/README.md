@@ -1,6 +1,6 @@
 # Machine Learning Engineer Nanodegree
 # Deep Learning
-## Project: Build a Live Camera App
+## Project: Build a Character Recognition Program
 
 ### Install
 
@@ -8,6 +8,7 @@ This project requires **Python 2.7** and the following Python libraries installe
 
 - [NumPy](http://www.numpy.org/)
 - [SciPy](https://www.scipy.org/)
+- [scikit-learn](http://scikit-learn.org/0.17/install.html) (v0.17)
 - [TensorFlow](http://tensorflow.org)
 
 You will also need to have software installed to run and execute a [Jupyter Notebook](http://ipython.org/notebook.html).
@@ -40,18 +41,18 @@ conda install -c menpo opencv=2.4.11
 
 ### Code
 
-A template notebook is provided as `camera_app.ipynb`. While no code is included in the notebook, you will be required to use the notebook to implement the basic functionality of your project and answer questions about your implementation and results. 
+A template notebook is provided as `character_recognition.ipynb`. While no code is included in the notebook, you will be required to use the notebook to implement the basic functionality of your project and answer questions about your implementation and results. 
 
 ### Run
 
-In a terminal or command window, navigate to the top-level project directory `camera_app/` (that contains this README) and run one of the following commands:
+In a terminal or command window, navigate to the top-level project directory `character_recognition/` (that contains this README) and run one of the following commands:
 
 ```bash
-ipython notebook camera_app.ipynb
+ipython notebook character_recognition.ipynb
 ```  
 or
 ```bash
-jupyter notebook camera_app.ipynb
+jupyter notebook character_recognition.ipynb
 ```
 
 This will open the Jupyter Notebook software and notebook file in your browser.
