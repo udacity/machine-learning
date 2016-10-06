@@ -26,7 +26,7 @@ Mac:
 `conda install -c https://conda.anaconda.org/quasiben pygame`
 
 Windows & Linux:  
-`conda install -c https://conda.anaconda.org/tlatorre pygame`
+`conda install -c https://conda.anaconda.org/prkrekel pygame`
 
 ## Starting the Project
 
