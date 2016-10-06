@@ -30,16 +30,13 @@ For those optionally seeking to deploy an Android application:
 
 If you do not have Python installed yet, it is highly recommended that you install the [Anaconda](http://continuum.io/downloads) distribution of Python, which already has the above packages and more included. Make sure that you select the Python 2.7 installer and not the Python 3.x installer. `pygame` and `OpenCV` can then be installed using one of the following commands:
 
-Mac:  
-```bash
-conda install -c https://conda.anaconda.org/quasiben pygame
-conda install -c menpo opencv=2.4.11
-```
+**opencv**  
+`conda install -c menpo opencv=2.4.11`
 
-Windows & Linux:  
-```bash
-conda install -c https://conda.anaconda.org/prkrekel pygame
-conda install -c menpo opencv=2.4.11
+**PyGame:**  
+Mac:  `conda install -c https://conda.anaconda.org/quasiben pygame`  
+Windows: `conda install -c https://conda.anaconda.org/tlatorre pygame`  
+Linux:  `conda install -c https://conda.anaconda.org/prkrekel pygame`  
 ```
 
 ## Starting the Project
