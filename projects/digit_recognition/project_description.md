@@ -38,7 +38,7 @@ conda install -c menpo opencv=2.4.11
 
 Windows & Linux:  
 ```bash
-conda install -c https://conda.anaconda.org/tlatorre pygame
+conda install -c https://conda.anaconda.org/prkrekel pygame
 conda install -c menpo opencv=2.4.11
 ```
 
