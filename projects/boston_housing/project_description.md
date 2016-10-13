@@ -32,12 +32,12 @@ If you do not have Python installed yet, it is highly recommended that you insta
 
 ## Starting the Project
 
-For this assignment, you can find the `boston_housing` folder containing the necessary project files on the [Machine Learning projects GitHub](https://github.com/udacity/machine-learning), under the `projects` folder. You may download all of the projects we\'ll use in this Nanodegree program directly from this repo.
+For this assignment, you can find the `boston_housing` folder containing the necessary project files on the [Machine Learning projects GitHub](https://github.com/udacity/machine-learning), under the `projects` folder. You may download all of the projects we'll use in this Nanodegree program directly from this repo.
 
 This project contains three files:
 
 - `boston_housing.ipynb`: This is the main file where you will be performing your work on the project.
-- `housing.csv`: The project dataset. You\'ll load this data in the notebook.
+- `housing.csv`: The project dataset. You'll load this data in the notebook.
 - `visuals.py`: This Python script provides supplementary visualizations for the project. Do not modify.
 
 In the Terminal or Command Prompt, navigate to the folder containing the project files, and then use the command `jupyter notebook boston_housing.ipynb` to open up a browser window or tab to work with your notebook. Alternatively, you can use the command `jupyter notebook` or `ipython notebook` and navigate to the notebook file in the browser window that opens. Follow the instructions in the notebook and answer each question presented to successfully complete the project. A **README** file has also been provided with the project files which may contain additional necessary information or instruction for the project. 
@@ -55,7 +55,7 @@ When you are ready to submit your project, collect the following files and compr
 Once you have collected these files and reviewed the project rubric, proceed to the project submission page.
 
 ### I'm Ready!
-When you\'re ready to submit your project, click on the **Submit Project** button at the bottom of the page.
+When you're ready to submit your project, click on the **Submit Project** button at the bottom of the page.
 
 If you are having any problems submitting your project or wish to check on the status of your submission, please email us at **machine-support@udacity.com** or visit us in the <a href="http://discussions.udacity.com" target="_blank">discussion forums</a>.
 
