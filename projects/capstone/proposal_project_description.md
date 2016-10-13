@@ -2,8 +2,8 @@
 ## Project: Capstone Proposal and Capstone Project
 
 ## Capstone Proposal Overview
-In this capstone project proposal, prior to completing the following **Capstone Project**, you you will leverage what you\'ve learned throughout the Nanodegree program to author a proposal for solving a problem of your choice by applying machine learning algorithms and techniques. A project proposal encompasses seven key points: 
-- The project's **domain background** - the field of research where the project is derived;
+In this capstone project proposal, prior to completing the following **Capstone Project**, you you will leverage what you've learned throughout the Nanodegree program to author a proposal for solving a problem of your choice by applying machine learning algorithms and techniques. A project proposal encompasses seven key points: 
+- The project's **domain background** : the field of research where the project is derived;
 - A **problem statement** : a problem being investigated for which a solution will be defined;
 - The **datasets and inputs** : data or inputs being used for the problem;
 - A **solution statement** : a the solution proposed for the problem given;
