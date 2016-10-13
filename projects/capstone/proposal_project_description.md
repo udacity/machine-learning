@@ -54,7 +54,7 @@ Your project will be reviewed by a Udacity reviewer against the **<a href="https
 
 ### Submission Files
 At minimum, your submission will be required to have the following files listed below. If your submission method of choice is uploading an archive (`*.zip`), please take into consideration the total file size. You will need to include
-- A project proposal, *in PDF format only*, with the name **proposal.pdf**, addressing each of the eight key points of a proposal. The recommended page length for a proposal is approximately *two to three pages*.
+- A project proposal, *in PDF format only*, with the name **proposal.pdf**, addressing each of the seven key points of a proposal. The recommended page length for a proposal is approximately *two to three pages*.
 - Any additional supporting material such as datasets, images, or input files that are necessary for your project and proposal. If these files are too large and you are uploading your submission, instead provide appropriate means of acquiring the necessary files in an included `README.md` file.
 
 Once you have collected these files and reviewed the project rubric, proceed to the project submission page.
