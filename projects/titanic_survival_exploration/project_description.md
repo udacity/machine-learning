@@ -4,9 +4,9 @@
 ## Project Overview
 Welcome to the Machine Learning Engineer Nanodegree!
 
-In this ***optional*** project, you will create decision functions that attempt to predict survival outcomes from the 1912 Titanic disaster based on each passenger\'s features, such as sex and age. You will start with a simple algorithm and increase its complexity until you are able to accurately predict the outcomes for at least 80\% of the passengers in the provided data. This project will introduce you to some of the concepts of machine learning as you start the Nanodegree program.
+In this ***optional*** project, you will create decision functions that attempt to predict survival outcomes from the 1912 Titanic disaster based on each passenger's features, such as sex and age. You will start with a simple algorithm and increase its complexity until you are able to accurately predict the outcomes for at least 80% of the passengers in the provided data. This project will introduce you to some of the concepts of machine learning as you start the Nanodegree program.
 
-In addition, you\'ll make sure Python is installed with the necessary packages to complete this project. There are two Python libraries, `numpy` and `pandas`, that we\'ll use a bit here in this project. Don\'t worry about how these libraries work for now -- we\'ll get to them in more detail in later projects. This project will also familiarize you with the submission process for the projects that you will be completing as part of the Nanodegree program.
+In addition, you'll make sure Python is installed with the necessary packages to complete this project. There are two Python libraries, `numpy` and `pandas`, that we'll use a bit here in this project. Don't worry about how these libraries work for now -- we'll get to them in more detail in later projects. This project will also familiarize you with the submission process for the projects that you will be completing as part of the Nanodegree program.
 
 ## Software Requirements
 This project uses the following software and Python libraries:
@@ -47,10 +47,10 @@ When you are ready to submit your project, collect the following files and compr
 
 Once you have collected these files and reviewed the project rubric, proceed to the project submission page.
 
-### I\'m Ready!
-When you\'re ready to submit your project, click on the **Submit Project** button at the bottom of the page.
+### I'm Ready!
+When you're ready to submit your project, click on the **Submit Project** button at the bottom of the page.
 
 If you are having any problems submitting your project or wish to check on the status of your submission, please email us at **machine-support@udacity.com** or visit us in the <a href="http://discussions.udacity.com" target="_blank">discussion forums</a>.
 
-### What\'s Next?
+### What's Next?
 You will get an email as soon as your reviewer has feedback for you. In the meantime, review your next project and feel free to get started on it or the courses supporting it!
