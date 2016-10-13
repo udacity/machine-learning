@@ -17,7 +17,7 @@ Things you will learn by completing this project:
 - How to assess information given by cluster data and use it in a meaningful way.
 
 ## Description
-A wholesale distributor recently tested a change to their delivery method for some customers, by moving from a morning delivery service five days a week to a cheaper evening delivery service three days a week. Initial testing did not discover any significant unsatisfactory results, so they implemented the cheaper option for all customers. Almost immediately, the distributor began getting complaints about the delivery service change and customers were canceling deliveries, losing the distributor more money than what was being saved. You\'ve been hired by the wholesale distributor to find what types of customers they have to help them make better, more informed business decisions in the future. Your task is to use unsupervised learning techniques to see if any similarities exist between customers, and how to best segment customers into distinct categories.
+A wholesale distributor recently tested a change to their delivery method for some customers, by moving from a morning delivery service five days a week to a cheaper evening delivery service three days a week. Initial testing did not discover any significant unsatisfactory results, so they implemented the cheaper option for all customers. Almost immediately, the distributor began getting complaints about the delivery service change and customers were canceling deliveries, losing the distributor more money than what was being saved. You've been hired by the wholesale distributor to find what types of customers they have to help them make better, more informed business decisions in the future. Your task is to use unsupervised learning techniques to see if any similarities exist between customers, and how to best segment customers into distinct categories.
 
 ## Software and Libraries
 This project uses the following software and Python libraries:
@@ -34,7 +34,7 @@ If you do not have Python installed yet, it is highly recommended that you insta
 
 ## Starting the Project
 
-For this assignment, you can find the `customer_segments` folder containing the necessary project files on the [Machine Learning projects GitHub](https://github.com/udacity/machine-learning), under the `projects` folder. You may download all of the projects we\'ll use in this Nanodegree program directly from this repo.
+For this assignment, you can find the `customer_segments` folder containing the necessary project files on the [Machine Learning projects GitHub](https://github.com/udacity/machine-learning), under the `projects` folder. You may download all of the projects we'll use in this Nanodegree program directly from this repo.
 
 This project contains three files:
 
@@ -56,10 +56,10 @@ When you are ready to submit your project, collect the following files and compr
 
 Once you have collected these files and reviewed the project rubric, proceed to the project submission page.
 
-### I\'m Ready!
+### I'm Ready!
 When you're ready to submit your project, click on the **Submit Project** button at the bottom of the page.
 
 If you are having any problems submitting your project or wish to check on the status of your submission, please email us at **machine-support@udacity.com** or visit us in the <a href="http://discussions.udacity.com" target="_blank">discussion forums</a>.
 
-### What\'s Next?
+### What's Next?
 You will get an email as soon as your reviewer has feedback for you. In the meantime, review your next project and feel free to get started on it or the courses supporting it!
