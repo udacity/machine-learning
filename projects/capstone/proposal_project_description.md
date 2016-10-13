@@ -1,6 +1,5 @@
-# Machine Learning Engineer Nanodegree
-## Specializations
-## Capstone Proposal and Capstone Project
+# Content: Specializations
+## Project: Capstone Proposal and Capstone Project
 
 ## Capstone Proposal Overview
 In this capstone project proposal, prior to completing the following **Capstone Project**, you you will leverage what you\'ve learned throughout the Nanodegree program to author a proposal for solving a problem of your choice by applying machine learning algorithms and techniques. A project proposal encompasses seven key points: 
