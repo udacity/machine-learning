@@ -87,18 +87,18 @@ def evaluate(results, accuracy, f1):
     ax[1, 2].set_ylabel("F-score")
     
     # Add titles
-    ax[0, 0].set_title("Training Time")
-    ax[0, 1].set_title("Accuracy on Training Samples")
-    ax[0, 2].set_title("F-score on Training Samples")
-    ax[1, 0].set_title("Predicting Time")
+    ax[0, 0].set_title("Model Training")
+    ax[0, 1].set_title("Accuracy Score on Training Subset")
+    ax[0, 2].set_title("F-score on Training Subset")
+    ax[1, 0].set_title("Model Predicting")
     ax[1, 1].set_title("Accuracy Score on Testing Set")
     ax[1, 2].set_title("F-score on Testing Set")
     
     # Add horizontal lines for naive predictors
-    ax[0, 1].axhline(y = accuracy, xmin = -0.1, xmax = 3.0, linewidth = 1, color = 'k', linestyle = 'dotted')
-    ax[1, 1].axhline(y = accuracy, xmin = -0.1, xmax = 3.0, linewidth = 1, color = 'k', linestyle = 'dotted')
-    ax[0, 2].axhline(y = f1, xmin = -0.1, xmax = 3.0, linewidth = 1, color = 'k', linestyle = 'dotted')
-    ax[1, 2].axhline(y = f1, xmin = -0.1, xmax = 3.0, linewidth = 1, color = 'k', linestyle = 'dotted')
+    ax[0, 1].axhline(y = accuracy, xmin = -0.1, xmax = 3.0, linewidth = 1, color = 'k', linestyle = 'dashed')
+    ax[1, 1].axhline(y = accuracy, xmin = -0.1, xmax = 3.0, linewidth = 1, color = 'k', linestyle = 'dashed')
+    ax[0, 2].axhline(y = f1, xmin = -0.1, xmax = 3.0, linewidth = 1, color = 'k', linestyle = 'dashed')
+    ax[1, 2].axhline(y = f1, xmin = -0.1, xmax = 3.0, linewidth = 1, color = 'k', linestyle = 'dashed')
     
     # Set y-limits for score panels
     ax[0, 1].set_ylim((0, 1))

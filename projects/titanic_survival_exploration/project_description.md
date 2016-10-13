@@ -26,7 +26,7 @@ If you already have Python 2.7 installed on your computer, then you can install 
 
 ## Starting the Project
 
-For this assignment, you can find the `titanic_survival_exploration.zip` archive containing the necessary project files as a downloadable in the **Resources** section. *You may also visit our [Machine Learning projects GitHub](https://github.com/udacity/machine-learning) to have access to all of the projects available for this Nanodegree.*
+For this assignment, you can find the `titanic_survival_exploration` folder containing the necessary project files on the [Machine Learning projects GitHub](https://github.com/udacity/machine-learning), under the `projects` folder. You may download all of the projects we\'ll use in this Nanodegree program directly from this repo.
 
 This project contains three files:
 
