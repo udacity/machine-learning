@@ -10,24 +10,29 @@ This project requires **Python 2.7** and the following Python libraries installe
 - [Pandas](http://pandas.pydata.org)
 - [scikit-learn](http://scikit-learn.org/stable/)
 
-You will also need to have software installed to run and execute an [iPython Notebook](http://ipython.org/notebook.html)
+You will also need to have software installed to run and execute a [Jupyter Notebook](http://ipython.org/notebook.html)
 
-Udacity recommends our students install [Anaconda](https://www.continuum.io/downloads), a pre-packaged Python distribution that contains all of the necessary libraries and software for this project. 
+If you do not have Python installed yet, it is highly recommended that you install the [Anaconda](http://continuum.io/downloads) distribution of Python, which already has the above packages and more included. Make sure that you select the Python 2.7 installer and not the Python 3.x installer.
 
 ### Code
 
-Template code is provided in the notebook `student_intervention.ipynb` notebook file. While some code has already been implemented to get you started, you will need to implement additional functionality when requested to successfully complete the project.
+Template code is provided in the `student_intervention.ipynb` notebook file. You will also be required to use the `student-data.csv` dataset file to complete your work. While some code has already been implemented to get you started, you will need to implement additional functionality when requested to successfully complete the project.
 
 ### Run
 
 In a terminal or command window, navigate to the top-level project directory `student_intervention/` (that contains this README) and run one of the following commands:
 
-```ipython notebook student_intervention.ipynb```  
-```jupyter notebook student_intervention.ipynb```
+```bash
+ipython notebook student_intervention.ipynb
+```  
+or
+```bash
+jupyter notebook student_intervention.ipynb
+```
 
-This will open the iPython Notebook software and project file in your browser.
+This will open the Jupyter Notebook software and project file in your browser.
 
-## Data
+### Data
 
 The dataset used in this project is included as `student-data.csv`. This dataset has the following attributes:
 
