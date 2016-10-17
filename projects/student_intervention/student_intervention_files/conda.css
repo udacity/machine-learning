@@ -1,0 +1,62 @@
+.action_col {
+    text-align: right;
+}
+
+.action_col a {
+    color: black;
+}
+
+.default_col {
+    text-align: center;
+}
+
+.list_item > div input.flush-left {
+    margin-left: 4px;
+}
+
+div.scrollable {
+    overflow-y: auto;
+    height: 180px;
+}
+
+div.big_scrollable {
+    overflow-y: auto;
+    height: 280px;
+}
+
+div.half_width {
+    width: 48%;
+    margin: 1%;
+    display: inline-block;
+}
+
+input.small-input {
+    height: 22px;
+    width: 100%;
+    padding: 2px 6px 0px 6px;
+    font-size: 10px;
+}
+
+#environments {
+    width: 98%;
+    margin: 1%;
+}
+
+div.inprogress {
+    background-color: #8F8;
+    width: 72px;
+    text-align: center;
+}
+
+.icon-button {
+    padding-right: 8px;
+}
+
+label {
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.new_env_form input {
+    margin-right: 15px;
+}
