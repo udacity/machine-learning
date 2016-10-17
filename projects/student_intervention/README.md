@@ -1,5 +1,6 @@
-# Project 2: Supervised Learning
-## Building a Student Intervention System
+# Machine Learning Engineer Nanodegree
+# Supervised Learning
+## Project: Building a Student Intervention System
 
 ### Install
 
