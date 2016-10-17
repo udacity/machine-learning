@@ -37,7 +37,6 @@ If you do not have Python installed yet, it is highly recommended that you insta
 Mac:  `conda install -c https://conda.anaconda.org/quasiben pygame`  
 Windows: `conda install -c https://conda.anaconda.org/tlatorre pygame`  
 Linux:  `conda install -c https://conda.anaconda.org/prkrekel pygame`  
-```
 
 ## Starting the Project
 
