@@ -40,7 +40,7 @@ Linux:  `conda install -c https://conda.anaconda.org/prkrekel pygame`
 
 ## Starting the Project
 
-For this assignment, you can find the `digit_recognition` folder containing the necessary project files on the [Machine Learning projects GitHub](https://github.com/udacity/machine-learning), under the `projects` folder. You may download all of the projects we\'ll use in this Nanodegree program directly from this repo.
+For this assignment, you can find the `digit_recognition` folder containing the necessary project files on the [Machine Learning projects GitHub](https://github.com/udacity/machine-learning), under the `projects` folder. You may download all of the files for projects we'll use in this Nanodegree program directly from this repo. Please make sure that you use the most recent version of project files when completing a project!
 
 This project contains one file:
 
