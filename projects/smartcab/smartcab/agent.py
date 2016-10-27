@@ -118,22 +118,13 @@ class LearningAgent(Agent):
             environment for a given trial. This function will build the agent
             state, choose an action, receive a reward, and learn if enabled. """
 
-        ########### 
-        ## TO DO ##
-        ###########
-        # Set 'state' using self.build_state()
-        # Set 'action' using self.choose_action()
-        # Set 'reward' using self.env.act()
-        # Set 'new_state' again using self.build_state()
-        # Perform Q-Learning using self.learn()
-        #
-        # You will need to examine each function for their use-case
-
-        state = self.build_state()                   
-        action = self.choose_action(state)          
-        reward = self.env.act(self, action)         
-        new_state = self.build_state()  
-        self.learn(state, action, reward, new_state)
+        # Update the agent based on the functions built above.
+        state = self.build_state()                   # Build the agent pre-action state               
+        action = self.choose_action(state)           # Choose an action based on the agent state     
+        reward = self.env.act(self, action)          # Receive a reward based on the action     
+        new_state = self.build_state()               # Build the agent's post-action state
+        self.learn(state, action, reward, new_state) # Run the Q-Learning algorithm
+        
         return        
         
 
@@ -178,7 +169,6 @@ def run():
     #   n_train - discrete number of training trials to perform, default is 10
     #   n_test  - discrete number of testing trials to perform, default is 0
     sim.run()
-
 
 if __name__ == '__main__':
     run()
