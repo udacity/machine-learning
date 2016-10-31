@@ -34,7 +34,7 @@ class Simulator(object):
         'gray'    : (155, 155, 155)
     }
 
-    def __init__(self, env, size=None, update_delay=1.0, display=True, log_metrics=False):
+    def __init__(self, env, size=None, update_delay=2.0, display=True, log_metrics=False):
         self.env = env
         self.size = size if size is not None else ((self.env.grid_size[0] + 1) * self.env.block_size, (self.env.grid_size[1] + 2) * self.env.block_size)
         self.width, self.height = self.size
@@ -96,24 +96,46 @@ class Simulator(object):
             else:
                 self.log_filename = os.path.join("logs", "sim_no-learning.csv")
             
-            self.log_fields = ['trial', 'testing', 'initial_deadline', 'final_deadline', 'net_reward', 'actions', 'success']
+            self.log_fields = ['trial', 'testing', 'parameters', 'initial_deadline', 'final_deadline', 'net_reward', 'actions', 'success']
             self.log_file = open(self.log_filename, 'wb')
             self.log_writer = csv.DictWriter(self.log_file, fieldnames=self.log_fields)
             self.log_writer.writeheader()
 
-    def run(self, n_train=10, n_test=0):
+    def run(self, tolerance=0.01, max_trials=300, n_test=0):
+        """ Run a simulation of the environment. 
+
+        'tolerance' is the minimum epsilon necessary to begin testing (if enabled)
+        'max_trials' is the maximum number of trials allowed before testing (if enabled)
+        'n_test' is the number of testing trials simulated
+
+        Note that the minimum number of training trials is always 20. """
+
         self.quit = False
-        for n_trial in xrange(1, n_train + n_test + 1):
 
-            # Determine whether we are training or testing
-            testing = False
-            trial = n_trial
+        # Get the primary agent
+        a = self.env.primary_agent
 
-            if n_test > 0:
-                if trial > n_train:
-                    testing = True
-                    trial = n_trial - n_train         
-            
+        total_trials = 1
+        testing = False
+        trial = 1
+
+        while True:
+
+            # Flip testing switch
+            if not testing:
+                if total_trials > 20: # Must complete minimum 20 training trials
+                    if a.epsilon < tolerance:
+                        testing = True
+                        trial = 1
+                    else:
+                        if total_trials > max_trials:
+                            testing = True
+                            trial = 1       
+            # Break if we've reached the limit of testing trials
+            else:
+                if trial > n_test:
+                    break
+
             # Pretty print to terminal
             print 
             print "/-------------------------"
@@ -175,6 +197,7 @@ class Simulator(object):
                 self.log_writer.writerow({
                     'trial': trial,
                     'testing': self.env.trial_data['testing'],
+                    'parameters': self.env.trial_data['parameters'],
                     'initial_deadline': self.env.trial_data['initial_deadline'],
                     'final_deadline': self.env.trial_data['final_deadline'],
                     'net_reward': self.env.trial_data['net_reward'],
@@ -190,11 +213,14 @@ class Simulator(object):
                 print "\nTrial Aborted!"
                 print "Agent did not reach the destination."
 
+            # Increment
+            total_trials = total_trials + 1
+            trial = trial + 1
+
         # Clean up
         if self.log_metrics:
-            a = self.env.primary_agent
 
-            if(a.learning):
+            if a.learning:
                 f = self.table_file
                 
                 f.write("/-----------------------------------------\n")
@@ -217,9 +243,9 @@ class Simulator(object):
             self.pygame.display.quit()  # shut down pygame
 
     def render_text(self, trial, testing=False):
-        # Print statistics
-        # This will display in the terminal
-        # Turn verbose output on to see more output
+        """ This is the non-GUI render display of the simulation. 
+            Simulated trial data will be rendered in the terminal/command prompt. """
+
         status = self.env.step_data
         if status and status['waypoint'] is not None: # Continuing the trial
 
@@ -265,7 +291,10 @@ class Simulator(object):
                 print "espilon = {:.4f}; alpha = {:.4f}; gamma = {:.4f}".format(a.epsilon, a.alpha, a.gamma)
 
     def render(self, trial, testing=False):
-        # Clear screen
+        """ This is the GUI render display of the simulation. 
+            Supplementary trial data can be found from render_text. """
+        
+        # Reset the screen.
         self.screen.fill(self.bg_color)
 
         # Draw elements
@@ -334,9 +363,7 @@ class Simulator(object):
 
         self.font = self.pygame.font.Font(None, 30)
 
-        # Print statistics
-        # This will display both in the GUI and print to the terminal
-        # Turn verbose output on to see more output
+        # Status text about each step
         status = self.env.step_data
         if status:
 
@@ -411,6 +438,8 @@ class Simulator(object):
         self.pygame.display.flip()
 
     def pause(self):
+        """ When the GUI is enabled, this function will pause the simulation. """
+        
         abs_pause_time = time.time()
         self.font = self.pygame.font.Font(None, 30)
         pause_text = "Simulation Paused. Press any key to continue. . ."
