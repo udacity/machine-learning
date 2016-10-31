@@ -89,16 +89,23 @@ class Environment(object):
         }
 
     def create_agent(self, agent_class, *args, **kwargs):
+        """ When called, create_agent creates an agent in the environment. """
+
         agent = agent_class(self, *args, **kwargs)
         self.agent_states[agent] = {'location': random.choice(self.intersections.keys()), 'heading': (0, 1)}
         return agent
 
     def set_primary_agent(self, agent, enforce_deadline=False):
+        """ When called, set_primary_agent sets 'agent' as the primary agent.
+            The primary agent is the smartcab that is followed in the environment. """
+
         self.primary_agent = agent
         agent.primary_agent = True
         self.enforce_deadline = enforce_deadline
 
     def reset(self, testing=False):
+        """ This function is called at the beginning of a new trial. """
+
         self.done = False
         self.t = 0
 
@@ -134,14 +141,16 @@ class Environment(object):
             agent.reset(destination=(destination if agent is self.primary_agent else None), testing=testing)
             if agent is self.primary_agent:
                 # Reset metrics for this trial (step data will be set during the step)
-                self.trial_data['testing'] = False
+                self.trial_data['testing'] = testing
                 self.trial_data['initial_deadline'] = deadline
                 self.trial_data['final_deadline'] = deadline
                 self.trial_data['net_reward'] = 0.0
                 self.trial_data['actions'] = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}
+                self.trial_data['parameters'] = {'e': agent.epsilon, 'a': agent.alpha, 'g': agent.gamma}
                 self.trial_data['success'] = 0
 
     def step(self):
+        """ This function is called when a time step is taken turing a trial. """
 
         # Pretty print to terminal
         print ""
@@ -173,16 +182,20 @@ class Environment(object):
             if agent_deadline <= self.hard_time_limit:
                 self.done = True
                 self.success = False
-                print "Environment.step(): Primary agent hit hard time limit ({})! Trial aborted.".format(self.hard_time_limit)
+                if self.verbose: # Debugging
+                    print "Environment.step(): Primary agent hit hard time limit ({})! Trial aborted.".format(self.hard_time_limit)
             elif self.enforce_deadline and agent_deadline <= 0:
                 self.done = True
                 self.success = False
-                if(self.verbose == True): # Debugging
+                if self.verbose: # Debugging
                     print "Environment.step(): Primary agent ran out of time! Trial aborted."
 
         self.t += 1
 
     def sense(self, agent):
+        """ This function is called when information is requested about the sensor
+            inputs from an 'agent' in the environment. """
+
         assert agent in self.agent_states, "Unknown agent!"
 
         state = self.agent_states[agent]
@@ -215,6 +228,8 @@ class Environment(object):
         return {'light': light, 'oncoming': oncoming, 'left': left, 'right': right}
 
     def get_deadline(self, agent):
+        """ Returns the deadline remaining for an agent. """
+
         return self.agent_states[agent]['deadline'] if agent is self.primary_agent else None
 
     def act(self, agent, action):
@@ -240,8 +255,8 @@ class Environment(object):
         violation = 0
 
         # Reward scheme
-        # First initialize reward uniformly random from [-2, 2]
-        reward = 4 * random.random() - 2
+        # First initialize reward uniformly random from [-1, 1]
+        reward = 2 * random.random() - 1
 
         # Create a penalty factor as a function of remaining deadline
         # Scales reward multiplicatively from [0, 1]
@@ -292,11 +307,11 @@ class Environment(object):
         # Did the agent attempt a valid move?
         if violation == 0:
             if action == agent.get_next_waypoint(): # Was it the correct action?
-                reward += 2 * (1 - penalty) # (2, 0)
+                reward += 2 - penalty # (2, 1)
             elif action == None and light != 'green': # Was the agent stuck at a red light?
-                reward += 2 * (1 - penalty) # (2, 0)
+                reward += 2 - penalty # (2, 1)
             else: # Valid but incorrect
-                reward -= 2 * penalty # (0, -2)
+                reward += 1 - penalty # (1, 0)
 
             # Move the agent
             if action is not None:
@@ -311,16 +326,15 @@ class Environment(object):
             elif violation == 2: # Major violation
                 reward += -10
             elif violation == 3: # Minor accident
-                reward += -50
+                reward += -20
             elif violation == 4: # Major accident
-                reward += -100
+                reward += -40
 
         # Did agent reach the goal after a valid move?
         if agent is self.primary_agent:
             if state['location'] == state['destination']:
                 # Did agent get to destination before deadline?
                 if state['deadline'] >= 0:
-                    # reward += 10 * (1 - penalty) # (0, 10)
                     self.trial_data['success'] = 1
                 
                 # Stop the trial
@@ -353,7 +367,7 @@ class Environment(object):
         return reward
 
     def compute_dist(self, a, b):
-        """ L1 distance between two points in a world that wraps. """
+        """ Compute the Manhattan (L1) distance of a spherical world. """
 
         dx1 = abs(b[0] - a[0])
         dx2 = abs(self.grid_size[0] - dx1)
