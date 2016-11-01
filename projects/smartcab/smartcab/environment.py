@@ -12,7 +12,7 @@ class TrafficLight(object):
 
     def __init__(self, state=None, period=None):
         self.state = state if state is not None else random.choice(self.valid_states)
-        self.period = period if period is not None else random.choice([2, 3, 4])
+        self.period = period if period is not None else random.choice([2, 3, 4, 5])
         self.last_updated = 0
 
     def reset(self):
@@ -146,7 +146,7 @@ class Environment(object):
                 self.trial_data['final_deadline'] = deadline
                 self.trial_data['net_reward'] = 0.0
                 self.trial_data['actions'] = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0}
-                self.trial_data['parameters'] = {'e': agent.epsilon, 'a': agent.alpha, 'g': agent.gamma}
+                self.trial_data['parameters'] = {'e': agent.epsilon, 'a': agent.alpha}
                 self.trial_data['success'] = 0
 
     def step(self):

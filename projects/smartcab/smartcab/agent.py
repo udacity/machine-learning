@@ -8,7 +8,7 @@ class LearningAgent(Agent):
     """ An agent that learns to drive in the Smartcab world.
         This is the object you will be modifying. """ 
 
-    def __init__(self, env, learning=True, epsilon=1.0, alpha=0.5, gamma=0.0):
+    def __init__(self, env, learning=False, epsilon=1.0, alpha=0.5):
         super(LearningAgent, self).__init__(env)     # Set the agent in the evironment 
         self.planner = RoutePlanner(self.env, self)  # Create a route planner
         self.valid_actions = self.env.valid_actions  # The set of valid actions
@@ -18,7 +18,6 @@ class LearningAgent(Agent):
         self.Q = dict()          # Create a Q-table which will be a dictionary of tuples
         self.epsilon = epsilon   # Random exploration factor
         self.alpha = alpha       # Learning factor
-        self.gamma = gamma       # Discount factor
 
         ###########
         ## TO DO ##
@@ -112,16 +111,16 @@ class LearningAgent(Agent):
         return action
 
 
-    def learn(self, state, action, reward, new_state):
+    def learn(self, state, action, reward):
         """ The learn function is called after the agent completes an action and
-            receives an award. 'new_state' is the state the smartcab arrives at
-            once completing the action. This is for calculating future rewards. """
+            receives an award. This function does not consider future rewards 
+            when conducting learning. """
 
         ########### 
         ## TO DO ##
         ###########
         # When learning, implement the value iteration update rule
-        #   Use both the learning rate 'alpha', and the discount factor, 'gamma'
+        #   Use only the learning rate 'alpha' (do not use the discount factor 'gamma')
 
         return
 
@@ -135,8 +134,6 @@ class LearningAgent(Agent):
         self.createQ(state)                          # Create 'state' in Q-table
         action = self.choose_action(state)           # Choose an action
         reward = self.env.act(self, action)          # Receive a reward
-        new_state = self.build_state()               # Get new state
-        self.createQ(new_state)                      # Create 'new_state' in Q-table
         self.learn(state, action, reward, new_state) # Q-learn
 
         return
@@ -157,10 +154,9 @@ def run():
     ##############
     # Create the driving agent
     # Flags:
-    #   learning - set to True to force the driving agent to use Q-learning
-    #   epsilon  - continuous value for the exploration factor, default is 1
-    #   alpha    - continuous value for the learning rate, default is 0.5
-    #   gamma    - continuous value for the discount factor, default is 0
+    #   learning   - set to True to force the driving agent to use Q-learning
+    #    * epsilon - continuous value for the exploration factor, default is 1
+    #    * alpha   - continuous value for the learning rate, default is 0.5
     agent = env.create_agent(LearningAgent)
     
     ##############
@@ -175,15 +171,17 @@ def run():
     #   update_delay - continuous time (in seconds) between actions, default is 2.0 seconds
     #   display      - set to False to disable the GUI if PyGame is enabled
     #   log_metrics  - set to True to log trial and simulation results to /logs
+    #   optimized    - set to True to change the default log file name
     sim = Simulator(env)
     
     ##############
     # Run the simulator
     # Flags:
-    #   tolerance - epsilon tolerance before beginning testing, default is 0.01 
-    #   n_train   - maximum limit of training trials to perform, default is 300
-    #   n_test    - discrete number of testing trials to perform, default is 0
+    #   tolerance  - epsilon tolerance before beginning testing, default is 0.01 
+    #   max_trials - maximum limit of training trials to perform, default is 300
+    #   n_test     - discrete number of testing trials to perform, default is 0
     sim.run()
+
 
 if __name__ == '__main__':
     run()
