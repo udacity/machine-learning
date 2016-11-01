@@ -34,7 +34,7 @@ class Simulator(object):
         'gray'    : (155, 155, 155)
     }
 
-    def __init__(self, env, size=None, update_delay=2.0, display=True, log_metrics=False):
+    def __init__(self, env, size=None, update_delay=2.0, display=True, log_metrics=False, optimized=False):
         self.env = env
         self.size = size if size is not None else ((self.env.grid_size[0] + 1) * self.env.block_size, (self.env.grid_size[1] + 2) * self.env.block_size)
         self.width, self.height = self.size
@@ -85,13 +85,20 @@ class Simulator(object):
 
         # Setup metrics to report
         self.log_metrics = log_metrics
+        self.optimized = optimized
+        
         if self.log_metrics:
             a = self.env.primary_agent
 
             # Set log files
             if a.learning:
-                self.log_filename = os.path.join("logs", "sim_learning-e{}-a{}-g{}.csv".format(a.epsilon, a.alpha, a.gamma))
-                self.table_filename = os.path.join("logs","sim_learning-e{}-a{}-g{}.txt".format(a.epsilon, a.alpha, a.gamma))
+                if self.optimized: # Whether the user is optimizing the parameters and decay functions
+                    self.log_filename = os.path.join("logs", "sim_improved-learning.csv")
+                    self.table_filename = os.path.join("logs","sim_improved-learning.txt")
+                else: 
+                    self.log_filename = os.path.join("logs", "sim_default-learning.csv")
+                    self.table_filename = os.path.join("logs","sim_default-learning.txt")
+
                 self.table_file = open(self.table_filename, 'wb')
             else:
                 self.log_filename = os.path.join("logs", "sim_no-learning.csv")
@@ -101,7 +108,7 @@ class Simulator(object):
             self.log_writer = csv.DictWriter(self.log_file, fieldnames=self.log_fields)
             self.log_writer.writeheader()
 
-    def run(self, tolerance=0.01, max_trials=300, n_test=0):
+    def run(self, tolerance=0.01, max_trials=20, n_test=0):
         """ Run a simulation of the environment. 
 
         'tolerance' is the minimum epsilon necessary to begin testing (if enabled)
@@ -288,8 +295,11 @@ class Simulator(object):
             a = self.env.primary_agent
             print "Simulating trial. . . "
             if a.learning:
-                print "espilon = {:.4f}; alpha = {:.4f}; gamma = {:.4f}".format(a.epsilon, a.alpha, a.gamma)
+                print "espilon = {:.4f}; alpha = {:.4f}".format(a.epsilon, a.alpha)
+            else:
+                print "Agent not set to learn."
 
+                
     def render(self, trial, testing=False):
         """ This is the GUI render display of the simulation. 
             Supplementary trial data can be found from render_text. """
@@ -425,7 +435,6 @@ class Simulator(object):
                     self.font = self.pygame.font.Font(None, 22)
                     self.screen.blit(self.font.render("epsilon = {:.4f}".format(self.env.primary_agent.epsilon), True, self.colors['black'], self.bg_color), (10, 80))
                     self.screen.blit(self.font.render("alpha = {:.4f}".format(self.env.primary_agent.alpha), True, self.colors['black'], self.bg_color), (10, 95))
-                    self.screen.blit(self.font.render("gamma = {:.4f}".format(self.env.primary_agent.gamma), True, self.colors['black'], self.bg_color), (10, 110))
 
         # Reset status text
         else:
