@@ -131,13 +131,40 @@ class Environment(object):
         if(self.verbose == True): # Debugging
             print "Environment.reset(): Trial set up with start = {}, destination = {}, deadline = {}".format(start, destination, deadline)
 
+        # Create a map of all possible initial positions
+        positions = dict()
+        for location in self.intersections:
+            positions[location] = list()
+            for heading in self.valid_headings:
+                positions[location].append(heading)
+
         # Initialize agent(s)
         for agent in self.agent_states.iterkeys():
-            self.agent_states[agent] = {
-                'location': start if agent is self.primary_agent else random.choice(self.intersections.keys()),
-                'heading': start_heading if agent is self.primary_agent else random.choice(self.valid_headings),
-                'destination': destination if agent is self.primary_agent else None,
-                'deadline': deadline if agent is self.primary_agent else None}
+
+            if agent is self.primary_agent:
+                self.agent_states[agent] = {
+                    'location': start,
+                    'heading': start_heading,
+                    'destination': destination,
+                    'deadline': deadline
+                }
+            # For dummy agents, make them choose one of the available 
+            # intersections and headings still in 'positions'
+            else:
+                intersection = random.choice(positions.keys())
+                heading = random.choice(positions[intersection])
+                self.agent_states[agent] = {
+                    'location': intersection,
+                    'heading': heading,
+                    'destination': None,
+                    'deadline': None
+                }
+                # Now delete the taken location and heading from 'positions'
+                positions[intersection] = list(set(positions[intersection]) - set([heading]))
+                if positions[intersection] == list(): # No headings available for intersection
+                    del positions[intersection] # Delete the intersection altogether
+
+    
             agent.reset(destination=(destination if agent is self.primary_agent else None), testing=testing)
             if agent is self.primary_agent:
                 # Reset metrics for this trial (step data will be set during the step)

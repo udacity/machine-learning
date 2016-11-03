@@ -130,11 +130,11 @@ class LearningAgent(Agent):
             environment for a given trial. This function will build the agent
             state, choose an action, receive a reward, and learn if enabled. """
 
-        state = self.build_state()                   # Get current state
-        self.createQ(state)                          # Create 'state' in Q-table
-        action = self.choose_action(state)           # Choose an action
-        reward = self.env.act(self, action)          # Receive a reward
-        self.learn(state, action, reward, new_state) # Q-learn
+        state = self.build_state()          # Get current state
+        self.createQ(state)                 # Create 'state' in Q-table
+        action = self.choose_action(state)  # Choose an action
+        reward = self.env.act(self, action) # Receive a reward
+        self.learn(state, action, reward)   # Q-learn
 
         return
         
@@ -177,8 +177,7 @@ def run():
     ##############
     # Run the simulator
     # Flags:
-    #   tolerance  - epsilon tolerance before beginning testing, default is 0.01 
-    #   max_trials - maximum limit of training trials to perform, default is 300
+    #   tolerance  - epsilon tolerance before beginning testing, default is 0.05 
     #   n_test     - discrete number of testing trials to perform, default is 0
     sim.run()
 

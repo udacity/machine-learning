@@ -108,11 +108,10 @@ class Simulator(object):
             self.log_writer = csv.DictWriter(self.log_file, fieldnames=self.log_fields)
             self.log_writer.writeheader()
 
-    def run(self, tolerance=0.01, max_trials=20, n_test=0):
+    def run(self, tolerance=0.05, n_test=0):
         """ Run a simulation of the environment. 
 
         'tolerance' is the minimum epsilon necessary to begin testing (if enabled)
-        'max_trials' is the maximum number of trials allowed before testing (if enabled)
         'n_test' is the number of testing trials simulated
 
         Note that the minimum number of training trials is always 20. """
@@ -131,13 +130,10 @@ class Simulator(object):
             # Flip testing switch
             if not testing:
                 if total_trials > 20: # Must complete minimum 20 training trials
-                    if a.epsilon < tolerance:
+                    if a.epsilon < tolerance: # assumes epsilon decays to 0
                         testing = True
                         trial = 1
-                    else:
-                        if total_trials > max_trials:
-                            testing = True
-                            trial = 1       
+                        
             # Break if we've reached the limit of testing trials
             else:
                 if trial > n_test:
@@ -341,9 +337,9 @@ class Simulator(object):
                             2 * state['heading'][1] * self.agent_circle_radius - self.agent_circle_radius * state['heading'][0] * 0.5)
 
 
-            #agent_offset = (2 * state['heading'][0] * self.agent_circle_radius, 2 * state['heading'][1] * self.agent_circle_radius)
             agent_pos = (state['location'][0] * self.env.block_size - agent_offset[0], state['location'][1] * self.env.block_size - agent_offset[1])
             agent_color = self.colors[agent.color]
+
             if hasattr(agent, '_sprite') and agent._sprite is not None:
                 # Draw agent sprite (image), properly rotated
                 rotated_sprite = agent._sprite if state['heading'] == (1, 0) else self.pygame.transform.rotate(agent._sprite, 180 if state['heading'][0] == -1 else state['heading'][1] * -90)
@@ -362,7 +358,6 @@ class Simulator(object):
                         state['destination'][1]*self.env.block_size - self.road_width/2, \
                         state['destination'][0]*self.env.block_size + self.road_width/2, \
                         state['destination'][1]*self.env.block_size + self.road_width/2))
-                #self.pygame.draw.circle(self.screen, agent_color, (state['destination'][0] * self.env.block_size, state['destination'][1] * self.env.block_size), self.road_width/2 - 3, 1)
 
         # * Overlays
         self.font = self.pygame.font.Font(None, 50)
