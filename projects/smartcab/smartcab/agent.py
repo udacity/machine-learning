@@ -72,7 +72,7 @@ class LearningAgent(Agent):
         ########### 
         ## TO DO ##
         ###########
-        # Calculate the maxmimum Q-value of all actions for a given state
+        # Calculate the maximum Q-value of all actions for a given state
 
         maxQ = None
 
