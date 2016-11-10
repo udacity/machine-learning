@@ -26,10 +26,6 @@
 在命令行中，确保当前目录为 `finding_donors/` 文件夹的最顶层（目录包含本 README 文件），运行下列命令：
 
 ```bash
-ipython notebook finding_donors.ipynb
-```  
-or
-```bash
 jupyter notebook finding_donors.ipynb
 ```
 
