@@ -1,32 +1,30 @@
-# Project 3: Unsupervised Learning
-## Creating Customer Segments
+# 项目 3: 非监督学习
+## 创建用户细分
 
-### Install
+### 安装
 
-This project requires **Python 2.7** and the following Python libraries installed:
+这个项目要求使用 **Python 2.7** 并且需要安装下面这些python包：
 
-- [NumPy](http://www.numpy.org/)
-- [Pandas](http://pandas.pydata.org)
-- [matplotlib](http://matplotlib.org/)
-- [scikit-learn](http://scikit-learn.org/stable/)
+- [NumPy](http：//www.numpy.org/)
+- [Pandas](http：//pandas.pydata.org)
+- [scikit-learn](http：//scikit-learn.org/stable/)
 
-You will also need to have software installed to run and execute an [iPython Notebook](http://ipython.org/notebook.html)
+你同样需要安装好相应软件使之能够运行[Jupyter Notebook](http://jupyter.org/)。
 
-Udacity recommends our students install [Anaconda](https://www.continuum.io/downloads), a pre-packaged Python distribution that contains all of the necessary libraries and software for this project. 
+优达学城推荐学生安装 [Anaconda](https：//www.continuum.io/downloads), 这是一个已经打包好的python发行版，它包含了我们这个项目需要的所有的库和软件。
 
-### Code
+### 代码
 
-Template code is provided in the notebook `customer_segments.ipynb` notebook file. Additional supporting code can be found in `renders.py`. While some code has already been implemented to get you started, you will need to implement additional functionality when requested to successfully complete the project.
+初始代码包含在 `customer_segments.ipynb` 这个notebook文件中。这里面有一些代码已经实现好来帮助你开始项目，但是为了完成项目，你还需要实现附加的功能。
 
-### Run
+### 运行
 
-In a terminal or command window, navigate to the top-level project directory `creating_customer_segments/` (that contains this README) and run one of the following commands:
+在命令行中，确保当前目录为 `customer_segments.ipynb` 文件夹的最顶层（目录包含本 README 文件），运行下列命令：
 
-```ipython notebook customer_segments.ipynb```
 ```jupyter notebook customer_segments.ipynb```
 
-This will open the iPython Notebook software and project file in your browser.
+​这会启动 Jupyter Notebook 并把项目文件打开在你的浏览器中。
 
-## Data
+## 数据
 
-The dataset used in this project is included as `customers.csv`. You can find more information on this dataset on the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Wholesale+customers) page.
+​这个项目的数据包含在 `customers.csv` 文件中。你能在[UCI 机器学习信息库](https://archive.ics.uci.edu/ml/datasets/Wholesale+customers)页面中找到更多信息。
