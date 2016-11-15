@@ -1,69 +1,63 @@
-# Machine Learning Engineer Nanodegree
-# Supervised Learning
-## Project: Building a Student Intervention System
+# 项目 2： 监督学习
+## 搭建一个学生干预系统
 
-### Install
+### 安装
 
-This project requires **Python 2.7** and the following Python libraries installed:
+这个项目要求使用 **Python 2.7** 并且需要安装下面这些python包：
 
-- [NumPy](http://www.numpy.org/)
-- [Pandas](http://pandas.pydata.org)
-- [scikit-learn](http://scikit-learn.org/stable/)
+- [NumPy](http：//www.numpy.org/)
+- [pandas](http：//pandas.pydata.org)
+- [scikit-learn](http：//scikit-learn.org/stable/)
 
-You will also need to have software installed to run and execute a [Jupyter Notebook](http://ipython.org/notebook.html)
+你同样需要安装好相应软件使之能够运行[Jupyter Notebook](http://jupyter.org/)
 
-If you do not have Python installed yet, it is highly recommended that you install the [Anaconda](http://continuum.io/downloads) distribution of Python, which already has the above packages and more included. Make sure that you select the Python 2.7 installer and not the Python 3.x installer.
+优达学城推荐学生安装[Anaconda](https：//www.continuum.io/downloads), 这是一个已经打包好的python发行版，它包含了我们这个项目需要的所有的库和软件。
 
-### Code
 
-Template code is provided in the `student_intervention.ipynb` notebook file. You will also be required to use the `student-data.csv` dataset file to complete your work. While some code has already been implemented to get you started, you will need to implement additional functionality when requested to successfully complete the project.
+### 代码
 
-### Run
+初始代码包含在 `student_intervention.ipynb` 这个notebook文件中。这里面有一些代码已经实现好来帮助你开始项目，但是为了完成项目，你还需要实现附加的功能。
 
-In a terminal or command window, navigate to the top-level project directory `student_intervention/` (that contains this README) and run one of the following commands:
+### 运行
 
-```bash
-ipython notebook student_intervention.ipynb
-```  
-or
-```bash
-jupyter notebook student_intervention.ipynb
-```
+在命令行中，确保当前目录为 `student_intervention/` 文件夹的最顶层（目录包含本 README 文件），运行下列命令：
 
-This will open the Jupyter Notebook software and project file in your browser.
+```jupyter notebook student_intervention.ipynb```
 
-### Data
+​这会启动 Jupyter Notebook 并把项目文件打开在你的浏览器中。
 
-The dataset used in this project is included as `student-data.csv`. This dataset has the following attributes:
+## 数据
 
-- `school` : student's school (binary: "GP" or "MS")
-- `sex` : student's sex (binary: "F" - female or "M" - male)
-- `age` : student's age (numeric: from 15 to 22)
-- `address` : student's home address type (binary: "U" - urban or "R" - rural)
-- `famsize` : family size (binary: "LE3" - less or equal to 3 or "GT3" - greater than 3)
-- `Pstatus` : parent's cohabitation status (binary: "T" - living together or "A" - apart)
-- `Medu` : mother's education (numeric: 0 - none,  1 - primary education (4th grade), 2 - 5th to 9th grade, 3 - secondary education or 4 - higher education)
-- `Fedu` : father's education (numeric: 0 - none,  1 - primary education (4th grade), 2 - 5th to 9th grade, 3 - secondary education or 4 - higher education)
-- `Mjob` : mother's job (nominal: "teacher", "health" care related, civil "services" (e.g. administrative or police), "at_home" or "other")
-- `Fjob` : father's job (nominal: "teacher", "health" care related, civil "services" (e.g. administrative or police), "at_home" or "other")
-- `reason` : reason to choose this school (nominal: close to "home", school "reputation", "course" preference or "other")
-- `guardian` : student's guardian (nominal: "mother", "father" or "other")
-- `traveltime` : home to school travel time (numeric: 1 - <15 min., 2 - 15 to 30 min., 3 - 30 min. to 1 hour, or 4 - >1 hour)
-- `studytime` : weekly study time (numeric: 1 - <2 hours, 2 - 2 to 5 hours, 3 - 5 to 10 hours, or 4 - >10 hours)
-- `failures` : number of past class failures (numeric: n if 1<=n<3, else 4)
-- `schoolsup` : extra educational support (binary: yes or no)
-- `famsup` : family educational support (binary: yes or no)
-- `paid` : extra paid classes within the course subject (Math or Portuguese) (binary: yes or no)
-- `activities` : extra-curricular activities (binary: yes or no)
-- `nursery` : attended nursery school (binary: yes or no)
-- `higher` : wants to take higher education (binary: yes or no)
-- `internet` : Internet access at home (binary: yes or no)
-- `romantic` : with a romantic relationship (binary: yes or no)
-- `famrel` : quality of family relationships (numeric: from 1 - very bad to 5 - excellent)
-- `freetime` : free time after school (numeric: from 1 - very low to 5 - very high)
-- `goout` : going out with friends (numeric: from 1 - very low to 5 - very high)
-- `Dalc` : workday alcohol consumption (numeric: from 1 - very low to 5 - very high)
-- `Walc` : weekend alcohol consumption (numeric: from 1 - very low to 5 - very high)
-- `health` : current health status (numeric: from 1 - very bad to 5 - very good)
-- `absences` : number of school absences (numeric: from 0 to 93)
-- `passed` : did the student pass the final exam (binary: yes or no)
+​这个项目的数据包含在 `student-data.csv` 文件中。这个数据集包含以下属性： ​
+
+- `school` ： 学生的学校（二元特征：值为“GP”或者是“MS”）
+- `sex` ： 学生的性别（二元特征：“F”表示女性 或者是 “M”表示男性）
+- `age` ： 学生的年龄（数值特征：从15到22）
+- `address`： 学生的家庭住址类型（二元特征：“U”表示城市 或者是 “R”表示农村）
+- `famsize`： 家庭大小（二元特征：“LE3”表示小于等于3 或者 “GT3”表示大于3）
+- `Pstatus`： 父母共同生活状态（二元特征：“T”表示共同生活 或者是 “A”表示分居）
+- `Medu`： 母亲的教育程度 （数值特征：0 - 未受教育,  1 - 小学教育（4年级）, 2 - 5年级到9年级, 3 - 中学教育 或者 4 - 更高等级教育）
+- `Fedu`： 父亲的教育程度 （数值特征：0 - 未受教育,  1 - 小学教育（4年级）, 2 - 5年级到9年级, 3 - 中学教育 或者 4 - 更高等级教育）
+- `Mjob` ： 母亲的工作 （常量特征： "teacher", "health" 表示和健康看护相关的工作, "services" 表示公务员（比如：行政人员或者警察）, "at_home"表示在家， "other"表示其他）
+- `Fjob` ： 父亲的工作 （常量特征： "teacher", "health" 表示和健康看护相关的工作, "services" 表示公务员（比如：行政人员或者警察）, "at_home"表示在家， "other"表示其他）
+- `reason` ： 选择这所学校的原因 （常量特征："home"表示离家近, "reputation"表示学校声誉, "course"表示课程偏好 或者 "other"表示其他）
+- `guardian` ： 学生的监护人 （常量特征："mother"表示母亲, "father"表示父亲 或者 "other"表示其他）
+- `traveltime` ： 到学校需要的时间 （数值特征： 1 - 小于15分钟., 2 - 15到30分钟., 3 - 30分钟到1小时, 4 - 大于1小时）
+- `studytime`： 每周学习时间 （数值特征： 1 - 小于2个小时, 2 - 2到5个小时, 3 - 5到10个小时, 4 - 大于10个小时）
+- `failures`：过去考试失败的次数 （数值特征： n 如果 1<=n<3, 其他 4）
+- `schoolsup` ： 额外的教育支持 （二元特征： yes 或者 no）
+- `famsup` ： 家庭教育支持 （二元特征： yes 或者 no）
+- `paid` ： 和课程有关的其他付费课堂 （数学或者葡萄牙语） （二值特征： yes 或者 no）
+- `activities` ： 课外活动 （二元特征： yes 或者 no）
+- `nursery` ： 参加托儿所 （二元特征： yes 或者 no）
+- `higher` ： 希望得到高等教育（二元特征： yes 或者 no）
+- `internet` ： 在家是否能够访问网络 （二元特征： yes 或者 no）
+- `romantic` ： 有没有谈恋爱 （二元特征： yes 或者 no）
+- `famrel` ： 与家人关系的好坏 （数值特征： 从 1 - 非常差 到 5 - 非常好）
+- `freetime` ： 放学后的空闲时间（数值特征： 从 1 - 非常少 到 5 - 非常多）
+- `goout` ： 和朋友出去（数值特征： 从 1 - 非常少 到 5 - 非常多）
+- `Dalc` ： 工作日饮酒量（数值特征：从 1 - 非常少 到 5 - 非常多）
+- `Walc` ： 周末饮酒量（数值特征：从 1 - 非常少 到 5 - 非常多）
+- `health` ： 当前健康状况 （数值特征： 从 1 - 非常差 到 5 - 非常好）
+- `absences` ：在学校的缺席次数 （数值特征： 从 0 到 93）
+- `passed` ： 学生是否通过最终的考试 （二元特征： yes 或者 no）
