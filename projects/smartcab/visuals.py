@@ -71,19 +71,19 @@ def plot_trials(csv):
 		return
 	
 	# Create additional features
-	data['average_reward'] = (data['net_reward'] / (data['initial_deadline'] - data['final_deadline']).rolling(window=10, center=False).mean()
+	data['average_reward'] = (data['net_reward'] / (data['initial_deadline'] - data['final_deadline'])).rolling(window=10, center=False).mean()
 	data['reliability_rate'] = (data['success']*100).rolling(window=10, center=False).mean()  # compute avg. net reward with window=10
 	data['good_actions'] = data['actions'].apply(lambda x: ast.literal_eval(x)[0])
 	data['good'] = (data['good_actions'] * 1.0 / \
-		(data['initial_deadline'] - data['final_deadline']).rolling(window=10, center=False).mean()
+		(data['initial_deadline'] - data['final_deadline'])).rolling(window=10, center=False).mean()
 	data['minor'] = (data['actions'].apply(lambda x: ast.literal_eval(x)[1]) * 1.0 / \
-		(data['initial_deadline'] - data['final_deadline']).rolling(window=10, center=False).mean()
+		(data['initial_deadline'] - data['final_deadline'])).rolling(window=10, center=False).mean()
 	data['major'] = (data['actions'].apply(lambda x: ast.literal_eval(x)[2]) * 1.0 / \
-		(data['initial_deadline'] - data['final_deadline']).rolling(window=10, center=False).mean()
+		(data['initial_deadline'] - data['final_deadline'])).rolling(window=10, center=False).mean()
 	data['minor_acc'] = (data['actions'].apply(lambda x: ast.literal_eval(x)[3]) * 1.0 / \
-		(data['initial_deadline'] - data['final_deadline']).rolling(window=10, center=False).mean()
+		(data['initial_deadline'] - data['final_deadline'])).rolling(window=10, center=False).mean()
 	data['major_acc'] = (data['actions'].apply(lambda x: ast.literal_eval(x)[4]) * 1.0 / \
-		(data['initial_deadline'] - data['final_deadline']).rolling(window=10, center=False).mean()
+		(data['initial_deadline'] - data['final_deadline'])).rolling(window=10, center=False).mean()
 	data['epsilon'] = data['parameters'].apply(lambda x: ast.literal_eval(x)['e']) 
 	data['alpha'] = data['parameters'].apply(lambda x: ast.literal_eval(x)['a']) 
 
