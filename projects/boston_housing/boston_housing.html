@@ -11944,7 +11944,7 @@ Standard deviation of prices: $165,171.13
 <ul>
 <li>positively with <code>RM</code>, as larger homes tend to have more rooms and cost more.</li>
 <li>negatively with <code>LSTAT</code>, as "lower class" individuals cannot afford expensive homes.</li>
-<li>positively with <code>PTRATIO</code>, as wealthier schools tend to have lower student-to-teacher ratios</li>
+<li>negatively with <code>PTRATIO</code>, as wealthier schools tend to have lower student-to-teacher ratios</li>
 </ul>
 
 </div>
@@ -13840,7 +13840,7 @@ pyRJkiRJkjQyXpySJEmSJEnSyHwKFNX64WWZENQAAAAASUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong> I will describe the plot where <code>max_depth</code> = 10...</p>
 <p>The model is practically perfectly fitting the training data, regardless of the number of training points.</p>
-<p>The model is poorly predicting the test data when the number of training points is small (~ 10). It dramatically improves when the number of training points reaches 50. After this, minor fit improvements are observed as the sample size increases to around 200, at which point no further improvements in fit are observed.</p>
+<p>The model is poorly predicting the test data when the number of training points is small (~ 10). It dramatically improves when the number of training points reaches 50. After this, minor fit improvements are observed as the sample size increases to around 200, at which point no further improvements in fit are observed. Still, it's possible that the addition of new data, that contains variability in important features, could help to improve our fit.</p>
 <p>Despite improvements in fit to the test data once $n >= 50$, the fit is still considerably lower (and more variable) than for the training data. Overall, the plot suggests that the model is overfitting the training data.</p>
 
 </div>
