@@ -75,7 +75,7 @@ class Environment(object):
 
         # Primary agent and associated parameters
         self.primary_agent = None  # to be set explicitly
-        self.enforce_deadline = False
+        self.enforce_deadline = True
 
         # Trial data (updated at the end of each trial)
         self.trial_data = {
