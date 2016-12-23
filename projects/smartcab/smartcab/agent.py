@@ -107,7 +107,12 @@ class LearningAgent(Agent):
         # When not learning, choose a random action
         # When learning, choose a random action with 'epsilon' probability
         #   Otherwise, choose an action with the highest Q-value for the current state
- 
+        if not self.learning:
+            action = random.choice(self.valid_actions)
+        else:
+            action = None
+
+
         return action
 
 
