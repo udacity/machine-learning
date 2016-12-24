@@ -208,7 +208,7 @@ def run(file_suffix=''):
     #   display      - set to False to disable the GUI if PyGame is enabled
     #   log_metrics  - set to True to log trial and simulation results to /logs
     #   optimized    - set to True to change the default log file name
-    sim = Simulator(env, update_delay = 0.01, log_metrics = False, optimized = True, display = False,
+    sim = Simulator(env, update_delay = 0.01, log_metrics = True, optimized = True, display = False,
                     file_suffix=file_suffix)
 
     ##############
