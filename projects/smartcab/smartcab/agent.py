@@ -86,8 +86,7 @@ class LearningAgent(Agent):
         ########### 
         ## TO DO ## DONE
         ###########
-        # Calculate the maximum Q-value of all actions for a given state
-        maxQ = max(self.Q[state], key=self.Q[state].get)
+        maxQ = self.Q[state][max(self.Q[state])]
 
         return maxQ
 
@@ -101,7 +100,7 @@ class LearningAgent(Agent):
         # When learning, check if the 'state' is not in the Q-table
         # If it is not, create a new dictionary for that state
         #   Then, for each action available, set the initial Q-value to 0.0
-        if state not in self.Q:
+        if self.learning and state not in self.Q:
             self.Q[state] = {}
             for action in self.valid_actions:
                 self.Q[state][action] = 0
@@ -130,8 +129,17 @@ class LearningAgent(Agent):
             action = random.choice(self.valid_actions)
 
         else:
-            action_Qs = self.Q[state]
-            action = max(action_Qs.iterkeys(), key=(lambda key: action_Qs[key]))
+            # Finds actions and maximum Q
+            maxQ = self.get_maxQ(state)
+
+            # Choose action with max Q
+            # Choose randomly if there are multiple actions with the max Q
+            potential_actions = []
+            for action, Q in self.Q[state].iteritems():
+                if Q == maxQ:
+                    potential_actions.append(action)
+
+            action = random.choice(potential_actions)
 
         return action
 
@@ -146,8 +154,9 @@ class LearningAgent(Agent):
         ###########
         # When learning, implement the value iteration update rule
         #   Use only the learning rate 'alpha' (do not use the discount factor 'gamma')
-        old_Q = self.Q[state][action]
-        self.Q[state][action] = old_Q + self.alpha * (reward - old_Q)
+        if self.learning:
+            old_Q = self.Q[state][action]
+            self.Q[state][action] = old_Q + self.alpha * (reward - old_Q)
 
         return
 
@@ -199,7 +208,7 @@ def run(file_suffix=''):
     #   display      - set to False to disable the GUI if PyGame is enabled
     #   log_metrics  - set to True to log trial and simulation results to /logs
     #   optimized    - set to True to change the default log file name
-    sim = Simulator(env, update_delay = 0.01, log_metrics = True, optimized = True, display = False,
+    sim = Simulator(env, update_delay = 0.01, log_metrics = False, optimized = True, display = False,
                     file_suffix=file_suffix)
 
     ##############
