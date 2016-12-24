@@ -8,7 +8,7 @@ class LearningAgent(Agent):
     """ An agent that learns to drive in the Smartcab world.
         This is the object you will be modifying. """
 
-    def __init__(self, env, learning=False, epsilon=1.0, alpha=0.5, decay_rate=0.05):
+    def __init__(self, env, learning=False, epsilon=1.0, alpha=0.5, decay_param=0.01):
         super(LearningAgent, self).__init__(env)     # Set the agent in the evironment
         self.planner = RoutePlanner(self.env, self)  # Create a route planner
         self.valid_actions = self.env.valid_actions  # The set of valid actions
@@ -23,7 +23,9 @@ class LearningAgent(Agent):
         ## TO DO ##
         ###########
         # Set any additional class parameters as needed
-        self.decay_rate = decay_rate # Amount to decay epsilon after each trial
+        self.trial_num = 0             # Trial number to be tracked
+        self.decay_param = decay_param # `a` Parameter used to decay epsilon after each trial
+
 
 
     def reset(self, destination=None, testing=False):
@@ -40,11 +42,17 @@ class LearningAgent(Agent):
         # Update epsilon using a decay function of your choice
         # Update additional class parameters as needed
         # If 'testing' is True, set epsilon and alpha to 0
+
+        self.trial_num += 1  # Increment trial number
+
         if testing:
             self.epsilon = 0
             self.alpha = 0
         else:
-            self.epsilon = self.epsilon - self.decay_rate
+            self.epsilon = self.epsilon - self.decay_param            # e = e - a
+            #self.epsilon = math.pow(self.decay_param, self.trial_num) # e = a^t
+            #self.epsilon = 1 / math.pow(self.trial_num, 2)            # e = 1 / t^2
+            #self.epsilon = math.cos(self.decay_param * self.trial_num) # e = cos(at)
 
         return None
 
@@ -158,7 +166,7 @@ class LearningAgent(Agent):
         return
 
 
-def run():
+def run(file_suffix=''):
     """ Driving function for running the simulation. 
         Press ESC to close the simulation, or [SPACE] to pause the simulation. """
 
@@ -176,7 +184,7 @@ def run():
     #   learning   - set to True to force the driving agent to use Q-learning
     #    * epsilon - continuous value for the exploration factor, default is 1
     #    * alpha   - continuous value for the learning rate, default is 0.5
-    agent = env.create_agent(LearningAgent, learning = True)
+    agent = env.create_agent(LearningAgent, learning = True, alpha = 0.75)
 
     ##############
     # Follow the driving agent
@@ -191,15 +199,26 @@ def run():
     #   display      - set to False to disable the GUI if PyGame is enabled
     #   log_metrics  - set to True to log trial and simulation results to /logs
     #   optimized    - set to True to change the default log file name
-    sim = Simulator(env, update_delay = 0.01, log_metrics = True, optimized = True)
+    sim = Simulator(env, update_delay = 0.01, log_metrics = True, optimized = True, display = False,
+                    file_suffix=file_suffix)
 
     ##############
     # Run the simulator
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05 
     #   n_test     - discrete number of testing trials to perform, default is 0
-    sim.run(n_test = 10)
+    sim.run(n_test = 20)
 
 
 if __name__ == '__main__':
+    '''
+    Run this line for a single simulation
+    '''
     run()
+
+    '''
+    This will run 5 simulations using current settings and
+    save all of the results as separate log files
+    '''
+    #for i in xrange(5):
+    #    run(i)
