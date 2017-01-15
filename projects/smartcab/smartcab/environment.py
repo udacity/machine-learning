@@ -337,6 +337,8 @@ class Environment(object):
                 reward += 2 - penalty # (2, 1)
             elif action == None and light != 'green': # Was the agent stuck at a red light?
                 reward += 2 - penalty # (2, 1)
+            elif action== None and light == 'green' and inputs['oncoming'] in ['forward', 'right']:
+                reward += 2 - penalty # (2, 1)
             else: # Valid but incorrect
                 reward += 1 - penalty # (1, 0)
 
