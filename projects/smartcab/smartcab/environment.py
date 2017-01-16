@@ -327,7 +327,7 @@ class Environment(object):
 
         # Agent wants to perform no action:
         elif action == None:
-            if light == 'green' and inputs['oncoming'] != 'left': # No oncoming traffic
+            if light == 'green' and (inputs['oncoming'] != 'left' or waypoint != 'left'): # No oncoming traffic
                 violation = 1 # Minor violation
 
 
