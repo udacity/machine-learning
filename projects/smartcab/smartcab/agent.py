@@ -69,6 +69,7 @@ class LearningAgent(Agent):
         ########### 
         ## TO DO ## DONE
         ###########
+
         # Set 'state' as a tuple of relevant data for the agent
         # When learning, check if the state is in the Q-table
         #   If it is not, create a dictionary in the Q-table for the current 'state'
