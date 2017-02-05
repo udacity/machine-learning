@@ -328,17 +328,17 @@ div#notebook {
 <p><strong>Answer:</strong></p>
 
 <pre><code>1. In the agent.py Python file, choose three flags that can be set and explain how they change the simulation.
-    num_dummies is dummy agents in the environment and by changing we can set increase or decrease the number of agents in the env.
-    grid_size is being used to number of intersections 
-    enforce_deadline is being used set to enforce a deadline metric and if true it sets deadline for the agent to finish.
+    -&gt; num_dummies is dummy agents in the environment and by changing we can set increase or decrease the number of agents in the env.
+    -&gt; grid_size is being used to number of intersections 
+    -&gt; enforce_deadline is being used set to enforce a deadline metric and if true it sets deadline for the agent  to finish.
 
 2. In the environment.py Python file, Environment class function act is called when an agent performs an action.      
 
-3. In the simulator.py Python file, what is the difference between the 'render_text()' function and the 'render()' function?
-    render_text() will do the non-GUI render display of the simulation and simulated trial data will be rendered in the terminal/command prompt.
-    render() will do the GUI render display of the simulation.
+3. In the simulator.py Python file, the difference between the 'render_text()' function and the 'render()' function
+    -&gt; render_text() will do the non-GUI render display of the simulation and simulated trial data will be rendered in the terminal/command prompt.
+    -&gt; render() will do the GUI render display of the simulation.
 
-4. In the planner.py Python file, 'next_waypoint() function consider the East-West direction first.     </code></pre>
+4. In the planner.py Python file, 'next_waypoint()' function consider the East-West direction first. </code></pre>
 
 </div>
 </div>
@@ -1487,9 +1487,11 @@ TkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>The most relevant feature for learning safety is 'input'. In inputs only 'light' and 'oncoming' plays crucial role in safely. 
-The most relevant feature for learning efficiency is 'waypoint' which gives direction to the Smartcab to drive leading to the destination.
-Another available feature 'dealine' is also for learning efficiency; however because we have 'waypoint' whcih helps to learn efficiency, 'dealine' does add any additional value and becomes irrelevant feature for state space.</p>
+
+<pre><code>- The most relevant feature for learning safety is 'input'. In inputs only 'light' and 'oncoming' plays crucial role in safely. Following to the given traffic rules in United States, I feel that traffic approching from ‘right’ and 'left' was redundant to our learning model, so I am excluding to monitor traffic from these two directions. Furthermore, I assume that an oncoming agent obeys traffic laws and does not break a red light.
+
+- The most relevant feature for learning efficiency is 'waypoint' which gives direction to the Smartcab to drive   leading to the destination.
+- Another available feature 'dealine' is also for learning efficiency; however because we have 'waypoint' whcih     helps to learn efficiency, 'dealine' would not add any additional value and becomes irrelevant feature for state space. Furthermore, including Deadline as an input would drastically increase the number of training examples needed for convergence to the optimal policy the concern we have learned eariler about curse of dimensionality.</code></pre>
 
 </div>
 </div>
@@ -1523,7 +1525,10 @@ Another available feature 'dealine' is also for learning efficiency; however bec
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>Features selected according to answer #4 are inputs and waypoint and with these two features the size of the state space would be around 25. Given what we know about the environment and how it is simulated, I am sure that the driving agent could learn a policy for each possible state within a reasonable number of training trials.</p>
+
+<pre><code>Features selected according to answer #4 are inputs and waypoint and with these two features we have states that factor in next_waypoint (Left, Right and Forward), light (red or green), oncoming traffic (None, ‘forward’, ‘left’, ‘right’). This would result in 3 (next_waypoint) x 2 (light) x 4 (oncoming traffic) = 24 states
+
+24 states seems like a reasonable number to me given that the goal of Q-Learning is to learn and make informed decisions about each state. The driving agent could learn a policy for each possible state within this reasonable number of training trials. </code></pre>
 
 </div>
 </div>
@@ -4387,8 +4392,22 @@ ZmZmZmY5+n/4vWgWZww5DAAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> 
-In 'sim_improved-learning.txt' text file recorded from the simulation, the policy (the action with the highest value) is correct for the given states.</p>
+<p><strong>Answer:</strong></p>
+
+<pre><code>Optimal policy for this problem would look like that the agent reaches to the final state in the minimum possible time while incurring minimum penalties. 
+The optimal policy would be:
+- No clashes with other cars.
+- Obey all traffic rules.
+- Minimum possible time.
+
+In 'sim_improved-learning.txt' text file recorded from the simulation, the policy (the action with the highest 
+value) is correct for the given states.
+
+An example of agent behavior is below:
+Agent state: ('green', 'left', 'forward') {'forward': 1.81, 'right': 0.94, None: 0.62, 'left': 0.73}
+Q values for actions: 1.81
+Action agent took: forward
+Does the action make sense? Agent has chosen the best action from the Q-table available</code></pre>
 
 </div>
 </div>
