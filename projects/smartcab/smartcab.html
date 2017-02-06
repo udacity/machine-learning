@@ -1488,7 +1488,15 @@ TkSuQmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 
-<pre><code>- The most relevant feature for learning safety is 'input'. In inputs only 'light' and 'oncoming' plays crucial role in safely. Following to the given traffic rules in United States, I feel that traffic approching from ‘right’ and 'left' was redundant to our learning model, so I am excluding to monitor traffic from these two directions. Furthermore, I assume that an oncoming agent obeys traffic laws and does not break a red light.
+<pre><code>- The most relevant feature for learning safety is 'input'. In inputs only 'light' and 'oncoming' plays crucial role in safely. 
+Following to the given traffic rules in United States, I can't think of a scenario in which we care about traffic that is approaching from the 'right'. If we want to go 'left', then on 'red' we stop, and on 'green' we care what the oncoming car wants to do. If we want to go 'forward' or 'right', then if the light is 'green' we can go, and if 'red' we can't go 'forward' anyway, though we can go 'righ't but the way model has been trained it wouldn't move because there may be traffic approaching from the 'left'.  
+
+In case of traffic approching from 'left', the only possible way when smartcab still on 'red' light is to take 'right' and that has conflict with traffic approching 'forward' from 'left'. In this particular state, the final trained model chose to not move (please refer below). Not have 'left' as a part of state space might impact the reliabilty a little bit but there will be no compromise safety per se. In addition to that, adding this in state space and it's 4 choices will increase the state space will quadruple and increase the training time multifold.
+
+light     ongoing   next           [None, 'forward', 'left', 'right']
+red       None      right           1.56    -11.15  -15.54    -7.87
+
+ Furthermore, I assume that an oncoming agent obeys traffic laws and does not break a red light.
 
 - The most relevant feature for learning efficiency is 'waypoint' which gives direction to the Smartcab to drive   leading to the destination.
 - Another available feature 'dealine' is also for learning efficiency; however because we have 'waypoint' whcih     helps to learn efficiency, 'dealine' would not add any additional value and becomes irrelevant feature for state space. Furthermore, including Deadline as an input would drastically increase the number of training examples needed for convergence to the optimal policy the concern we have learned eariler about curse of dimensionality.</code></pre>
@@ -4403,10 +4411,17 @@ The optimal policy would be:
 In 'sim_improved-learning.txt' text file recorded from the simulation, the policy (the action with the highest 
 value) is correct for the given states.
 
-An example of agent behavior is below:
+Examples of agent behavior is below:
+#1.
 Agent state: ('green', 'left', 'forward') {'forward': 1.81, 'right': 0.94, None: 0.62, 'left': 0.73}
 Q values for actions: 1.81
 Action agent took: forward
+Does the action make sense? Agent has chosen the best action from the Q-table available
+
+#2.
+Agent state: ('green', 'left', 'left'){'forward': 0.69, 'right': 0.4, None: 0.58, 'left': 1.51}
+Q values for actions: 1.51
+Action agent took: left
 Does the action make sense? Agent has chosen the best action from the Q-table available</code></pre>
 
 </div>
