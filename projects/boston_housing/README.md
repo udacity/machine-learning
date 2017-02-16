@@ -1,31 +1,46 @@
-# 项目1：模型评估与验证
-## 波士顿房价预测
+# Machine Learning Engineer Nanodegree
+# Model Evaluation and Validation
+## Project: Predicting Boston Housing Prices
 
-### 准备工作
+### Install
 
-这个项目需要安装**Python 2.7**和以下的Python函数库：
+This project requires **Python 2.7** and the following Python libraries installed:
 
 - [NumPy](http://www.numpy.org/)
+- [Pandas](http://pandas.pydata.org/)
 - [matplotlib](http://matplotlib.org/)
 - [scikit-learn](http://scikit-learn.org/stable/)
 
-你还需要安装一个软件，以运行和编辑[ipynb](http://jupyter.org/)文件。
+You will also need to have software installed to run and execute a [Jupyter Notebook](http://ipython.org/notebook.html)
 
-优达学城推荐学生安装 [Anaconda](https://www.continuum.io/downloads)，这是一个常用的Python集成编译环境，且已包含了本项目中所需的全部函数库。我们在P0项目中也有讲解[如何搭建学习环境](https://github.com/udacity/machine-learning/blob/master/projects_cn/titanic_survival_exploration/README.md)。
+If you do not have Python installed yet, it is highly recommended that you install the [Anaconda](http://continuum.io/downloads) distribution of Python, which already has the above packages and more included. Make sure that you select the Python 2.7 installer and not the Python 3.x installer.
 
-### 编码
+### Code
 
-代码的模版已经在`boston_housing.ipynb`文件中给出。你还会用到`visuals.py`和名为`housing.csv`的数据文件来完成这个项目。我们已经为你提供了一部分代码，但还有些功能需要你来实现才能以完成这个项目。
+Template code is provided in the `boston_housing.ipynb` notebook file. You will also be required to use the included `visuals.py` Python file and the `housing.csv` dataset file to complete your work. While some code has already been implemented to get you started, you will need to implement additional functionality when requested to successfully complete the project. Note that the code included in `visuals.py` is meant to be used out-of-the-box and not intended for students to manipulate. If you are interested in how the visualizations are created in the notebook, please feel free to explore this Python file.
 
-### 运行
+### Run
 
-在终端或命令行窗口中，选定`boston_housing/`的目录下（包含此README文件），运行下方的命令：
+In a terminal or command window, navigate to the top-level project directory `boston_housing/` (that contains this README) and run one of the following commands:
 
-```jupyter notebook boston_housing.ipynb```
+```bash
+ipython notebook boston_housing.ipynb
+```  
+or
+```bash
+jupyter notebook boston_housing.ipynb
+```
 
-这样就能够启动jupyter notebook软件，并在你的浏览器中打开文件。
+This will open the Jupyter Notebook software and project file in your browser.
 
-### 数据
+### Data
 
+The modified Boston housing dataset consists of 490 data points, with each datapoint having 3 features. This dataset is a modified version of the Boston Housing dataset found on the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Housing).
 
-本项目中使用的数据均包含在scikit-learn数据库([`sklearn.datasets.load_boston`] (http://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_boston.html#sklearn.datasets.load_boston))中，你无需额外下载。关于数据的更多信息，你可以访问[UCI机器学习库](https://archive.ics.uci.edu/ml/datasets/Housing)。
+**Features**
+1.  `RM`: average number of rooms per dwelling
+2. `LSTAT`: percentage of population considered lower status
+3. `PTRATIO`: pupil-student ratio by town
+
+**Target Variable**
+4. `MEDV`: median value of owner-occupied homes

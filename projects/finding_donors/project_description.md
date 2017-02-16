@@ -1,21 +1,22 @@
-# 内容： 监督学习
-## 项目：为CharityML寻找捐献者
+# Content: Supervised Learning
+## Project: Finding Donors for CharityML
 
-## 项目概况
-在这个项目中，你将使用监督技术和分析能力对美国人口普查数据进行分析，以帮助CharityML（一个虚拟的慈善机构）识别最有可能向他们捐款的人，你将首先探索数据以了解人口普查数据是如何记录的。接下来，你将使用一系列的转换和预处理技术以将数据整理成能用的形式。然后，你将在这个数据上评价你选择的几个算法，然后考虑哪一个是最合适的。之后，你将优化你现在为CharityML选择的模型。最后，你将探索选择的模型和它的预测能力。
+## Project Overview
+In this project, you will apply supervised learning techniques and an analytical mind on data collected for the U.S. census to help CharityML (a fictitious charity organization) identify people most likely to donate to their cause. You will first explore the data to learn how the census data is recorded. Next, you will apply a series of transformations and preprocessing techniques to manipulate the data into a workable format. You will then evaluate several supervised learners of your choice on the data, and consider which is best suited for the solution. Afterwards, you will optimize the model you've selected and present it as your solution to CharityML. Finally, you will explore the chosen model and its predictions under the hood, to see just how well it's performing when considering the data it's given.
+predicted selling price to your statistics.
 
-## 项目亮点
-这个项目设计成帮助你熟悉在sklearn中能够使用的多个监督学习算法，并提供一个评价模型在某种类型的数据上表现的方法。在机器学习中准确理解在什么时候什么地方应该选择什么算法和不应该选择什么算法是十分重要的。
+## Project Highlights
+This project is designed to get you acquainted with the many supervised learning algorithms available in sklearn, and to also provide for a method of evaluating just how each model works and performs on a certain type of data. It is important in machine learning to understand exactly when and where a certain algorithm should be used, and when one should be avoided.
 
-完成这个项目你将学会以下内容：
-- 知道什么时候应该使用预处理以及如何做预处理。
-- 如何为问题设置一个基准。
-- 判断在一个特定的数据集上几个监督学习算法的表现如何。
-- 调查候选的解决方案模型是否足够解决问题。
+Things you will learn by completing this project:
+- How to identify when preprocessing is needed, and how to apply it.
+- How to establish a benchmark for a solution to the problem.
+- What each of several supervised learning algorithms accomplishes given a specific dataset.
+- How to investigate whether a candidate solution model is adequate for the problem.
 
-## 软件要求
+## Software Requirements
 
-这个项目要求使用 Python 2.7 并且需要安装下面这些python包：
+This project uses the following software and Python libraries:
 
 - [Python 2.7](https://www.python.org/download/releases/2.7/)
 - [NumPy](http://www.numpy.org/)
@@ -23,38 +24,38 @@
 - [scikit-learn](http://scikit-learn.org/stable/)
 - [matplotlib](http://matplotlib.org/)
 
-你同样需要安装好相应软件使之能够运行 [iPython Notebook](http://ipython.org/notebook.html)
+You will also need to have software installed to run and execute a [Jupyter Notebook](http://ipython.org/notebook.html)
 
-优达学城推荐学生安装[Anaconda](https://www.continuum.io/downloads), 这是一个已经打包好的python发行版，它包含了我们这个项目需要的所有的库和软件。请注意你安装的是2.7而不是3.X
+If you do not have Python installed yet, it is highly recommended that you install the [Anaconda](http://continuum.io/downloads) distribution of Python, which already has the above packages and more included. Make sure that you select the Python 2.7 installer and not the Python 3.x installer.
 
-## 开始项目
+## Starting the Project
 
-对于这个项目，你能够在**Resources**部分找到一个能下载的`find_donors.zip`。*你也可以访问我们的[机器学习项目GitHub](https://github.com/udacity/machine-learning)获取我们纳米学位中的所有项目*
+For this assignment, you can find the `finding_donors` folder containing the necessary project files on the [Machine Learning projects GitHub](https://github.com/udacity/machine-learning), under the `projects` folder. You may download all of the files for projects we'll use in this Nanodegree program directly from this repo. Please make sure that you use the most recent version of project files when completing a project!
 
-这个项目包含以下文件：
+This project contains three files:
 
-- `find_donors.ipynb`: 这是你需要工作的主要的文件。
-- `census.csv`: 项目使用的数据集，你将需要在notebook中载入这个数据集。
-- `visuals.py`: 一个实现了可视化功能的Python代码。不要修改它。
+- `finding_donors.ipynb`: This is the main file where you will be performing your work on the project.
+- `census.csv`: The project dataset. You'll load this data in the notebook.
+- `visuals.py`: A Python file containing visualization code that is run behind-the-scenes. Do not modify
 
-在终端或命令提示符中，导航到包含项目文件的文件夹，使用命令`jupyter notebook finding_donors.ipynb`以在一个浏览器窗口或一个标签页打开notebook文件。或者你也可以使用命令`jupyter notebook`或者`ipython notebook`然后在打开的网页中导航到需要的文件夹。跟随notebook中的指引，回答每一个问题以成功完成项目。在这个项目中我们也提供了一个**README**文件，其中也包含了你在这个项目中需要了解的信息或者指引。
+In the Terminal or Command Prompt, navigate to the folder containing the project files, and then use the command `jupyter notebook finding_donors.ipynb` to open up a browser window or tab to work with your notebook. Alternatively, you can use the command `jupyter notebook` or `ipython notebook` and navigate to the notebook file in the browser window that opens. Follow the instructions in the notebook and answer each question presented to successfully complete the project. A **README** file has also been provided with the project files which may contain additional necessary information or instruction for the project. 
 
-## 提交项目
+## Submitting the Project
 
-### 评价
-你的项目会由Udacity项目评审师根据**<a href="#" target="_blank">为CharityML寻找捐献者项目量规</a>**进行评审。请注意仔细阅读这份量规并在提交前进行全面的自我评价。这份量规中涉及的所有条目必须全部被标记成*meeting specifications*你才能通过。
+### Evaluation
+Your project will be reviewed by a Udacity reviewer against the **<a href="https://review.udacity.com/#!/rubrics/406/view" target="_blank">Finding Donors for CharityML project rubric</a>**. Be sure to review this rubric thoroughly and self-evaluate your project before submission. All criteria found in the rubric must be *meeting specifications* for you to pass.
 
-### 需要提交的文件
-当你准备好提交你的项目的时候，请收集以下的文件，并把他们压缩进单个压缩包中上传。或者你也可以在你的GitHub Repo中的一个名叫`finding_donors`的文件夹中提供以下文件以方便检查：
- - 回答了所有问题并且所有的代码单元被执行并显示了输出结果的`finding_donors.ipynb`文件。
- - 一个从项目的notebook文件中导出的命名为**report.html**的**HTML**文件。这个文件*必须*提供。
+### Submission Files
+When you are ready to submit your project, collect the following files and compress them into a single archive for upload. Alternatively, you may supply the following files on your GitHub Repo in a folder named `student_intervention` for ease of access:
+ - The `finding_donors.ipynb` notebook file with all questions answered and all code cells executed and displaying output.
+ - An **HTML** export of the project notebook with the name **report.html**. This file *must* be present for your project to be evaluated.
 
-一旦你收集好了这些文件，并阅读了项目量规，请进入项目提交页面。
+Once you have collected these files and reviewed the project rubric, proceed to the project submission page.
 
-### 我准备好了！
-当你准备好提交项目的时候，点击页面底部的**提交项目**按钮。
+### I'm Ready!
+When you're ready to submit your project, click on the **Submit Project** button at the bottom of the page.
 
-如果你提交项目中遇到任何问题或者是希望检查你的提交的进度，请给**machine-support@udacity.com**发邮件，或者你可以访问<a href="http://discussions.youdaxue.com/" target="_blank">论坛</a>.
+If you are having any problems submitting your project or wish to check on the status of your submission, please email us at **machine-support@udacity.com** or visit us in the <a href="http://discussions.udacity.com" target="_blank">discussion forums</a>.
 
-### 然后？
-当你的项目评审师给你回复之后你会马上收到一封通知邮件。在等待的同时你也可以开始准备下一个项目，或者学习相关的课程。
+### What's Next?
+You will get an email as soon as your reviewer has feedback for you. In the meantime, review your next project and feel free to get started on it or the courses supporting it!
