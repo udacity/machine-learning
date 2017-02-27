@@ -11782,7 +11782,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11837,7 +11837,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -11964,7 +11964,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
@@ -12105,7 +12105,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Make a copy of the DataFrame, using the &#39;drop&#39; function to drop the given feature</span>
@@ -12189,7 +12189,7 @@ The Detergents_Paper feature is not as important as others, since we can probabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Produce a scatter matrix for each pair of features in the data</span>
@@ -14776,7 +14776,7 @@ The data doesn't seem to be normally distributed, most points lie on lower area.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Scale the data using the natural logarithm</span>
@@ -20386,7 +20386,7 @@ oiiKoiiKomQB2sijKIqiKIqiKIqiKIqSBfx/ntL30or4NpYAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the log-transformed sample data</span>
@@ -20477,7 +20477,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># For each feature find the data points with extreme high or low values</span>
@@ -21279,7 +21279,7 @@ Those outliers plus 161, 86, 98 and 356 are being removed from the dataset. Thos
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Apply PCA by fitting the good data with the same number of dimensions as features</span>
@@ -21288,7 +21288,7 @@ Those outliers plus 161, 86, 98 and 356 are being removed from the dataset. Thos
 <span class="n">pca</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">good_data</span><span class="p">)</span>
 <span class="c1"># TODO: Transform log_samples using the PCA fit above</span>
 <span class="n">pca_samples</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">log_samples</span><span class="p">)</span>
-
+<span class="k">print</span> <span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_ratio_</span>
 <span class="c1"># Generate PCA results plot</span>
 <span class="n">pca_results</span> <span class="o">=</span> <span class="n">vs</span><span class="o">.</span><span class="n">pca_results</span><span class="p">(</span><span class="n">good_data</span><span class="p">,</span> <span class="n">pca</span><span class="p">)</span>
 </pre></div>
@@ -21300,6 +21300,13 @@ Those outliers plus 161, 86, 98 and 356 are being removed from the dataset. Thos
 <div class="output_wrapper">
 <div class="output">
 
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[ 0.43168132  0.26890034  0.12610861  0.10318784  0.04927185  0.02085004]
+</pre>
+</div>
+</div>
 
 <div class="output_area"><div class="prompt"></div>
 
@@ -21912,9 +21919,12 @@ RERCKGkkIiIiIiIiIiIh/g+XKsx0fZYHyQAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:
-It is 0.7006 variance in total by the first and second principal components. It is 0.9569 variance in total by the first four principal components.
-We can see each component weights feature differently. The first dimension has the most variance among others, and is trying hard to weight features equally whether postive or negative weighted in order to retain maximum information of data. The second dimension get all postive weighted features, but the Grocery and Detergents_Paper are less important. The third dimension that Fresh , Frozen and Delicatessen become important weighted, and Frozen and Delicatessen in fourth dimension. We can see how second dimension compensate first dimension, while more dimension added the more information we can retain. Overall, we can say the Fresh, Frozen and Delicatessen have large absolute value weight in first four dimensions.</strong></p>
+<p>**Answer:
+It is 0.7006 variance in total by the first and second principal components. It is 0.9299 variance in total by the first four principal components.
+We can see each component weights feature differently. The first dimension has the most variance among others, and is trying hard to weight features equally whether postive or negative weighted in order to retain maximum information of data. The first dimension is strongly correlate with detergents_paper, Grocery and Milk, the value of those features are larger than others in the first dimension. It seems that customer groups who buying more Milk and Grocery also buy more on detergents_paper, it can be interpreted as daily supplies.</p>
+<p>The second dimension get all postive weighted features, but the Grocery and Detergents_Paper are less important. This dimension capture the groups who buying more Fresh will also buying Frozen and delicatessen, it can be interpreted as food consumption.</p>
+<p>The third dimension that Fresh , Frozen and Delicatessen become important weighted, and Frozen and Delicatessen in fourth dimension. We can see how second dimension compensate first dimension, while more dimension added the more information we can retain. Overall, we can say the Fresh, Frozen and Delicatessen have large absolute value weight in first four dimensions.</p>
+<p>**</p>
 
 </div>
 </div>
@@ -21931,7 +21941,7 @@ We can see each component weights feature differently. The first dimension has t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display sample log-data after having a PCA transformation applied</span>
@@ -22019,7 +22029,7 @@ We can see each component weights feature differently. The first dimension has t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Apply PCA by fitting the good data with only two dimensions</span>
@@ -22053,7 +22063,7 @@ We can see each component weights feature differently. The first dimension has t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display sample log-data after applying PCA transformation in two dimensions</span>
@@ -22120,7 +22130,7 @@ We can see each component weights feature differently. The first dimension has t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create a biplot</span>
@@ -22135,11 +22145,11 @@ We can see each component weights feature differently. The first dimension has t
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xcd4a3c8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xc1804a8&gt;</pre>
 </div>
 
 </div>
@@ -23855,14 +23865,16 @@ The K-Mean is computational cheap than Gaussian Mixture Model, but the Gaussian 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Apply your clustering algorithm of choice to the reduced data </span>
 <span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
 <span class="kn">from</span> <span class="nn">sklearn.mixture</span> <span class="kn">import</span> <span class="n">GMM</span>
-
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">silhouette_score</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">continue</span>
     <span class="n">clusterer</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">i</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
     <span class="n">clusterer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">)</span>
     
@@ -23874,12 +23886,11 @@ The K-Mean is computational cheap than Gaussian Mixture Model, but the Gaussian 
     <span class="n">sample_preds</span> <span class="o">=</span> <span class="n">clusterer</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pca_samples</span><span class="p">)</span>
     
     <span class="c1"># TODO: Calculate the mean silhouette coefficient for the number of clusters chosen</span>
-    <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">silhouette_score</span>
-    <span class="n">kmeanscore1</span> <span class="o">=</span> <span class="n">silhouette_score</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">,</span><span class="n">preds</span><span class="p">)</span>
     
-    <span class="n">gscore1</span> <span class="o">=</span> <span class="n">silhouette_score</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">,</span><span class="n">preds2</span><span class="p">)</span>
+    <span class="n">kmeanscore1</span> <span class="o">=</span> <span class="n">silhouette_score</span><span class="p">(</span><span class="n">reduced_data</span><span class="p">,</span> <span class="n">preds</span><span class="p">)</span>
+    <span class="n">kmeanscore2</span> <span class="o">=</span> <span class="n">silhouette_score</span><span class="p">(</span><span class="n">pca_samples</span><span class="p">,</span> <span class="n">sample_preds</span><span class="p">)</span>
     
-    <span class="k">print</span> <span class="s2">&quot;KMean({}) sihouette score for reduced data is {}, for pca_samples is {} &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">kmeanscore1</span><span class="p">,</span><span class="n">kmeanscore2</span><span class="p">)</span>
+    <span class="k">print</span> <span class="s2">&quot;KMean({}) sihouette score for reduced data is {}, for pca_samples is {} &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">kmeanscore1</span><span class="p">,</span> <span class="n">kmeanscore2</span><span class="p">)</span>
     
 </pre></div>
 
@@ -23894,7 +23905,6 @@ The K-Mean is computational cheap than Gaussian Mixture Model, but the Gaussian 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>KMean(2) sihouette score for reduced data is 0.427853321697, for pca_samples is 0.820340627596 
-KMean(3) sihouette score for reduced data is 0.400354197222, for pca_samples is 0.820340627596 
 KMean(4) sihouette score for reduced data is 0.334158701287, for pca_samples is 0.820340627596 
 KMean(5) sihouette score for reduced data is 0.348514519919, for pca_samples is 0.820340627596 
 KMean(6) sihouette score for reduced data is 0.368769919462, for pca_samples is 0.820340627596 
