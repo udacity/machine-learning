@@ -3,146 +3,146 @@
 \-----------------------------------------
 
 moveleft_redLight_OncomingToleft
- -- forward : -8.85
- -- right : -9.76
- -- None : 1.56
- -- left : -8.12
-
-moveleft_greenLight_OncomingToleft
- -- forward : 0.72
- -- right : -0.07
- -- None : 0.40
- -- left : 2.22
-
-moveforward_redLight_OncomingToright
- -- forward : -4.64
- -- right : -9.72
- -- None : 1.79
- -- left : 0.00
-
-moveright_redLight_OncomingToforward
- -- forward : -25.02
- -- right : 0.74
- -- None : 2.18
- -- left : -19.83
+ -- forward : 0.00
+ -- right : -1.42
+ -- None : 2.40
+ -- left : -8.16
 
 moveforward_greenLight_OncomingToforward
- -- forward : 2.01
+ -- forward : 1.10
+ -- right : 0.41
+ -- None : 0.00
+ -- left : -10.13
+
+moveleft_greenLight_OncomingToNone
+ -- forward : 0.71
+ -- right : 0.91
+ -- None : -3.61
+ -- left : 1.82
+
+moveright_redLight_OncomingToforward
+ -- forward : -19.66
  -- right : 0.00
- -- None : -3.35
- -- left : -9.91
+ -- None : 2.02
+ -- left : -23.57
+
+moveleft_greenLight_OncomingToleft
+ -- forward : 0.94
+ -- right : -0.23
+ -- None : 0.00
+ -- left : 0.00
 
 moveright_greenLight_OncomingToright
- -- forward : 0.69
- -- right : 1.62
+ -- forward : 0.00
+ -- right : 1.17
  -- None : 0.00
- -- left : -10.11
+ -- left : 0.00
 
 moveright_redLight_OncomingToNone
- -- forward : -9.64
- -- right : -12.47
- -- None : 1.88
- -- left : -18.28
+ -- forward : -9.27
+ -- right : 1.81
+ -- None : 1.29
+ -- left : -8.52
 
 moveright_redLight_OncomingToleft
- -- forward : -29.42
- -- right : 1.35
- -- None : 1.64
- -- left : -8.89
+ -- forward : -9.04
+ -- right : 1.84
+ -- None : 2.28
+ -- left : -18.29
 
 moveright_greenLight_OncomingToNone
- -- forward : 0.45
- -- right : 1.67
- -- None : -4.57
- -- left : 0.54
+ -- forward : 0.24
+ -- right : 2.28
+ -- None : -3.70
+ -- left : 0.43
 
 moveleft_redLight_OncomingToright
- -- forward : -4.56
- -- right : 0.95
- -- None : 0.00
- -- left : -20.38
+ -- forward : 0.00
+ -- right : 0.36
+ -- None : 2.14
+ -- left : -19.98
 
 moveleft_greenLight_OncomingToright
- -- forward : 0.19
- -- right : 0.58
- -- None : -2.09
- -- left : -14.96
+ -- forward : 0.00
+ -- right : 0.85
+ -- None : -3.89
+ -- left : -10.00
 
 moveforward_redLight_OncomingToNone
- -- forward : -11.33
- -- right : -9.20
- -- None : 1.51
- -- left : -20.01
+ -- forward : -9.76
+ -- right : -0.70
+ -- None : 2.16
+ -- left : -17.09
 
 moveforward_greenLight_OncomingToleft
- -- forward : 1.32
- -- right : 0.05
- -- None : 0.00
- -- left : 0.80
+ -- forward : 2.22
+ -- right : 0.89
+ -- None : 0.57
+ -- left : 0.25
 
 moveright_greenLight_OncomingToleft
- -- forward : 0.27
- -- right : 0.00
- -- None : 0.39
- -- left : 0.52
+ -- forward : 0.60
+ -- right : 2.05
+ -- None : 0.50
+ -- left : 0.64
 
 moveleft_redLight_OncomingToforward
- -- forward : -7.00
- -- right : 0.00
- -- None : 2.04
- -- left : -20.17
+ -- forward : -14.60
+ -- right : 0.37
+ -- None : 1.92
+ -- left : -5.21
 
 moveleft_greenLight_OncomingToforward
- -- forward : 0.60
- -- right : 1.01
- -- None : -4.08
+ -- forward : 0.16
+ -- right : 1.52
+ -- None : 0.00
  -- left : 0.00
 
 moveforward_redLight_OncomingToforward
  -- forward : 0.00
- -- right : 0.00
- -- None : 1.94
- -- left : -4.69
+ -- right : -10.04
+ -- None : 2.24
+ -- left : -5.38
 
 moveforward_greenLight_OncomingToright
- -- forward : 0.00
- -- right : 0.49
- -- None : 0.00
- -- left : 0.00
+ -- forward : 1.57
+ -- right : 0.00
+ -- None : -2.43
+ -- left : -10.31
 
 moveleft_redLight_OncomingToNone
- -- forward : -11.47
- -- right : 0.85
- -- None : 2.20
- -- left : -9.76
+ -- forward : -7.37
+ -- right : 0.99
+ -- None : 2.07
+ -- left : -9.93
 
-moveleft_greenLight_OncomingToNone
- -- forward : 0.23
- -- right : 0.71
- -- None : -4.95
- -- left : 2.35
+moveforward_redLight_OncomingToright
+ -- forward : -4.63
+ -- right : -9.59
+ -- None : 1.31
+ -- left : -19.66
 
 moveright_redLight_OncomingToright
- -- forward : -7.57
- -- right : -9.35
- -- None : 2.03
- -- left : 0.00
+ -- forward : 0.00
+ -- right : 0.87
+ -- None : 1.62
+ -- left : -20.18
 
 moveforward_redLight_OncomingToleft
- -- forward : -5.40
- -- right : 0.00
- -- None : 1.47
- -- left : -22.57
+ -- forward : -20.36
+ -- right : 0.57
+ -- None : 2.38
+ -- left : -7.85
 
 moveright_greenLight_OncomingToforward
- -- forward : 0.64
- -- right : 1.07
- -- None : 0.00
+ -- forward : 0.00
+ -- right : 1.56
+ -- None : -2.64
  -- left : 0.00
 
 moveforward_greenLight_OncomingToNone
- -- forward : 1.90
- -- right : 0.53
- -- None : -4.23
- -- left : 0.90
+ -- forward : 1.68
+ -- right : 0.21
+ -- None : -5.26
+ -- left : 0.33
 

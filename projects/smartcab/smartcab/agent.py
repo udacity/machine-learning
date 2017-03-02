@@ -18,7 +18,7 @@ class LearningAgent(Agent):
         self.Q = dict()          # Create a Q-table which will be a dictionary of tuples
         self.epsilon = epsilon   # Random exploration factor
         self.alpha = alpha       # Learning factor
-        self.decay_factor = 0.955
+        self.decay_factor = 0.95
 
         ###########
         ## TO DO ##
@@ -42,7 +42,6 @@ class LearningAgent(Agent):
         # Update epsilon using a decay function of your choice
         # Update additional class parameters as needed
         # If 'testing' is True, set epsilon and alpha to 0
-        self.trail = self.trail + 1
         if self.learning:
             #self.epsilon = self.epsilon - self.decay_factor
             self.epsilon = self.decay_factor ** self.trail
@@ -50,6 +49,7 @@ class LearningAgent(Agent):
                 self.epsilon = 0
         else:
             self.epsilon = 0
+        self.trail = self.trail + 1
         return None
 
     def build_state(self):
@@ -83,13 +83,11 @@ class LearningAgent(Agent):
         ###########
         # Calculate the maximum Q-value of all actions for a given state
         key = self.constract_state_key(state)
-        maxQ = None
-        max = -1
+        maxQ = -1
         actions = self.Q[key]
         for act in actions:
-            if actions[act] > max:
-                max = actions[act]
-                maxQ = act
+            if actions[act] > maxQ:
+                maxQ = actions[act]
         return maxQ
 
     def constract_state_key(self, state):
@@ -104,12 +102,13 @@ class LearningAgent(Agent):
         # When learning, check if the 'state' is not in the Q-table
         # If it is not, create a new dictionary for that state
         #   Then, for each action available, set the initial Q-value to 0.0
-        key = self.constract_state_key(state)
-        if not(key in self.Q):
-            actions = dict()
-            for a in self.valid_actions:
-                actions[a] = 0
-            self.Q[key] = actions
+        if self.learning:
+            key = self.constract_state_key(state)
+            if not(key in self.Q):
+                actions = dict()
+                for a in self.valid_actions:
+                    actions[a] = 0
+                self.Q[key] = actions
         return
 
 
@@ -132,10 +131,18 @@ class LearningAgent(Agent):
             if self.epsilon > random.random():
                 action = random.choice(self.valid_actions)
             else:
-                action = self.get_maxQ(state)
+                maxQ = self.get_maxQ(state)
+                key = self.constract_state_key(state)
+                candidates = []
+                actions = self.Q[key]
+                for act in actions:
+                    if actions[act] == maxQ:
+                        candidates.append(act)
+                index = random.randint(0, len(candidates) - 1)
+                action = candidates[index]
         else:
             index = random.randint(0, len(self.valid_actions)-1)
-            action = self.valid_actions[index];
+            action = self.valid_actions[index]
 
         return action
 
@@ -192,7 +199,7 @@ def run():
     #    * epsilon - continuous value for the exploration factor, default is 1
     #    * alpha   - continuous value for the learning rate, default is 0.5
 
-    agent = env.create_agent(LearningAgent, True, 1, 0.4)
+    agent = env.create_agent(LearningAgent, True, 1, 0.45)
     
     ##############
     # Follow the driving agent

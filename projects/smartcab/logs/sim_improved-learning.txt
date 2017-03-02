@@ -3,146 +3,146 @@
 \-----------------------------------------
 
 moveleft_redLight_OncomingToleft
- -- forward : -14.10
- -- right : -1.02
- -- None : 1.71
- -- left : -10.03
-
-moveleft_greenLight_OncomingToleft
- -- forward : 0.57
- -- right : 0.71
- -- None : 0.58
- -- left : 1.80
-
-moveleft_greenLight_OncomingToNone
- -- forward : 0.84
- -- right : 0.82
- -- None : -5.03
- -- left : 1.70
-
-moveright_redLight_OncomingToforward
- -- forward : -15.70
- -- right : -8.01
- -- None : 2.02
- -- left : -6.25
+ -- forward : -8.51
+ -- right : 0.75
+ -- None : 1.85
+ -- left : -11.13
 
 moveforward_greenLight_OncomingToforward
- -- forward : 1.39
+ -- forward : 2.64
+ -- right : 0.68
+ -- None : -4.31
+ -- left : -9.31
+
+moveforward_redLight_OncomingToright
+ -- forward : 0.00
  -- right : 0.00
- -- None : -2.10
- -- left : -15.28
+ -- None : 2.02
+ -- left : -17.84
+
+moveright_redLight_OncomingToforward
+ -- forward : -7.04
+ -- right : -0.84
+ -- None : 1.03
+ -- left : -8.50
+
+moveleft_greenLight_OncomingToleft
+ -- forward : 0.45
+ -- right : 0.55
+ -- None : 0.75
+ -- left : 1.56
 
 moveright_greenLight_OncomingToright
- -- forward : 0.89
- -- right : 1.81
+ -- forward : 0.00
+ -- right : 1.95
  -- None : 0.00
  -- left : 0.00
 
 moveright_redLight_OncomingToNone
- -- forward : -11.42
- -- right : -2.99
- -- None : 1.81
- -- left : -9.73
+ -- forward : -19.90
+ -- right : 0.70
+ -- None : 2.27
+ -- left : -9.67
 
 moveright_redLight_OncomingToleft
- -- forward : -8.93
- -- right : -3.81
- -- None : 1.58
- -- left : -9.64
+ -- forward : -8.22
+ -- right : -8.22
+ -- None : 1.46
+ -- left : -11.96
 
 moveright_greenLight_OncomingToNone
- -- forward : 0.18
- -- right : 1.99
- -- None : -3.36
- -- left : 0.50
+ -- forward : 0.82
+ -- right : 1.46
+ -- None : -5.31
+ -- left : 0.69
 
 moveleft_redLight_OncomingToright
- -- forward : 0.00
- -- right : 0.00
- -- None : 2.15
- -- left : 0.00
+ -- forward : -6.67
+ -- right : 0.21
+ -- None : 1.69
+ -- left : -27.78
 
 moveleft_greenLight_OncomingToright
- -- forward : -0.01
- -- right : 0.87
- -- None : -4.47
- -- left : -8.00
+ -- forward : 0.25
+ -- right : 0.02
+ -- None : -1.95
+ -- left : -17.22
 
 moveforward_redLight_OncomingToNone
- -- forward : -10.49
- -- right : -0.73
- -- None : 2.00
- -- left : -26.49
+ -- forward : -16.06
+ -- right : 0.99
+ -- None : 1.64
+ -- left : -10.97
 
 moveforward_greenLight_OncomingToleft
- -- forward : 1.72
- -- right : 0.45
- -- None : 0.61
- -- left : 1.11
+ -- forward : 1.76
+ -- right : 0.67
+ -- None : 0.77
+ -- left : 0.85
 
 moveright_greenLight_OncomingToleft
- -- forward : 0.96
- -- right : 0.31
- -- None : 0.45
- -- left : 0.35
+ -- forward : 0.19
+ -- right : 2.44
+ -- None : 0.72
+ -- left : -0.21
 
 moveleft_redLight_OncomingToforward
- -- forward : -8.54
- -- right : 0.07
- -- None : 1.88
- -- left : -12.88
-
-moveforward_redLight_OncomingToleft
- -- forward : -9.62
- -- right : 0.66
- -- None : 2.36
- -- left : -6.23
-
-moveforward_redLight_OncomingToforward
- -- forward : -13.63
- -- right : -0.92
- -- None : 2.05
- -- left : -6.95
-
-moveforward_greenLight_OncomingToright
- -- forward : 2.01
- -- right : 0.00
- -- None : -1.99
- -- left : -7.85
-
-moveleft_redLight_OncomingToNone
- -- forward : -14.45
- -- right : 0.52
- -- None : 2.26
- -- left : -11.59
-
-moveforward_redLight_OncomingToright
- -- forward : -18.58
- -- right : 0.16
- -- None : 1.67
- -- left : -25.37
-
-moveright_redLight_OncomingToright
- -- forward : 0.00
- -- right : 0.00
- -- None : 2.13
- -- left : -31.08
+ -- forward : -15.88
+ -- right : 0.42
+ -- None : 2.42
+ -- left : -21.87
 
 moveleft_greenLight_OncomingToforward
- -- forward : 1.24
- -- right : -0.34
- -- None : -4.30
- -- left : -13.34
+ -- forward : -0.01
+ -- right : 1.45
+ -- None : -2.36
+ -- left : -9.31
+
+moveforward_redLight_OncomingToforward
+ -- forward : -12.49
+ -- right : -5.06
+ -- None : 1.88
+ -- left : -6.78
+
+moveforward_greenLight_OncomingToright
+ -- forward : 1.80
+ -- right : 0.20
+ -- None : -1.92
+ -- left : -8.95
+
+moveleft_redLight_OncomingToNone
+ -- forward : -11.18
+ -- right : -3.53
+ -- None : 2.28
+ -- left : -11.00
+
+moveleft_greenLight_OncomingToNone
+ -- forward : 0.75
+ -- right : 0.64
+ -- None : -4.75
+ -- left : 2.09
+
+moveright_redLight_OncomingToright
+ -- forward : -4.82
+ -- right : 1.04
+ -- None : 1.48
+ -- left : 0.00
+
+moveforward_redLight_OncomingToleft
+ -- forward : -20.74
+ -- right : 0.60
+ -- None : 1.86
+ -- left : -8.37
 
 moveright_greenLight_OncomingToforward
- -- forward : 0.16
- -- right : 2.18
- -- None : -2.25
- -- left : -7.87
+ -- forward : 0.39
+ -- right : 1.80
+ -- None : 0.00
+ -- left : -16.65
 
 moveforward_greenLight_OncomingToNone
  -- forward : 1.91
- -- right : 0.63
- -- None : -5.36
- -- left : 0.85
+ -- right : 0.85
+ -- None : -4.72
+ -- left : 0.80
 
