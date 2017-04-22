@@ -1,0 +1,13 @@
+enron_mail_20110402/maildir/jones-t/all_documents/11446.
+enron_mail_20110402/maildir/jones-t/all_documents/11455.
+enron_mail_20110402/maildir/jones-t/all_documents/2322.
+enron_mail_20110402/maildir/jones-t/notes_inbox/4456.
+enron_mail_20110402/maildir/jones-t/notes_inbox/4463.
+enron_mail_20110402/maildir/jones-t/notes_inbox/763.
+enron_mail_20110402/maildir/shackleton-s/all_documents/189.
+enron_mail_20110402/maildir/shackleton-s/all_documents/2148.
+enron_mail_20110402/maildir/shackleton-s/all_documents/9135.
+enron_mail_20110402/maildir/shackleton-s/brazil/29.
+enron_mail_20110402/maildir/shackleton-s/notes_inbox/3270.
+enron_mail_20110402/maildir/taylor-m/all_documents/6.
+enron_mail_20110402/maildir/taylor-m/s_a__trading/15.

@@ -1,0 +1,11 @@
+enron_mail_20110402/maildir/crandell-s/deleted_items/36.
+enron_mail_20110402/maildir/crandell-s/inbox/rto_west/7.
+enron_mail_20110402/maildir/hain-m/all_documents/596.
+enron_mail_20110402/maildir/hain-m/all_documents/597.
+enron_mail_20110402/maildir/hain-m/all_documents/598.
+enron_mail_20110402/maildir/hain-m/discussion_threads/685.
+enron_mail_20110402/maildir/hain-m/discussion_threads/686.
+enron_mail_20110402/maildir/hain-m/discussion_threads/687.
+enron_mail_20110402/maildir/hain-m/notes_inbox/491.
+enron_mail_20110402/maildir/hain-m/notes_inbox/492.
+enron_mail_20110402/maildir/hain-m/notes_inbox/493.

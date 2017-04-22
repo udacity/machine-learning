@@ -1,0 +1,15 @@
+enron_mail_20110402/maildir/lokay-m/all_documents/1905.
+enron_mail_20110402/maildir/lokay-m/all_documents/2103.
+enron_mail_20110402/maildir/lokay-m/all_documents/2204.
+enron_mail_20110402/maildir/lokay-m/all_documents/665.
+enron_mail_20110402/maildir/lokay-m/all_documents/688.
+enron_mail_20110402/maildir/lokay-m/discussion_threads/632.
+enron_mail_20110402/maildir/lokay-m/notes_inbox/32.
+enron_mail_20110402/maildir/lokay-m/systems/120.
+enron_mail_20110402/maildir/lokay-m/systems/45.
+enron_mail_20110402/maildir/lokay-m/systems/47.
+enron_mail_20110402/maildir/lokay-m/tw_commercial_group/804.
+enron_mail_20110402/maildir/mccarty-d/deleted_items/114.
+enron_mail_20110402/maildir/mccarty-d/deleted_items/3.
+enron_mail_20110402/maildir/watson-k/inbox/143.
+enron_mail_20110402/maildir/watson-k/rm_work_order/7.

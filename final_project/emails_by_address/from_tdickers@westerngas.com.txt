@@ -1,0 +1,17 @@
+enron_mail_20110402/maildir/hyatt-k/inbox/31.
+enron_mail_20110402/maildir/lokay-m/deleted_items/108.
+enron_mail_20110402/maildir/lokay-m/deleted_items/180.
+enron_mail_20110402/maildir/lokay-m/personal/286.
+enron_mail_20110402/maildir/lokay-m/personal/315.
+enron_mail_20110402/maildir/lokay-m/tw_commercial_group/1003.
+enron_mail_20110402/maildir/lokay-m/tw_commercial_group/1075.
+enron_mail_20110402/maildir/lokay-m/tw_commercial_group/1107.
+enron_mail_20110402/maildir/lokay-m/tw_commercial_group/1108.
+enron_mail_20110402/maildir/lokay-m/tw_commercial_group/1116.
+enron_mail_20110402/maildir/lokay-m/tw_commercial_group/1149.
+enron_mail_20110402/maildir/lokay-m/tw_commercial_group/1662.
+enron_mail_20110402/maildir/lokay-m/tw_commercial_group/1748.
+enron_mail_20110402/maildir/lokay-m/tw_commercial_group/1759.
+enron_mail_20110402/maildir/lokay-m/tw_commercial_group/1785.
+enron_mail_20110402/maildir/lokay-m/tw_commercial_group/1818.
+enron_mail_20110402/maildir/lokay-m/tw_commercial_group/867.

@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/rogers-b/all_documents/182.
+enron_mail_20110402/maildir/rogers-b/all_documents/242.
+enron_mail_20110402/maildir/rogers-b/all_documents/921.
+enron_mail_20110402/maildir/rogers-b/deleted_items/277.
+enron_mail_20110402/maildir/rogers-b/discussion_threads/1066.
+enron_mail_20110402/maildir/rogers-b/discussion_threads/1707.
+enron_mail_20110402/maildir/rogers-b/discussion_threads/1767.
+enron_mail_20110402/maildir/rogers-b/inbox/232.
+enron_mail_20110402/maildir/rogers-b/personal/173.
+enron_mail_20110402/maildir/rogers-b/personal/57.
+enron_mail_20110402/maildir/rogers-b/personal/85.
+enron_mail_20110402/maildir/rogers-b/personal/94.

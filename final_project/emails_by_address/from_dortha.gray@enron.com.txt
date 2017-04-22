@@ -1,0 +1,14 @@
+enron_mail_20110402/maildir/beck-s/all_documents/2549.
+enron_mail_20110402/maildir/beck-s/discussion_threads/747.
+enron_mail_20110402/maildir/beck-s/sap/38.
+enron_mail_20110402/maildir/haedicke-m/all_documents/1280.
+enron_mail_20110402/maildir/haedicke-m/notes_inbox/68.
+enron_mail_20110402/maildir/hayslett-r/all_documents/466.
+enron_mail_20110402/maildir/hayslett-r/discussion_threads/407.
+enron_mail_20110402/maildir/hayslett-r/notes_inbox/19.
+enron_mail_20110402/maildir/kitchen-l/_americas/sec/13.
+enron_mail_20110402/maildir/kitchen-l/_americas/sec/18.
+enron_mail_20110402/maildir/lokey-t/inbox/235.
+enron_mail_20110402/maildir/mann-k/all_documents/6068.
+enron_mail_20110402/maildir/mann-k/discussion_threads/4399.
+enron_mail_20110402/maildir/mann-k/notes_inbox/349.

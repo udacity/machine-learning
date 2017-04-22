@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/kaminski-v/all_documents/10153.
+enron_mail_20110402/maildir/kaminski-v/c/mangmt/group/management/684.
+enron_mail_20110402/maildir/salisbury-h/read/314.
+enron_mail_20110402/maildir/sanders-r/all_documents/1183.
+enron_mail_20110402/maildir/sanders-r/all_documents/4997.
+enron_mail_20110402/maildir/sanders-r/all_documents/5049.
+enron_mail_20110402/maildir/sanders-r/all_documents/929.
+enron_mail_20110402/maildir/sanders-r/misc/10.
+enron_mail_20110402/maildir/sanders-r/misc/17.
+enron_mail_20110402/maildir/sanders-r/notes_inbox/122.
+enron_mail_20110402/maildir/sanders-r/notes_inbox/126.
+enron_mail_20110402/maildir/sanders-r/notes_inbox/131.

@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/kitchen-l/_americas/earnings/10.
+enron_mail_20110402/maildir/kitchen-l/_americas/earnings/11.
+enron_mail_20110402/maildir/kitchen-l/_americas/east_power/175.
+enron_mail_20110402/maildir/kitchen-l/_americas/east_power/189.
+enron_mail_20110402/maildir/kitchen-l/_americas/east_power/190.
+enron_mail_20110402/maildir/kitchen-l/_americas/east_power/210.
+enron_mail_20110402/maildir/kitchen-l/_americas/east_power/211.
+enron_mail_20110402/maildir/kitchen-l/_americas/east_power/215.
+enron_mail_20110402/maildir/kitchen-l/_americas/east_power/221.
+enron_mail_20110402/maildir/mann-k/all_documents/5030.
+enron_mail_20110402/maildir/mann-k/blue_dog/98.
+enron_mail_20110402/maildir/mann-k/discussion_threads/3495.

@@ -1,0 +1,16 @@
+enron_mail_20110402/maildir/forney-j/deleted_items/35.
+enron_mail_20110402/maildir/forney-j/deleted_items/36.
+enron_mail_20110402/maildir/gilbertsmith-d/ercot/transmission/4.
+enron_mail_20110402/maildir/presto-k/deleted_items/392.
+enron_mail_20110402/maildir/presto-k/deleted_items/439.
+enron_mail_20110402/maildir/stokley-c/chris_stokley/projects/ees_/ercot/1.
+enron_mail_20110402/maildir/stokley-c/chris_stokley/projects/ees_/ercot/10.
+enron_mail_20110402/maildir/stokley-c/chris_stokley/projects/ees_/ercot/11.
+enron_mail_20110402/maildir/stokley-c/chris_stokley/projects/ees_/ercot/2.
+enron_mail_20110402/maildir/stokley-c/chris_stokley/projects/ees_/ercot/3.
+enron_mail_20110402/maildir/stokley-c/chris_stokley/projects/ees_/ercot/4.
+enron_mail_20110402/maildir/stokley-c/chris_stokley/projects/ees_/ercot/5.
+enron_mail_20110402/maildir/stokley-c/chris_stokley/projects/ees_/ercot/6.
+enron_mail_20110402/maildir/stokley-c/chris_stokley/projects/ees_/ercot/7.
+enron_mail_20110402/maildir/stokley-c/chris_stokley/projects/ees_/ercot/8.
+enron_mail_20110402/maildir/stokley-c/chris_stokley/projects/ees_/ercot/9.

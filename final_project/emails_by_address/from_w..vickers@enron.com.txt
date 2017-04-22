@@ -1,0 +1,15 @@
+enron_mail_20110402/maildir/hodge-j/inbox/308.
+enron_mail_20110402/maildir/hodge-j/inbox/332.
+enron_mail_20110402/maildir/kitchen-l/_americas/east_power/91.
+enron_mail_20110402/maildir/kitchen-l/_americas/gas/47.
+enron_mail_20110402/maildir/kitchen-l/_americas/gas/52.
+enron_mail_20110402/maildir/kitchen-l/_americas/gas/59.
+enron_mail_20110402/maildir/kitchen-l/_americas/gas/66.
+enron_mail_20110402/maildir/kitchen-l/_americas/gas/68.
+enron_mail_20110402/maildir/kitchen-l/_americas/gas/75.
+enron_mail_20110402/maildir/kitchen-l/_americas/hr/90.
+enron_mail_20110402/maildir/kitchen-l/inbox/93.
+enron_mail_20110402/maildir/neal-s/deleted_items/309.
+enron_mail_20110402/maildir/neal-s/inbox/227.
+enron_mail_20110402/maildir/nemec-g/inbox/315.
+enron_mail_20110402/maildir/tycholiz-b/inbox/336.

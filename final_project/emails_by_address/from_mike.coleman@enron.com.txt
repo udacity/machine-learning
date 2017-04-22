@@ -1,0 +1,16 @@
+enron_mail_20110402/maildir/kitchen-l/_americas/east_power/147.
+enron_mail_20110402/maildir/kitchen-l/_americas/mexico/52.
+enron_mail_20110402/maildir/kitchen-l/_americas/mexico/53.
+enron_mail_20110402/maildir/kitchen-l/_americas/tech_services/10.
+enron_mail_20110402/maildir/kitchen-l/_americas/tech_services/61.
+enron_mail_20110402/maildir/kitchen-l/_americas/tech_services/7.
+enron_mail_20110402/maildir/kitchen-l/_americas/turbines/56.
+enron_mail_20110402/maildir/kitchen-l/_americas/turbines/7.
+enron_mail_20110402/maildir/kitchen-l/_americas/turbines/8.
+enron_mail_20110402/maildir/lay-k/inbox/1652.
+enron_mail_20110402/maildir/weldon-c/ft__pierce/10.
+enron_mail_20110402/maildir/weldon-c/ft__pierce/14.
+enron_mail_20110402/maildir/weldon-c/ft__pierce/15.
+enron_mail_20110402/maildir/weldon-c/ft__pierce/18.
+enron_mail_20110402/maildir/weldon-c/ft__pierce/19.
+enron_mail_20110402/maildir/weldon-c/ft__pierce/8.

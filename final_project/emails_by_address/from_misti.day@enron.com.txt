@@ -1,0 +1,16 @@
+enron_mail_20110402/maildir/kitchen-l/_americas/east_power/50.
+enron_mail_20110402/maildir/kitchen-l/_americas/mrha/ooc/79.
+enron_mail_20110402/maildir/kitchen-l/_americas/mrha/ooc/85.
+enron_mail_20110402/maildir/kitchen-l/_americas/mrha/ooc/87.
+enron_mail_20110402/maildir/kitchen-l/_americas/ooc/55.
+enron_mail_20110402/maildir/kitchen-l/_americas/ooc/61.
+enron_mail_20110402/maildir/kitchen-l/_americas/ooc/63.
+enron_mail_20110402/maildir/martin-t/inbox/201.
+enron_mail_20110402/maildir/martin-t/inbox/205.
+enron_mail_20110402/maildir/neal-s/all_documents/23.
+enron_mail_20110402/maildir/neal-s/discussion_threads/413.
+enron_mail_20110402/maildir/neal-s/inbox/108.
+enron_mail_20110402/maildir/neal-s/inbox/25.
+enron_mail_20110402/maildir/neal-s/notes_inbox/23.
+enron_mail_20110402/maildir/shively-h/deleted_items/470.
+enron_mail_20110402/maildir/shively-h/inbox/67.

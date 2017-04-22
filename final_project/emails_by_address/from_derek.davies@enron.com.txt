@@ -1,0 +1,16 @@
+enron_mail_20110402/maildir/haedicke-m/inbox/307.
+enron_mail_20110402/maildir/jones-t/all_documents/3376.
+enron_mail_20110402/maildir/jones-t/notes_inbox/1387.
+enron_mail_20110402/maildir/kitchen-l/_americas/canada/1.
+enron_mail_20110402/maildir/kitchen-l/_americas/canada/4.
+enron_mail_20110402/maildir/kitchen-l/_americas/canada/8.
+enron_mail_20110402/maildir/kitchen-l/_americas/esvl/362.
+enron_mail_20110402/maildir/lavorato-j/deleted_items/538.
+enron_mail_20110402/maildir/lavorato-j/deleted_items/652.
+enron_mail_20110402/maildir/lavorato-j/inbox/247.
+enron_mail_20110402/maildir/lavorato-j/inbox/82.
+enron_mail_20110402/maildir/lavorato-j/inbox/94.
+enron_mail_20110402/maildir/taylor-m/all_documents/1113.
+enron_mail_20110402/maildir/taylor-m/archive/1_00/18.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/30.
+enron_mail_20110402/maildir/tycholiz-b/inbox/433.

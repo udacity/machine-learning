@@ -1,0 +1,14 @@
+enron_mail_20110402/maildir/hayslett-r/inbox/12.
+enron_mail_20110402/maildir/hayslett-r/inbox/13.
+enron_mail_20110402/maildir/hayslett-r/inbox/39.
+enron_mail_20110402/maildir/hayslett-r/inbox/8.
+enron_mail_20110402/maildir/kitchen-l/_americas/finance/45.
+enron_mail_20110402/maildir/kitchen-l/_americas/portland/162.
+enron_mail_20110402/maildir/kitchen-l/_americas/tech_services/18.
+enron_mail_20110402/maildir/kitchen-l/_americas/tech_services/5.
+enron_mail_20110402/maildir/whalley-l/all_documents/1025.
+enron_mail_20110402/maildir/whalley-l/all_documents/1270.
+enron_mail_20110402/maildir/whalley-l/discussion_threads/1053.
+enron_mail_20110402/maildir/whalley-l/discussion_threads/1292.
+enron_mail_20110402/maildir/whalley-l/notes_inbox/485.
+enron_mail_20110402/maildir/whalley-l/notes_inbox/682.

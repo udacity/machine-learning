@@ -1,0 +1,13 @@
+enron_mail_20110402/maildir/baughman-d/power/interviews/151.
+enron_mail_20110402/maildir/campbell-l/all_documents/1230.
+enron_mail_20110402/maildir/campbell-l/discussion_threads/1106.
+enron_mail_20110402/maildir/campbell-l/notes_inbox/70.
+enron_mail_20110402/maildir/dean-c/inbox/72.
+enron_mail_20110402/maildir/gilbertsmith-d/calendar/14.
+enron_mail_20110402/maildir/gilbertsmith-d/calendar/18.
+enron_mail_20110402/maildir/hernandez-j/24_hr_power/23.
+enron_mail_20110402/maildir/hernandez-j/all_documents/766.
+enron_mail_20110402/maildir/hernandez-j/discussion_threads/754.
+enron_mail_20110402/maildir/stepenovitch-j/all_documents/39.
+enron_mail_20110402/maildir/stepenovitch-j/discussion_threads/27.
+enron_mail_20110402/maildir/sturm-f/inbox/43.
