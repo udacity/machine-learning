@@ -13741,12 +13741,12 @@ JGQo6YmISMhQ0hMRkZChpCciIiHjfwEuk7lzXG41KQAAAABJRU5ErkJggg==
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
 <ul>
-<li>maximum depth 1: High Variance<ul>
-<li>The point of the validation score is close to the training score. That is why the bias is not so high. In contrast to that is the variance. The variance, indicated by the shady area around the validation curve, seems to be quite high (roughly a score of +/- 0.15).</li>
+<li>maximum depth 1: High Bias<ul>
+<li>Both lines have a low score. The training score is at 0.5 and the validation score is at 0.35. When both scores are low, this is indicating a under-fitting and so a high bias. The model seems to be too simple.</li>
 </ul>
 </li>
-<li>maximum depth 10: High Bias and High Variance<ul>
-<li>The value of the validation score is far away from the testing score belonging to the same point. This indicated that there is high bias when the data point is far away. Furthermore, the variance seems to be similar to a maximum depth of 1 (roughly a score of +/- 0.15). The variance can be seen by the shady area around the validation curve. As the value seems to be similar, I would say there is also a high variance.</li>
+<li>maximum depth 10: High Variance<ul>
+<li>The training score seems to be at a maximum value, which can be a sign of overfitting. Furthermore,the gap and between the training score and validation score is huge. It is roughly 0.4. Huge gaps betweens these two scores are a sign of a high variance. Besides, as the training score is at 1.0, I assume that the model is strongly depending on the training data and can't deal so well with unknown data. The model seems to be too complex.</li>
 </ul>
 </li>
 </ul>
