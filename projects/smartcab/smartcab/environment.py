@@ -327,7 +327,7 @@ class Environment(object):
 
         # Agent wants to perform no action:
         elif action == None:
-            if light == 'green' and inputs['oncoming'] != 'left': # No oncoming traffic
+            if light == 'green' and (inputs['oncoming'] != 'left' or waypoint != 'left'): # No oncoming traffic
                 violation = 1 # Minor violation
 
 
@@ -336,6 +336,8 @@ class Environment(object):
             if action == agent.get_next_waypoint(): # Was it the correct action?
                 reward += 2 - penalty # (2, 1)
             elif action == None and light != 'green': # Was the agent stuck at a red light?
+                reward += 2 - penalty # (2, 1)
+            elif action== None and light == 'green' and inputs['oncoming'] in ['forward', 'right']:
                 reward += 2 - penalty # (2, 1)
             else: # Valid but incorrect
                 reward += 1 - penalty # (1, 0)
