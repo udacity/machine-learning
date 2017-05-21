@@ -34,7 +34,11 @@ class Simulator(object):
         'gray'    : (155, 155, 155)
     }
 
-    def __init__(self, env, size=None, update_delay=2.0, display=True, log_metrics=False, optimized=False):
+    def __init__(self, env, size=None, update_delay=2.0, display=True, log_metrics=False, optimized=False, file_suffix=''):
+        """
+        'file_suffix' is a string (or string-coercable value) to be appended to log file name,
+         therefore allowing for multiple log files to be created. """
+
         self.env = env
         self.size = size if size is not None else ((self.env.grid_size[0] + 1) * self.env.block_size, (self.env.grid_size[1] + 2) * self.env.block_size)
         self.width, self.height = self.size
@@ -93,8 +97,12 @@ class Simulator(object):
             # Set log files
             if a.learning:
                 if self.optimized: # Whether the user is optimizing the parameters and decay functions
-                    self.log_filename = os.path.join("logs", "sim_improved-learning.csv")
-                    self.table_filename = os.path.join("logs","sim_improved-learning.txt")
+                    file_name = "sim_improved-learning" + str(file_suffix)
+                    self.log_filename = os.path.join("logs", file_name + ".csv")
+                    self.table_filename = os.path.join("logs", file_name + ".txt")
+
+                    #self.log_filename = os.path.join("logs", "sim_improved-learning.csv")
+                    #self.table_filename = os.path.join("logs","sim_improved-learning.txt")
                 else: 
                     self.log_filename = os.path.join("logs", "sim_default-learning.csv")
                     self.table_filename = os.path.join("logs","sim_default-learning.txt")
