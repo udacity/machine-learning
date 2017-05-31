@@ -16,7 +16,7 @@ If you do not have Python installed yet, it is highly recommended that you insta
 
 ### Code
 
-Template code is provided in the `customer_segments.ipynb` notebook file. You will also be required to use the included `visuals.py` Python file and the `housing.csv` dataset file to complete your work. While some code has already been implemented to get you started, you will need to implement additional functionality when requested to successfully complete the project. Note that the code included in `visuals.py` is meant to be used out-of-the-box and not intended for students to manipulate. If you are interested in how the visualizations are created in the notebook, please feel free to explore this Python file.
+Template code is provided in the `customer_segments.ipynb` notebook file. You will also be required to use the included `visuals.py` Python file and the `customers.csv` dataset file to complete your work. While some code has already been implemented to get you started, you will need to implement additional functionality when requested to successfully complete the project. Note that the code included in `visuals.py` is meant to be used out-of-the-box and not intended for students to manipulate. If you are interested in how the visualizations are created in the notebook, please feel free to explore this Python file.
 
 ### Run
 
@@ -46,4 +46,4 @@ Note (m.u.) is shorthand for *monetary units*.
 5) `Detergents_Paper`: annual spending (m.u.) on detergents and paper products (Continuous);
 6) `Delicatessen`: annual spending (m.u.) on and delicatessen products (Continuous); 
 7) `Channel`: {Hotel/Restaurant/Cafe - 1, Retail - 2} (Nominal)
-8) `Region`: {Lisnon - 1, Oporto - 2, or Other - 3} (Nominal) 
+8) `Region`: {Lisbon - 1, Oporto - 2, or Other - 3} (Nominal) 
