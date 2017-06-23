@@ -55,6 +55,12 @@ class LearningAgent(Agent):
         ########### 
         ## TO DO ##
         ###########
+        
+        # NOTE : you are not allowed to engineer eatures outside of the inputs available.
+        # Because the aim of this project is to teach Reinforcement Learning, we have placed 
+        # constraints in order for you to learn how to adjust epsilon and alpha, and thus learn about the balance between exploration and exploitation.
+        # With the hand-engineered features, this learning process gets entirely negated.
+        
         # Set 'state' as a tuple of relevant data for the agent        
         state = None
 
@@ -102,14 +108,14 @@ class LearningAgent(Agent):
         ###########
         # When not learning, choose a random action
         # When learning, choose a random action with 'epsilon' probability
-        #   Otherwise, choose an action with the highest Q-value for the current state
- 
+        # Otherwise, choose an action with the highest Q-value for the current state
+        # Be sure that when choosing an action with highest Q-value that you randomly select between actions that "tie".
         return action
 
 
     def learn(self, state, action, reward):
         """ The learn function is called after the agent completes an action and
-            receives an award. This function does not consider future rewards 
+            receives a reward. This function does not consider future rewards 
             when conducting learning. """
 
         ########### 

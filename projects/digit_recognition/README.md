@@ -4,7 +4,7 @@
 
 ### Install
 
-This project requires **Python 2.7** and the following Python libraries installed:
+This project requires **Python 2.x or Python 3.x** and the following Python libraries installed:
 
 - [NumPy](http://www.numpy.org/)
 - [SciPy](https://www.scipy.org/)

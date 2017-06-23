@@ -313,10 +313,7 @@ class Environment(object):
                 elif inputs['oncoming'] == 'right': # Oncoming car turning right
                     violation = 4 # Accident
             else: # Green light
-                if inputs['oncoming'] == 'right' or inputs['oncoming'] == 'forward': # Incoming traffic
-                    violation = 3 # Accident
-                else: # Valid move!
-                    heading = (heading[1], -heading[0])
+                heading = (heading[1], -heading[0]) # Valid move. We assume the cab will wait for the lane to be clear on a green light, before taking the left turn.
 
         # Agent wants to drive right:
         elif action == 'right':
@@ -327,7 +324,7 @@ class Environment(object):
 
         # Agent wants to perform no action:
         elif action == None:
-            if light == 'green' and inputs['oncoming'] != 'left': # No oncoming traffic
+            if light == 'green': 
                 violation = 1 # Minor violation
 
 
@@ -335,6 +332,9 @@ class Environment(object):
         if violation == 0:
             if action == agent.get_next_waypoint(): # Was it the correct action?
                 reward += 2 - penalty # (2, 1)
+            elif action == None and light != 'green' and agent.get_next_waypoint() == 'right':
+                # valid action but incorrect (idling at red light, when we should have gone right on red)
+                reward += 1 - penalty # (1, 0)
             elif action == None and light != 'green': # Was the agent stuck at a red light?
                 reward += 2 - penalty # (2, 1)
             else: # Valid but incorrect
