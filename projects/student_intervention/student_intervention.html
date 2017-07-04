@@ -11801,7 +11801,7 @@ This is a classification problem sincde we are trying to figure out if the stude
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries</span>
@@ -11853,14 +11853,14 @@ This is a classification problem sincde we are trying to figure out if the stude
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Calculate number of students</span>
 <span class="n">n_students</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">student_data</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
 
 <span class="c1"># TODO: Calculate number of features</span>
-<span class="n">n_features</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">student_data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">n_features</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">student_data</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 
 <span class="c1"># TODO: Calculate passing students</span>
 <span class="n">n_passed</span> <span class="o">=</span> <span class="n">student_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">student_data</span><span class="p">[</span><span class="s1">&#39;passed&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">][</span><span class="s1">&#39;passed&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -11890,7 +11890,7 @@ This is a classification problem sincde we are trying to figure out if the stude
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Total number of students: 395
-Number of features: 31
+Number of features: 30
 Number of students who passed: 265
 Number of students who failed: 130
 Graduation rate of the class: 67.09%
@@ -11916,7 +11916,7 @@ Graduation rate of the class: 67.09%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Extract feature columns</span>
@@ -11998,7 +11998,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">preprocess_features</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -12069,7 +12069,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import any additional functionality you may need here</span>
@@ -12101,7 +12101,6 @@ Feature values:
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training set has 300 samples.
 Testing set has 95 samples.
-&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 </pre>
 </div>
 </div>
@@ -12159,12 +12158,19 @@ This is a classification problem where there are labels rather than continuous v
 <li>Decision Trees</li>
 </ol>
 <ol>
-<li><p>Gaussian Naive Bayes : This is an eager learner algorithm, meaning that the accuracy of the classification remains the same once the training data has been "learnt". It is used in security and mail filtering software, particularly to determine if a given email is spam. This works well on relatively small datasets with low variance. However, it is naive in the sense that it assumes that the features used in training are independent.</p>
+<li><p>Gaussian Naive Bayes : This is an eager learner algorithm, meaning that the accuracy of the classification remains the same once the training data has been "learnt". It is used in security and mail filtering software, particularly to determine if a given email is spam. This works well on relatively small datasets with low variance. However, it is naive in the sense that it assumes that the features used in training are independent. Given the small number of features (30) and datapoints (395), it might be good to try out Naive Bayes on our dataset.</p>
 </li>
-<li><p>K-Nearest Neighbors : This is a lazy learner and the current training set determines the accuracy of the test data classification. It is used in the recommender systems. It handles multi-class/ multi-label cases very well and has the ability to incorporate distance and weights. However, it requires large amount of training data to be stored and has a high compute requirement to classify every test point.</p>
+<li><p>K-Nearest Neighbors : This is a lazy learner and the current training set determines the accuracy of the test data classification. It is used in the recommender systems. It handles multi-class/ multi-label cases very well and has the ability to incorporate distance and weights. However, it requires large amount of training data to be stored and has a high compute requirement to classify every test point. In our case, our dataset is small enough that storing it is not an issue and K-Neighbors will work well if the dat is noisy.</p>
 </li>
-<li><p>Decision Trees : This is another eager learner and is easy to interpret. It is used to determine possibility of credit card fraud (FICO). This approach works very well when the dataset has missing attributes, but performs poorly with noisy data.</p>
+<li><p>Decision Trees : This is another eager learner and is easy to interpret. It is used to determine possibility of credit card fraud (FICO). This approach works very well when the dataset has missing attributes, but performs poorly with noisy data. Decision trees can draw non-linear boundaries, which is good for multi-feature/ multi-label dataset.</p>
 </li>
+</ol>
+<p>References:</p>
+<ol>
+<li><a href="https://www.quora.com/What-are-the-advantages-of-different-classification-algorithms">https://www.quora.com/What-are-the-advantages-of-different-classification-algorithms</a></li>
+<li><a href="https://pratanalytics.wordpress.com/2014/11/25/pros-and-cons-of-classifiers/">https://pratanalytics.wordpress.com/2014/11/25/pros-and-cons-of-classifiers/</a></li>
+<li><a href="http://blog.aylien.com/naive-bayes-for-dummies-a-simple-explanation/">http://blog.aylien.com/naive-bayes-for-dummies-a-simple-explanation/</a></li>
+<li><a href="http://www2.cs.man.ac.uk/~raym8/comp37212/main/node264.html">http://www2.cs.man.ac.uk/~raym8/comp37212/main/node264.html</a></li>
 </ol>
 
 </div>
@@ -12190,7 +12196,7 @@ This is a classification problem where there are labels rather than continuous v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">train_classifier</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">):</span>
@@ -12263,7 +12269,7 @@ This is a classification problem where there are labels rather than continuous v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import the three supervised learning models from sklearn</span>
@@ -12278,15 +12284,15 @@ This is a classification problem where there are labels rather than continuous v
 <span class="c1"># TODO: Initialize the three models</span>
 <span class="n">clf_A</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
 <span class="n">clf_B</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">()</span>
-<span class="n">clf_C</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+<span class="n">clf_C</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">50</span><span class="p">)</span>
 
 <span class="c1"># TODO: Set up the training set sizes</span>
 <span class="k">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
-<span class="n">X_train_100</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">99</span><span class="p">]</span>
-<span class="n">y_train_100</span> <span class="o">=</span> <span class="n">y_train</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">99</span><span class="p">]</span>
+<span class="n">X_train_100</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[:</span><span class="mi">100</span><span class="p">]</span>
+<span class="n">y_train_100</span> <span class="o">=</span> <span class="n">y_train</span><span class="p">[:</span><span class="mi">100</span><span class="p">]</span>
 
-<span class="n">X_train_200</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">199</span><span class="p">]</span>
-<span class="n">y_train_200</span> <span class="o">=</span> <span class="n">y_train</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">199</span><span class="p">]</span>
+<span class="n">X_train_200</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[:</span><span class="mi">200</span><span class="p">]</span>
+<span class="n">y_train_200</span> <span class="o">=</span> <span class="n">y_train</span><span class="p">[:</span><span class="mi">200</span><span class="p">]</span>
 
 <span class="n">X_train_300</span> <span class="o">=</span> <span class="n">X_train</span>
 <span class="n">y_train_300</span> <span class="o">=</span> <span class="n">y_train</span>
@@ -12317,60 +12323,60 @@ This is a classification problem where there are labels rather than continuous v
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-Training a GaussianNB using a training set size of 99. . .
+Training a GaussianNB using a training set size of 100. . .
 Trained model in 0.0000 seconds
 Made predictions in 0.0000 seconds.
 F1 score for training set: 0.8467.
 Made predictions in 0.0000 seconds.
-F1 score for test set: 0.7941.
-Training a GaussianNB using a training set size of 199. . .
-Trained model in 0.0310 seconds
+F1 score for test set: 0.8029.
+Training a GaussianNB using a training set size of 200. . .
+Trained model in 0.0150 seconds
 Made predictions in 0.0000 seconds.
-F1 score for training set: 0.8394.
+F1 score for training set: 0.8406.
 Made predictions in 0.0000 seconds.
-F1 score for test set: 0.7344.
+F1 score for test set: 0.7244.
 Training a GaussianNB using a training set size of 300. . .
 Trained model in 0.0000 seconds
 Made predictions in 0.0000 seconds.
 F1 score for training set: 0.8038.
 Made predictions in 0.0000 seconds.
 F1 score for test set: 0.7634.
-Training a KNeighborsClassifier using a training set size of 99. . .
+Training a KNeighborsClassifier using a training set size of 100. . .
 Trained model in 0.0000 seconds
 Made predictions in 0.0000 seconds.
 F1 score for training set: 0.8060.
-Made predictions in 0.0000 seconds.
-F1 score for test set: 0.7246.
-Training a KNeighborsClassifier using a training set size of 199. . .
-Trained model in 0.0000 seconds
 Made predictions in 0.0160 seconds.
-F1 score for training set: 0.8746.
+F1 score for test set: 0.7246.
+Training a KNeighborsClassifier using a training set size of 200. . .
+Trained model in 0.0000 seconds
 Made predictions in 0.0000 seconds.
-F1 score for test set: 0.7606.
+F1 score for training set: 0.8800.
+Made predictions in 0.0000 seconds.
+F1 score for test set: 0.7692.
 Training a KNeighborsClassifier using a training set size of 300. . .
 Trained model in 0.0000 seconds
-Made predictions in 0.0320 seconds.
+Made predictions in 0.0000 seconds.
 F1 score for training set: 0.8809.
-Made predictions in 0.0150 seconds.
+Made predictions in 0.0000 seconds.
 F1 score for test set: 0.7801.
-Training a DecisionTreeClassifier using a training set size of 99. . .
+Training a DecisionTreeClassifier using a training set size of 100. . .
 Trained model in 0.0000 seconds
 Made predictions in 0.0000 seconds.
 F1 score for training set: 1.0000.
 Made predictions in 0.0000 seconds.
-F1 score for test set: 0.7031.
-Training a DecisionTreeClassifier using a training set size of 199. . .
+F1 score for test set: 0.6250.
+Training a DecisionTreeClassifier using a training set size of 200. . .
 Trained model in 0.0000 seconds
 Made predictions in 0.0000 seconds.
 F1 score for training set: 1.0000.
 Made predictions in 0.0000 seconds.
-F1 score for test set: 0.7258.
+F1 score for test set: 0.7368.
 Training a DecisionTreeClassifier using a training set size of 300. . .
 Trained model in 0.0000 seconds
 Made predictions in 0.0000 seconds.
 F1 score for training set: 1.0000.
 Made predictions in 0.0000 seconds.
-F1 score for test set: 0.6508.
+F1 score for test set: 0.6667.
 </pre>
 </div>
 </div>
@@ -12478,21 +12484,21 @@ F1 score for test set: 0.6508.
 <td style="text-align:center">0</td>
 <td style="text-align:center">0</td>
 <td style="text-align:center">1</td>
-<td style="text-align:center">0.7200</td>
+<td style="text-align:center">0.6250</td>
 </tr>
 <tr>
 <td style="text-align:center">200</td>
 <td style="text-align:center">0</td>
 <td style="text-align:center">0</td>
 <td style="text-align:center">1</td>
-<td style="text-align:center">0.7287</td>
+<td style="text-align:center">0.7368</td>
 </tr>
 <tr>
 <td style="text-align:center">300</td>
 <td style="text-align:center">0</td>
 <td style="text-align:center">0</td>
 <td style="text-align:center">1</td>
-<td style="text-align:center">0.5882</td>
+<td style="text-align:center">0.6667</td>
 </tr>
 </tbody>
 </table>
@@ -12581,7 +12587,7 @@ The decision tree algorithm works by finding classifying the data into subsets b
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[123]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;GridSearchCV&#39; and &#39;make_scorer&#39;</span>
@@ -12593,7 +12599,7 @@ The decision tree algorithm works by finding classifying the data into subsets b
 <span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]}</span>
 <span class="c1"># TODO: Initialize the classifier</span>
 <span class="c1">#clf = KNeighborsClassifier()</span>
-<span class="n">clf</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">50</span><span class="p">)</span>
 
 <span class="c1"># TODO: Make an f1 scoring function using &#39;make_scorer&#39; </span>
 <span class="n">f1_scorer</span> <span class="o">=</span> <span class="n">make_scorer</span><span class="p">(</span><span class="n">f1_score</span><span class="p">,</span><span class="n">pos_label</span> <span class="o">=</span> <span class="s1">&#39;yes&#39;</span><span class="p">)</span>
