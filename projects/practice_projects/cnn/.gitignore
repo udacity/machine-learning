@@ -1,0 +1,13 @@
+.DS_Store
+mnist-mlp/.ipynb_checkpoints/
+mnist-mlp/.DS_Store
+conv-visualization/.ipynb_checkpoints/
+conv-visualization/.DS_Store
+cifar10-classification/.ipynb_checkpoints/
+cifar10-classification/.DS_Store
+cifar10-augmentation/.ipynb_checkpoints/
+cifar10-augmentation/.DS_Store
+transfer-learning/dogImages
+transfer-learning/bottleneck_features/DogVGG16Data.npz
+transfer-learning/.ipynb_checkpoints/
+transfer-learning/.DS_Store
