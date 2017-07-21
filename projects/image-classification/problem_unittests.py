@@ -40,7 +40,7 @@ def test_normalize(normalize):
     assert normalize_out.shape == test_shape,\
         'Incorrect Shape. {} shape found'.format(normalize_out.shape)
 
-    assert normalize_out.max() <= 1 and normalize_out.min() >= 0,\
+    assert normalize_out.max() == 1 and normalize_out.min() == 0,\
         'Incorect Range. {} to {} found'.format(normalize_out.min(), normalize_out.max())
 
     _print_success_message()
