@@ -13812,6 +13812,8 @@ I would choose an MD of value 3. It is true that a value of 4 would give a sligh
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong> <br>
 The grid search technique consists in trying out different hyperparameters for our models and see which values achieve a better score. This technique saves us a lot of time of "knob tuning". In the case of the decision tree model we have used so far, we would automate the process of finding the best MD.</p>
+<p>When using this technique with multiple variables, lets say x variables, we can picture what the algorithm does as creating a cartesian system of x dimensions, and map into the cartesian system all the possible combinations of the values we provided. It's important to note that it's impossible to try all valid combinations, that's why we have to provide the valid valus to use. Then it will try all this different points as parameters of our model, registering the performance each time. We then select the best performing model among the results.</p>
+<p>In order to recognize which model does best, it's imperative that we define an evaluation function. This could be either a loss function or some sort of performance function. With the former we pick the parameters that minimize its value, with the later it's the opposite, we try to maximize it.</p>
 
 </div>
 </div>
@@ -13837,9 +13839,9 @@ The grid search technique consists in trying out different hyperparameters for o
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong> <br>
-K-fold cross validation is a technique used to get the most out of the data available. Instead of spliting the data into train and test sets and only use the training data to tune our model, we define a k value which represents the number of folds we will split our data (all our data) into. We then train our model using one fold as our test data and the rest as our training data, and we do this k times, each time using a different fold as our test set. We will end up with k different meassurements of the performance of our model, which we average. But more importantly, we will use all our data to train our model, without the risk of overfitting! <br>
-<br>
-Cross validation helps grid search because it lets the algorithm evaluate  on wether the different parameters decrease the error or not, but using all the data available. If we choose our parameters possible values right, we end up with the best possible model.</p>
+K-fold cross validation is a technique used to get the most out of the data available. Instead of spliting the data into train and test sets and only use the training data to tune our model, we define a k value which represents the number of folds we will split our data (all our data) into. We then train our model using one fold as our test data and the rest as our training data, and we do this k times, each time using a different fold as our test set. We will end up with k different meassurements of the performance of our model, which we average. But more importantly, we will use all our data to train our model, without the risk of overfitting!</p>
+<p>Cross validation helps grid search because it lets the algorithm evaluate  on wether the different parameters decrease the error or not, but using all the data available. If we choose our parameters' possible values right, we end up with the best possible model.</p>
+<p>GridSearchCV will split only the training data, but this will be done multiple times for each holdout of K-fold. On the other hand, it is important to note that the default behaviour of Kfold will split the data sequentially, and that many times this will not be the desired method. If our data is ordered or we suspect the underlying probability distribution may vary relative to its index, we need to use a random split in order to avoid this bias source.</p>
 
 </div>
 </div>
@@ -14096,9 +14098,9 @@ Predicted selling price for Client 3&#39;s home: $935,130.00
 <p><strong>Answer: </strong> <br>
 For each client I would recommend the following:</p>
 <ol>
-<li>Client 1 should sell the house for a price similar to USD 409,000</li>
-<li>Client 2 should sell the house for a price similar to USD 240,000</li>
-<li>Client 3 should sell the house for a price similar to USD 935,000</li>
+<li>Client 1 should sell the house for a price similar to USD 409,000: average value of features that returns an average price for the house (rememeber that the mean price in the dataset is USD 454,342.94).</li>
+<li>Client 2 should sell the house for a price similar to USD 240,000: A smaller number of rooms with a higher poverty level and a high ratio of student to teacher. This house should clearly sell for a low price, and the price that the model suggests is a little lower than the mean minus one standard deviation (USD 289,171.81) which seems reasonable.</li>
+<li>Client 3 should sell the house for a price similar to USD 935,000: This house has all its numbers asking for a higher price, and the price is close to the maximum wihtin the dataset (which is just above a million dollars). It does seem a good estimation.</li>
 </ol>
 <p>This prices do seem reasonable (in the context of this dataset) when taking into account each house's data.</p>
 
