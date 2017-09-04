@@ -328,7 +328,7 @@ class Environment(object):
         # Agent wants to perform no action:
         elif action == None:
             if light == 'green':
-                if (agent.get_next_waypoint() == 'left' and inputs['oncoming'] != 'right' and inputs['oncoming'] != 'forward'):
+                if (agent.get_next_waypoint() == 'left' and (inputs['oncoming'] == 'right' or inputs['oncoming'] == 'forward')):
                     pass
                 else:
                     violation = 1 # Minor violation
