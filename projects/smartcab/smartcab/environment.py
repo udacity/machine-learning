@@ -336,10 +336,10 @@ class Environment(object):
 
         # Did the agent attempt a valid move?
         if violation == 0:
-            # Agent moved wihtout violations or accidents towards the waypoint.
+            # Agent moved without violations or accidents towards the waypoint.
             if action == agent.get_next_waypoint():
                 reward += 2 - penalty # (2, 1)
-            # Agent moved wihtout violations or accidents, but not towards the waypoint.
+            # Agent moved without violations or accidents, but not towards the waypoint.
             elif action != None:
                 reward += 1 - penalty # (1, 0)
             else:
