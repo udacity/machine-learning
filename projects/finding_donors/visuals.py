@@ -72,11 +72,11 @@ def evaluate(results, accuracy, f1):
             for i in np.arange(3):
                 
                 # Creative plot code
-                ax[j/3, j%3].bar(i+k*bar_width, results[learner][i][metric], width = bar_width, color = colors[k])
-                ax[j/3, j%3].set_xticks([0.45, 1.45, 2.45])
-                ax[j/3, j%3].set_xticklabels(["1%", "10%", "100%"])
-                ax[j/3, j%3].set_xlabel("Training Set Size")
-                ax[j/3, j%3].set_xlim((-0.1, 3.0))
+                ax[int(j/3), int(j%3)].bar(i+k*bar_width, results[learner][i][metric], width = bar_width, color = colors[k])
+                ax[int(j/3), int(j%3)].set_xticks([0.45, 1.45, 2.45])
+                ax[int(j/3), int(j%3)].set_xticklabels(["1%", "10%", "100%"])
+                ax[int(j/3), int(j%3)].set_xlabel("Training Set Size")
+                ax[int(j/3), int(j%3)].set_xlim((-0.1, 3.0))
     
     # Add unique y-labels
     ax[0, 0].set_ylabel("Time (in seconds)")
