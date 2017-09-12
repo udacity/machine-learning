@@ -177,7 +177,7 @@ class Environment(object):
                 self.trial_data['success'] = 0
 
     def step(self):
-        """ This function is called when a time step is taken turing a trial. """
+        """ This function is called when a time step is taken during a trial. """
 
         # Pretty print to terminal
         print ""
