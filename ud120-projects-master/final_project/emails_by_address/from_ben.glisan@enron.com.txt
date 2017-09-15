@@ -1,0 +1,16 @@
+enron_mail_20110402/maildir/buy-r/inbox/1115.
+enron_mail_20110402/maildir/hayslett-r/accounting/4.
+enron_mail_20110402/maildir/hayslett-r/all_documents/147.
+enron_mail_20110402/maildir/hayslett-r/discussion_threads/135.
+enron_mail_20110402/maildir/kitchen-l/_americas/asset_marketing/80.
+enron_mail_20110402/maildir/lay-k/inbox/384.
+enron_mail_20110402/maildir/rogers-b/genco_jv_ipo/1.
+enron_mail_20110402/maildir/whalley-g/inbox/90.
+enron_mail_20110402/maildir/whalley-l/all_documents/1226.
+enron_mail_20110402/maildir/whalley-l/all_documents/447.
+enron_mail_20110402/maildir/whalley-l/all_documents/604.
+enron_mail_20110402/maildir/whalley-l/discussion_threads/571.
+enron_mail_20110402/maildir/whalley-l/discussion_threads/716.
+enron_mail_20110402/maildir/whalley-l/notes_inbox/150.
+enron_mail_20110402/maildir/whalley-l/notes_inbox/262.
+enron_mail_20110402/maildir/whalley-l/notes_inbox/646.

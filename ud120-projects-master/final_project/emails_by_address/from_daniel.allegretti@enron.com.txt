@@ -1,0 +1,17 @@
+enron_mail_20110402/maildir/dasovich-j/all_documents/376.
+enron_mail_20110402/maildir/dasovich-j/commercial_opportunities_task_force/4.
+enron_mail_20110402/maildir/lay-k/all_documents/351.
+enron_mail_20110402/maildir/lay-k/discussion_threads/256.
+enron_mail_20110402/maildir/lay-k/notes_inbox/154.
+enron_mail_20110402/maildir/shapiro-r/all_documents/164.
+enron_mail_20110402/maildir/shapiro-r/all_documents/171.
+enron_mail_20110402/maildir/shapiro-r/all_documents/246.
+enron_mail_20110402/maildir/shapiro-r/all_documents/517.
+enron_mail_20110402/maildir/shapiro-r/discussion_threads/143.
+enron_mail_20110402/maildir/shapiro-r/discussion_threads/149.
+enron_mail_20110402/maildir/shapiro-r/discussion_threads/218.
+enron_mail_20110402/maildir/shapiro-r/retail_markets/2.
+enron_mail_20110402/maildir/shapiro-r/value/24.
+enron_mail_20110402/maildir/shapiro-r/value/25.
+enron_mail_20110402/maildir/shapiro-r/wholesale_markets/24.
+enron_mail_20110402/maildir/steffes-j/deleted_items/58.

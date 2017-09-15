@@ -1,0 +1,16 @@
+enron_mail_20110402/maildir/donoho-l/inbox/junk_file/196.
+enron_mail_20110402/maildir/donoho-l/inbox/junk_file/82.
+enron_mail_20110402/maildir/hyatt-k/projects/19.
+enron_mail_20110402/maildir/hyatt-k/projects/4.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/29.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/junk/151.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/junk/248.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/junk/291.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/junk/306.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/junk/487.
+enron_mail_20110402/maildir/watson-k/deleted_items/344.
+enron_mail_20110402/maildir/watson-k/e_mail_bin/17.
+enron_mail_20110402/maildir/watson-k/e_mail_bin/461.
+enron_mail_20110402/maildir/watson-k/e_mail_bin/543.
+enron_mail_20110402/maildir/watson-k/e_mail_bin/637.
+enron_mail_20110402/maildir/watson-k/e_mail_bin/7.

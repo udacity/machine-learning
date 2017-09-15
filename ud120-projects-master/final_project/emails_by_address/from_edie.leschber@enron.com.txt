@@ -1,0 +1,14 @@
+enron_mail_20110402/maildir/geaccone-t/cfp/13.
+enron_mail_20110402/maildir/geaccone-t/deleted_items/161.
+enron_mail_20110402/maildir/haedicke-m/budget/2.
+enron_mail_20110402/maildir/martin-t/all_documents/79.
+enron_mail_20110402/maildir/martin-t/all_documents/90.
+enron_mail_20110402/maildir/martin-t/discussion_threads/76.
+enron_mail_20110402/maildir/martin-t/discussion_threads/87.
+enron_mail_20110402/maildir/martin-t/inbox/180.
+enron_mail_20110402/maildir/martin-t/inbox/195.
+enron_mail_20110402/maildir/neal-s/all_documents/82.
+enron_mail_20110402/maildir/neal-s/discussion_threads/359.
+enron_mail_20110402/maildir/neal-s/inbox/53.
+enron_mail_20110402/maildir/neal-s/notes_inbox/66.
+enron_mail_20110402/maildir/shively-h/deleted_items/378.

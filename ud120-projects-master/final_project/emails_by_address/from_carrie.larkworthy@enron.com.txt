@@ -1,0 +1,11 @@
+enron_mail_20110402/maildir/baughman-d/enron_power/mdea/1.
+enron_mail_20110402/maildir/baughman-d/enron_power/mdea/3.
+enron_mail_20110402/maildir/baughman-d/inbox/109.
+enron_mail_20110402/maildir/baughman-d/inbox/251.
+enron_mail_20110402/maildir/baughman-d/inbox/264.
+enron_mail_20110402/maildir/baughman-d/power/24_hour/107.
+enron_mail_20110402/maildir/baughman-d/power/24_hour/125.
+enron_mail_20110402/maildir/hernandez-j/inbox/108.
+enron_mail_20110402/maildir/hernandez-j/inbox/162.
+enron_mail_20110402/maildir/hernandez-j/inbox/76.
+enron_mail_20110402/maildir/saibi-e/inbox/460.

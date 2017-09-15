@@ -1,0 +1,16 @@
+enron_mail_20110402/maildir/griffith-j/all_documents/36.
+enron_mail_20110402/maildir/griffith-j/discussion_threads/33.
+enron_mail_20110402/maildir/nemec-g/inbox/1184.
+enron_mail_20110402/maildir/nemec-g/inbox/1354.
+enron_mail_20110402/maildir/nemec-g/inbox/1620.
+enron_mail_20110402/maildir/nemec-g/inbox/1742.
+enron_mail_20110402/maildir/nemec-g/inbox/1753.
+enron_mail_20110402/maildir/nemec-g/inbox/1767.
+enron_mail_20110402/maildir/nemec-g/inbox/1774.
+enron_mail_20110402/maildir/nemec-g/inbox/1785.
+enron_mail_20110402/maildir/nemec-g/inbox/1794.
+enron_mail_20110402/maildir/nemec-g/inbox/1795.
+enron_mail_20110402/maildir/nemec-g/inbox/1796.
+enron_mail_20110402/maildir/nemec-g/inbox/408.
+enron_mail_20110402/maildir/nemec-g/inbox/999.
+enron_mail_20110402/maildir/tycholiz-b/inbox/312.

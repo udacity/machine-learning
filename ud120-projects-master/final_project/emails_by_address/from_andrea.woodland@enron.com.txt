@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/crandell-s/inbox/27.
+enron_mail_20110402/maildir/crandell-s/inbox/46.
+enron_mail_20110402/maildir/crandell-s/inbox/53.
+enron_mail_20110402/maildir/crandell-s/inbox/bankruptcy/10.
+enron_mail_20110402/maildir/crandell-s/inbox/bankruptcy/4.
+enron_mail_20110402/maildir/crandell-s/inbox/bankruptcy/5.
+enron_mail_20110402/maildir/crandell-s/inbox/bankruptcy/6.
+enron_mail_20110402/maildir/crandell-s/inbox/bankruptcy/8.
+enron_mail_20110402/maildir/scholtes-d/inbox/7.
+enron_mail_20110402/maildir/swerzbin-m/inbox/43.
+enron_mail_20110402/maildir/swerzbin-m/inbox/54.
+enron_mail_20110402/maildir/swerzbin-m/inbox/55.

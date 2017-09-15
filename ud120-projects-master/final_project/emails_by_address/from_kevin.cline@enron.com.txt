@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/baughman-d/enron_power/24_hour/17.
+enron_mail_20110402/maildir/baughman-d/power/24_hour/182.
+enron_mail_20110402/maildir/gilbertsmith-d/all_documents/112.
+enron_mail_20110402/maildir/gilbertsmith-d/all_documents/132.
+enron_mail_20110402/maildir/gilbertsmith-d/ercot/loaddata/2.
+enron_mail_20110402/maildir/gilbertsmith-d/ercot/loaddata/3.
+enron_mail_20110402/maildir/gilbertsmith-d/ercot/loaddata/4.
+enron_mail_20110402/maildir/gilbertsmith-d/ercot/loaddata/5.
+enron_mail_20110402/maildir/saibi-e/all_documents/9.
+enron_mail_20110402/maildir/saibi-e/discussion_threads/9.
+enron_mail_20110402/maildir/saibi-e/saved/16.
+enron_mail_20110402/maildir/thomas-p/inbox/227.

@@ -1,0 +1,13 @@
+enron_mail_20110402/maildir/blair-l/customer___oneok/7.
+enron_mail_20110402/maildir/blair-l/customer___oneok/8.
+enron_mail_20110402/maildir/blair-l/deleted_items/212.
+enron_mail_20110402/maildir/corman-s/calendar/27.
+enron_mail_20110402/maildir/geaccone-t/inbox/141.
+enron_mail_20110402/maildir/lokay-m/enron_t_s/188.
+enron_mail_20110402/maildir/lokay-m/enron_t_s/190.
+enron_mail_20110402/maildir/lokey-t/calendar/23.
+enron_mail_20110402/maildir/mccarty-d/deleted_items/193.
+enron_mail_20110402/maildir/mccarty-d/deleted_items/256.
+enron_mail_20110402/maildir/watson-k/contact_emp__list/1.
+enron_mail_20110402/maildir/watson-k/inbox/195.
+enron_mail_20110402/maildir/watson-k/keyex_1997/1.

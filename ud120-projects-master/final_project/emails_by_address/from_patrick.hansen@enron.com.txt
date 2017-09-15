@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/taylor-m/all_documents/2635.
+enron_mail_20110402/maildir/taylor-m/all_documents/2641.
+enron_mail_20110402/maildir/taylor-m/all_documents/2760.
+enron_mail_20110402/maildir/taylor-m/all_documents/2863.
+enron_mail_20110402/maildir/taylor-m/archive/7_00/137.
+enron_mail_20110402/maildir/taylor-m/archive/7_00/78.
+enron_mail_20110402/maildir/taylor-m/archive/7_00/79.
+enron_mail_20110402/maildir/taylor-m/archive/8_00/68.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/1034.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/1036.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/1110.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/1187.

@@ -1,0 +1,14 @@
+enron_mail_20110402/maildir/beck-s/all_documents/1267.
+enron_mail_20110402/maildir/beck-s/all_documents/1530.
+enron_mail_20110402/maildir/beck-s/all_documents/1639.
+enron_mail_20110402/maildir/beck-s/all_documents/2121.
+enron_mail_20110402/maildir/beck-s/discussion_threads/1104.
+enron_mail_20110402/maildir/beck-s/discussion_threads/1498.
+enron_mail_20110402/maildir/beck-s/discussion_threads/1500.
+enron_mail_20110402/maildir/beck-s/discussion_threads/1825.
+enron_mail_20110402/maildir/beck-s/global/japan/1.
+enron_mail_20110402/maildir/beck-s/global/japan/2.
+enron_mail_20110402/maildir/beck-s/japan/1.
+enron_mail_20110402/maildir/beck-s/japan/12.
+enron_mail_20110402/maildir/beck-s/japan/2.
+enron_mail_20110402/maildir/beck-s/offsite/11.

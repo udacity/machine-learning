@@ -1,0 +1,13 @@
+enron_mail_20110402/maildir/griffith-j/market/36.
+enron_mail_20110402/maildir/griffith-j/research/12.
+enron_mail_20110402/maildir/mclaughlin-e/all_documents/978.
+enron_mail_20110402/maildir/mclaughlin-e/discussion_threads/807.
+enron_mail_20110402/maildir/mclaughlin-e/notes_inbox/48.
+enron_mail_20110402/maildir/quigley-d/deleted_items/238.
+enron_mail_20110402/maildir/quigley-d/deleted_items/239.
+enron_mail_20110402/maildir/weldon-c/all_documents/288.
+enron_mail_20110402/maildir/weldon-c/austin_energy/3.
+enron_mail_20110402/maildir/weldon-c/discussion_threads/186.
+enron_mail_20110402/maildir/weldon-c/kcs/18.
+enron_mail_20110402/maildir/weldon-c/misc__gas_issues/1.
+enron_mail_20110402/maildir/weldon-c/misc__gas_issues/3.

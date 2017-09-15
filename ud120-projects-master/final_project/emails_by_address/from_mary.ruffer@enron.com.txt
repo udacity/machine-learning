@@ -1,0 +1,13 @@
+enron_mail_20110402/maildir/griffith-j/all_documents/134.
+enron_mail_20110402/maildir/griffith-j/all_documents/152.
+enron_mail_20110402/maildir/griffith-j/chase_mah_stone/16.
+enron_mail_20110402/maildir/griffith-j/chase_mah_stone/20.
+enron_mail_20110402/maildir/griffith-j/discussion_threads/126.
+enron_mail_20110402/maildir/jones-t/all_documents/3746.
+enron_mail_20110402/maildir/jones-t/all_documents/4454.
+enron_mail_20110402/maildir/jones-t/all_documents/4517.
+enron_mail_20110402/maildir/jones-t/notes_inbox/1605.
+enron_mail_20110402/maildir/jones-t/notes_inbox/2064.
+enron_mail_20110402/maildir/jones-t/trading_issues/2.
+enron_mail_20110402/maildir/sager-e/all_documents/3086.
+enron_mail_20110402/maildir/sager-e/notes_inbox/897.

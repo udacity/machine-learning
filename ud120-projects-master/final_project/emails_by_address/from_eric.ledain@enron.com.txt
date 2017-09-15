@@ -1,0 +1,14 @@
+enron_mail_20110402/maildir/kitchen-l/_americas/turbines/58.
+enron_mail_20110402/maildir/lavorato-j/all_documents/21.
+enron_mail_20110402/maildir/lavorato-j/all_documents/73.
+enron_mail_20110402/maildir/lavorato-j/all_documents/77.
+enron_mail_20110402/maildir/lavorato-j/discussion_threads/39.
+enron_mail_20110402/maildir/lavorato-j/discussion_threads/71.
+enron_mail_20110402/maildir/lavorato-j/discussion_threads/73.
+enron_mail_20110402/maildir/mann-k/all_documents/270.
+enron_mail_20110402/maildir/mann-k/chicago/33.
+enron_mail_20110402/maildir/mann-k/discussion_threads/196.
+enron_mail_20110402/maildir/rogers-b/all_documents/919.
+enron_mail_20110402/maildir/rogers-b/discussion_threads/1068.
+enron_mail_20110402/maildir/rogers-b/genco_jv_ipo/348.
+enron_mail_20110402/maildir/storey-g/inbox/40.

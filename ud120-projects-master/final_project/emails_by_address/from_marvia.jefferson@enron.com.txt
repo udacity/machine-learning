@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/beck-s/all_documents/270.
+enron_mail_20110402/maildir/beck-s/all_documents/476.
+enron_mail_20110402/maildir/beck-s/all_documents/477.
+enron_mail_20110402/maildir/beck-s/all_documents/693.
+enron_mail_20110402/maildir/beck-s/ase/12.
+enron_mail_20110402/maildir/beck-s/discussion_threads/2308.
+enron_mail_20110402/maildir/beck-s/discussion_threads/239.
+enron_mail_20110402/maildir/beck-s/discussion_threads/430.
+enron_mail_20110402/maildir/beck-s/discussion_threads/431.
+enron_mail_20110402/maildir/beck-s/notes_inbox/52.
+enron_mail_20110402/maildir/beck-s/solmonson__mary/3.
+enron_mail_20110402/maildir/beck-s/solmonson__mary/4.

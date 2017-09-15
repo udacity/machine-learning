@@ -1,0 +1,11 @@
+enron_mail_20110402/maildir/germany-c/bankrupt/enron_compressor_services/13.
+enron_mail_20110402/maildir/lokey-t/inbox/718.
+enron_mail_20110402/maildir/schoolcraft-d/deleted_items/124.
+enron_mail_20110402/maildir/schoolcraft-d/deleted_items/376.
+enron_mail_20110402/maildir/schoolcraft-d/deleted_items/411.
+enron_mail_20110402/maildir/schoolcraft-d/deleted_items/421.
+enron_mail_20110402/maildir/schoolcraft-d/deleted_items/571.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/55.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/junk/383.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/junk/633.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/junk/636.

@@ -1,0 +1,16 @@
+enron_mail_20110402/maildir/keiser-k/deleted_items/227.
+enron_mail_20110402/maildir/keiser-k/deleted_items/297.
+enron_mail_20110402/maildir/keiser-k/deleted_items/60.
+enron_mail_20110402/maildir/keiser-k/inbox/173.
+enron_mail_20110402/maildir/keiser-k/inbox/175.
+enron_mail_20110402/maildir/keiser-k/inbox/176.
+enron_mail_20110402/maildir/keiser-k/inbox/178.
+enron_mail_20110402/maildir/keiser-k/inbox/23.
+enron_mail_20110402/maildir/keiser-k/inbox/25.
+enron_mail_20110402/maildir/keiser-k/inbox/263.
+enron_mail_20110402/maildir/white-s/deleted_items/381.
+enron_mail_20110402/maildir/white-s/deleted_items/441.
+enron_mail_20110402/maildir/white-s/deleted_items/871.
+enron_mail_20110402/maildir/white-s/deleted_items/874.
+enron_mail_20110402/maildir/white-s/inbox/148.
+enron_mail_20110402/maildir/white-s/inbox/156.

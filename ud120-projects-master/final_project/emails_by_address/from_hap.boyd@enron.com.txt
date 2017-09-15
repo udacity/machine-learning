@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/dasovich-j/all_documents/11277.
+enron_mail_20110402/maildir/dasovich-j/all_documents/12904.
+enron_mail_20110402/maildir/dasovich-j/all_documents/12936.
+enron_mail_20110402/maildir/dasovich-j/all_documents/12939.
+enron_mail_20110402/maildir/dasovich-j/deleted_items/1734.
+enron_mail_20110402/maildir/dasovich-j/deleted_items/1750.
+enron_mail_20110402/maildir/dasovich-j/inbox/126.
+enron_mail_20110402/maildir/dasovich-j/inbox/153.
+enron_mail_20110402/maildir/dasovich-j/notes_inbox/3035.
+enron_mail_20110402/maildir/dasovich-j/notes_inbox/3038.
+enron_mail_20110402/maildir/dasovich-j/notes_inbox/3061.
+enron_mail_20110402/maildir/dasovich-j/notes_inbox/4164.

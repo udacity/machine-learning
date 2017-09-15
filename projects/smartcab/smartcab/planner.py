@@ -4,8 +4,8 @@ class RoutePlanner(object):
     """ Complex route planner that is meant for a perpendicular grid network. """
 
     def __init__(self, env, agent):
-        self.env = env
-        self.agent = agent
+        self.env = env #sets enviroment instance?
+        self.agent = agent #sets agent instance?
         self.destination = None
 
     def route_to(self, destination=None):
