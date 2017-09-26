@@ -8,7 +8,10 @@ warnings.filterwarnings("ignore", category=UserWarning, module="matplotlib")
 # Display inline matplotlib plots with IPython
 from IPython import get_ipython
 
-get_ipython().run_line_magic('matplotlib', 'inline')
+try:
+    get_ipython().run_line_magic('matplotlib', 'inline')
+except:
+    pass
 ###########################################
 
 import matplotlib.pyplot as plt
