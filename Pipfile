@@ -10,6 +10,7 @@ sklearn = "*"
 matplotlib = "*"
 pipenv = "*"
 pandas = "*"
+scipy = "*"
 
 
 [dev-packages]

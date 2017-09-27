@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "b2fabb8bc10f6bb20b9c6aa77d80c1b60df71cc3e82d9beb61a67145871f41fd"
+            "sha256": "572b507e3a50e34b22b2fa1e7f249695049491d29c1da8fbbea7565c0223a166"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -351,9 +351,9 @@
         },
         "pipenv": {
             "hashes": [
-                "sha256:b8feb370009937659ca790925244ccd1d61de2df094efc2c06f965d6f717e9cc"
+                "sha256:cf752508522a2d182e74e69a195edd8031f18b438a613781aed7b91079d0280a"
             ],
-            "version": "==7.9.2"
+            "version": "==8.0.6"
         },
         "prompt-toolkit": {
             "hashes": [
@@ -506,6 +506,26 @@
                 "sha256:24f5cb67559e0df27827b1804b197431c08880d2ec9285724fac90906830021f"
             ],
             "version": "==0.19.0"
+        },
+        "scipy": {
+            "hashes": [
+                "sha256:1e8fedf602859b541ebae78667ccfc53158edef58d9ee19ee659309004565952",
+                "sha256:023ee29faa76c184a607e21076f097dc32f3abba7c71ece374588f95920aa993",
+                "sha256:2a26d06a642e3c9107ca06df125f5dc5507abe2b87fd7865415d03ab654b0b43",
+                "sha256:b3e97be2cd9f052d984fc5ba2d441897971b744c64d658617944c47bc366f8ff",
+                "sha256:78713101b32af384c564837fd7ae665a2a72cb6d49edbd8f32148d74724a65a8",
+                "sha256:2c9e87d556b83a8e11de7a064856c3997bbaff7f9cf62bf63ff0623751549e4c",
+                "sha256:b87a923ed390ba0aafcbbcc6f0e023d495f19d2bd22ae59bdef3b0aec6485b39",
+                "sha256:2dc9bcfaa585d9d941fb1add0d160556fe8587c3800264a77643695565a2d279",
+                "sha256:93825cc80c638d901099f657dfff852ad2421beb51cb7d1d3f91157741ebe287",
+                "sha256:4118647273c907ed984da52b71fa2bbb30229f1820fb79b1ed087c8bc9a20cca",
+                "sha256:4c26ef44e8bb2cd2aef11c60d163caa04670d6f42996789b209526677310ded2",
+                "sha256:2a3b6ceadbb58d8b8d4a329f8219f9e6f17757ec6c85baf03987bbd2b728c263",
+                "sha256:909be30bdd1d8cd57609760ea72a1499543169ed6ea5c66fad50946582682cf8",
+                "sha256:4de84e3870228e8afd55a6e63e762aa7c9d1e3bd9a9ef5ab716835a69c77d257",
+                "sha256:a19a2ca7a7336495ec180adeaa0dfdcf41e96dbbee90d51c3ed828ba570884e6"
+            ],
+            "version": "==0.19.1"
         },
         "simplegeneric": {
             "hashes": [
