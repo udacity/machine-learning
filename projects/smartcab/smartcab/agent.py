@@ -9,7 +9,7 @@ class LearningAgent(Agent):
     """ An agent that learns to drive in the Smartcab world.
         This is the object you will be modifying. """ 
 
-    def __init__(self, env, learning=True, epsilon=1.0, alpha=0.5):
+    def __init__(self, env, learning=True, epsilon=1.0, alpha=0.05):
         super(LearningAgent, self).__init__(env)     # Set the agent in the evironment 
         self.planner = RoutePlanner(self.env, self)  # Create a route planner
         self.valid_actions = self.env.valid_actions  # The set of valid actions
@@ -24,6 +24,7 @@ class LearningAgent(Agent):
         ## TO DO ##
         ###########
         # Set any additional class parameters as needed
+        self.timer=1
 
 
     def reset(self, destination=None, testing=False):
@@ -44,7 +45,9 @@ class LearningAgent(Agent):
             self.epsilon = 0
             self.alpha=0
         else:
-            self.epsilon = self.epsilon - 0.05
+            self.epsilon = (0.99)**self.timer
+            #self.epsilon=self.epsilon-0.05
+            self.timer=self.timer+1
 
         return None
 
@@ -62,7 +65,7 @@ class LearningAgent(Agent):
         ## TO DO ##
         ###########
         # Set 'state' as a tuple of relevant data for the agent        
-        state = (waypoint,inputs['light'],inputs['oncoming'], inputs['left'], inputs['right'],deadline)
+        state = (waypoint,inputs['light'],inputs['oncoming'], inputs['left'], inputs['right'])
 
         return state
 
@@ -113,10 +116,16 @@ class LearningAgent(Agent):
             action = random.choice(self.valid_actions)
         else:
             
-            if (random.random()>self.epsilon):
+            if (self.epsilon>random.random()):
                  action = random.choice(self.valid_actions)
             else: 
-                action = self.Q[state].keys()[self.Q[state].values().index(self.get_maxQ(state))]
+                maxQ = self.get_maxQ(state)
+                max_keys=[]
+                for key in self.Q[state]:
+                    if self.Q[state][key]==maxQ:
+                        max_keys.append(key)
+                
+                action = random.choice(max_keys)
                 
 
         ########### 
@@ -200,7 +209,7 @@ def run():
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05 
     #   n_test     - discrete number of testing trials to perform, default is 0
-    sim.run()
+    sim.run(tolerance=0.001)
 
 
 if __name__ == '__main__':
