@@ -11,6 +11,7 @@ matplotlib = "*"
 pipenv = "*"
 pandas = "*"
 scipy = "*"
+seaborn = "*"
 
 
 [dev-packages]
