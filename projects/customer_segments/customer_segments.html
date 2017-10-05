@@ -13177,19 +13177,21 @@ AAAA8IjQBQAAAAAe/X8vNx/UPa+B2gAAAABJRU5ErkJggg==
 <p>Answer:</p>
 
 <pre><code>1st Customer: could be retailer (small market, super market, convenience store)
-    Majority of spending is found in the categories: Fresh, Milk, Grocery and Detergents_paper, well above the 
-    mean -&gt; 126% (for category Fresh) of mean and up.
+    Majority of spending is found in the categories: Fresh, Milk, Grocery and
+    Detergents_Paper, well above the mean -&gt; 126% (for category Fresh) of mean and up.
 
 2nd Customer: Small Deli/Small restaurant
-    Majority of spending is found in the categories: Milk, Frozen , Delicatessen. While spending for these 
-    categoreis is around the mean the spending for the remaining 3 categoresi is well below the eman , at 
-    31% for Grocery or less.
+    Majority of spending is found in the categories: Milk, Frozen , Delicatessen. 
+    While spending for these categoreis is around the mean the spending for the 
+    remaining 3 categoresi is well below the eman , at 31% for Grocery or less.
 
 3rd Customer: could also be a retailer (small market, super market, convenience store)
-    Majority of spending, as with the first customer, is also found in the categories: Fresh, Milk, Grocery and 
-    Detergents_paper, well above the mean -&gt; 124% (for category Milk) of mean and up.
+    Majority of spending, as with the first customer, is also found in the categories: 
+    Fresh, Milk, Grocery and Detergents_Paper, well above the mean -&gt; 124% (for category Milk)
+    of mean and up.
 
-Comparing the spending across categories with the median leads to similar patterns and concusions.</code></pre>
+    Comparing the spending across categories with the median leads to similar patterns and
+conclusions.</code></pre>
 
 </div>
 </div>
@@ -13286,11 +13288,12 @@ with target label Delicatessen,  R2 score =  -1.74272242895
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 
-<pre><code>    Features, Frozen and Delicatessen have a negative R2.  This implies they are necessary for identifying 
-customers' spending habits, becasue the remaing features can not explain the variation in them.
+<pre><code>    Features, Frozen and Delicatessen have a negative R2.  This implies they are necessary
+for identifying customers' spending habits, becasue the remaing features can not explain 
+the variation in them.
 
-    The scores for features Grocery and Detergents_Paper at 0.75 and 0.80 respectively show some correlation and 
-therefore are not necessary for identifying cusomters's spending habits. </code></pre>
+    The scores for features Grocery and Detergents_Paper at 0.75 and 0.80 respectively show
+some correlation and therefore are not necessary for identifying cusomters's spending habits. </code></pre>
 
 </div>
 </div>
@@ -15115,12 +15118,13 @@ Ny7+WPF7swAAAABJRU5ErkJggg==
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 
-<pre><code>    It looks like there is some degree of correlation between 'Grocery', 'Detergents_Paper', 'Milk' and 
-'Detergent_Paper'.
+<pre><code>    It looks like there is some degree of correlation between 'Grocery', 'Detergents_Paper',
+'Milk' and 'Detergent_Paper'.
 
 There seems to be a linear relationship between 'Grocery' and 'Detergents_Paper'.
 
-The data is not normally distributed. Most data points lie within 10-25% of the range of each category.</code></pre>
+    The data is not normally distributed. Most data points lie within 10-25% of the range of 
+each category.</code></pre>
 
 </div>
 </div>
@@ -19722,11 +19726,12 @@ Data points considered outliers for the feature &#39;Delicatessen&#39;:
     index 75 is an outlier for 'Grocery' and 'Detergent_Paper' and 
     index 154 an outlier for 'Grocery' and 'Delicatessen'.
 
-    These data points should not be removed, because there might be a valid reason why the values are as high or 
-low in more than one category. They might help to find underlying patterns.
+    These data points should not be removed, because there might be a valid reason why the
+values are as high or low in more than one category. They might help to find underlying 
+patterns.
 
-    An exception might be with data points considered outliers for more than one feature, when those features 
-correlate. This would be the case for the data point at index 75.</code></pre>
+    An exception might be with data points considered outliers for more than one feature, 
+when those features correlate. This would be the case for the data point at index 75.</code></pre>
 
 </div>
 </div>
@@ -20168,12 +20173,14 @@ zKw/vh/eFsBqM/v0vCcT8oOQzgV8eVAfX/c9wGbn3Ngg6hduQj0PHvf/w1eObxz6/wRRt3AU6nlw
 
 <pre><code>The Variance explained by the first 2 dimensions is equal to 0.7190.
 The Variance explained by the first 4 dimensions is equal to 0.9314. 
-Dimension 1: High Positive weights on Milk, Grocery and Detergent_Paper  -  This could be a mini market type 
-             of store
-Dimension 2: High Positive weights on Fresh, Frozen and Delicatessen  -  This could be a sandwich shop
-Dimension 3: High Positive weight on Fresh and High Negative weight on Deli  -  Salad Bar type of store 
-Dimension 4: High Positive weight on Frozen and high negative on Delicatessen  -  This could be a Bar type of 
-             place that serves food but not fresh.</code></pre>
+Dimension 1: High Positive weights on Milk, Grocery and Detergent_Paper  -  This could be 
+             a mini market type of store
+Dimension 2: High Positive weights on Fresh, Frozen and Delicatessen  -  This could be a
+             sandwich shop
+Dimension 3: High Positive weight on Fresh and High Negative weight on Deli  -  Salad Bar 
+             type of store 
+Dimension 4: High Positive weight on Frozen and high negative on Delicatessen  -  This could
+             be a Bar type of place that serves food but not fresh.</code></pre>
 
 </div>
 </div>
@@ -21530,21 +21537,24 @@ RK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 
-<pre><code>    K-Means clustering and the Gaussian Mixture Model both are clustering algorithms. K_means does so called 
-"hard" clustering, assigning each data point to one specific cluster. It finds cluster centers and uses them to 
-divide the data. The K_means algorithm is guaranteed to find a local optimum. The downside is, that the found 
-local optimum is not guaranteed to be the global optimum and it might be necessary to run the algorithm several 
-times to find the global otimum.
+<pre><code>    K-Means clustering and the Gaussian Mixture Model both are clustering algorithms. K_means
+does so called "hard" clustering, assigning each data point to one specific cluster. It finds
+cluster centers and uses them to divide the data. The K_means algorithm is guaranteed to find
+a local optimum. The downside is, that the found local optimum is not guaranteed to be the 
+global optimum and it might be necessary to run the algorithm several times to find the global
+optimum.
 
-    In comparision, the Gaussian Mixture Model, a special case of Expectation-Maximization, calculates for each 
-data point the probability of it belonging to a cluster. This is called "soft" clustering, because it allows to 
-have an area where it is not clear to which cluster they belong. The upside of Expectation-Maximization is, that 
-it will not diverge and that it works with any kind of distribution. The downside is that it can get stuck.
+    In comparision, the Gaussian Mixture Model, a special case of Expectation-Maximization,
+calculates for each data point the probability of it belonging to a cluster. This is called 
+"soft" clustering, because it allows to have an area where it is not clear to which cluster
+they belong. The upside of Expectation-Maximization is, that it will not diverge and that it 
+works with any kind of distribution. The downside is that it can get stuck.
 
-    I will use the K_means clustering, because our data has a lot of outliers. This means that there will be 
-some misclassifications where it is not clear if a customer belongs to one or another segment, but 
-establishments with higher spendings because they are bigger should not make a new segment, but be classified 
-to the corresponding segment with the same structure spending.
+    I will use the K_means clustering, because our data has a lot of outliers. This means that
+there will be some misclassifications where it is not clear if a customer belongs to one or
+another segment, but establishments with higher spendings because they are bigger should not
+make a new segment, but be classified to the corresponding segment with the same structure 
+spending.
 
 </code></pre>
 <p>Reference <a href="https://www.quora.com/What-are-the-advantages-of-K-Means-clustering">https://www.quora.com/What-are-the-advantages-of-K-Means-clustering</a></p>
@@ -23157,8 +23167,8 @@ kiRJkpQB/x+vsOXGafgf/gAAAABJRU5ErkJggg==
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 
-<pre><code>The total purchase costs of the product categories of the representative customer in Segment 0 are compared 
-to the statistical data are:
+<pre><code>The total purchase costs of the product categories of the representative customer in Segment
+0 are compared to the statistical data are:
 
     'Fresh': 75% of mean
     'Milk': 33% of mean
@@ -23167,8 +23177,8 @@ to the statistical data are:
     'Detergents_Paper': 10% of mean
     'Delicatessen': 45% of mean
 
-The total purchase costs of the product categories of the representative customer in Segment 1 are compared 
-to the statistical data are:
+The total purchase costs of the product categories of the representative customer in Segment
+1 are compared to the statistical data are:
 
     'Fresh': 30% of mean
     'Milk': 134% of mean
@@ -23179,12 +23189,13 @@ to the statistical data are:
 
 
 
-    Customer segment 0 could represent restaurants, cafes or places where customers get something to eat or 
-drink, because the purchase costs in almost all categories are relatively low with the highest purchase costs 
-in the category 'Fresh' followed by 'Milk', 'Delicatessen' and 'Frozen'.
+    Customer segment 0 could represent restaurants, cafes or places where customers get 
+something to eat or drink, because the purchase costs in almost all categories are relatively
+low with the highest purchase costs in the category 'Fresh' followed by 'Milk', 'Delicatessen'
+and 'Frozen'.
 
-    Customer segment 1 could represent retailers. Product categories where customers of this segment spend 
-more money than the average customer are 'Milk', 'Grocery' and 'Detergent_Papers'.</code></pre>
+    Customer segment 1 could represent retailers. Product categories where customers of this 
+segment spend more money than the average customer are 'Milk', 'Grocery' and 'Detergent_Papers'.</code></pre>
 
 </div>
 </div>
@@ -23545,22 +23556,23 @@ BwAAsAYMdwAAAGvgT9k3PoUMHlfNAAAAAElFTkSuQmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 
-<pre><code>    As stated above, the Sample '0' might represent a retailer, Sample '1' might represent a restaurant, 
-Sample '2' a retailer / market. Comparing to the Segments found, the restaurant should fall into the 
-"restaurants, cafes or places where customers get something to eat or drink" segment and the "retailer" 
-and "retailer/market" should fall into the "retailers" segment.
+<pre><code>    As stated above, the Sample '0' might represent a retailer, Sample '1' might represent
+a restaurant, Sample '2' a retailer / market. Comparing to the Segments found, the restau-
+rant should fall into the "restaurants, cafes or places where customers get something to eat
+or drink" segment and the "retailer" and "retailer/market" should fall into the "retailers"
+segment.
 
-    For Sample '1' the values for most categories are below the mean with the excpetion of 'Frozen' and 
-'Delicatessen' which ar e slightly above the mean. This mimics the Segment 0 cluster, the predicted cluster 
-seems to be consistent with the sample.
+    For Sample '1' the values for most categories are below the mean with the excpetion of
+'Frozen' and 'Delicatessen' which ar e slightly above the mean. This mimics the Segment 0 
+cluster, the predicted cluster seems to be consistent with the sample.
 
-    For Sample '0' and '2' the values for 'Grocery', 'Milk', and 'Detergents_Paper' are above average. 
-That mimics the Segment 1 cluster and makes the predicted cluster for each sample point seem to be consistent 
-with the corresponding sample.
+    For Sample '0' and '2' the values for 'Grocery', 'Milk', and 'Detergents_Paper' are 
+above average. That mimics the Segment 1 cluster and makes the predicted cluster for each 
+sample point seem to be consistent with the corresponding sample.
 
-    Category 'Fresh'  seems to be the one label that is out of proportion in both cases and acts the exact 
-opposite when comparing the Samples with the Segments.  This is due to the fcat that the sample points are 
-closer to the border between the 2 segments.</code></pre>
+    Category 'Fresh'  seems to be the one label that is out of proportion in both cases and
+acts the exact opposite when comparing the Samples with the Segments.  This is due to the
+fact that the sample points are closer to the border between the 2 segments.</code></pre>
 
 </div>
 </div>
@@ -23602,18 +23614,20 @@ closer to the border between the 2 segments.</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 
-<pre><code>    A change in delivery schedule would not affect all customers equally. Some customers might order 
-products every week or every few weeks. Other customers may have orders on a daily basis and are dependent 
-on having fresh products every day or have not enough storing place to order higher amounts less frequently. 
-These are the customers who would presumably be affected the most by a change in delivery schedule.
+<pre><code>    A change in delivery schedule would not affect all customers equally. Some customers 
+might order products every week or every few weeks. Other customers may have orders on a 
+daily basis and are dependent on having fresh products every day or have not enough sto-
+ring place to order higher amounts less frequently. These are the customers who would pre-
+sumably be affected the most by a change in delivery schedule.
 
-    The distributor would need to run at least 2 A/B tests: one for each customer segment. This would return 
-the satisfaction rates for the experimental groups and the control groups for each segment respectively, i.e. 
-we can determine how each segment is responding to the changes.
-    The delta in response between the respective experimental and control groups will indicate how each 
-segment is responding to the changes.
-    To determine which segment is affetced the most, we can compare the differences in response between the 
-2 segments (comparing the A/B tests of each segment). </code></pre>
+    The distributor would need to run at least 2 A/B tests: one for each customer segment.
+This would return the satisfaction rates for the experimental groups and the control groups
+for each segment respectively, i.e. we can determine how each segment is responding to the
+changes.
+    The delta in response between the respective experimental and control groups will in-
+dicate how each segment is responding to the changes.
+    To determine which segment is affetced the most, we can compare the differences in 
+response between the 2 segments (comparing the A/B tests of each segment). </code></pre>
 
 </div>
 </div>
@@ -23637,10 +23651,11 @@ segment is responding to the changes.
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 
-<pre><code>    The output of the unsupervised learner gives us the segment each customer belongs to.  We can populate 
-the orginal data with this information (added as a feature/label).  We can then apply a supervised learner, 
-e.g. Logistic regression, with the customer segment as the target variable to then predict the customer 
-segment for new customers based on the predicted purchasing estimates. </code></pre>
+<pre><code>    The output of the unsupervised learner gives us the segment each customer belongs to.
+We can populate the orginal data with this information (added as a feature/label).  We can
+then apply a supervised learner, e.g. Logistic regression, with the customer segment as the
+target variable to then predict the customer segment for new customers based on the 
+predicted purchasing estimates. </code></pre>
 
 </div>
 </div>
@@ -24475,12 +24490,12 @@ CgdynKlVeJAAAAAASUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 
-<pre><code>    The clustering algorithm does a very good job compared to the underlying distribution of Hotel / 
-Restaurant / Cafe customers to Retail customers (original data with channel). The number of clusters found 
-is in line with the channel distribution. 
+<pre><code>    The clustering algorithm does a very good job compared to the underlying distribution of
+Hotel / Restaurant / Cafe customers to Retail customers (original data with channel). The 
+number of clusters found is in line with the channel distribution. 
 
-    Some customers may be misclassified by the clustering, especially in the region between the 
-two clusters. Choosing soft clustering would probably have done a better job here.</code></pre>
+    Some customers may be misclassified by the clustering, especially in the region between 
+the two clusters. Choosing soft clustering would probably have done a better job here.</code></pre>
 
 </div>
 </div>
