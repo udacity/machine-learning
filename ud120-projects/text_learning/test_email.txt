@@ -1,5 +1,0 @@
-To: Katie_and_Sebastians_Excellent_Students@udacity.com
-From: katie@udacity.com
-X-FileName:
-
-Hi Everyone!  If you can read this message, you're properly using parseOutText.  Please proceed to the next part of the project!
