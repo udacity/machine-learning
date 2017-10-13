@@ -1,0 +1,16 @@
+enron_mail_20110402/maildir/germany-c/bankrupt/transport/appalachain/2.
+enron_mail_20110402/maildir/germany-c/bankrupt/transport/appalachain/3.
+enron_mail_20110402/maildir/germany-c/bankrupt/transport/appalachain/4.
+enron_mail_20110402/maildir/germany-c/bankrupt/transport/appalachain/5.
+enron_mail_20110402/maildir/germany-c/bankrupt/transport/appalachain/6.
+enron_mail_20110402/maildir/germany-c/bankrupt/transport/dominion/1.
+enron_mail_20110402/maildir/germany-c/bankrupt/transport/dominion/26.
+enron_mail_20110402/maildir/germany-c/bankrupt/transport/dominion/35.
+enron_mail_20110402/maildir/germany-c/bankrupt/transport/dominion/36.
+enron_mail_20110402/maildir/germany-c/bankrupt/transport/dominion/38.
+enron_mail_20110402/maildir/germany-c/inbox/10.
+enron_mail_20110402/maildir/germany-c/inbox/15.
+enron_mail_20110402/maildir/germany-c/inbox/20.
+enron_mail_20110402/maildir/germany-c/inbox/46.
+enron_mail_20110402/maildir/germany-c/inbox/57.
+enron_mail_20110402/maildir/germany-c/inbox/59.

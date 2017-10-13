@@ -1,0 +1,15 @@
+enron_mail_20110402/maildir/jones-t/all_documents/10808.
+enron_mail_20110402/maildir/jones-t/all_documents/12011.
+enron_mail_20110402/maildir/jones-t/all_documents/1922.
+enron_mail_20110402/maildir/jones-t/all_documents/1934.
+enron_mail_20110402/maildir/jones-t/notes_inbox/3995.
+enron_mail_20110402/maildir/jones-t/notes_inbox/4863.
+enron_mail_20110402/maildir/jones-t/notes_inbox/528.
+enron_mail_20110402/maildir/jones-t/notes_inbox/537.
+enron_mail_20110402/maildir/kitchen-l/_americas/netco_restart/30.
+enron_mail_20110402/maildir/martin-t/deleted_items/71.
+enron_mail_20110402/maildir/taylor-m/all_documents/3864.
+enron_mail_20110402/maildir/taylor-m/all_documents/7325.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/1837.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/2754.
+enron_mail_20110402/maildir/zipper-a/deleted_items/144.

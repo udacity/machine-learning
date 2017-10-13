@@ -1,0 +1,16 @@
+enron_mail_20110402/maildir/hernandez-j/all_documents/121.
+enron_mail_20110402/maildir/hernandez-j/all_documents/4.
+enron_mail_20110402/maildir/hernandez-j/all_documents/426.
+enron_mail_20110402/maildir/hernandez-j/all_documents/440.
+enron_mail_20110402/maildir/hernandez-j/all_documents/46.
+enron_mail_20110402/maildir/hernandez-j/all_documents/658.
+enron_mail_20110402/maildir/hernandez-j/discussion_threads/131.
+enron_mail_20110402/maildir/hernandez-j/discussion_threads/351.
+enron_mail_20110402/maildir/hernandez-j/discussion_threads/365.
+enron_mail_20110402/maildir/hernandez-j/discussion_threads/4.
+enron_mail_20110402/maildir/hernandez-j/discussion_threads/46.
+enron_mail_20110402/maildir/hernandez-j/discussion_threads/667.
+enron_mail_20110402/maildir/hernandez-j/notes_inbox/326.
+enron_mail_20110402/maildir/hernandez-j/notes_inbox/339.
+enron_mail_20110402/maildir/hernandez-j/notes_inbox/39.
+enron_mail_20110402/maildir/hernandez-j/private_folders/judy/43.

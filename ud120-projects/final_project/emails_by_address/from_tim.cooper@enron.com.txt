@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/corman-s/deleted_items/119.
+enron_mail_20110402/maildir/corman-s/deleted_items/95.
+enron_mail_20110402/maildir/corman-s/inbox/archives/242.
+enron_mail_20110402/maildir/corman-s/inbox/archives/306.
+enron_mail_20110402/maildir/corman-s/inbox/archives/376.
+enron_mail_20110402/maildir/corman-s/inbox/archives/380.
+enron_mail_20110402/maildir/corman-s/inbox/archives/382.
+enron_mail_20110402/maildir/corman-s/inbox/archives/389.
+enron_mail_20110402/maildir/corman-s/inbox/archives/396.
+enron_mail_20110402/maildir/corman-s/inbox/archives/400.
+enron_mail_20110402/maildir/corman-s/inbox/archives/401.
+enron_mail_20110402/maildir/corman-s/inbox/archives/403.

@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/jones-t/all_documents/5879.
+enron_mail_20110402/maildir/jones-t/inbox/1009.
+enron_mail_20110402/maildir/jones-t/inbox/1026.
+enron_mail_20110402/maildir/jones-t/inbox/6.
+enron_mail_20110402/maildir/jones-t/inbox/924.
+enron_mail_20110402/maildir/jones-t/inbox/934.
+enron_mail_20110402/maildir/jones-t/inbox/948.
+enron_mail_20110402/maildir/jones-t/notes_inbox/2941.
+enron_mail_20110402/maildir/panus-s/deleted_items/346.
+enron_mail_20110402/maildir/taylor-m/all_documents/3034.
+enron_mail_20110402/maildir/taylor-m/archive/8_00/161.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/1296.

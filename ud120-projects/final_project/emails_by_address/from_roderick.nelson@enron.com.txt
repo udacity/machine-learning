@@ -1,0 +1,13 @@
+enron_mail_20110402/maildir/heard-m/inbox/274.
+enron_mail_20110402/maildir/shackleton-s/all_documents/11236.
+enron_mail_20110402/maildir/shackleton-s/inbox/1134.
+enron_mail_20110402/maildir/shackleton-s/inbox/1135.
+enron_mail_20110402/maildir/shackleton-s/inbox/281.
+enron_mail_20110402/maildir/shackleton-s/inbox/584.
+enron_mail_20110402/maildir/shackleton-s/notes_inbox/2115.
+enron_mail_20110402/maildir/stclair-c/all_documents/2406.
+enron_mail_20110402/maildir/stclair-c/all_documents/2411.
+enron_mail_20110402/maildir/stclair-c/all_documents/2418.
+enron_mail_20110402/maildir/stclair-c/power_e_mails/32.
+enron_mail_20110402/maildir/stclair-c/power_e_mails/34.
+enron_mail_20110402/maildir/stclair-c/power_e_mails/37.

@@ -1,0 +1,16 @@
+enron_mail_20110402/maildir/beck-s/all_documents/1739.
+enron_mail_20110402/maildir/beck-s/all_documents/2403.
+enron_mail_20110402/maildir/beck-s/all_documents/2438.
+enron_mail_20110402/maildir/beck-s/all_documents/90.
+enron_mail_20110402/maildir/beck-s/commoditylogic/14.
+enron_mail_20110402/maildir/beck-s/discussion_threads/1419.
+enron_mail_20110402/maildir/beck-s/discussion_threads/81.
+enron_mail_20110402/maildir/beck-s/discussion_threads/844.
+enron_mail_20110402/maildir/beck-s/discussion_threads/876.
+enron_mail_20110402/maildir/beck-s/it___misc_/12.
+enron_mail_20110402/maildir/beck-s/notes_inbox/13.
+enron_mail_20110402/maildir/beck-s/promotions/6.
+enron_mail_20110402/maildir/beck-s/unify/4.
+enron_mail_20110402/maildir/kitchen-l/_americas/hpl/30.
+enron_mail_20110402/maildir/kitchen-l/_americas/hpl/31.
+enron_mail_20110402/maildir/kitchen-l/_americas/hpl/33.

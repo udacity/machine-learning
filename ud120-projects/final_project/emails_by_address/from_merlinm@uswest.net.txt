@@ -1,0 +1,13 @@
+enron_mail_20110402/maildir/lenhart-m/all_documents/2698.
+enron_mail_20110402/maildir/lenhart-m/all_documents/2911.
+enron_mail_20110402/maildir/lenhart-m/all_documents/3073.
+enron_mail_20110402/maildir/lenhart-m/all_documents/3082.
+enron_mail_20110402/maildir/lenhart-m/deleted_items/90.
+enron_mail_20110402/maildir/lenhart-m/discussion_threads/524.
+enron_mail_20110402/maildir/lenhart-m/discussion_threads/586.
+enron_mail_20110402/maildir/lenhart-m/discussion_threads/676.
+enron_mail_20110402/maildir/lenhart-m/discussion_threads/683.
+enron_mail_20110402/maildir/lenhart-m/notes_inbox/18.
+enron_mail_20110402/maildir/lenhart-m/notes_inbox/53.
+enron_mail_20110402/maildir/lenhart-m/notes_inbox/56.
+enron_mail_20110402/maildir/lenhart-m/notes_inbox/6.

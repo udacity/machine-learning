@@ -1,0 +1,16 @@
+enron_mail_20110402/maildir/griffith-j/new_items/4.
+enron_mail_20110402/maildir/grigsby-m/deleted_items/114.
+enron_mail_20110402/maildir/pimenov-v/deleted_items/49.
+enron_mail_20110402/maildir/pimenov-v/inbox/28.
+enron_mail_20110402/maildir/pimenov-v/inbox/29.
+enron_mail_20110402/maildir/pimenov-v/inbox/52.
+enron_mail_20110402/maildir/quigley-d/deleted_items/130.
+enron_mail_20110402/maildir/quigley-d/deleted_items/316.
+enron_mail_20110402/maildir/quigley-d/deleted_items/317.
+enron_mail_20110402/maildir/quigley-d/deleted_items/318.
+enron_mail_20110402/maildir/quigley-d/fin_desk/47.
+enron_mail_20110402/maildir/shively-h/deleted_items/24.
+enron_mail_20110402/maildir/shively-h/deleted_items/25.
+enron_mail_20110402/maildir/shively-h/inbox/115.
+enron_mail_20110402/maildir/wolfe-j/inbox/320.
+enron_mail_20110402/maildir/zipper-a/deleted_items/13.

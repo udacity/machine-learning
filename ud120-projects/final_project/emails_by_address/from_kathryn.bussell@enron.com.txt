@@ -1,0 +1,14 @@
+enron_mail_20110402/maildir/beck-s/all_documents/561.
+enron_mail_20110402/maildir/beck-s/discussion_threads/509.
+enron_mail_20110402/maildir/beck-s/hpl/19.
+enron_mail_20110402/maildir/beck-s/hpl/6.
+enron_mail_20110402/maildir/farmer-d/all_documents/303.
+enron_mail_20110402/maildir/farmer-d/discussion_threads/2588.
+enron_mail_20110402/maildir/farmer-d/inbox/22.
+enron_mail_20110402/maildir/farmer-d/logistics/1496.
+enron_mail_20110402/maildir/germany-c/bankrupt/transport/dominion/27.
+enron_mail_20110402/maildir/giron-d/all_documents/43.
+enron_mail_20110402/maildir/giron-d/all_documents/88.
+enron_mail_20110402/maildir/giron-d/discussion_threads/556.
+enron_mail_20110402/maildir/giron-d/discussion_threads/597.
+enron_mail_20110402/maildir/giron-d/notes_inbox/26.

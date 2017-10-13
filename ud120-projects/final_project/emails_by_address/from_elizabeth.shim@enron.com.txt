@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/grigsby-m/deleted_items/415.
+enron_mail_20110402/maildir/grigsby-m/deleted_items/450.
+enron_mail_20110402/maildir/grigsby-m/inbox/104.
+enron_mail_20110402/maildir/holst-k/deleted_items/44.
+enron_mail_20110402/maildir/holst-k/inbox/259.
+enron_mail_20110402/maildir/mclaughlin-e/all_documents/951.
+enron_mail_20110402/maildir/mclaughlin-e/deleted_items/344.
+enron_mail_20110402/maildir/mclaughlin-e/discussion_threads/783.
+enron_mail_20110402/maildir/mclaughlin-e/eol___tagg/98.
+enron_mail_20110402/maildir/mclaughlin-e/notes_inbox/55.
+enron_mail_20110402/maildir/wolfe-j/05_saved/37.
+enron_mail_20110402/maildir/wolfe-j/inbox/28.

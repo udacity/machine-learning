@@ -1,0 +1,15 @@
+enron_mail_20110402/maildir/arora-h/deleted_items/131.
+enron_mail_20110402/maildir/arora-h/deleted_items/132.
+enron_mail_20110402/maildir/arora-h/deleted_items/173.
+enron_mail_20110402/maildir/arora-h/deleted_items/174.
+enron_mail_20110402/maildir/arora-h/deleted_items/195.
+enron_mail_20110402/maildir/arora-h/inbox/33.
+enron_mail_20110402/maildir/arora-h/inbox/34.
+enron_mail_20110402/maildir/arora-h/inbox/35.
+enron_mail_20110402/maildir/arora-h/inbox/36.
+enron_mail_20110402/maildir/arora-h/inbox/38.
+enron_mail_20110402/maildir/arora-h/inbox/39.
+enron_mail_20110402/maildir/arora-h/inbox/40.
+enron_mail_20110402/maildir/arora-h/inbox/62.
+enron_mail_20110402/maildir/arora-h/inbox/81.
+enron_mail_20110402/maildir/arora-h/inbox/83.

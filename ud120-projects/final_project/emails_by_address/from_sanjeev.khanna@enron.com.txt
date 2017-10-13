@@ -1,0 +1,16 @@
+enron_mail_20110402/maildir/griffith-j/all_documents/243.
+enron_mail_20110402/maildir/griffith-j/belden/1.
+enron_mail_20110402/maildir/griffith-j/discussion_threads/225.
+enron_mail_20110402/maildir/keavey-p/all_documents/124.
+enron_mail_20110402/maildir/keavey-p/discussion_threads/72.
+enron_mail_20110402/maildir/keavey-p/notes_inbox/119.
+enron_mail_20110402/maildir/mclaughlin-e/all_documents/183.
+enron_mail_20110402/maildir/mclaughlin-e/discussion_threads/168.
+enron_mail_20110402/maildir/mclaughlin-e/prepays_structured_deals/6.
+enron_mail_20110402/maildir/sager-e/all_documents/856.
+enron_mail_20110402/maildir/sager-e/notes_inbox/142.
+enron_mail_20110402/maildir/weldon-c/all_documents/200.
+enron_mail_20110402/maildir/weldon-c/discussion_threads/109.
+enron_mail_20110402/maildir/weldon-c/misc_/17.
+enron_mail_20110402/maildir/zipper-a/deleted_items/508.
+enron_mail_20110402/maildir/zipper-a/inbox/173.

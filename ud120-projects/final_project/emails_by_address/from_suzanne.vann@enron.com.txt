@@ -1,0 +1,11 @@
+enron_mail_20110402/maildir/hayslett-r/inbox/106.
+enron_mail_20110402/maildir/mckay-j/deleted_items/16.
+enron_mail_20110402/maildir/mckay-j/personal/6.
+enron_mail_20110402/maildir/ward-k/deleted_items/112.
+enron_mail_20110402/maildir/ward-k/deleted_items/13.
+enron_mail_20110402/maildir/ward-k/deleted_items/151.
+enron_mail_20110402/maildir/ward-k/deleted_items/300.
+enron_mail_20110402/maildir/ward-k/inbox/157.
+enron_mail_20110402/maildir/ward-k/inbox/334.
+enron_mail_20110402/maildir/ward-k/inbox/337.
+enron_mail_20110402/maildir/ward-k/inbox/temporary/6.

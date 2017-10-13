@@ -1,0 +1,14 @@
+enron_mail_20110402/maildir/buy-r/inbox/1206.
+enron_mail_20110402/maildir/buy-r/inbox/225.
+enron_mail_20110402/maildir/buy-r/inbox/39.
+enron_mail_20110402/maildir/buy-r/inbox/393.
+enron_mail_20110402/maildir/buy-r/inbox/396.
+enron_mail_20110402/maildir/buy-r/inbox/399.
+enron_mail_20110402/maildir/buy-r/inbox/403.
+enron_mail_20110402/maildir/buy-r/inbox/934.
+enron_mail_20110402/maildir/kaminski-v/all_documents/10811.
+enron_mail_20110402/maildir/kaminski-v/discussion_threads/4501.
+enron_mail_20110402/maildir/kaminski-v/personal/321.
+enron_mail_20110402/maildir/williams-j/all_documents/114.
+enron_mail_20110402/maildir/williams-j/deals/42.
+enron_mail_20110402/maildir/williams-j/discussion_threads/96.

@@ -1,0 +1,14 @@
+enron_mail_20110402/maildir/haedicke-m/all_documents/22.
+enron_mail_20110402/maildir/haedicke-m/all_documents/4795.
+enron_mail_20110402/maildir/haedicke-m/notes_inbox/1304.
+enron_mail_20110402/maildir/hyvl-d/all_documents/707.
+enron_mail_20110402/maildir/hyvl-d/miscellaneous/68.
+enron_mail_20110402/maildir/jones-t/all_documents/10621.
+enron_mail_20110402/maildir/jones-t/notes_inbox/3859.
+enron_mail_20110402/maildir/taylor-m/all_documents/1060.
+enron_mail_20110402/maildir/taylor-m/all_documents/2838.
+enron_mail_20110402/maildir/taylor-m/all_documents/7437.
+enron_mail_20110402/maildir/taylor-m/archive/8_00/53.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/1170.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/13.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/2689.

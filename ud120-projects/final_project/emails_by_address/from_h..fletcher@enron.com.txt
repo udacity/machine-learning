@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/germany-c/deleted_items/304.
+enron_mail_20110402/maildir/germany-c/deleted_items/314.
+enron_mail_20110402/maildir/germany-c/deleted_items/349.
+enron_mail_20110402/maildir/germany-c/inbox/234.
+enron_mail_20110402/maildir/germany-c/inbox/286.
+enron_mail_20110402/maildir/germany-c/inbox/292.
+enron_mail_20110402/maildir/germany-c/inbox/301.
+enron_mail_20110402/maildir/germany-c/inbox/310.
+enron_mail_20110402/maildir/germany-c/inbox/312.
+enron_mail_20110402/maildir/germany-c/inbox/397.
+enron_mail_20110402/maildir/townsend-j/deleted_items/125.
+enron_mail_20110402/maildir/townsend-j/deleted_items/126.

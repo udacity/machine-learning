@@ -1,0 +1,11 @@
+enron_mail_20110402/maildir/watson-k/inbox/342.
+enron_mail_20110402/maildir/watson-k/nymex_prices/1.
+enron_mail_20110402/maildir/watson-k/nymex_prices/10.
+enron_mail_20110402/maildir/watson-k/nymex_prices/2.
+enron_mail_20110402/maildir/watson-k/nymex_prices/3.
+enron_mail_20110402/maildir/watson-k/nymex_prices/4.
+enron_mail_20110402/maildir/watson-k/nymex_prices/5.
+enron_mail_20110402/maildir/watson-k/nymex_prices/6.
+enron_mail_20110402/maildir/watson-k/nymex_prices/7.
+enron_mail_20110402/maildir/watson-k/nymex_prices/8.
+enron_mail_20110402/maildir/watson-k/nymex_prices/9.

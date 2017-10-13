@@ -1,0 +1,15 @@
+enron_mail_20110402/maildir/may-l/all_documents/55.
+enron_mail_20110402/maildir/may-l/all_documents/89.
+enron_mail_20110402/maildir/may-l/all_documents/98.
+enron_mail_20110402/maildir/may-l/discussion_threads/43.
+enron_mail_20110402/maildir/may-l/discussion_threads/77.
+enron_mail_20110402/maildir/may-l/discussion_threads/86.
+enron_mail_20110402/maildir/may-l/inbox/528.
+enron_mail_20110402/maildir/may-l/inbox/537.
+enron_mail_20110402/maildir/may-l/inbox/571.
+enron_mail_20110402/maildir/may-l/inbox/701.
+enron_mail_20110402/maildir/may-l/inbox/725.
+enron_mail_20110402/maildir/may-l/inbox/731.
+enron_mail_20110402/maildir/may-l/inbox/732.
+enron_mail_20110402/maildir/neal-s/inbox/159.
+enron_mail_20110402/maildir/shively-h/deleted_items/641.

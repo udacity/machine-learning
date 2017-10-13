@@ -1,0 +1,11 @@
+enron_mail_20110402/maildir/farmer-d/all_documents/3790.
+enron_mail_20110402/maildir/farmer-d/all_documents/598.
+enron_mail_20110402/maildir/farmer-d/all_documents/612.
+enron_mail_20110402/maildir/farmer-d/discussion_threads/2314.
+enron_mail_20110402/maildir/farmer-d/discussion_threads/2316.
+enron_mail_20110402/maildir/farmer-d/discussion_threads/4338.
+enron_mail_20110402/maildir/farmer-d/logistics/1438.
+enron_mail_20110402/maildir/farmer-d/logistics/1440.
+enron_mail_20110402/maildir/farmer-d/logistics/147.
+enron_mail_20110402/maildir/farmer-d/logistics/181.
+enron_mail_20110402/maildir/farmer-d/logistics/2035.

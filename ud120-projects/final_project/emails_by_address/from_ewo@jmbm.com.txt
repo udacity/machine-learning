@@ -1,0 +1,15 @@
+enron_mail_20110402/maildir/scott-s/all_documents/209.
+enron_mail_20110402/maildir/scott-s/all_documents/306.
+enron_mail_20110402/maildir/scott-s/all_documents/381.
+enron_mail_20110402/maildir/scott-s/all_documents/386.
+enron_mail_20110402/maildir/scott-s/all_documents/401.
+enron_mail_20110402/maildir/scott-s/discussion_threads/161.
+enron_mail_20110402/maildir/scott-s/discussion_threads/246.
+enron_mail_20110402/maildir/scott-s/discussion_threads/311.
+enron_mail_20110402/maildir/scott-s/discussion_threads/316.
+enron_mail_20110402/maildir/scott-s/discussion_threads/326.
+enron_mail_20110402/maildir/scott-s/gir/113.
+enron_mail_20110402/maildir/scott-s/gir/172.
+enron_mail_20110402/maildir/scott-s/gir/177.
+enron_mail_20110402/maildir/scott-s/gir/186.
+enron_mail_20110402/maildir/scott-s/gir/47.

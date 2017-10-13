@@ -1,0 +1,13 @@
+enron_mail_20110402/maildir/kaminski-v/all_documents/10821.
+enron_mail_20110402/maildir/kaminski-v/all_documents/2163.
+enron_mail_20110402/maildir/kaminski-v/deleted_items/2406.
+enron_mail_20110402/maildir/kaminski-v/deleted_items/2411.
+enron_mail_20110402/maildir/kaminski-v/discussion_threads/2571.
+enron_mail_20110402/maildir/kaminski-v/discussion_threads/4528.
+enron_mail_20110402/maildir/kaminski-v/personal/324.
+enron_mail_20110402/maildir/kaminski-v/personal/93.
+enron_mail_20110402/maildir/kean-s/all_documents/1948.
+enron_mail_20110402/maildir/kean-s/archiving/untitled/379.
+enron_mail_20110402/maildir/kean-s/calendar/untitled/1949.
+enron_mail_20110402/maildir/kean-s/discussion_threads/1659.
+enron_mail_20110402/maildir/kean-s/knowledge_management/1.

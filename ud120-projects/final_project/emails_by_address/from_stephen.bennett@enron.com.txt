@@ -1,0 +1,15 @@
+enron_mail_20110402/maildir/maggi-m/deleted_items/670.
+enron_mail_20110402/maildir/martin-t/deleted_items/122.
+enron_mail_20110402/maildir/mims-thurston-p/inbox/136.
+enron_mail_20110402/maildir/neal-s/deleted_items/367.
+enron_mail_20110402/maildir/ruscitti-k/inbox/53.
+enron_mail_20110402/maildir/schwieger-j/deleted_items/43.
+enron_mail_20110402/maildir/shively-h/deleted_items/613.
+enron_mail_20110402/maildir/shively-h/inbox/18.
+enron_mail_20110402/maildir/shively-h/inbox/20.
+enron_mail_20110402/maildir/weldon-c/all_documents/24.
+enron_mail_20110402/maildir/weldon-c/all_documents/98.
+enron_mail_20110402/maildir/weldon-c/discussion_threads/10.
+enron_mail_20110402/maildir/weldon-c/discussion_threads/58.
+enron_mail_20110402/maildir/weldon-c/rotation_1/hurricane/1.
+enron_mail_20110402/maildir/weldon-c/rotation_1/hurricane/4.

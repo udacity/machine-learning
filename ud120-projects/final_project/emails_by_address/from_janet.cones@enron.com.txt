@@ -1,0 +1,14 @@
+enron_mail_20110402/maildir/fossum-d/all_documents/652.
+enron_mail_20110402/maildir/fossum-d/all_documents/945.
+enron_mail_20110402/maildir/fossum-d/discussion_threads/406.
+enron_mail_20110402/maildir/fossum-d/discussion_threads/698.
+enron_mail_20110402/maildir/fossum-d/notes_inbox/122.
+enron_mail_20110402/maildir/hayslett-r/deleted_items/39.
+enron_mail_20110402/maildir/scott-s/all_documents/269.
+enron_mail_20110402/maildir/scott-s/all_documents/325.
+enron_mail_20110402/maildir/scott-s/all_documents/469.
+enron_mail_20110402/maildir/scott-s/all_documents/67.
+enron_mail_20110402/maildir/scott-s/discussion_threads/210.
+enron_mail_20110402/maildir/scott-s/discussion_threads/259.
+enron_mail_20110402/maildir/scott-s/discussion_threads/378.
+enron_mail_20110402/maildir/scott-s/discussion_threads/49.

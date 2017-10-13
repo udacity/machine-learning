@@ -1,0 +1,15 @@
+enron_mail_20110402/maildir/beck-s/all_documents/64.
+enron_mail_20110402/maildir/beck-s/approval_authorizations/2.
+enron_mail_20110402/maildir/beck-s/discussion_threads/57.
+enron_mail_20110402/maildir/beck-s/notes_inbox/72.
+enron_mail_20110402/maildir/giron-d/inbox/124.
+enron_mail_20110402/maildir/kitchen-l/_americas/esvl/681.
+enron_mail_20110402/maildir/kitchen-l/_americas/esvl/731.
+enron_mail_20110402/maildir/kitchen-l/_americas/esvl/880.
+enron_mail_20110402/maildir/kitchen-l/_americas/mrha/ooc/28.
+enron_mail_20110402/maildir/kitchen-l/_americas/ooc/17.
+enron_mail_20110402/maildir/schwieger-j/bammel_stg/24.
+enron_mail_20110402/maildir/taylor-m/all_documents/3336.
+enron_mail_20110402/maildir/taylor-m/archive/9_00/120.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/1503.
+enron_mail_20110402/maildir/zipper-a/deleted_items/535.

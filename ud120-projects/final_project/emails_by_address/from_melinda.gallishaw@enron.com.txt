@@ -1,0 +1,15 @@
+enron_mail_20110402/maildir/schoolcraft-d/deleted_items/109.
+enron_mail_20110402/maildir/schoolcraft-d/deleted_items/110.
+enron_mail_20110402/maildir/schoolcraft-d/deleted_items/163.
+enron_mail_20110402/maildir/schoolcraft-d/deleted_items/295.
+enron_mail_20110402/maildir/schoolcraft-d/deleted_items/375.
+enron_mail_20110402/maildir/schoolcraft-d/deleted_items/483.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/46.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/88.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/junk/20.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/junk/327.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/junk/422.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/junk/424.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/junk/502.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/junk/96.
+enron_mail_20110402/maildir/schoolcraft-d/tw/13.

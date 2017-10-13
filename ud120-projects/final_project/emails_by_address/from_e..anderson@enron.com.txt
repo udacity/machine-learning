@@ -1,0 +1,11 @@
+enron_mail_20110402/maildir/blair-l/acctg___customer_issues_on_billing/7.
+enron_mail_20110402/maildir/blair-l/acctg___measurement_issues/2.
+enron_mail_20110402/maildir/blair-l/acctg___measurement_issues/4.
+enron_mail_20110402/maildir/blair-l/acctg___measurement_issues/8.
+enron_mail_20110402/maildir/blair-l/deleted_items/158.
+enron_mail_20110402/maildir/blair-l/inbox/17.
+enron_mail_20110402/maildir/blair-l/inbox/55.
+enron_mail_20110402/maildir/blair-l/inbox/90.
+enron_mail_20110402/maildir/corman-s/deleted_items/396.
+enron_mail_20110402/maildir/corman-s/inbox/measurement/19.
+enron_mail_20110402/maildir/geaccone-t/tw/29.

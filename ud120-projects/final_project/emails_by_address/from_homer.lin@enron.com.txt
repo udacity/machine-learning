@@ -1,0 +1,15 @@
+enron_mail_20110402/maildir/taylor-m/all_documents/8382.
+enron_mail_20110402/maildir/taylor-m/all_documents/8454.
+enron_mail_20110402/maildir/taylor-m/all_documents/8467.
+enron_mail_20110402/maildir/taylor-m/all_documents/8502.
+enron_mail_20110402/maildir/taylor-m/all_documents/8506.
+enron_mail_20110402/maildir/taylor-m/deleted_items/14.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/2014.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/2017.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/2048.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/2053.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/2099.
+enron_mail_20110402/maildir/taylor-m/online_trading/product_descriptions/3.
+enron_mail_20110402/maildir/taylor-m/online_trading/product_descriptions/4.
+enron_mail_20110402/maildir/ward-k/all_documents/73.
+enron_mail_20110402/maildir/ward-k/discussion_threads/60.

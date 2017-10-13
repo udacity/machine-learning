@@ -1,0 +1,11 @@
+enron_mail_20110402/maildir/dean-c/all_documents/287.
+enron_mail_20110402/maildir/dean-c/all_documents/288.
+enron_mail_20110402/maildir/dean-c/all_documents/314.
+enron_mail_20110402/maildir/dean-c/discussion_threads/281.
+enron_mail_20110402/maildir/dean-c/discussion_threads/282.
+enron_mail_20110402/maildir/dean-c/discussion_threads/306.
+enron_mail_20110402/maildir/dean-c/notes_inbox/112.
+enron_mail_20110402/maildir/dean-c/notes_inbox/134.
+enron_mail_20110402/maildir/dean-c/notes_inbox/135.
+enron_mail_20110402/maildir/forney-j/inbox/122.
+enron_mail_20110402/maildir/saibi-e/inbox/558.

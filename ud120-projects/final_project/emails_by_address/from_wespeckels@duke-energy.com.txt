@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/farmer-d/all_documents/1460.
+enron_mail_20110402/maildir/farmer-d/all_documents/1739.
+enron_mail_20110402/maildir/farmer-d/all_documents/1775.
+enron_mail_20110402/maildir/farmer-d/all_documents/2183.
+enron_mail_20110402/maildir/farmer-d/discussion_threads/1229.
+enron_mail_20110402/maildir/farmer-d/discussion_threads/1266.
+enron_mail_20110402/maildir/farmer-d/discussion_threads/1522.
+enron_mail_20110402/maildir/farmer-d/discussion_threads/850.
+enron_mail_20110402/maildir/farmer-d/pan_energy_swap/124.
+enron_mail_20110402/maildir/farmer-d/pan_energy_swap/125.
+enron_mail_20110402/maildir/farmer-d/pan_energy_swap/126.
+enron_mail_20110402/maildir/farmer-d/pan_energy_swap/144.

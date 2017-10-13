@@ -1,0 +1,11 @@
+enron_mail_20110402/maildir/beck-s/all_documents/588.
+enron_mail_20110402/maildir/beck-s/discussion_threads/536.
+enron_mail_20110402/maildir/beck-s/prc/2001_mid_year_prc/1.
+enron_mail_20110402/maildir/beck-s/prc/2001_mid_year_prc/2.
+enron_mail_20110402/maildir/kean-s/all_documents/5419.
+enron_mail_20110402/maildir/kean-s/archiving/untitled/5418.
+enron_mail_20110402/maildir/kean-s/calendar/untitled/7945.
+enron_mail_20110402/maildir/kean-s/discussion_threads/2829.
+enron_mail_20110402/maildir/kean-s/personnel/37.
+enron_mail_20110402/maildir/kitchen-l/_americas/hr/228.
+enron_mail_20110402/maildir/kitchen-l/_americas/hr/266.

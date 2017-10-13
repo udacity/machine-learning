@@ -1,0 +1,11 @@
+enron_mail_20110402/maildir/hyvl-d/all_documents/1549.
+enron_mail_20110402/maildir/hyvl-d/gas/foster_ward/37.
+enron_mail_20110402/maildir/hyvl-d/notes_inbox/28.
+enron_mail_20110402/maildir/staab-t/citizens/17.
+enron_mail_20110402/maildir/staab-t/citizens/6.
+enron_mail_20110402/maildir/staab-t/citizens/7.
+enron_mail_20110402/maildir/staab-t/citizens/8.
+enron_mail_20110402/maildir/staab-t/citizens/9.
+enron_mail_20110402/maildir/tycholiz-b/inbox/18.
+enron_mail_20110402/maildir/ward-k/citizens_utilities/61.
+enron_mail_20110402/maildir/ward-k/citizens_utilities/96.

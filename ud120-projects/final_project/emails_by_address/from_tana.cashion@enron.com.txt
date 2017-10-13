@@ -1,0 +1,13 @@
+enron_mail_20110402/maildir/beck-s/deleted_items/73.
+enron_mail_20110402/maildir/beck-s/inbox/119.
+enron_mail_20110402/maildir/beck-s/inbox/136.
+enron_mail_20110402/maildir/cash-m/deleted_items/381.
+enron_mail_20110402/maildir/cash-m/deleted_items/461.
+enron_mail_20110402/maildir/cash-m/deleted_items/464.
+enron_mail_20110402/maildir/cash-m/inbox/320.
+enron_mail_20110402/maildir/kaminski-v/all_documents/7274.
+enron_mail_20110402/maildir/kaminski-v/c/mangmt/ene_ect/163.
+enron_mail_20110402/maildir/shankman-j/deleted_items/385.
+enron_mail_20110402/maildir/shankman-j/inbox/32.
+enron_mail_20110402/maildir/shankman-j/inbox/35.
+enron_mail_20110402/maildir/shankman-j/inbox/55.

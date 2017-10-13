@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/love-p/all_documents/489.
+enron_mail_20110402/maildir/love-p/deleted_items/124.
+enron_mail_20110402/maildir/love-p/deleted_items/14.
+enron_mail_20110402/maildir/love-p/deleted_items/158.
+enron_mail_20110402/maildir/love-p/deleted_items/161.
+enron_mail_20110402/maildir/love-p/deleted_items/162.
+enron_mail_20110402/maildir/love-p/deleted_items/163.
+enron_mail_20110402/maildir/love-p/deleted_items/164.
+enron_mail_20110402/maildir/love-p/deleted_items/165.
+enron_mail_20110402/maildir/love-p/deleted_items/17.
+enron_mail_20110402/maildir/love-p/discussion_threads/631.
+enron_mail_20110402/maildir/love-p/notes_inbox/25.

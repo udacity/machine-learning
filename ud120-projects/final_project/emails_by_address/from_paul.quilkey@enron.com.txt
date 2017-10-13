@@ -1,0 +1,17 @@
+enron_mail_20110402/maildir/kaminski-v/all_documents/5125.
+enron_mail_20110402/maildir/kaminski-v/all_documents/5367.
+enron_mail_20110402/maildir/kaminski-v/all_documents/678.
+enron_mail_20110402/maildir/kaminski-v/australia/80.
+enron_mail_20110402/maildir/kaminski-v/australia/87.
+enron_mail_20110402/maildir/kaminski-v/deleted_items/2101.
+enron_mail_20110402/maildir/kaminski-v/deleted_items/2118.
+enron_mail_20110402/maildir/kaminski-v/discussion_threads/240.
+enron_mail_20110402/maildir/kaminski-v/discussion_threads/3721.
+enron_mail_20110402/maildir/kaminski-v/discussion_threads/400.
+enron_mail_20110402/maildir/kaminski-v/weather/6.
+enron_mail_20110402/maildir/kitchen-l/_americas/mrha/ooc/199.
+enron_mail_20110402/maildir/kitchen-l/_americas/mrha/ooc/214.
+enron_mail_20110402/maildir/kitchen-l/_americas/ooc/175.
+enron_mail_20110402/maildir/mcconnell-m/all_documents/103.
+enron_mail_20110402/maildir/mcconnell-m/discussion_threads/600.
+enron_mail_20110402/maildir/mcconnell-m/notes_inbox/79.

@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/mann-k/all_documents/6395.
+enron_mail_20110402/maildir/mann-k/all_documents/6400.
+enron_mail_20110402/maildir/mann-k/discussion_threads/4704.
+enron_mail_20110402/maildir/mann-k/discussion_threads/4710.
+enron_mail_20110402/maildir/mann-k/midway/14.
+enron_mail_20110402/maildir/mann-k/notes_inbox/172.
+enron_mail_20110402/maildir/rogers-b/all_documents/125.
+enron_mail_20110402/maildir/rogers-b/all_documents/493.
+enron_mail_20110402/maildir/rogers-b/discussion_threads/1468.
+enron_mail_20110402/maildir/rogers-b/discussion_threads/1823.
+enron_mail_20110402/maildir/rogers-b/genco_jv_ipo/154.
+enron_mail_20110402/maildir/rogers-b/genco_jv_ipo/46.

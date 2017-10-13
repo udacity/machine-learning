@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/buy-r/inbox/1188.
+enron_mail_20110402/maildir/kaminski-v/all_documents/2524.
+enron_mail_20110402/maildir/kaminski-v/credit/60.
+enron_mail_20110402/maildir/kaminski-v/discussion_threads/2307.
+enron_mail_20110402/maildir/kitchen-l/_americas/esvl/464.
+enron_mail_20110402/maildir/kitchen-l/_americas/esvl/583.
+enron_mail_20110402/maildir/kitchen-l/_americas/esvl/584.
+enron_mail_20110402/maildir/kitchen-l/_americas/esvl/684.
+enron_mail_20110402/maildir/kitchen-l/_americas/netco_credit/2.
+enron_mail_20110402/maildir/kitchen-l/_americas/netco_restart/46.
+enron_mail_20110402/maildir/white-s/deleted_items/54.
+enron_mail_20110402/maildir/white-s/inbox/239.
