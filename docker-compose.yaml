@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 11111:11111
+    volumes:
+      - .:/machine-learning
+    entrypoint:
+      - pipenv
+      - run
+    command:
+    - jupyter notebook --allow-root --ip 0.0.0.0 --port 11111
