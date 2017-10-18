@@ -312,8 +312,11 @@ class Environment(object):
                     violation = 4 # Accident
                 elif inputs['oncoming'] == 'right': # Oncoming car turning right
                     violation = 4 # Accident
-            else: # Green light
-                heading = (heading[1], -heading[0]) # Valid move. We assume the cab will wait for the lane to be clear on a green light, before taking the left turn.
+            else:# Green light
+                if inputs['oncoming'] == 'right' or inputs['oncoming'] == 'forward': # Incoming traffic
+                    violation = 3 # Accident
+                else: # Valid move!
+                    heading = (heading[1], -heading[0])
 
         # Agent wants to drive right:
         elif action == 'right':
