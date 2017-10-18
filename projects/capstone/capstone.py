@@ -121,8 +121,4 @@ print predictions
 
 print r2_score(y_tests, predictions)
 
-<<<<<<< HEAD
 #test modification 2
-=======
-# test modification
->>>>>>> master
