@@ -81,14 +81,7 @@ class LearningAgent(Agent):
         ## TO DO ##
         ###########
         # Calculate the maximum Q-value of all actions for a given state
-
-        maxQ = None
-        for x in self.Q[state]:
-            if(maxQ == None):
-                maxQ = self.Q[state][x]
-            elif(self.Q[state][x] > maxQ):
-                maxQ = self.Q[state][x]   
-        return maxQ 
+        return max(self.Q[state].values())  
 
 
     def createQ(self, state):
@@ -129,14 +122,12 @@ class LearningAgent(Agent):
             if(random.uniform(0, 1) < self.epsilon):
                 action = random.choice(self.valid_actions)
             else:
-                q_value = 0.0
-                for x in self.Q[state]:
-                    if(action == None):
-                        action = x
-                        q_value = self.Q[state][x]
-                    elif(self.Q[state][x] > q_value):
-                        action = x
-                        q_value = self.Q[state][x]             
+                maxq = self.get_maxQ(state)
+                possible_actions = []
+                for possible_action in self.valid_actions:
+                    if(self.Q[state][possible_action] == maxq):
+                        possible_actions.append(possible_action)
+                action = random.choice(possible_actions)
         return action
 
 
@@ -151,7 +142,7 @@ class LearningAgent(Agent):
         # When learning, implement the value iteration update rule
         #   Use only the learning rate 'alpha' (do not use the discount factor 'gamma')
         if(self.learning):
-            reward_update = self.alpha * (reward + self.get_maxQ(state))
+            reward_update = self.alpha * reward
             self.Q[state][action] = (1 - self.alpha) * self.Q[state][action] + reward_update
         return
 
@@ -188,7 +179,7 @@ def run():
     #   learning   - set to True to force the driving agent to use Q-learning
     #    * epsilon - continuous value for the exploration factor, default is 1
     #    * alpha   - continuous value for the learning rate, default is 0.5
-    agent = env.create_agent(LearningAgent, alpha=0.2, learning=True)
+    agent = env.create_agent(LearningAgent, alpha=1, learning=True)
     
     ##############
     # Follow the driving agent
