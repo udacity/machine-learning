@@ -14,6 +14,7 @@ pipenv = "*"
 pandas = "*"
 scipy = "*"
 seaborn = "*"
+pygame = "*"
 
 
 [dev-packages]
