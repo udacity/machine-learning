@@ -10,11 +10,10 @@ name = "pypi"
 jupyter = "*"
 sklearn = "*"
 matplotlib = "*"
-pipenv = "*"
 pandas = "*"
 scipy = "*"
 seaborn = "*"
-pygame = "*"
+Pygame = "*"
 
 
 [dev-packages]
