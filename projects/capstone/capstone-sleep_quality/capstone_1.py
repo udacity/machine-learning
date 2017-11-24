@@ -12,27 +12,12 @@ from sklearn.ensemble import AdaBoostClassifier
 from sklearn.cross_validation import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 
-print 'ok'
-test = {
-    'one':{98:'_mean',99:'_mean','_NaN':'mean',94:'something'},
-    'two': {98:'_mean'}
-}
-print test
-sys.exit()
+import pre_process
+
+
 
 all_data = pd.read_csv("2013SleepinAmericaPollExerciseandSleepRawDataExcel.csv")
-# print list(all_data)
-# sys.exit()
-# print type(all_data)
-# sys.exit()
-# all_data.drop(['caseid', 'source','market','smptype','city','state','zip'
-#                   ,'fips','dma','tz','rep','census','age','qs1a','','',''], axis=1)
-# print all_data
-# sys.exit()
-#
 
-# print type(all_data["NORTHEAST"][0])
-# sys.exit()
 # refined_data =  all_data[["qs1","qs2","qs3","NORTHEAST","MIDWEST","SOUTH","WEST","Q1VALUE","Q2VALUE",
 #                       "Q2Q1DIF","Q3VALUE","Q4VALUE","Q4Q3DIF","Q4Q3Q2Q1DIFHRS","Q5","Q6","Q6Q5DIF"
 #     ,"q7","q8","q9","q10","q11","q12","q13a","q13b","q13c","q13d","q13e","q13f","q13g","EPWORTH",
@@ -42,409 +27,857 @@ all_data = pd.read_csv("2013SleepinAmericaPollExerciseandSleepRawDataExcel.csv")
 # ,"q3901","q3902","q3903","Q40","q4101","q4102","q4103","Q42","Q43A","Q43B","Q43C","Q43D","Q43E","Q43F","Q43G1"
 #     ,"Q43G2","Q43G3","q4401","q4402","q4403","q45","q46","q47","q48","q49","q50","SHEEWORK","SHEEFAMILY","SHEEMOOD"
 #     ,"SHEESEX","SHEETOTAL","NSFDISABLE","WEIGHT","HEIGHT","BMI","STOPBAG1","STOPBAG2","IPAQ36","IPAQ38","IPAQ40","IPAQTOTAL"]]
-# all_data =  all_data[["Q1VALUE"]]
-# print 9998 == 9998.00
-# print all_data['Q1VALUE'][97]
-# print all_data
-# sys.exit()
+
 columns_info = {
-    'qs1':{
-        '_NaN':'_mean'
+    'qs1':{#age
+        'conversion':{
+            '_NaN':'_mean'
+        },
+        'available_types':['int','int64','float','float64']
+
     },
-    'qs2':{
-        '_NaN':94
+    'qs2':{#emplyment_status
+        'conversion': {
+            '_NaN':94
+        },
+        'one_hot_encoding': True,
+        'available_values':[1,2,3,4,98,99]
     },
-    'qs3':{
-        '_NaN':94
+    'qs3':{ #gender
+        'conversion': {
+            '_NaN':94
+        },
+        'one_hot_encoding': True,
+        'available_values':[1,2]
     },
-    'NORTHEAST':{
-        '_NaN':0
+    'NORTHEAST':{#ok1
+        'conversion': {
+            '_NaN':0
+        },
+        'available_values':[1]
     },
     'MIDWEST':{
-        '_NaN':0
+        'conversion': {
+            '_NaN':0
+        },
+        'available_values':[1]
     },
     'SOUTH':{
-        '_NaN':0
+        'conversion': {
+            '_NaN':0
+        },
+        'available_values':[1]
     },
     'WEST':{
-        '_NaN':0
+        'conversion': {
+            '_NaN':0
+        },
+        'available_values':[1]
     },
     'Q1VALUE':{
-        9998:'_mean',
-        9999:'_mean'
+        'conversion': {
+            9998:'_mean',
+            9999:'_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'Q2VALUE':{
-        9998:'_mean',
-        9999:'_mean'
+        'conversion': {
+            9998:'_mean',
+            9999:'_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'Q2Q1DIF':{
     #     recalculate
+        'recalculation':{
+            'subtraction':('Q2VALUE','Q1VALUE')
+        },
+        'available_types':['int','float','float64']
     },
     'Q3VALUE':{
-        9998:'_mean',
-        9999:'_mean'
+        'conversion': {
+            9998:'_mean',
+            9999:'_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'Q4VALUE':{
-        9998:'_mean',
-        9999:'_mean'
+        'conversion': {
+            9998:'_mean',
+            9999:'_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'Q4Q3DIF':{
     #     recalculate
+        'recalculation':{
+            'subtraction':('Q4VALUE','Q3VALUE')
+        },
+        'available_types':['int','float','float64']
     },
-    'Q4Q3Q2Q1DIFHRS':{
-    #     recalculate
-    },
+    # 'Q4Q3Q2Q1DIFHRS':{
+    #     'recalculation': {
+    #         'subtraction': ('Q2VALUE', 'Q1VALUE')
+    #     }
+    # },make a new colum for this
     'Q5':{
-        '_NaN':'_mean'
+        'conversion': {
+            '_NaN':'_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'Q6':{
-        '_NaN':'_mean'
+        'conversion': {
+            '_NaN':'_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'Q6Q5DIF':{
-        #     recalculate
+        'recalculation': {
+            'subtraction': ('Q6', 'Q5')
+        },
+        'available_types':['int','float','float64']
     },
-    'q7':{
-        '_NaN':94
+    'q7':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'one_hot_encoding': True,
+        'available_values':[1,2,3,4,5,98,99]
     },
     'q8':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':94
+        },
+        'one_hot_encoding': True,
+        'available_values':[1,2,3,4,5,98,99]
     },
-    'q9':{
-        '_NaN':94
+    'q9':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'one_hot_encoding': True,
+        'available_values':[1,2,3,4,5,98,99]
     },
     'q10':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':94
+        },
+        'one_hot_encoding': True,
+        'available_values':[1,2,3,4,5,98,99]
     },
     'q11':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':94
+        },
+        'one_hot_encoding': True,
+        'available_values':[1,2,3,4,98,99]
     },
     'q12':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':94
+        },
+        'one_hot_encoding': True,
+        'available_values':[1,2,3,4,98,99]
     },
     'q13a':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values':[0,1,2,3,98,99],
+        'one_hot_encoding': True
     },
     'q13b':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [0, 1, 2, 3, 98, 99],
+        'one_hot_encoding': True
     },
     'q13c':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [0, 1, 2, 3, 98, 99],
+        'one_hot_encoding': True
     },
     'q13d':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [0, 1, 2, 3, 98, 99],
+        'one_hot_encoding': True
     },
     'q13e':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [0, 1, 2, 3, 98, 99],
+        'one_hot_encoding': True
     },
     'q13f':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [0, 1, 2, 3, 98, 99],
+        'one_hot_encoding': True
     },
     'q13g':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [0, 1, 2, 3, 98, 99],
+        'one_hot_encoding': True
     },
     'EPWORTH':{
-        '_NaN':'_mean'
+        'conversion': {
+            '_NaN':'_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'q14':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 98, 99],
+        'one_hot_encoding': True
     },
     'q15':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 98, 99],
+        'one_hot_encoding': True
     },
-    'q16a':{
-        '_NaN':94
+    'q16a':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 96, 98, 99],
+        'one_hot_encoding': True
     },
-    'q16c':{
-        '_NaN':94
+    'q16c':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 96, 98, 99],
+        'one_hot_encoding': True
     },
-    'q16d':{
-        '_NaN':94
+    'q16d':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 96, 98, 99],
+        'one_hot_encoding': True
     },
-    'q16e':{
-        '_NaN':94
+    'q16e':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 96, 98, 99],
+        'one_hot_encoding': True
     },
-    'q16f':{
-        '_NaN':94
+    'q16f':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 96, 98, 99],
+        'one_hot_encoding': True
     },
     'q17':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 4, 5, 6, 7, 96, 98, 99],
+        'one_hot_encoding': True
     },
     'q18':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 4, 5, 6, 7, 96, 98, 99],
+        'one_hot_encoding': True
     },
-    'q19a':{
-        '_NaN':94
+    'q19a':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 4, 98, 99],
+        'one_hot_encoding': True
     },
-    'q19b':{
-        '_NaN':94
+    'q19b':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 4, 98, 99],
+        'one_hot_encoding': True
     },
-    'q19c':{
-        '_NaN':94
+    'q19c':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 4, 98, 99],
+        'one_hot_encoding': True
     },
-    'q19d':{
-        '_NaN':94
+    'q19d':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 4, 98, 99],
+        'one_hot_encoding': True
     },
-    'q20':{
-        '_NaN':94
+    'q20':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 98, 99],
+        'one_hot_encoding': True
     },
-    'q21':{
-        '_NaN':94
+    'q21':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 98, 99],
+        'one_hot_encoding': True
     },
-    'q22':{
-        '_NaN':94
+    'q22':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 98, 99],
+        'one_hot_encoding': True
     },
-    'q23':{
-        '_NaN':94
+    'q23':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 98, 99],
+        'one_hot_encoding': True
     },
-    'q24':{
-        '_NaN':94
+    'q24':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 4, 98, 99],
+        'one_hot_encoding': True
     },
-    'q25':{
-        '_NaN':94
+    'q25':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 4, 98, 99],
+        'one_hot_encoding': True
     },
-    'q26':{
-        '_NaN':94
+    'q26':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 98, 99],
+        'one_hot_encoding': True
     },
-    'q27':{
-        '_NaN':94
+    'q27':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 4, 5, 98, 99],
+        'one_hot_encoding': True
     },
     'q28':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 4, 98, 99],
+        'one_hot_encoding': True
     },
     'q29a':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':'_mean',
+            98:'_mean',
+            99:'_mean',
+            97: 0.5
+        },
+        'available_types':['int','float','float64'],
+        'one_hot_encoding': True
+
     },
     'q29b':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':'_mean',
+            98:'_mean',
+            99:'_mean',
+            97: 0.5
+        },
+        'available_types':['int','float','float64'],
+        'one_hot_encoding': True
     },
     'q29c':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':'_mean',
+            98:'_mean',
+            99:'_mean',
+            97: 0.5
+        },
+        'available_types':['int','float','float64'],
+        'one_hot_encoding': True
     },
     'Q29TOTAL':{
-        98:'_mean',
-        99:'_mean'
+        'conversion': {
+            98:'_mean',
+            99:'_mean'
+        },
+        'available_types':['int','float','float64']
     },
-    'q30':{
-        '_NaN':94
+    'q30':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 4, 98, 99],
+        'one_hot_encoding': True
     },
-    'q31':{
-        '_NaN':94
+    'q31':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 4, 98, 99],
+        'one_hot_encoding': True
     },
-    'q32':{
-        '_NaN':94
+    'q32':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 4, 98, 99],
+        'one_hot_encoding': True
     },
-    'q33':{
-        '_NaN':94
+    'q33':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 4, 98, 99],
+        'one_hot_encoding': True
     },
-    'q34':{
-        '_NaN':94
+    'q34':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 4, 98, 99],
+        'one_hot_encoding': True
     },
-    'q35':{
-        '_NaN':'mean',
-        996:'_mean',
-        998:'_mean',
-        999:'_mean'
+    'q35':{#ok1
+        'conversion': {
+            '_NaN':'_mean',
+            996:'_mean',
+            998:'_mean',
+            999:'_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'Q36':{
-        98:'_mean',
-        99:'_mean',
-        '_NaN':'mean',
+        'conversion': {
+            98:'_mean',
+            99:'_mean',
+            '_NaN':'_mean',
+        },
+        'available_types':['int','float','float64']
     },
-    'q3701':{
-        '_NaN':94
+    'q3701':{#ok1?
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 98, 99],
+        'one_hot_encoding': True
     },
     'q3702':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 98, 99],
+        'one_hot_encoding': True
     },
     'q3703':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 98, 99],
+        'one_hot_encoding': True
     },
 
     'Q38':{
-        98: '_mean',
-        99: '_mean',
-        '_NaN': 'mean'
+        'conversion': {
+            98: '_mean',
+            99: '_mean',
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
 
     'q3901': {
-        '_NaN': 94
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 3, 98, 99],
+        'one_hot_encoding': True
     },
     'q3902': {
-        '_NaN': 94
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 3, 98, 99],
+        'one_hot_encoding': True
     },
     'q3903': {
-        '_NaN': 94
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 3, 98, 99],
+        'one_hot_encoding': True
     },
-    'q4101':{
-        '_NaN':94
+    'Q40':{
+        'conversion': {
+            98:'_mean',
+            99:'_mean',
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
+    },
+    'q4101':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 98, 99],
+        'one_hot_encoding': True
     },
     'q4102':{
-        '_NaN':94
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 98, 99],
+        'one_hot_encoding': True
     },
-    'q4103':{
-        '_NaN':94
+    'q4103':{#ok1
+        'conversion': {
+            '_NaN':94
+        },
+        'available_values': [1, 2, 3, 98, 99],
+        'one_hot_encoding': True
     },
     'Q42':{
-        98: '_mean',
-        99: '_mean',
-        '_NaN': 'mean'
+        'conversion': {
+            98: '_mean',
+            99: '_mean',
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'Q43A':{
-        98: '_mean',
-        99: '_mean',
-        '_NaN': 'mean'
+        'conversion': {
+            98: '_mean',
+            99: '_mean',
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'Q43B':{
-        98: '_mean',
-        99: '_mean',
-        '_NaN': 'mean'
+        'conversion': {
+            98: '_mean',
+            99: '_mean',
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'Q43C':{
-        98: '_mean',
-        99: '_mean',
-        '_NaN': 'mean'
+        'conversion': {
+            98: '_mean',
+            99: '_mean',
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'Q43D':{
-        98: '_mean',
-        99: '_mean',
-        '_NaN': 'mean'
+        'conversion': {
+            98: '_mean',
+            99: '_mean',
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
 
     'Q43E': {
-        98: '_mean',
-        99: '_mean',
-        '_NaN': 'mean'
+        'conversion': {
+            98: '_mean',
+            99: '_mean',
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
 
     'Q43F': {
-        98: '_mean',
-        99: '_mean',
-        '_NaN': 'mean'
+        'conversion': {
+            98: '_mean',
+            99: '_mean',
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'Q43G1': {
-        98: '_mean',
-        99: '_mean',
-        '_NaN': 'mean'
+        'conversion': {
+            98: '_mean',
+            99: '_mean',
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'Q43G2': {
-        98: '_mean',
-        99: '_mean',
-        '_NaN': 'mean'
+        'conversion': {
+            98: '_mean',
+            99: '_mean',
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
-    'Q43G3': {
-        98: '_mean',
-        99: '_mean',
-        '_NaN': 'mean'
+    'Q43G3': {#ok1
+        'conversion': {
+            98: '_mean',
+            99: '_mean',
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
-    'q4401': {
-        '_NaN': 94
+    'q4401': {#ok1
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 3, 98, 99],
+        'one_hot_encoding': True
     },
-    'q4402': {
-        '_NaN': 94
+    'q4402': {#ok1
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 3, 98, 99],
+        'one_hot_encoding': True
     },
-    'q4403': {
-        '_NaN': 94
+    'q4403': {#ok1
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 3, 98, 99],
+        'one_hot_encoding': True
     },
-    'q45': {
-        '_NaN': 94
+    'q45': {#ok1
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 3, 96, 98, 99],
+        'one_hot_encoding': True
     },
-    'q46': {
-        '_NaN': 94
+    'q46': {#ok1
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 3, 96, 98, 99],
+        'one_hot_encoding': True
     },
-    'q47': {
-        '_NaN': 94
+    'q47': {#ok1
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 3, 4, 5, 96, 98, 99],
+        'one_hot_encoding': True
     },
-    'q48': {
-        '_NaN': 94
+    'q48': {#ok1
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 3, 4, 5, 96, 98, 99],
+        'one_hot_encoding': True
     },
-    'q49': {
-        '_NaN': 94
+    'q49': {#ok1
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 3, 4, 96, 98, 99],
+        'one_hot_encoding': True
     },
     'q50': {
-        '_NaN': 94
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 3, 4, 5, 96, 98, 99],
+        'one_hot_encoding': True
     },
-    'q51': {
-        '_NaN': 94
-    },
+    # 'q51': {
+    #     'conversion': {
+    #         '_NaN': 94
+    #     },
+    #     'available_values': [1, 2, 3, 4, 5, 96, 98, 99],# i guess there is a mistake in the questionaries. consider removing
+    #     'one_hot_encoding': True
+    # },
     'q53': {
-        '_NaN': 94
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 3, 4, 5, 6, 98],
+        'one_hot_encoding': True
     },
     'q54': {
-        '_NaN': 94
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 3, 4, 5, 6, 7, 8, 9, 98],
+        'one_hot_encoding': True
     },
     'q55': {
-        '_NaN': 94
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 3, 4, 5, 98, 99],
+        'one_hot_encoding': True
     },
     'q56': {
-        '_NaN': 94
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 98, 99],
+        'one_hot_encoding': True
     },
     'q5701': {
-        '_NaN': 94
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 3, 4, 5, 6, 7, 8, 95, 98, 99],
+        'one_hot_encoding': True
     },
     'q5702': {
-        '_NaN': 94
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 3, 4, 5, 6, 7, 8, 95, 98, 99],
+        'one_hot_encoding': True
     },
     'q5703': {
-        '_NaN': 94
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 3, 4, 5, 6, 7, 8, 95, 98, 99],
+        'one_hot_encoding': True
     },
     'q5704': {
-        '_NaN': 94
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 3, 4, 5, 6, 7, 8, 95, 98, 99]
+    },
+    'q58': {
+        'conversion': {
+            '_NaN': 94
+        },
+        'available_values': [1, 2, 98, 99],
     },
     'SHEEWORK': {
-        '_NaN': '_mean'
+        'conversion': {
+            '_NaN': '_mean'
+        },
+        'one_hot_encoding': True,
+        'available_types':['int','float','float64']
     },
     'SHEEFAMILY': {
-        '_NaN': '_mean'
+        'conversion': {
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'SHEESOCIAL': {
-        '_NaN': '_mean'
+        'conversion': {
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
-    'SHEEMOOD': {
-        '_NaN': '_mean'
+    'SHEEMOOD': {#ok1
+        'conversion': {
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'SHEESEX': {
-        '_NaN': '_mean'
+        'conversion': {
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'SHEETOTAL': {
-        '_NaN': '_mean'
+        'conversion': {
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'NSFDISABLE': {
-        '_NaN': '_mean'
+        'conversion': {
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'WEIGHT': {
-        '_NaN': '_mean'
+        'conversion': {
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'HEIGHT': {
-        '_NaN': '_mean'
+        'conversion': {
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'BMI': {
-        '_NaN': '_mean'
+        'conversion': {
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'STOPBAG1': {
-        '_NaN': 0
+        'conversion': {
+            '_NaN': 0
+        },
+        'available_values': [1],
     },
     'STOPBAG2': {
-        '_NaN': '_mean'
+        'conversion': {
+            '_NaN': '_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'IPAQ36': {
-        '_NaN': '_mean',
-        98: '_mean',
-        99: '_mean'
+        'conversion': {
+            '_NaN': '_mean',
+            98: '_mean',
+            99: '_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'IPAQ38': {
-        '_NaN': '_mean',
-        98: '_mean',
-        99: '_mean'
+        'conversion': {
+            '_NaN': '_mean',
+            98: '_mean',
+            99: '_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'IPAQ40': {
-        '_NaN': '_mean',
-        98: '_mean',
-        99: '_mean'
+        'conversion': {
+            '_NaN': '_mean',
+            98: '_mean',
+            99: '_mean'
+        },
+        'available_types':['int','float','float64']
     },
     'IPAQTOTAL': {
-        '_NaN': 94,
-        98: '_mean',
-        99: '_mean'
+        'conversion': {
+            '_NaN': 94,
+            98: '_mean',
+            99: '_mean'
+        },
+        'available_types':['int','float','float64']
     }
 
 
@@ -452,43 +885,39 @@ columns_info = {
 
 }
 
+# columns_info = {
+#     'BMI': {
+#         'conversion': {
+#             '_NaN': '_mean'
+#         }
+#     },
+# }
 
 
-def convert_values_and_extract_columns(data, columns_info):
+refined_data = pre_process.convert_values_and_extract_data(all_data,columns_info)
 
-    columns_to_extract = []
-    for column_name, empty_values_setting in columns_info.items():
-        print column_name
-        if any(empty_values_setting): #convert empty values
-            # To convert to mean, we have to replace numeric values with NaN,
-            # and calculate mean
-            if '_mean' in empty_values_setting.values():
-                convert_to_mean = {}
-                for convert_from, convert_to in empty_values_setting.iteritems():
-                    if convert_to == '_mean' and convert_from != '_NaN':
-                        data[column_name] = data[column_name].replace(convert_from, np.NaN)
-                mean = data[column_name].mean()
-            for convert_from, convert_to in empty_values_setting.items():
-                for key, value in data[column_name].iteritems():
-                    if (convert_from == "_NaN" and pd.isnull(value)) or convert_from == value:
-                        if convert_to == "_mean":
-                            convert_to = mean
-                        data.loc[key, column_name] = convert_to
-        columns_to_extract.append(column_name)
-    return data, columns_to_extract
-
-
-
-refined_data, columns_to_extract=  convert_values_and_extract_columns(all_data,columns_info)
-
-# print type(refined_data)
-# sys.exit()
-def extract_values():
-
-    return
-# print len(refined_data.columns)
-print refined_data['Q1VALUE'][97]
+result = pre_process.are_valid_data(refined_data,columns_info)
+print result
 sys.exit()
+# pd.set_option("display.max_colwidth", 1000)
+#
+# pd.set_option("display.max_rows", 1000)
+# refined_data.to_csv("check.csv")
+
+
+sys.exit()
+
+one_hot_encoded_data = pre_process.apply_one_hot_encode(refined_data,columns_info)
+
+pd.set_option("display.max_colwidth", 1000)
+
+pd.set_option("display.max_rows", 1000)
+# print one_hot_encoded_data
+# one_hot_encoded_data.to_csv("check.csv")
+sys.exit()
+# print type(refined_data)
+# print refined_data
+
 
 # features =  all_data[["q34","q35"]]
 # qualities_of_sleep = all_data["q30"]
