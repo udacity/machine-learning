@@ -1,8 +1,9 @@
 import unittest
 from unittest_data_provider import data_provider
-# import sys,os
-# sys.path.append(os.pardir)
-from .. import str
+import sys,os
+sys.path.append(os.pardir)
+import str
+# from .. import str
 class TestPreProcess(unittest.TestCase):
 
     __data_for_test_convert_all_to_string__returns_expected_values = lambda: [
@@ -32,3 +33,7 @@ class TestPreProcess(unittest.TestCase):
     def test_implode__returns_expected_values(self, list_to_stringify,separator,quote_string, expected):
         actual = str.implode(list_to_stringify,separator,quote_string)
         self.assertEquals(expected,actual)
+
+
+if __name__ == "__main__":
+    unittest.main()
