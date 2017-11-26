@@ -11890,7 +11890,8 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li>The smartcab doesn't appear to move at all during the simulation - it either successfully idles at a red light, successfully idles at a green light when there's oncoming traffic, or mistakenly idles at a green light when there's no oncoming traffic. It begins by receiving rewards of around +2 to +3 pts for correctly idling at the red light, gaining around 0 to +2 pts for correctly idling at green lights with oncoming traffic, and losing around -4 to -6 pts for idling incorrectly at a green light. The light changing color affects the signs of the rewards dependent on whether there is oncoming traffic or not, as is evident above.</li>
+<li>The smartcab doesn't appear to move at all during the simulation: it either successfully idles at a red light, successfully idles at a green light when there's oncoming traffic, or mistakenly idles at a green light when there's no oncoming traffic. </li>
+<li>It begins by receiving rewards of around +2 to +3 pts for correctly idling at the red light, gaining around 0 to +2 pts for correctly idling at green lights with oncoming traffic, and losing around -4 to -6 pts for idling incorrectly at a green light.  When the light changing color it affects the signs of the rewards dependent on whether there is oncoming traffic or not.</li>
 </ul>
 
 </div>
@@ -11928,7 +11929,12 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li><p>In the agent.py file, the flag 'grid_size' alters the number of intersections (effectively the size of the map) that the car can make decisions in; the flag 'log_metrics' must be set to true for the trials and simulation results to be stored for analysis in the /logs folder; the flag 'epsilon' allows us to control the degree to which the algorithm explores its environment by taking random actions to discover new state-action rewards.</p>
+<li><p>In the agent.py file the flag:</p>
+<ul>
+<li>'grid_size': alters the number of intersections (effectively the size of the map) that the car can make decisions in; </li>
+<li>'log_metrics': must be set to true for the trials and simulation results to be stored for analysis in the /logs folder; </li>
+<li>'epsilon': allows us to control the degree to which the algorithm explores its environment by taking random actions to discover new state-action rewards. </li>
+</ul>
 </li>
 <li><p>In the environment.py file, the Environment class function 'act' which takes the parameters self, agent, and action is called when an agent performs an action.</p>
 </li>
