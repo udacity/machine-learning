@@ -321,8 +321,8 @@ class Simulator(object):
             # Center line
             self.pygame.draw.line(self.screen, self.line_color, (road[0][0] * self.env.block_size, road[0][1] * self.env.block_size), (road[1][0] * self.env.block_size, road[1][1] * self.env.block_size), 2)
         
-        for intersection, traffic_light in self.env.intersections.iteritems():
-            self.pygame.draw.circle(self.screen, self.road_color, (intersection[0] * self.env.block_size, intersection[1] * self.env.block_size), self.road_width/2)
+        for intersection, traffic_light in self.env.intersections.items():
+            self.pygame.draw.circle(self.screen, self.road_color, (intersection[0] * self.env.block_size, intersection[1] * self.env.block_size), int(self.road_width/2))
             
             if traffic_light.state: # North-South is open
                 self.screen.blit(self._ns,
