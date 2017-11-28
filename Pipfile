@@ -13,7 +13,7 @@ matplotlib = "*"
 pandas = "*"
 scipy = "*"
 seaborn = "*"
-Pygame = "*"
+pygame = "*"
 
 
 [dev-packages]
