@@ -61,26 +61,28 @@ class PreProcess:
         for column_name, column_info_2 in self.columns_config.items():
 
             # if there is a config of 'conversion' apply conversion
-            if 'conversion' in column_info_2 and any(column_info_2['conversion']):
+            if 'conversion' in column_info_2 \
+                    and 'values' in column_info_2['conversion'] \
+                    and  any(column_info_2['conversion']['values']):
 
                 # To convert to mean, we firstly have to replace the numeric values with NaN,
                 # then calculate mean
-                for convert_from, convert_to in column_info_2['conversion'].items():
+                for convert_from, convert_to in column_info_2['conversion']['values'].items():
                     for key, value in self.df[column_name].iteritems():
                         if convert_to != "_mean" and (
                             (convert_from == "_NaN" and pd.isnull(value)) or convert_from == value):
                             self.df.loc[key, column_name] = convert_to
 
                 # if '_mean' is specified calculate mean of the column
-                if '_mean' in column_info_2['conversion'].values():
+                if '_mean' in column_info_2['conversion']['values'].values():
                     tmp_data = self.df.copy(deep=True)
-                    for convert_from, convert_to in column_info_2['conversion'].iteritems():
+                    for convert_from, convert_to in column_info_2['conversion']['values'].iteritems():
                         if convert_to == '_mean':
                             tmp_data[column_name] = tmp_data[column_name].replace(convert_from, np.NaN)
                     mean = self.average(tmp_data[column_name])
 
                 # apply value conversion
-                for convert_from, convert_to in column_info_2['conversion'].items():
+                for convert_from, convert_to in column_info_2['conversion']['values'].items():
                     for key, value in self.df[column_name].iteritems():
                         if convert_to == "_mean" and (
                                 convert_from == value or convert_from == '_NaN' and pd.isnull(value)):
@@ -158,8 +160,10 @@ class PreProcess:
                 available_values.extend(column_info['available_values'])
 
                 # store the value of convert_to to available_values
-                if 'conversion' in column_info and any(column_info['conversion']):
-                    for convert_from, convert_to in column_info['conversion'].items():
+                if 'conversion' in column_info \
+                        and column_info['conversion']['values'] \
+                        and  any(column_info['conversion']['values']):
+                    for convert_from, convert_to in column_info['conversion']['values'].items():
                         # if convert_to == '_NaN':  # if '_NaN', set NaN to convert_to
                         #     convert_to = float('NaN')
                         if convert_to != '_mean':  # ignore _mean
