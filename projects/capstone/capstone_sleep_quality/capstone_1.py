@@ -15,8 +15,7 @@ from sklearn.tree import DecisionTreeClassifier
 import pre_process
 
 
-
-all_data = pd.read_csv("2013SleepinAmericaPollExerciseandSleepRawDataExcel.csv")
+# all_data = pd.read_csv("2013SleepinAmericaPollExerciseandSleepRawDataExcel.csv")
 
 # refined_data =  all_data[["qs1","qs2","qs3","NORTHEAST","MIDWEST","SOUTH","WEST","Q1VALUE","Q2VALUE",
 #                       "Q2Q1DIF","Q3VALUE","Q4VALUE","Q4Q3DIF","Q4Q3Q2Q1DIFHRS","Q5","Q6","Q6Q5DIF"
@@ -28,7 +27,7 @@ all_data = pd.read_csv("2013SleepinAmericaPollExerciseandSleepRawDataExcel.csv")
 #     ,"Q43G2","Q43G3","q4401","q4402","q4403","q45","q46","q47","q48","q49","q50","SHEEWORK","SHEEFAMILY","SHEEMOOD"
 #     ,"SHEESEX","SHEETOTAL","NSFDISABLE","WEIGHT","HEIGHT","BMI","STOPBAG1","STOPBAG2","IPAQ36","IPAQ38","IPAQ40","IPAQTOTAL"]]
 
-columns_info = {
+columns_config = {
     'qs1':{#age
         'conversion':{
             '_NaN':'_mean'
@@ -398,7 +397,7 @@ columns_info = {
             97: 0.5
         },
         'available_types':['int','float','float64'],
-        'one_hot_encoding': True
+        # 'one_hot_encoding': True
 
     },
     'q29b':{
@@ -409,7 +408,7 @@ columns_info = {
             97: 0.5
         },
         'available_types':['int','float','float64'],
-        'one_hot_encoding': True
+        # 'one_hot_encoding': True
     },
     'q29c':{
         'conversion': {
@@ -419,7 +418,7 @@ columns_info = {
             97: 0.5
         },
         'available_types':['int','float','float64'],
-        'one_hot_encoding': True
+        # 'one_hot_encoding': True
     },
     'Q29TOTAL':{
         'conversion': {
@@ -778,7 +777,7 @@ columns_info = {
         'conversion': {
             '_NaN': '_mean'
         },
-        'one_hot_encoding': True,
+        # 'one_hot_encoding': True,
         'available_types':['int','float','float64']
     },
     'SHEEFAMILY': {
@@ -893,11 +892,31 @@ columns_info = {
 #     },
 # }
 
+# pre_process_obj = pre_process.PreProcess(all_data,columns_config)
 
-refined_data = pre_process.convert_values_and_extract_data(all_data,columns_info)
+# pre_process_obj.convert_values_and_extract_data()
 
-result = pre_process.are_valid_data(refined_data,columns_info)
-print result
+
+# pre_process_obj.df.to_csv("first_refined_data.csv")
+first_refined_df = pd.read_csv("first_refined_data.csv")
+# print first_refined_df['q3701'].dtypes
+# first_refined_df['q3701'] = first_refined_df['q3701'].astype(int)
+# print first_refined_df['q3701']
+# print first_refined_df['q3701'].dtypes
+
+# first_refined_df.drop(['Unnamed: 0'],axis=1, inplace=True)
+# print list(first_refined_df)
+# print first_refined_df
+# print first_refined_df
+pre_process_obj = pre_process.PreProcess(first_refined_df,columns_config)
+# print first_refined_df['q3701'].dtypes
+pre_process_obj.df['q3701'] = pre_process_obj.df['q3701'].astype(int)
+# print pre_process_obj.df['q3701']
+# print first_refined_df['q3701'].dtypes
+pre_process_obj.apply_one_hot_encoding()
+# pre_process_obj.validate_one_hot_encoding()
+print list(pre_process_obj.df)
+# print result
 sys.exit()
 # pd.set_option("display.max_colwidth", 1000)
 #
