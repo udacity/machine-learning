@@ -1,8 +1,9 @@
 # Redefining Cancer Treatment
-This is my entry into the kaggle competition:
+In the past several years, researchers have been trying new ways to treat cancer with precision medicine and genetic testing customized to the specific patient. However, analyzing genetic information is a very time-consuming task. A cancer tumor can have thousands of different mutations, and the clinical pathologist must manually review every single genetic mutation by reading long pages of clinical literature.
+Therefore, this project's goal is to predict cancerous genes, each with one of its possible variations, into a few mutation classes based on clinical text.
 https://www.kaggle.com/c/msk-redefining-cancer-treatment
-## Goal
-Predict cancerous genes, each with one of its possible variations, into a few mutation classes based on clinical text.
+## Data
+https://www.kaggle.com/c/msk-redefining-cancer-treatment/data
 ## Requirements (In additional to Anaconda package)
 1. pip install --user mca/
 2. conda install -c conda-forge xgboost 
