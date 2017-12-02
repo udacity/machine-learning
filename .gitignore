@@ -64,4 +64,5 @@ target/
 #Ipython Notebook
 .ipynb_checkpoints
 .ipython
+.jupyter
 .local
