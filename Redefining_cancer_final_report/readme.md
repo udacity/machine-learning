@@ -1,6 +1,8 @@
 # Project: Redefining Cancer
+In recent years, researchers have been looking for new ways to combat cancer through precision medicine and genetic testing. Therefore, Kaggle.com has partnered with Memorial Sloan Kettering Cancer Center (MSKCC) with a goal of coming up with a machine learning algorithm that contribute new insights to genetic testing. 
 This project is a submission for this [Kaggle Competition](https://www.kaggle.com/c/msk-redefining-cancer-treatment). 
-The full dcoumentation can be find [here]
+
+The full documentation can be find [here](https://github.com/jmt7080/machine-learning/blob/master/Redefining_cancer_final_report/Udacity%20Capstone%20Project%20Paper%202.pdf)
 ## Install
 This Project requires 
 1. [Python 3.6 with Anaconda](https://anaconda.org/anaconda/python)
