@@ -13,7 +13,7 @@ import matplotlib.pyplot as pl
 import numpy as np
 import sklearn.learning_curve as curves
 from sklearn.tree import DecisionTreeRegressor
-from sklearn.cross_validation import ShuffleSplit, train_test_split
+from sklearn.model_selection import ShuffleSplit, train_test_split
 
 def ModelLearning(X, y):
     """ Calculates the performance of several models with varying sizes of training data.
@@ -124,7 +124,7 @@ def PredictTrials(X, y, fitter, data):
         prices.append(pred)
         
         # Result
-        print "Trial {}: ${:,.2f}".format(k+1, pred)
+        print("Trial {}: ${:,.2f}".format(k+1, pred))
 
     # Display price range
-    print "\nRange in prices: ${:,.2f}".format(max(prices) - min(prices))
+    print ("\nRange in prices: ${:,.2f}".format(max(prices) - min(prices)))
