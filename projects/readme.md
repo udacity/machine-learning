@@ -7,7 +7,7 @@
 5. Image Classification - Deep learning project, identified animals and humans in images
 6. Intro to Tensorflow - Tensorflow library lab
 7. Practice projects - Various tutorials
-8. Smartcab - Reinforcement learning, found optimal path for simulated driving agent
+8. Smartcab - Reinforcement learning project, found optimal path for simulated driving agent
 9. Student Intervention - Supervised learning project, classify students in need of help 
 10. Titanic Survival Exploration - Supervised learning project, predicting whether someone on the titanic died
 
