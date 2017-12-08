@@ -31,28 +31,28 @@ def display_stats(cifar10_dataset_folder_path, batch_id, sample_id):
     batch_ids = list(range(1, 6))
 
     if batch_id not in batch_ids:
-        print(('Batch Id out of Range. Possible Batch Ids: {}'.format(batch_ids)))
+        print('Batch Id out of Range. Possible Batch Ids: {}'.format(batch_ids))
         return None
 
     features, labels = load_cfar10_batch(cifar10_dataset_folder_path, batch_id)
 
     if not (0 <= sample_id < len(features)):
-        print(('{} samples in batch {}.  {} is out of range.'.format(len(features), batch_id, sample_id)))
+        print('{} samples in batch {}.  {} is out of range.'.format(len(features), batch_id, sample_id))
         return None
 
-    print(('\nStats of batch {}:'.format(batch_id)))
-    print(('Samples: {}'.format(len(features))))
-    print(('Label Counts: {}'.format(dict(list(zip(*np.unique(labels, return_counts=True)))))))
-    print(('First 20 Labels: {}'.format(labels[:20])))
+    print('\nStats of batch {}:'.format(batch_id))
+    print('Samples: {}'.format(len(features)))
+    print('Label Counts: {}'.format(dict(zip(*np.unique(labels, return_counts=True)))))
+    print('First 20 Labels: {}'.format(labels[:20]))
 
     sample_image = features[sample_id]
     sample_label = labels[sample_id]
     label_names = _load_label_names()
 
-    print(('\nExample of Image {}:'.format(sample_id)))
-    print(('Image - Min Value: {} Max Value: {}'.format(sample_image.min(), sample_image.max())))
-    print(('Image - Shape: {}'.format(sample_image.shape)))
-    print(('Label - Label Id: {} Name: {}'.format(sample_label, label_names[sample_label])))
+    print('\nExample of Image {}:'.format(sample_id))
+    print('Image - Min Value: {} Max Value: {}'.format(sample_image.min(), sample_image.max()))
+    print('Image - Shape: {}'.format(sample_image.shape))
+    print('Label - Label Id: {} Name: {}'.format(sample_label, label_names[sample_label]))
     plt.axis('off')
     plt.imshow(sample_image)
 
@@ -139,7 +139,7 @@ def display_image_predictions(features, labels, predictions):
     n_classes = 10
     label_names = _load_label_names()
     label_binarizer = LabelBinarizer()
-    label_binarizer.fit(list(range(n_classes)))
+    label_binarizer.fit(range(n_classes))
     label_ids = label_binarizer.inverse_transform(np.array(labels))
 
     fig, axies = plt.subplots(nrows=4, ncols=2)
