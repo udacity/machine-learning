@@ -1,0 +1,15 @@
+enron_mail_20110402/maildir/beck-s/inbox/533.
+enron_mail_20110402/maildir/buy-r/inbox/609.
+enron_mail_20110402/maildir/buy-r/inbox/793.
+enron_mail_20110402/maildir/buy-r/inbox/850.
+enron_mail_20110402/maildir/buy-r/inbox/923.
+enron_mail_20110402/maildir/keiser-k/to_do/12.
+enron_mail_20110402/maildir/mclaughlin-e/inbox/427.
+enron_mail_20110402/maildir/mclaughlin-e/inbox/430.
+enron_mail_20110402/maildir/white-s/calendar/54.
+enron_mail_20110402/maildir/white-s/calendar/69.
+enron_mail_20110402/maildir/white-s/calendar/84.
+enron_mail_20110402/maildir/white-s/deleted_items/566.
+enron_mail_20110402/maildir/white-s/deleted_items/775.
+enron_mail_20110402/maildir/white-s/deleted_items/891.
+enron_mail_20110402/maildir/white-s/inbox/364.

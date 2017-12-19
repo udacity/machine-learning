@@ -1,0 +1,13 @@
+enron_mail_20110402/maildir/badeer-r/all_documents/69.
+enron_mail_20110402/maildir/badeer-r/discussion_threads/208.
+enron_mail_20110402/maildir/badeer-r/notes_inbox/69.
+enron_mail_20110402/maildir/platter-p/inbox/395.
+enron_mail_20110402/maildir/symes-k/all_documents/10.
+enron_mail_20110402/maildir/symes-k/all_documents/245.
+enron_mail_20110402/maildir/symes-k/all_documents/662.
+enron_mail_20110402/maildir/symes-k/discussion_threads/238.
+enron_mail_20110402/maildir/symes-k/discussion_threads/619.
+enron_mail_20110402/maildir/symes-k/discussion_threads/9.
+enron_mail_20110402/maildir/symes-k/rainy_day/10.
+enron_mail_20110402/maildir/symes-k/rainy_day/50.
+enron_mail_20110402/maildir/symes-k/rainy_day/59.

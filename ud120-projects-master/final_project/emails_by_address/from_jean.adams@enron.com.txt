@@ -1,0 +1,15 @@
+enron_mail_20110402/maildir/blair-l/customer___ena/1.
+enron_mail_20110402/maildir/blair-l/deleted_items/263.
+enron_mail_20110402/maildir/blair-l/deleted_items/271.
+enron_mail_20110402/maildir/blair-l/deleted_items/305.
+enron_mail_20110402/maildir/blair-l/deleted_items/336.
+enron_mail_20110402/maildir/blair-l/deleted_items/366.
+enron_mail_20110402/maildir/blair-l/deleted_items/476.
+enron_mail_20110402/maildir/blair-l/deleted_items/492.
+enron_mail_20110402/maildir/blair-l/deleted_items/625.
+enron_mail_20110402/maildir/schoolcraft-d/deleted_items/219.
+enron_mail_20110402/maildir/schoolcraft-d/deleted_items/229.
+enron_mail_20110402/maildir/schoolcraft-d/deleted_items/230.
+enron_mail_20110402/maildir/schoolcraft-d/deleted_items/304.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/junk/183.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/junk/206.

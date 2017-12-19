@@ -1,0 +1,17 @@
+enron_mail_20110402/maildir/lay-k/all_documents/514.
+enron_mail_20110402/maildir/lay-k/all_documents/746.
+enron_mail_20110402/maildir/lay-k/discussion_threads/406.
+enron_mail_20110402/maildir/lay-k/discussion_threads/609.
+enron_mail_20110402/maildir/lay-k/notes_inbox/304.
+enron_mail_20110402/maildir/lay-k/notes_inbox/528.
+enron_mail_20110402/maildir/skilling-j/all_documents/1501.
+enron_mail_20110402/maildir/skilling-j/all_documents/1561.
+enron_mail_20110402/maildir/skilling-j/deleted_items/450.
+enron_mail_20110402/maildir/skilling-j/deleted_items/511.
+enron_mail_20110402/maildir/skilling-j/discussion_threads/1189.
+enron_mail_20110402/maildir/skilling-j/discussion_threads/1246.
+enron_mail_20110402/maildir/skilling-j/inbox/101.
+enron_mail_20110402/maildir/skilling-j/inbox/197.
+enron_mail_20110402/maildir/skilling-j/inbox/240.
+enron_mail_20110402/maildir/skilling-j/notes_inbox/297.
+enron_mail_20110402/maildir/skilling-j/notes_inbox/342.

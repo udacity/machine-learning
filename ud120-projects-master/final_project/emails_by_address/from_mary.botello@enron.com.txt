@@ -1,0 +1,16 @@
+enron_mail_20110402/maildir/geaccone-t/deleted_items/173.
+enron_mail_20110402/maildir/geaccone-t/inbox/113.
+enron_mail_20110402/maildir/geaccone-t/inbox/146.
+enron_mail_20110402/maildir/geaccone-t/inbox/147.
+enron_mail_20110402/maildir/geaccone-t/inbox/20.
+enron_mail_20110402/maildir/geaccone-t/inbox/203.
+enron_mail_20110402/maildir/geaccone-t/inbox/3.
+enron_mail_20110402/maildir/geaccone-t/inbox/308.
+enron_mail_20110402/maildir/geaccone-t/inbox/316.
+enron_mail_20110402/maildir/geaccone-t/inbox/322.
+enron_mail_20110402/maildir/geaccone-t/inbox/46.
+enron_mail_20110402/maildir/geaccone-t/inbox/550.
+enron_mail_20110402/maildir/geaccone-t/inbox/82.
+enron_mail_20110402/maildir/geaccone-t/inbox/93.
+enron_mail_20110402/maildir/jones-t/all_documents/1734.
+enron_mail_20110402/maildir/jones-t/notes_inbox/405.

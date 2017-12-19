@@ -1,0 +1,11 @@
+enron_mail_20110402/maildir/hyatt-k/enron_kids/8.
+enron_mail_20110402/maildir/jones-t/all_documents/1743.
+enron_mail_20110402/maildir/jones-t/all_documents/2027.
+enron_mail_20110402/maildir/jones-t/all_documents/2214.
+enron_mail_20110402/maildir/jones-t/notes_inbox/410.
+enron_mail_20110402/maildir/jones-t/notes_inbox/586.
+enron_mail_20110402/maildir/jones-t/notes_inbox/695.
+enron_mail_20110402/maildir/rapp-b/deleted_items/138.
+enron_mail_20110402/maildir/scott-s/all_documents/1032.
+enron_mail_20110402/maildir/scott-s/discussion_threads/1468.
+enron_mail_20110402/maildir/scott-s/notes_inbox/255.

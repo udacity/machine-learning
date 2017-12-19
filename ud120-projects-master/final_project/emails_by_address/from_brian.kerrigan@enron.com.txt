@@ -1,0 +1,14 @@
+enron_mail_20110402/maildir/jones-t/all_documents/4022.
+enron_mail_20110402/maildir/jones-t/notes_inbox/1780.
+enron_mail_20110402/maildir/sanders-r/all_documents/1891.
+enron_mail_20110402/maildir/sanders-r/all_documents/834.
+enron_mail_20110402/maildir/sanders-r/monetization_el_paso/3.
+enron_mail_20110402/maildir/sanders-r/tenaska/23.
+enron_mail_20110402/maildir/shackleton-s/all_documents/3703.
+enron_mail_20110402/maildir/shackleton-s/all_documents/3705.
+enron_mail_20110402/maildir/shackleton-s/all_documents/3717.
+enron_mail_20110402/maildir/shackleton-s/all_documents/3798.
+enron_mail_20110402/maildir/shackleton-s/notes_inbox/900.
+enron_mail_20110402/maildir/shackleton-s/notes_inbox/960.
+enron_mail_20110402/maildir/shackleton-s/notes_inbox/969.
+enron_mail_20110402/maildir/shackleton-s/notes_inbox/971.

@@ -1,0 +1,15 @@
+enron_mail_20110402/maildir/davis-d/all_documents/125.
+enron_mail_20110402/maildir/davis-d/all_documents/132.
+enron_mail_20110402/maildir/davis-d/all_documents/442.
+enron_mail_20110402/maildir/davis-d/all_documents/446.
+enron_mail_20110402/maildir/davis-d/discussion_threads/235.
+enron_mail_20110402/maildir/davis-d/discussion_threads/242.
+enron_mail_20110402/maildir/davis-d/discussion_threads/472.
+enron_mail_20110402/maildir/davis-d/discussion_threads/476.
+enron_mail_20110402/maildir/davis-d/finanial_operations/1.
+enron_mail_20110402/maildir/davis-d/finanial_operations/25.
+enron_mail_20110402/maildir/davis-d/notes_inbox/76.
+enron_mail_20110402/maildir/davis-d/save_the_date/12.
+enron_mail_20110402/maildir/davis-d/save_the_date/13.
+enron_mail_20110402/maildir/davis-d/save_the_date/37.
+enron_mail_20110402/maildir/davis-d/save_the_date/38.

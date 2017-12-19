@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/corman-s/calendar/53.
+enron_mail_20110402/maildir/geaccone-t/deleted_items/294.
+enron_mail_20110402/maildir/geaccone-t/inbox/211.
+enron_mail_20110402/maildir/geaccone-t/inbox/29.
+enron_mail_20110402/maildir/hayslett-r/all_documents/91.
+enron_mail_20110402/maildir/hayslett-r/discussion_threads/86.
+enron_mail_20110402/maildir/hayslett-r/inbox/252.
+enron_mail_20110402/maildir/lokey-t/calendar/16.
+enron_mail_20110402/maildir/lokey-t/calendar/27.
+enron_mail_20110402/maildir/lokey-t/inbox/1030.
+enron_mail_20110402/maildir/lokey-t/inbox/886.
+enron_mail_20110402/maildir/lokey-t/inbox/889.

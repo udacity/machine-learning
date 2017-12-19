@@ -1,0 +1,11 @@
+enron_mail_20110402/maildir/campbell-l/all_documents/658.
+enron_mail_20110402/maildir/campbell-l/discussion_threads/567.
+enron_mail_20110402/maildir/campbell-l/et_contacts/2.
+enron_mail_20110402/maildir/germany-c/all_documents/1882.
+enron_mail_20110402/maildir/germany-c/all_documents/1888.
+enron_mail_20110402/maildir/germany-c/all_documents/2240.
+enron_mail_20110402/maildir/germany-c/discussion_threads/511.
+enron_mail_20110402/maildir/germany-c/discussion_threads/793.
+enron_mail_20110402/maildir/germany-c/transport/137.
+enron_mail_20110402/maildir/germany-c/transport/138.
+enron_mail_20110402/maildir/germany-c/transport/161.

@@ -1,0 +1,17 @@
+enron_mail_20110402/maildir/donoho-l/inbox/junk_file/520.
+enron_mail_20110402/maildir/hayslett-r/deleted_items/114.
+enron_mail_20110402/maildir/hayslett-r/deleted_items/160.
+enron_mail_20110402/maildir/hayslett-r/deleted_items/226.
+enron_mail_20110402/maildir/hayslett-r/inbox/116.
+enron_mail_20110402/maildir/hayslett-r/inbox/147.
+enron_mail_20110402/maildir/hayslett-r/inbox/208.
+enron_mail_20110402/maildir/hayslett-r/vacations/10.
+enron_mail_20110402/maildir/hayslett-r/vacations/13.
+enron_mail_20110402/maildir/hayslett-r/vacations/19.
+enron_mail_20110402/maildir/hyatt-k/projects/sun_devil/137.
+enron_mail_20110402/maildir/hyatt-k/projects/sun_devil/143.
+enron_mail_20110402/maildir/lokey-t/inbox/266.
+enron_mail_20110402/maildir/lokey-t/inbox/665.
+enron_mail_20110402/maildir/lokey-t/inbox/784.
+enron_mail_20110402/maildir/mccarty-d/deleted_items/116.
+enron_mail_20110402/maildir/skilling-j/inbox/1563.

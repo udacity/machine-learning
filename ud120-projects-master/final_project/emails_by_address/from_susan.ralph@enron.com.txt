@@ -1,0 +1,17 @@
+enron_mail_20110402/maildir/hayslett-r/deleted_items/170.
+enron_mail_20110402/maildir/hayslett-r/inbox/89.
+enron_mail_20110402/maildir/hayslett-r/inbox/94.
+enron_mail_20110402/maildir/horton-s/all_documents/210.
+enron_mail_20110402/maildir/horton-s/all_documents/218.
+enron_mail_20110402/maildir/horton-s/all_documents/225.
+enron_mail_20110402/maildir/horton-s/all_documents/240.
+enron_mail_20110402/maildir/horton-s/all_documents/267.
+enron_mail_20110402/maildir/horton-s/all_documents/274.
+enron_mail_20110402/maildir/horton-s/all_documents/285.
+enron_mail_20110402/maildir/horton-s/discussion_threads/199.
+enron_mail_20110402/maildir/horton-s/discussion_threads/207.
+enron_mail_20110402/maildir/horton-s/discussion_threads/214.
+enron_mail_20110402/maildir/horton-s/discussion_threads/226.
+enron_mail_20110402/maildir/horton-s/discussion_threads/250.
+enron_mail_20110402/maildir/horton-s/discussion_threads/257.
+enron_mail_20110402/maildir/horton-s/discussion_threads/268.

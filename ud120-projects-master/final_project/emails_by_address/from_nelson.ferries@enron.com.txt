@@ -1,0 +1,14 @@
+enron_mail_20110402/maildir/donohoe-t/all_documents/122.
+enron_mail_20110402/maildir/donohoe-t/all_documents/166.
+enron_mail_20110402/maildir/donohoe-t/discussion_threads/20.
+enron_mail_20110402/maildir/donohoe-t/discussion_threads/64.
+enron_mail_20110402/maildir/donohoe-t/notes_inbox/122.
+enron_mail_20110402/maildir/germany-c/all_documents/311.
+enron_mail_20110402/maildir/germany-c/discussion_threads/2010.
+enron_mail_20110402/maildir/germany-c/notes_inbox/44.
+enron_mail_20110402/maildir/hyvl-d/all_documents/842.
+enron_mail_20110402/maildir/hyvl-d/gas/15.
+enron_mail_20110402/maildir/nemec-g/inbox/152.
+enron_mail_20110402/maildir/nemec-g/inbox/153.
+enron_mail_20110402/maildir/nemec-g/inbox/373.
+enron_mail_20110402/maildir/nemec-g/inbox/799.

@@ -1,0 +1,265 @@
+<tr>
+        <td>1</td>
+        <td>('left', 'green', 'forward')</td> 
+        <td>0.78</td>
+        <td>0.15</td>
+        <td>-4.82</td>
+        <td>1.64</td>
+        <td>None</td>
+        <td>left</td>
+        <td>NG</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>('right', 'green', 'right') </td> 
+        <td>1.69 </td>
+        <td>2.20</td>
+        <td>-2.00</td>
+        <td>1.64</td>
+        <td>right</td>
+        <td>right</td>
+        <td>OK</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>('forward', 'green', 'left') </td> 
+        <td>2.02</td>
+        <td>1.03</td>
+        <td>-4.88</td>
+        <td>0.86</td>
+        <td>forward</td>
+        <td>forward</td>
+        <td>OK</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>('left', 'green', 'right')</td> 
+        <td>0.31</td>
+        <td>0.71</td>
+        <td>-4.59</td>
+        <td>1.75</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>('right', 'red', 'forward')</td> 
+        <td>-19.43</td>
+        <td>-0.02</td>
+        <td>0.74</td>
+        <td>-10.29</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>('forward', 'green', None)</td> 
+        <td>2.10</td>
+        <td>1.11</td>
+        <td>-5.15</td>
+        <td>0.81</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>('forward', 'red', 'forward')</td> 
+        <td>-9.73</td>
+        <td>-9.22</td>
+        <td>1.78</td>
+        <td>-24.13</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>('forward', 'red', 'right')</td>
+        <td>-9.41</td> 
+        <td>0.83</td>
+        <td>1.41</td>
+        <td>-33.09</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>('left', 'red', 'left')</td> 
+        <td>-11.59</td>
+        <td>-1.20</td>
+        <td>1.98</td>
+        <td>-10.03</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr>
+        <td>10</td>
+        <td>('right', 'red', 'left')</td> 
+        <td>-9.91</td>
+        <td>-2.86</td>
+        <td>0.85</td>
+        <td>-28.10</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>('right', 'red', 'right')</td> 
+        <td>-29.94</td>
+        <td>-12.44</td>
+        <td>0.59</td>
+        <td>-39.64</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>'left', 'red', 'right'</td> 
+        <td>-9.67</td>
+        <td>-1.34</td>
+        <td>1.59</td>
+        <td>-40.23</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>('forward', 'red', None)</td> 
+        <td>-11.57</td>
+        <td>0.79</td>
+        <td>1.81</td>
+        <td>-20.43</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>14</td>
+        <td>('left', 'red', None)</td> 
+        <td>-10.23</td>
+        <td>0.50</td>
+        <td>2.00</td>
+        <td>-34.45</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>('right', 'green', 'forward')</td> 
+        <td>0.88</td>
+        <td>1.82</td>
+        <td>-5.05</td>
+        <td>0.89</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td>('right', 'red', None)</td> 
+        <td>-18.73</td>
+        <td>-1.70</td>
+        <td>0.87</td>
+        <td>-10.41</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>17</td>
+        <td>('forward', 'green', 'forward')</td> 
+        <td>1.79</td>
+        <td>0.79</td>
+        <td>-5.27</td>
+        <td>0.90</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>18</td>
+        <td>('forward', 'red', 'left')</td> 
+        <td>-13.53</td>
+        <td>-0.58</td>
+        <td>1.77</td>
+        <td>-26.49</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>19</td>
+        <td>('forward', 'green', 'right')</td> 
+        <td>1.95</td>
+        <td>1.00</td>
+        <td>-5.36</td>
+        <td>1.51</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td>('left', 'red', 'forward')</td> 
+        <td>-9.98</td>
+        <td>-7.85</td>
+        <td>1.92</td>
+        <td>-9.82</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td>('left', 'green', None)</td> 
+        <td>1.30</td>
+        <td>0.57</td>
+        <td>-5.10</td>
+        <td>1.98</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>22</td>
+        <td>('right', 'green', None)</td> 
+        <td>0.24</td>
+        <td>1.82</td>
+        <td>-4.75</td>
+        <td>0.47</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>23</td>
+        <td>('left', 'green', 'left')</td> 
+        <td>1.11</td>
+        <td>0.65</td>
+        <td>-4.73</td>
+        <td>1.65</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>24</td>
+        <td>('right', 'green', 'left')</td> 
+        <td>1.01</td>
+        <td>1.79</td>
+        <td>-4.50</td>
+        <td>1.04</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>

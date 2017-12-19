@@ -1,0 +1,11 @@
+enron_mail_20110402/maildir/mann-k/all_documents/6207.
+enron_mail_20110402/maildir/mann-k/all_documents/6628.
+enron_mail_20110402/maildir/mann-k/all_documents/6671.
+enron_mail_20110402/maildir/mann-k/discussion_threads/4521.
+enron_mail_20110402/maildir/mann-k/discussion_threads/4930.
+enron_mail_20110402/maildir/mann-k/discussion_threads/4973.
+enron_mail_20110402/maildir/mann-k/florida/52.
+enron_mail_20110402/maildir/mann-k/inbox/372.
+enron_mail_20110402/maildir/mann-k/notes_inbox/272.
+enron_mail_20110402/maildir/mann-k/notes_inbox/37.
+enron_mail_20110402/maildir/mann-k/notes_inbox/7.

@@ -1,0 +1,16 @@
+enron_mail_20110402/maildir/germany-c/all_documents/1221.
+enron_mail_20110402/maildir/germany-c/discussion_threads/1305.
+enron_mail_20110402/maildir/germany-c/transport/60.
+enron_mail_20110402/maildir/jones-t/all_documents/5669.
+enron_mail_20110402/maildir/jones-t/all_documents/5698.
+enron_mail_20110402/maildir/jones-t/notes_inbox/2786.
+enron_mail_20110402/maildir/jones-t/notes_inbox/2811.
+enron_mail_20110402/maildir/love-p/all_documents/446.
+enron_mail_20110402/maildir/love-p/discussion_threads/72.
+enron_mail_20110402/maildir/love-p/personal/140.
+enron_mail_20110402/maildir/tholt-j/all_documents/449.
+enron_mail_20110402/maildir/tholt-j/all_documents/452.
+enron_mail_20110402/maildir/tholt-j/discussion_threads/83.
+enron_mail_20110402/maildir/tholt-j/discussion_threads/86.
+enron_mail_20110402/maildir/tholt-j/janie/270.
+enron_mail_20110402/maildir/tholt-j/janie/272.

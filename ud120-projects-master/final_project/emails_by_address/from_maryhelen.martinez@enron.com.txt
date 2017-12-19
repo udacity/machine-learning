@@ -1,0 +1,13 @@
+enron_mail_20110402/maildir/nemec-g/inbox/329.
+enron_mail_20110402/maildir/shackleton-s/all_documents/10065.
+enron_mail_20110402/maildir/shackleton-s/all_documents/10076.
+enron_mail_20110402/maildir/shackleton-s/all_documents/10079.
+enron_mail_20110402/maildir/shackleton-s/notes_inbox/2741.
+enron_mail_20110402/maildir/shackleton-s/notes_inbox/2743.
+enron_mail_20110402/maildir/shackleton-s/notes_inbox/2751.
+enron_mail_20110402/maildir/taylor-m/all_documents/8024.
+enron_mail_20110402/maildir/taylor-m/all_documents/8029.
+enron_mail_20110402/maildir/taylor-m/all_documents/8031.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/2313.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/2315.
+enron_mail_20110402/maildir/taylor-m/notes_inbox/2319.

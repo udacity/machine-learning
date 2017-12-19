@@ -1,0 +1,13 @@
+enron_mail_20110402/maildir/love-p/central/74.
+enron_mail_20110402/maildir/white-s/deleted_items/450.
+enron_mail_20110402/maildir/white-s/deleted_items/500.
+enron_mail_20110402/maildir/white-s/deleted_items/589.
+enron_mail_20110402/maildir/white-s/deleted_items/770.
+enron_mail_20110402/maildir/white-s/deleted_items/786.
+enron_mail_20110402/maildir/white-s/deleted_items/888.
+enron_mail_20110402/maildir/white-s/inbox/136.
+enron_mail_20110402/maildir/white-s/inbox/139.
+enron_mail_20110402/maildir/white-s/inbox/247.
+enron_mail_20110402/maildir/white-s/inbox/338.
+enron_mail_20110402/maildir/white-s/inbox/61.
+enron_mail_20110402/maildir/white-s/inbox/95.

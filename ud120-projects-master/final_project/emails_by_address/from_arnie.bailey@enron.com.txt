@@ -1,0 +1,12 @@
+enron_mail_20110402/maildir/campbell-l/all_documents/424.
+enron_mail_20110402/maildir/campbell-l/discussion_threads/350.
+enron_mail_20110402/maildir/campbell-l/personnal/29.
+enron_mail_20110402/maildir/hyatt-k/deleted_items/601.
+enron_mail_20110402/maildir/lokay-m/all_documents/2060.
+enron_mail_20110402/maildir/lokay-m/tw_commercial_group/1213.
+enron_mail_20110402/maildir/lokay-m/tw_commercial_group/784.
+enron_mail_20110402/maildir/schoolcraft-d/deleted_items/579.
+enron_mail_20110402/maildir/schoolcraft-d/deleted_items/581.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/junk/229.
+enron_mail_20110402/maildir/watson-k/e_mail_bin/352.
+enron_mail_20110402/maildir/watson-k/e_mail_bin/354.

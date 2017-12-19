@@ -1,0 +1,17 @@
+enron_mail_20110402/maildir/corman-s/inbox/measurement/10.
+enron_mail_20110402/maildir/corman-s/inbox/measurement/11.
+enron_mail_20110402/maildir/corman-s/inbox/measurement/3.
+enron_mail_20110402/maildir/corman-s/inbox/measurement/4.
+enron_mail_20110402/maildir/corman-s/inbox/measurement/8.
+enron_mail_20110402/maildir/corman-s/inbox/measurement/9.
+enron_mail_20110402/maildir/fossum-d/all_documents/671.
+enron_mail_20110402/maildir/fossum-d/discussion_threads/427.
+enron_mail_20110402/maildir/fossum-d/notes_inbox/323.
+enron_mail_20110402/maildir/hayslett-r/all_documents/64.
+enron_mail_20110402/maildir/hayslett-r/all_documents/68.
+enron_mail_20110402/maildir/hayslett-r/discussion_threads/60.
+enron_mail_20110402/maildir/hayslett-r/discussion_threads/64.
+enron_mail_20110402/maildir/hayslett-r/projects/market_services/3.
+enron_mail_20110402/maildir/hayslett-r/projects/market_services/5.
+enron_mail_20110402/maildir/schoolcraft-d/deleted_items/696.
+enron_mail_20110402/maildir/schoolcraft-d/inbox/junk/568.

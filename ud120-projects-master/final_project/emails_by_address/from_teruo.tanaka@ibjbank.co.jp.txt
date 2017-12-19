@@ -1,0 +1,14 @@
+enron_mail_20110402/maildir/haedicke-m/all_documents/1298.
+enron_mail_20110402/maildir/haedicke-m/all_documents/2335.
+enron_mail_20110402/maildir/haedicke-m/all_documents/2499.
+enron_mail_20110402/maildir/haedicke-m/all_documents/4709.
+enron_mail_20110402/maildir/haedicke-m/deleted_items/29.
+enron_mail_20110402/maildir/haedicke-m/deleted_items/40.
+enron_mail_20110402/maildir/haedicke-m/deleted_items/41.
+enron_mail_20110402/maildir/haedicke-m/inbox/124.
+enron_mail_20110402/maildir/haedicke-m/inbox/130.
+enron_mail_20110402/maildir/haedicke-m/inbox/19.
+enron_mail_20110402/maildir/haedicke-m/notes_inbox/1363.
+enron_mail_20110402/maildir/haedicke-m/notes_inbox/359.
+enron_mail_20110402/maildir/haedicke-m/notes_inbox/489.
+enron_mail_20110402/maildir/haedicke-m/notes_inbox/56.
