@@ -62,10 +62,9 @@ class LearningAgent(Agent):
         # With the hand-engineered features, this learning process gets entirely negated.
 
         # Set 'state' as a tuple of relevant data for the agent
-        waypoint = self.planner.next_waypoint()
-        inputs = self.env.sense(self)
-        deadline = self.env.get_deadline(self)
-        state = (waypoint,tuple([inputs[item] for item in inputs]))
+
+        state = (waypoint, inputs[light],inputs['left'],inputsp['oncoming']
+#        state = (waypoint,tuple([inputs[item] for item in inputs]))
 
         return state
 
