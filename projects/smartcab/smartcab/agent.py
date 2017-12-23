@@ -63,8 +63,8 @@ class LearningAgent(Agent):
 
         # Set 'state' as a tuple of relevant data for the agent
 
-        state = (waypoint, inputs[light],inputs['left'],inputsp['oncoming']
-#        state = (waypoint,tuple([inputs[item] for item in inputs]))
+        #state = (waypoint, inputs['light'],inputs['left'],inputs['oncoming'])
+        state = (waypoint,tuple([inputs[item] for item in inputs]))
 
         return state
 
