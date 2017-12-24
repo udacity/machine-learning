@@ -24,7 +24,7 @@ class LearningAgent(Agent):
         ## TO DO ##
         ###########
         # Set any additional class parameters as needed
-        self.t = 0
+        self.train_trial = 0
 
     def reset(self, destination=None, testing=False):
         """ The reset function is called at the beginning of each trial.
@@ -45,6 +45,7 @@ class LearningAgent(Agent):
             self.alpha = 0.0
         else:
             self.epsilon -= 0.05
+            #self.epsilon =
         return None
 
     def build_state(self):
@@ -128,9 +129,11 @@ class LearningAgent(Agent):
             if self.epsilon > random.random():
                 action = random.choice(self.valid_actions)
             else:
-                for i in self.Q[self.state]:
-                    if self.Q[self.state][i]==self.getmaxQ(state):
-                        action=random.choice(self.Q[self.state][i])
+                highestQ_action = []
+                for a in self.Q[self.state]:
+                    if self.Q[self.state][a]==self.get_maxQ(state):
+                        highestQ_action.append(a)
+                action = random.choice(highestQ_action)
         return action
 
 
@@ -144,7 +147,14 @@ class LearningAgent(Agent):
         ###########
         # When learning, implement the value iteration update rule
         #   Use only the learning rate 'alpha' (do not use the discount factor 'gamma')
-        self.alpha=0.5
+        # Q(s',a')
+        #next_inputs = self.env.sense(self)
+        #following_waypoint = self.planner.next_waypoint()
+        #next_state = (following_waypoint, next_inputs['light'],next_inputs['left'],next_inputs['oncoming'])
+        #self.createQ(next_state)
+        if self.learning:
+            self.Q[state][action] +=self.alpha*(reward - self.Q[state][action])
+            #self.Q[state][action] = (1-self.alpha)*self.Q[state][action] + self.alpha(reward+self.get_maxQ(next_state))
         return
 
 
@@ -195,14 +205,14 @@ def run():
     #   display      - set to False to disable the GUI if PyGame is enabled
     #   log_metrics  - set to True to log trial and simulation results to /logs
     #   optimized    - set to True to change the default log file name
-    sim = Simulator(env,update_delay=0.01,log_metrics=True,optimized=True)
+    sim = Simulator(env,update_delay=0.01,log_metrics=True,optimized=False)
 
     ##############
     # Run the simulator
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05
     #   n_test     - discrete number of testing trials to perform, default is 0
-    sim.run(n_test=10,tolerance=0.003)
+    sim.run(n_test=10)
 
 
 if __name__ == '__main__':
