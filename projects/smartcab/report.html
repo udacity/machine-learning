@@ -18412,7 +18412,7 @@ lNHAaa5eAAAAAElFTkSuQmCC
 <ul>
 <li><p><em>How much improvement was made with this Q-Learner when compared to the default Q-Learner from the previous section?</em></p>
 <ul>
-<li>Both safety and reliability exhibited significant improvemnts with safety jumping from F to A+ while reliability only increased from A to A+.</li>
+<li>Both safety and reliability exhibited significant improvemnts with safety jumping from F to A+ while reliability only first decreased to A and later increased from A to A+.</li>
 </ul>
 </li>
 </ul>
@@ -18463,12 +18463,26 @@ lNHAaa5eAAAAAElFTkSuQmCC
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
+<p><strong>Edit as per Post-review</strong></p>
 <p>Optimal policy would take into consideration the rewards and ideally those are dependent on following the waypoint and taking action based on the light (green vs red) and arriving at the destination.</p>
 <table>
 <thead><tr>
@@ -18484,7 +18498,14 @@ lNHAaa5eAAAAAElFTkSuQmCC
 <td style="text-align:left">Green</td>
 <td style="text-align:right">[left,right,forward]</td>
 <td>Any</td>
+<td>[right,forward]</td>
+<td>Yield</td>
+</tr>
+<tr>
+<td style="text-align:left">Green</td>
+<td style="text-align:right">[left,right,forward]</td>
 <td>Any</td>
+<td>left</td>
 <td>Turn left/right/forward</td>
 </tr>
 <tr>
@@ -18500,6 +18521,13 @@ lNHAaa5eAAAAAElFTkSuQmCC
 <td>Any value other than None</td>
 <td>Any</td>
 <td>Wait, else turn right</td>
+</tr>
+<tr>
+<td style="text-align:left">Red</td>
+<td style="text-align:right">[right]</td>
+<td>forward</td>
+<td>Any</td>
+<td>Yield</td>
 </tr>
 </tbody>
 </table>
@@ -18533,7 +18561,12 @@ lNHAaa5eAAAAAElFTkSuQmCC
 <pre><code> - forward : 0.18
  - None : 0.00
  - right : 0.93
- - left : 0.00</code></pre>
+ - left : 0.00
+
+
+</code></pre>
+<p><strong>Edit as per review :</strong></p>
+<p>The policy may not be have learnt the optimal policy because of a inter-related reasons. One could be that it's taking into account the traffic from left and oncoming traffic and the other could be that rewards are affecting the behavior. The <em>waypoint</em> is <em>left</em> and the <em>light</em> is <em>green</em>. However, the <em>left</em> traffic is turning 'right' and <em>oncoming</em> traffic is moving 'forward'. It however considers those actions which will not yield in as high negative rewards (staying put at green light or turning left causing an accident) as it would for a safer option of either going 'forward' or turning 'right'.</p>
 
 </div>
 </div>
@@ -18570,6 +18603,10 @@ lNHAaa5eAAAAAElFTkSuQmCC
 </li>
 <li><p>With respect to environment, we tend to ignore the concept of more than one agent which can have an impact on safety and our own decisions at times.</p>
 </li>
+</ul>
+<p><strong>Edit as per Review :</strong></p>
+<ul>
+<li>Additionally, it is important to note that the environment gives a new state at each iteration. Specifically, the features like starpoint, light, destination can change at every trial run resulting in prior executions not being beneficial to calculate rewards for future states. </li>
 </ul>
 
 </div>
