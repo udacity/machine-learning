@@ -44,8 +44,9 @@ class LearningAgent(Agent):
             self.epsilon = 0.0
             self.alpha = 0.0
         else:
-            self.epsilon -= 0.05
-            #self.epsilon =
+            # Iteration 1: self.epsilon -= 0.005
+            # Iteration 2:
+            self.epsilon -= 0.005
         return None
 
     def build_state(self):
@@ -190,7 +191,7 @@ def run():
     #   learning   - set to True to force the driving agent to use Q-learning
     #    * epsilon - continuous value for the exploration factor, default is 1
     #    * alpha   - continuous value for the learning rate, default is 0.5
-    agent = env.create_agent(LearningAgent, learning = True, epsilon = 10,alpha = 0.5)
+    agent = env.create_agent(LearningAgent, learning = True, epsilon = 1,alpha = 0.5)
 
     ##############
     # Follow the driving agent
@@ -212,7 +213,7 @@ def run():
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05
     #   n_test     - discrete number of testing trials to perform, default is 0
-    sim.run(n_test=20, tolerance = 0.03)
+    sim.run(n_test=20, tolerance = 0.01)
 
 
 if __name__ == '__main__':
