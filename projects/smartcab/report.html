@@ -18496,17 +18496,17 @@ lNHAaa5eAAAAAElFTkSuQmCC
 <tbody>
 <tr>
 <td style="text-align:left">Green</td>
-<td style="text-align:right">[left,right,forward]</td>
+<td style="text-align:right">[left]</td>
 <td>Any</td>
 <td>[right,forward]</td>
 <td>Yield</td>
 </tr>
 <tr>
 <td style="text-align:left">Green</td>
-<td style="text-align:right">[left,right,forward]</td>
+<td style="text-align:right">[right,forward]</td>
 <td>Any</td>
-<td>left</td>
-<td>Turn left/right/forward</td>
+<td>None</td>
+<td>Proceed with waypoint</td>
 </tr>
 <tr>
 <td style="text-align:left">Red</td>
@@ -18518,16 +18518,9 @@ lNHAaa5eAAAAAElFTkSuQmCC
 <tr>
 <td style="text-align:left">Red</td>
 <td style="text-align:right">[right]</td>
-<td>Any value other than None</td>
-<td>Any</td>
-<td>Wait, else turn right</td>
-</tr>
-<tr>
-<td style="text-align:left">Red</td>
-<td style="text-align:right">[right]</td>
 <td>forward</td>
-<td>Any</td>
-<td>Yield</td>
+<td>left</td>
+<td>Yield, else turn right</td>
 </tr>
 </tbody>
 </table>
@@ -18547,12 +18540,13 @@ lNHAaa5eAAAAAElFTkSuQmCC
 
 </code></pre>
 <ul>
-<li><p>Similarly, ('left', 'green', 'left', 'forward') results in the appropriate policy of turning left.</p>
-
-<pre><code>- forward : 0.00
-- None : -2.91
-- right : 0.66
-- left : 1.65</code></pre>
+<li><p>('left', 'red', 'forward', None) results in the appropriate policy of staying put for the light to turn green.</p>
+<ul>
+<li>forward : -39.74</li>
+<li>None : 1.76</li>
+<li>right : -18.90</li>
+<li>left : -34.81</li>
+</ul>
 </li>
 </ul>
 <p>There are a few policies which may not be optimal. Consider the following example in which turning right is not the most optimal policy.</p>
