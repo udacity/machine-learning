@@ -18,30 +18,38 @@ Personally, I've been impressed with the technology for a while, but haven't mad
 The objective is to predict the price of bitcoin and ethereum given historic data on these cryptocurrencies. Given the volatility in these markets, it is hard to arrive at useful models just based on price data [3 - https://dashee87.github.io/deep%20learning/python/predicting-cryptocurrency-prices-with-deep-learning/]. In this light, I would also like to explore the possibility of adding major associated events to this dataset such as regulatory acceptance (twitter or news feed), new feature additions (code changes) etc. 
 
 ### Datasets and Inputs
-_(approx. 2-3 paragraphs)_
 
-The historic price data on these cryptocurrencies (along with other alt-coins) is available on coinmarketcap.com. 
+The historic price data on these cryptocurrencies (along with other alt-coins) is available on coinmarketcap.com. For each day, open/close/low/high/ prices, volume and market cap are available as part of this data.
 
-For the historic events on bitcoin, I would like to leverage the details on https://99bitcoins.com/price-chart-history/ and grade the nature of these events manually. (Time permitting) In addition, I plan to gather associated events based on newsfeed (from google news or twitter) 
+Also for the historic events on bitcoin, I would like to leverage the details on https://99bitcoins.com/price-chart-history/ and grade the nature of these events manually on a scale of 1-10, 10 being extremely positive event. 
+
+Time permitting, I plan to gather additional associated events based on newsfeed (from google news or twitter or github changes) 
 
 ### Solution Statement
 
-
-
-In this section, clearly describe a solution to the problem. The solution should be applicable to the project domain and appropriate for the dataset(s) or input(s) given. Additionally, describe the solution thoroughly such that it is clear that the solution is quantifiable (the solution can be expressed in mathematical or logical terms) , measurable (the solution can be measured by some metric and clearly observed), and replicable (the solution can be reproduced and occurs more than once).
+I'd begin with applying supervised learning algorithms (SVMs, random forests and boosting) to the available data. Also as this data has temporal information (time series), recurrent neural networks or LSTMs could be applied. The final model would be created by stacking the learned models based on different algorithms.
 
 ### Benchmark Model
-_(approximately 1-2 paragraphs)_
+
+Two benchmark models - 
+
+(a) LSTMs applied to bitcoin and ethereum prediction as explained in this blog post ([3]) and 
+(b) Kaggle kernel using Bayesian forecasting methods ([4] - https://www.kaggle.com/ara0303/forecasting-of-bitcoin-prices). 
 
 In this section, provide the details for a benchmark model or result that relates to the domain, problem statement, and intended solution. Ideally, the benchmark model or result contextualizes existing methods or known information in the domain and problem given, which could then be objectively compared to the solution. Describe how the benchmark model or result is measurable (can be measured by some metric and clearly observed) with thorough detail.
 
 ### Evaluation Metrics
 _(approx. 1-2 paragraphs)_
 
-In this section, propose at least one evaluation metric that can be used to quantify the performance of both the benchmark model and the solution model. The evaluation metric(s) you propose should be appropriate given the context of the data, the problem statement, and the intended solution. Describe how the evaluation metric(s) are derived and provide an example of their mathematical representations (if applicable). Complex evaluation metrics should be clearly defined and quantifiable (can be expressed in mathematical or logical terms).
+Mean Squared Error (MSE) and Mean Absolute Error (MAE) are two potential metrics for this mode. The benchmark models employ MSE. Since this is framed as a prediction problem and the target is continuous, MSE/MAE are sensible evaluation metrics.
 
 ### Project Design
 _(approx. 1 page)_
+
+Analysis of the data 
+Also for the historic events on bitcoin, I would like to leverage the details on https://99bitcoins.com/price-chart-history/ and grade the nature of these events manually on a scale of 1-10, 10 being extremely positive event. 
+
+Time permitting, I plan to gather additional associated events based on newsfeed (from google news or twitter or github changes) 
 
 In this final section, summarize a theoretical workflow for approaching a solution given the problem. Provide thorough discussion for what strategies you may consider employing, what analysis of the data might be required before being used, or which algorithms will be considered for your implementation. The workflow and discussion that you provide should align with the qualities of the previous sections. Additionally, you are encouraged to include small visualizations, pseudocode, or diagrams to aid in describing the project design, but it is not required. The discussion should clearly outline your intended workflow of the capstone project.
 
