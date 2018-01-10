@@ -41,10 +41,18 @@ In this section, provide the details for a benchmark model or result that relate
 ### Evaluation Metrics
 _(approx. 1-2 paragraphs)_
 
-Mean Squared Error (MSE) and Mean Absolute Error (MAE) are two potential metrics for this mode. The benchmark models employ MSE. Since this is framed as a prediction problem and the target is continuous, MSE/MAE are sensible evaluation metrics.
+Mean Squared Error (MSE) and Mean Absolute Error (MAE) are two potential metrics for this mode. The benchmark models employ MSE. Since this is framed as a regression problem and the target is continuous, MSE/MAE are sensible evaluation metrics.
+
+R^2 is another potential metric, but not sure if this will help in coming up with more accurate models.
+
+The model results would be considered satisfactory if the predicted results are within +/- 10% of the actual future price.
 
 ### Project Design
 _(approx. 1 page)_
+
+Train -> Test
+Regularization
+
 
 Analysis of the data 
 Also for the historic events on bitcoin, I would like to leverage the details on https://99bitcoins.com/price-chart-history/ and grade the nature of these events manually on a scale of 1-10, 10 being extremely positive event. 
