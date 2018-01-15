@@ -5,11 +5,16 @@ import warnings
 warnings.filterwarnings("ignore", category = UserWarning, module = "matplotlib")
 ###########################################
 
-import os
+import pathlib
 import time
 import random
 import importlib
 import csv
+
+
+IMG_DIR = (pathlib.Path(__file__) / '..' /  '..' / 'images').resolve()
+LOG_DIR = (pathlib.Path(__file__) / '..' /  '..' / 'logs').resolve()
+
 
 class Simulator(object):
     """Simulates agents in a dynamic smartcab environment.
@@ -54,34 +59,31 @@ class Simulator(object):
 
         self.display = display
         if self.display:
-            try:
-                self.pygame = importlib.import_module('pygame')
-                self.pygame.init()
-                self.screen = self.pygame.display.set_mode(self.size)
-                self._logo = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("images", "logo.png")), (self.road_width, self.road_width))
+            self.pygame = importlib.import_module('pygame')
+            self.pygame.init()
+            self.screen = self.pygame.display.set_mode(self.size)
+            self._logo = self.pygame.transform.smoothscale(self.pygame.image.load(str(IMG_DIR / "logo.png")), (self.road_width, self.road_width))
 
-                self._ew = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("images", "east-west.png")), (self.road_width, self.road_width))
-                self._ns = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("images", "north-south.png")), (self.road_width, self.road_width))
+            self._ew = self.pygame.transform.smoothscale(
+                self.pygame.image.load(str(IMG_DIR / "east-west.png")),
+                                       (self.road_width, self.road_width))
+            self._ns = self.pygame.transform.smoothscale(
+                self.pygame.image.load(str(IMG_DIR / "north-south.png")),
+                                       (self.road_width, self.road_width))
 
-                self.frame_delay = max(1, int(self.update_delay * 1000))  # delay between GUI frames in ms (min: 1)
-                self.agent_sprite_size = (32, 32)
-                self.primary_agent_sprite_size = (42, 42)
-                self.agent_circle_radius = 20  # radius of circle, when using simple representation
-                for agent in self.env.agent_states:
-                    if agent.color == 'white':
-                        agent._sprite = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("images", "car-{}.png".format(agent.color))), self.primary_agent_sprite_size)
-                    else:
-                        agent._sprite = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("images", "car-{}.png".format(agent.color))), self.agent_sprite_size)
-                    agent._sprite_size = (agent._sprite.get_width(), agent._sprite.get_height())
+            self.frame_delay = max(1, int(self.update_delay * 1000))  # delay between GUI frames in ms (min: 1)
+            self.agent_sprite_size = (32, 32)
+            self.primary_agent_sprite_size = (42, 42)
+            self.agent_circle_radius = 20  # radius of circle, when using simple representation
+            for agent in self.env.agent_states:
+                if agent.color == 'white':
+                    agent._sprite = self.pygame.transform.smoothscale(self.pygame.image.load(str(IMG_DIR / "car-{}.png".format(agent.color))), self.primary_agent_sprite_size)
+                else:
+                    agent._sprite = self.pygame.transform.smoothscale(self.pygame.image.load(str(IMG_DIR / "car-{}.png".format(agent.color))), self.agent_sprite_size)
+                agent._sprite_size = (agent._sprite.get_width(), agent._sprite.get_height())
 
-                self.font = self.pygame.font.Font(None, 20)
-                self.paused = False
-            except ImportError as e:
-                self.display = False
-                print "Simulator.__init__(): Unable to import pygame; display disabled.\n{}: {}".format(e.__class__.__name__, e)
-            except Exception as e:
-                self.display = False
-                print "Simulator.__init__(): Error initializing GUI objects; display disabled.\n{}: {}".format(e.__class__.__name__, e)
+            self.font = self.pygame.font.Font(None, 20)
+            self.paused = False
 
         # Setup metrics to report
         self.log_metrics = log_metrics
@@ -93,15 +95,15 @@ class Simulator(object):
             # Set log files
             if a.learning:
                 if self.optimized: # Whether the user is optimizing the parameters and decay functions
-                    self.log_filename = os.path.join("logs", "sim_improved-learning.csv")
-                    self.table_filename = os.path.join("logs","sim_improved-learning.txt")
+                    self.log_filename = LOG_DIR / "sim_improved-learning.csv"
+                    self.table_filename = LOG_DIR / "sim_improved-learning.txt"
                 else: 
-                    self.log_filename = os.path.join("logs", "sim_default-learning.csv")
-                    self.table_filename = os.path.join("logs","sim_default-learning.txt")
+                    self.log_filename = LOG_DIR / "sim_default-learning.csv"
+                    self.table_filename = LOG_DIR / "sim_default-learning.txt"
 
                 self.table_file = open(self.table_filename, 'wb')
             else:
-                self.log_filename = os.path.join("logs", "sim_no-learning.csv")
+                self.log_filename = LOG_DIR /  "sim_no-learning.csv"
             
             self.log_fields = ['trial', 'testing', 'parameters', 'initial_deadline', 'final_deadline', 'net_reward', 'actions', 'success']
             self.log_file = open(self.log_filename, 'wb')
@@ -144,15 +146,15 @@ class Simulator(object):
                     break
 
             # Pretty print to terminal
-            print 
-            print "/-------------------------"
+            print() 
+            print("/-------------------------")
             if testing:
-                print "| Testing trial {}".format(trial)
+                print("| Testing trial {}".format(trial))
             else:
-                print "| Training trial {}".format(trial)
+                print("| Training trial {}".format(trial))
 
-            print "\-------------------------"
-            print 
+            print("\-------------------------")
+            print() 
 
             self.env.reset(testing)
             self.current_time = 0.0
@@ -171,7 +173,7 @@ class Simulator(object):
                             elif event.type == self.pygame.KEYDOWN:
                                 if event.key == 27:  # Esc
                                     self.quit = True
-                                elif event.unicode == u' ':
+                                elif event.str == ' ':
                                     self.paused = True
 
                         if self.paused:
@@ -214,11 +216,11 @@ class Simulator(object):
 
             # Trial finished
             if self.env.success == True:
-                print "\nTrial Completed!"
-                print "Agent reached the destination."
+                print("\nTrial Completed!")
+                print("Agent reached the destination.")
             else:
-                print "\nTrial Aborted!"
-                print "Agent did not reach the destination."
+                print("\nTrial Aborted!")
+                print("Agent did not reach the destination.")
 
             # Increment
             total_trials = total_trials + 1
@@ -236,14 +238,14 @@ class Simulator(object):
 
                 for state in a.Q:
                     f.write("{}\n".format(state))
-                    for action, reward in a.Q[state].iteritems():
+                    for action, reward in a.Q[state].items():
                         f.write(" -- {} : {:.2f}\n".format(action, reward))
                     f.write("\n")  
                 self.table_file.close()
 
             self.log_file.close()
 
-        print "\nSimulation ended. . . "
+        print("\nSimulation ended. . . ")
 
         # Report final metrics
         if self.display:
@@ -258,46 +260,46 @@ class Simulator(object):
 
             # Previous State
             if status['state']:
-                print "Agent previous state: {}".format(status['state'])
+                print("Agent previous state: {}".format(status['state']))
             else:
-                print "!! Agent state not been updated!"
+                print("!! Agent state not been updated!")
 
             # Result
             if status['violation'] == 0: # Legal
                 if status['waypoint'] == status['action']: # Followed waypoint
-                    print "Agent followed the waypoint {}. (rewarded {:.2f})".format(status['action'], status['reward'])
+                    print("Agent followed the waypoint {}. (rewarded {:.2f})".format(status['action'], status['reward']))
                 elif status['action'] == None:
                     if status['light'] == 'red': # Stuck at red light
-                        print "Agent properly idled at a red light. (rewarded {:.2f})".format(status['reward'])
+                        print("Agent properly idled at a red light. (rewarded {:.2f})".format(status['reward']))
                     else:
-                        print "Agent idled at a green light with oncoming traffic. (rewarded {:.2f})".format(status['reward'])
+                        print("Agent idled at a green light with oncoming traffic. (rewarded {:.2f})".format(status['reward']))
                 else: # Did not follow waypoint
-                    print "Agent drove {} instead of {}. (rewarded {:.2f})".format(status['action'], status['waypoint'], status['reward'])
+                    print("Agent drove {} instead of {}. (rewarded {:.2f})".format(status['action'], status['waypoint'], status['reward']))
             else: # Illegal
                 if status['violation'] == 1: # Minor violation
-                    print "Agent idled at a green light with no oncoming traffic. (rewarded {:.2f})".format(status['reward'])
+                    print("Agent idled at a green light with no oncoming traffic. (rewarded {:.2f})".format(status['reward']))
                 elif status['violation'] == 2: # Major violation
-                    print "Agent attempted driving {} through a red light. (rewarded {:.2f})".format(status['action'], status['reward'])
+                    print("Agent attempted driving {} through a red light. (rewarded {:.2f})".format(status['action'], status['reward']))
                 elif status['violation'] == 3: # Minor accident
-                    print "Agent attempted driving {} through traffic and cause a minor accident. (rewarded {:.2f})".format(status['action'], status['reward'])
+                    print("Agent attempted driving {} through traffic and cause a minor accident. (rewarded {:.2f})".format(status['action'], status['reward']))
                 elif status['violation'] == 4: # Major accident
-                    print "Agent attempted driving {} through a red light with traffic and cause a major accident. (rewarded {:.2f})".format(status['action'], status['reward'])
+                    print("Agent attempted driving {} through a red light with traffic and cause a major accident. (rewarded {:.2f})".format(status['action'], status['reward']))
            
             # Time Remaining
             if self.env.enforce_deadline:
                 time = (status['deadline'] - 1) * 100.0 / (status['t'] + status['deadline'])
-                print "{:.0f}% of time remaining to reach destination.".format(time)
+                print("{:.0f}% of time remaining to reach destination.".format(time))
             else:
-                print "Agent not enforced to meet deadline."
+                print("Agent not enforced to meet deadline.")
 
         # Starting new trial
         else:
             a = self.env.primary_agent
-            print "Simulating trial. . . "
+            print("Simulating trial. . . ")
             if a.learning:
-                print "epsilon = {:.4f}; alpha = {:.4f}".format(a.epsilon, a.alpha)
+                print("epsilon = {:.4f}; alpha = {:.4f}".format(a.epsilon, a.alpha))
             else:
-                print "Agent not set to learn."
+                print("Agent not set to learn.")
 
                 
     def render(self, trial, testing=False):
@@ -319,8 +321,8 @@ class Simulator(object):
             # Center line
             self.pygame.draw.line(self.screen, self.line_color, (road[0][0] * self.env.block_size, road[0][1] * self.env.block_size), (road[1][0] * self.env.block_size, road[1][1] * self.env.block_size), 2)
         
-        for intersection, traffic_light in self.env.intersections.iteritems():
-            self.pygame.draw.circle(self.screen, self.road_color, (intersection[0] * self.env.block_size, intersection[1] * self.env.block_size), self.road_width/2)
+        for intersection, traffic_light in self.env.intersections.items():
+            self.pygame.draw.circle(self.screen, self.road_color, (intersection[0] * self.env.block_size, intersection[1] * self.env.block_size), int(self.road_width/2))
             
             if traffic_light.state: # North-South is open
                 self.screen.blit(self._ns,
@@ -335,7 +337,7 @@ class Simulator(object):
             
         # * Dynamic elements
         self.font = self.pygame.font.Font(None, 20)
-        for agent, state in self.env.agent_states.iteritems():
+        for agent, state in self.env.agent_states.items():
             # Compute precise agent location here (back from the intersection some)
             agent_offset = (2 * state['heading'][0] * self.agent_circle_radius + self.agent_circle_radius * state['heading'][1] * 0.5, \
                             2 * state['heading'][1] * self.agent_circle_radius - self.agent_circle_radius * state['heading'][0] * 0.5)
@@ -453,7 +455,7 @@ class Simulator(object):
         pause_text = "Simulation Paused. Press any key to continue. . ."
         self.screen.blit(self.font.render(pause_text, True, self.colors['red'], self.bg_color), (400, self.height - 30))
         self.pygame.display.flip()
-        print pause_text
+        print(pause_text)
         while self.paused:
             for event in self.pygame.event.get():
                 if event.type == self.pygame.KEYDOWN:

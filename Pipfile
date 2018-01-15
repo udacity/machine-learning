@@ -1,0 +1,26 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+sklearn = "*"
+matplotlib = "*"
+pandas = "*"
+scipy = "*"
+seaborn = "*"
+pygame = "*"
+
+
+[dev-packages]
+jupyter = "*"
+ipdb = "*"
+pdbpp = "*"
+pytest = "*"
+pytest-sugar = "*"
+
+[requires]
+python_version = "3.6"

@@ -66,8 +66,8 @@ def plot_trials(csv):
 	data = pd.read_csv(os.path.join("logs", csv))
 
 	if len(data) < 10:
-		print "Not enough data collected to create a visualization."
-		print "At least 20 trials are required."
+		print("Not enough data collected to create a visualization.")
+		print("At least 20 trials are required.")
 		return
 	
 	# Create additional features

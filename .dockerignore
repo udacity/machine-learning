@@ -1,10 +1,24 @@
-# Mac OS
-.DS_Store
+# Git
+.git
+.gitignore
+
+# CI
+.codeclimate.yml
+.travis.yml
+
+# Docker
+docker-compose.yml
+.docker
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*/*/*/__pycache__/
 *.py[cod]
-*$py.class
+*/*.py[cod]
+*/*/*.py[cod]
+*/*/*/*.py[cod]
 
 # C extensions
 *.so
@@ -17,7 +31,6 @@ develop-eggs/
 dist/
 downloads/
 eggs/
-.eggs/
 lib/
 lib64/
 parts/
@@ -41,12 +54,9 @@ pip-delete-this-directory.txt
 htmlcov/
 .tox/
 .coverage
-.coverage.*
 .cache
 nosetests.xml
 coverage.xml
-*,cover
-.hypothesis/
 
 # Translations
 *.mo
@@ -61,9 +71,22 @@ docs/_build/
 # PyBuilder
 target/
 
-#Ipython Notebook
-.ipynb_checkpoints
-.idea/
-*temp*
+# Virtual environment
+.env/
+.venv/
+venv/
 
-Pipfile.lock
+# PyCharm
+.idea
+
+# Python mode for VIM
+.ropeproject
+*/.ropeproject
+*/*/.ropeproject
+*/*/*/.ropeproject
+
+# Vim swap files
+*.swp
+*/*.swp
+*/*/*.swp
+*/*/*/*.swp
