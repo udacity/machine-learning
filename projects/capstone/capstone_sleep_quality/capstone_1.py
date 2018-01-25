@@ -15,7 +15,7 @@ from sklearn.tree import DecisionTreeClassifier
 import pre_process
 
 
-# all_data = pd.read_csv("2013SleepinAmericaPollExerciseandSleepRawDataExcel.csv")
+all_data = pd.read_csv("2013SleepinAmericaPollExerciseandSleepRawDataExcel.csv")
 
 # refined_data =  all_data[["qs1","qs2","qs3","NORTHEAST","MIDWEST","SOUTH","WEST","Q1VALUE","Q2VALUE",
 #                       "Q2Q1DIF","Q3VALUE","Q4VALUE","Q4Q3DIF","Q4Q3Q2Q1DIFHRS","Q5","Q6","Q6Q5DIF"
@@ -178,7 +178,8 @@ columns_config = {
         'conversion': {
             'values': {
                 '_NaN':94
-            }
+            },
+            'astype': 'int64'
         },
         'one_hot_encoding': True,
         'available_values':[1,2,3,4,5,98,99]
@@ -196,7 +197,8 @@ columns_config = {
         'conversion': {
             'values': {
                 '_NaN':94
-            }
+            },
+            'astype': 'int64'
         },
         'one_hot_encoding': True,
         'available_values':[1,2,3,4,5,98,99]
@@ -474,7 +476,8 @@ columns_config = {
         'conversion': {
             'values': {
                 '_NaN':94
-            }
+            },
+            'astype': 'int64'
         },
         'available_values': [1, 2, 3, 4, 5, 98, 99],
         'one_hot_encoding': True
@@ -483,7 +486,8 @@ columns_config = {
         'conversion': {
             'values': {
                 '_NaN':94
-            }
+            },
+            'astype': 'int64'
         },
         'available_values': [1, 2, 3, 4, 98, 99],
         'one_hot_encoding': True
@@ -495,9 +499,10 @@ columns_config = {
                 98:'_mean',
                 99:'_mean',
                 97: 0.5
-            }
+            },
+            'astype': 'int64'
         },
-        'available_types':['int','float','float64'],
+        'available_types':['int64','float','float64'],
         # 'one_hot_encoding': True
 
     },
@@ -508,9 +513,10 @@ columns_config = {
                 98:'_mean',
                 99:'_mean',
                 97: 0.5
-            }
+            },
+            'astype': 'int64'
         },
-        'available_types':['int','float','float64'],
+        'available_types':['int64','float','float64'],
         # 'one_hot_encoding': True
     },
     'q29c':{
@@ -520,9 +526,10 @@ columns_config = {
                 98:'_mean',
                 99:'_mean',
                 97: 0.5
-            }
+            },
+            'astype': 'int64'
         },
-        'available_types':['int','float','float64'],
+        'available_types':['int64','float','float64'],
         # 'one_hot_encoding': True
     },
     'Q29TOTAL':{
@@ -541,7 +548,8 @@ columns_config = {
             }
         },
         'available_values': [1, 2, 3, 4, 98, 99],
-        'one_hot_encoding': True
+        'is_target_variable': True
+        # 'one_hot_encoding': True
     },
     'q31':{#ok1
         'conversion': {
@@ -604,7 +612,8 @@ columns_config = {
         'conversion': {
             'values': {
                 '_NaN':94
-            }
+            },
+            'astype': 'int64'
         },
         'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
@@ -613,7 +622,8 @@ columns_config = {
         'conversion': {
             'values': {
                 '_NaN':94
-            }
+            },
+            'astype': 'int64'
         },
         'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
@@ -622,7 +632,8 @@ columns_config = {
         'conversion': {
             'values': {
                 '_NaN':94
-            }
+            },
+            'astype': 'int64'
         },
         'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
@@ -643,7 +654,8 @@ columns_config = {
         'conversion': {
             'values': {
                 '_NaN': 94
-            }
+            },
+            'astype': 'int64'
         },
         'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
@@ -652,7 +664,8 @@ columns_config = {
         'conversion': {
             'values': {
                 '_NaN': 94
-            }
+            },
+            'astype': 'int64'
         },
         'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
@@ -661,7 +674,8 @@ columns_config = {
         'conversion': {
             'values': {
                 '_NaN': 94
-            }
+            },
+            'astype': 'int64'
         },
         'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
@@ -680,7 +694,8 @@ columns_config = {
         'conversion': {
             'values': {
                 '_NaN':94
-            }
+            },
+            'astype': 'int64'
         },
         'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
@@ -689,7 +704,8 @@ columns_config = {
         'conversion': {
             'values': {
                 '_NaN':94
-            }
+            },
+            'astype': 'int64'
         },
         'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
@@ -698,7 +714,8 @@ columns_config = {
         'conversion': {
             'values': {
                 '_NaN':94
-            }
+            },
+            'astype': 'int64'
         },
         'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
@@ -809,7 +826,8 @@ columns_config = {
         'conversion': {
             'values': {
                 '_NaN': 94
-            }
+            },
+            'astype': 'int64'
         },
         'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
@@ -818,7 +836,8 @@ columns_config = {
         'conversion': {
             'values': {
                 '_NaN': 94
-            }
+            },
+            'astype': 'int64'
         },
         'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
@@ -827,7 +846,8 @@ columns_config = {
         'conversion': {
             'values': {
                 '_NaN': 94
-            }
+            },
+            'astype': 'int64'
         },
         'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
@@ -932,8 +952,10 @@ columns_config = {
     'q5701': {
         'conversion': {
             'values': {
-                '_NaN': 94
-            }
+                '_NaN': 94,
+                9 : 94
+            },
+            'astype': 'int64'
         },
         'available_values': [1, 2, 3, 4, 5, 6, 7, 8, 95, 98, 99],
         'one_hot_encoding': True
@@ -942,7 +964,8 @@ columns_config = {
         'conversion': {
             'values': {
                 '_NaN': 94
-            }
+            },
+            'astype': 'int64'
         },
         'available_values': [1, 2, 3, 4, 5, 6, 7, 8, 95, 98, 99],
         'one_hot_encoding': True
@@ -951,7 +974,8 @@ columns_config = {
         'conversion': {
             'values': {
                 '_NaN': 94
-            }
+            },
+            'astype': 'int64'
         },
         'available_values': [1, 2, 3, 4, 5, 6, 7, 8, 95, 98, 99],
         'one_hot_encoding': True
@@ -1067,7 +1091,7 @@ columns_config = {
                 '_NaN': '_mean'
             }
         },
-        'available_types':['int','float','float64']
+        'available_types':['int64','float','float64']
     },
     'IPAQ36': {
         'conversion': {
@@ -1115,38 +1139,94 @@ columns_config = {
 
 }
 
-# columns_info = {
-#     'BMI': {
-#         'conversion': {
-#             '_NaN': '_mean'
-#         }
-#     },
-# }
 
-# pre_process_obj = pre_process.PreProcess(all_data,columns_config)
-
-# pre_process_obj.convert_values_and_extract_data()
+#drop target values, set a target value
+# features = all_data.drop('q30', axis = 1)
+# sleep_quality = all_data['q30']
 
 
-# pre_process_obj.df.to_csv("first_refined_data.csv")
-first_refined_df = pd.read_csv("first_refined_data.csv")
+#make a preprocess object
+pre_process_obj = pre_process.PreProcess(all_data,columns_config)
+
+#convert values and extract data
+pre_process_obj.convert_values_and_extract_data()
+
+#recalculation of certain columns because some of the columms are consisted of
+pre_process_obj.recalculation()
+
+result = pre_process_obj.are_valid_data()
+print result
+sys.exit()
+
+#get inputs and outputs
+
+
+pre_process_obj.df, sleep_quality = pre_process_obj.get_inputs_and_outputs()
+
+
+
+
+
+
+#apply one hot encoding
+pre_process_obj.apply_one_hot_encoding()
+
+#get final features
+features_final = pre_process_obj.df
+
+
+# import GridSearchCV, make_scorer, train_test_split and metrics
+from sklearn.model_selection import GridSearchCV
+from sklearn.metrics import make_scorer
+from sklearn.cross_validation import train_test_split
+from sklearn.metrics import fbeta_score, accuracy_score
+
+
+# Split the 'features' and 'sleep_quality' data into training and testing sets
+random_state = 0
+test_size = 0.2
+X_train, X_test, y_train, y_test = train_test_split(features_final,
+                                                    sleep_quality['q30'],
+                                                    test_size = test_size,
+                                                    random_state = random_state)
+
+# print X_train
+# print X_test
+# print y_train
+# print y_test
+# sys.exit()
+
+# made AdaBoost classifier, and find the best parameters
+clf = AdaBoostClassifier(random_state = random_state)
+parameters = {'n_estimators': [100, 150, 200], 'learning_rate': [0.5,1.5, 2]}
+scorer = make_scorer(accuracy_score)
+grid_obj = GridSearchCV(clf, parameters, scoring = scorer )
+grid_fit = grid_obj.fit(X_train, y_train)
+
+
+best_clf = grid_fit.best_estimator_
+predictions = (clf.fit(X_train, y_train)).predict(X_test)
+best_predictions = best_clf.predict(X_test)
+print "Unoptimized model\n------"
+print "\nOptimized Model\n------"
+print "Accuracy score on testing data: {:.4f}".format(accuracy_score(y_test, predictions))
+print "Final accuracy score on the testing data: {:.4f}".format(accuracy_score(y_test, best_predictions))
+
+
+
+# result = pre_process_obj.are_valid_data()
+
+# print result
 # print first_refined_df['q3701'].dtypes
-# first_refined_df['q3701'] = first_refined_df['q3701'].astype(int)
-# print first_refined_df['q3701']
-# print first_refined_df['q3701'].dtypes
-
-# first_refined_df.drop(['Unnamed: 0'],axis=1, inplace=True)
-# print list(first_refined_df)
-# print first_refined_df
-# print first_refined_df
-pre_process_obj = pre_process.PreProcess(first_refined_df,columns_config)
-# print first_refined_df['q3701'].dtypes
-pre_process_obj.df['q3701'] = pre_process_obj.df['q3701'].astype(int)
+# pre_process_obj.df['q3701'] = pre_process_obj.df['q3701'].astype(int)
 # print pre_process_obj.df['q3701']
 # print first_refined_df['q3701'].dtypes
-pre_process_obj.apply_one_hot_encoding()
-# pre_process_obj.validate_one_hot_encoding()
-print list(pre_process_obj.df)
+# pre_process_obj.apply_one_hot_encoding()
+# not_in_actual, not_in_expected = pre_process_obj.validate_one_hot_encoding()
+# print not_in_actual
+# print not_in_expected
+# print list(pre_process_obj.df)
+# print len(list(pre_process_obj.df))
 # print result
 sys.exit()
 # pd.set_option("display.max_colwidth", 1000)
