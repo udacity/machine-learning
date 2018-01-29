@@ -29,14 +29,14 @@ I'd begin with applying linear regression (using sklearn) on the available data.
 
 ### Benchmark Model
 
-The linear regression model would be my benchmark model. I can evaluate the MSE on this model and use this as a baseline. LSTM model would be evaluated against this baseline measure.
+The benchmark model for this project is a simple model relying ony on last day's price available. The predicted price is going to be the last available price point. 
 
 
 ### Evaluation Metrics
 
 R^2 metric, Mean Squared Error (MSE) and Mean Absolute Error (MAE) are potential metrics for this problem. Since this is framed as a regression problem and the target is continuous, MSE is a sensible evaluation metrics.
 
-The model results would be considered satisfactory if the predicted results are within +/- 10% of the actual future price.
+The model results would be considered satisfactory if the predicted results are better than the benchmark model.
 
 ### Project Design
 
@@ -72,9 +72,9 @@ Split training set into train and validation sets and learn these models:
 
 Evaluate the models on validation set(s). Regularize or fine tune hyper-parameters to find a good bias-variance balance. Exploring the hyper-parameter space could be done using GridSearch in scikit, need to find relevant methods for LSTM.
 
-#### Publish results with approapriate visualization
+#### Publish results with appropriate visualization
 
-Evaluate the final optimized models on test set. Visualize the predicted and actual bitcoin price using seaborn/matplotlib.
+Evaluate the final optimized models on test set and compare with benchmark model. Visualize the predicted and actual bitcoin price using seaborn/matplotlib.
 
 ### References
 
