@@ -40,7 +40,7 @@ The model results would be considered satisfactory if the predicted results are 
 
 ### Project Design
 
-I plan to approach the problem this way:
+I plan to divide the problem into these steps:
 
 #### Data preparation and exploratory analysis
 
