@@ -48,7 +48,7 @@ Retrieve raw data from [3] and relevant tweets using twitter API, and load them 
 
 Review if any data is missing and either impute the data or ignore such records, as appropriate.
 
-##### Feature engineering
+#### Feature engineering
 
 Translate tweets into sentiments - either as binary (positive or negative) or as a grade on a scale of 1-5 (5 being very positive). This would be a new engineered feature.
 
@@ -58,10 +58,10 @@ Select relevant features and drop any, if no correlation is observed.
 
 Normalize the features to have zero mean and unit variance and apply PCA to create orthogonal features. If appropriate, consider only the top features henceforth. Since the number of features is not large, this may not be necessary.
 
-##### 80-20 Train-test split
+#### Train-test split
 Split dataset into train and test sets into 80-20 ratio. Since this is a time series, the latest 20% of data will be treated as test set (No randomization)
 
-##### Model exploration
+#### Model exploration
 
 Split training set into train and validation sets and learn these models:
 
@@ -70,11 +70,11 @@ Split training set into train and validation sets and learn these models:
 
 #### Model optimization and evaluation
 
-Evaluate the models on validation set(s) and regularize or fine tune hyper-parameters to optimize further. Exploring the hyper-parameter space could be done using GridSearch in scikit, need to find relevant methods for LSTM.
+Evaluate the models on validation set(s). Regularize or fine tune hyper-parameters to find a good bias-variance balance. Exploring the hyper-parameter space could be done using GridSearch in scikit, need to find relevant methods for LSTM.
 
 #### Publish results with approapriate visualization
 
-Evaluate the final optimized models on test set. Also, visualize the predicted and actual bitcoin price using seaborn/matplotlib.
+Evaluate the final optimized models on test set. Visualize the predicted and actual bitcoin price using seaborn/matplotlib.
 
 ### References
 
