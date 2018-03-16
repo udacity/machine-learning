@@ -3,17 +3,19 @@ import sys,os
 import pandas as pd
 import numpy as np
 sys.path.append(os.pardir)
-from visuals import Visuals
+sys.path.append('../lib')
+from lib.visuals import Visuals
 from assert_method_is_called import assertMethodIsCalled
-from pandas.util.testing import assert_frame_equal
 from unittest_data_provider import data_provider
 from collections import OrderedDict
+
 
 class TestVisuals(unittest.TestCase):
     def setUp(self):
         self.ins = Visuals()
 
-    __data_for_test_apply_range_classification__returns_expected_values = lambda: [
+    # python test_visuals.py TestVisuals.test_count_each_num_of_values_belong_to_each_range__returns_expected_values
+    __data_for_test_count_each_num_of_values_belong_to_each_range__returns_expected_values = lambda: [
         [
             pd.DataFrame(
                 {
@@ -57,20 +59,21 @@ class TestVisuals(unittest.TestCase):
         ],
     ]
 
-    @data_provider(__data_for_test_apply_range_classification__returns_expected_values)
-    def test_apply_range_classification__returns_expected_values(self, df, num_of_classes, r_min, r_max, return_type, expected_1,expected_2=None):
+    @data_provider(__data_for_test_count_each_num_of_values_belong_to_each_range__returns_expected_values)
+    def test_count_each_num_of_values_belong_to_each_range__returns_expected_values(self, df, num_of_classes, r_min, r_max, return_type, expected_1,expected_2=None):
         if return_type == None:
-            actual = self.ins.apply_range_classification(df['one'], num_of_classes, r_min, r_max)
+            actual = self.ins.count_each_num_of_values_belong_to_each_range(df['one'], num_of_classes, r_min, r_max)
             self.assertEqual(expected_1, actual)
         elif return_type == 'ordered_dict':
-            actual = self.ins.apply_range_classification(df['one'], num_of_classes, r_min, r_max, return_type)
+            actual = self.ins.count_each_num_of_values_belong_to_each_range(df['one'], num_of_classes, r_min, r_max, return_type)
             self.assertEqual(expected_1, actual)
         elif return_type == 'tuples':
-            actual_1, actual_2 = self.ins.apply_range_classification(df['one'], num_of_classes, r_min, r_max, return_type)
+            actual_1, actual_2 = self.ins.count_each_num_of_values_belong_to_each_range(df['one'], num_of_classes, r_min, r_max, return_type)
             self.assertTupleEqual(expected_1, actual_1)
             self.assertTupleEqual(expected_2, actual_2)
 
-    __data_for_test_apply_simple_classification__returns_expected_values = lambda: [
+    # python test_visuals.py TestVisuals.test_count_each_num_of_values_belong_to_each_value__returns_expected_values
+    __data_for_test_count_each_num_of_values_belong_to_each_value__returns_expected_values = lambda: [
         [
             pd.DataFrame(
                 {
@@ -111,21 +114,22 @@ class TestVisuals(unittest.TestCase):
         ]
     ]
 
-    @data_provider(__data_for_test_apply_simple_classification__returns_expected_values)
-    def test_apply_simple_classification__returns_expected_values(self, df, r_min, r_max, return_type,
+    @data_provider(__data_for_test_count_each_num_of_values_belong_to_each_value__returns_expected_values)
+    def test_count_each_num_of_values_belong_to_each_value__returns_expected_values(self, df, r_min, r_max, return_type,
                                                                  expected_1, expected_2=None):
         if return_type == None:
-            actual = self.ins.apply_simple_classification(df['one'], r_min, r_max)
+            actual = self.ins.count_each_num_of_values_belong_to_each_value(df['one'], r_min, r_max)
             self.assertEqual(expected_1, actual)
         elif return_type == 'ordered_dict':
-            actual = self.ins.apply_simple_classification(df['one'], r_min, r_max, return_type)
+            actual = self.ins.count_each_num_of_values_belong_to_each_value(df['one'], r_min, r_max, return_type)
             self.assertEqual(expected_1, actual)
         elif return_type == 'tuples':
-            actual_1, actual_2 = self.ins.apply_simple_classification(df['one'],  r_min, r_max,return_type)
+            actual_1, actual_2 = self.ins.count_each_num_of_values_belong_to_each_value(df['one'],  r_min, r_max,return_type)
             self.assertTupleEqual(expected_1, actual_1)
             self.assertTupleEqual(expected_2, actual_2)
 
-    __data_for_test_classificate__returns_expected_values = lambda: [
+    # python test_visuals.py TestVisuals.test_count_each_num_of_values_belongs_to_each_class__returns_expected_values
+    __data_for_test_count_each_num_of_values_belongs_to_each_class__returns_expected_values = lambda: [
         [
             pd.DataFrame(
                 {
@@ -156,16 +160,15 @@ class TestVisuals(unittest.TestCase):
         ],
     ]
 
-    @data_provider(__data_for_test_classificate__returns_expected_values)
-    def test_classificate__returns_expected_values(self, df, num_of_classes, r_min, r_max, return_type, expected_1,
+    @data_provider(__data_for_test_count_each_num_of_values_belongs_to_each_class__returns_expected_values)
+    def test_count_each_num_of_values_belongs_to_each_class__returns_expected_values(self, df, num_of_classes, r_min, r_max, return_type, expected_1,
                                                    expected_2=None):
         if num_of_classes == r_max + 1:
-            with assertMethodIsCalled(self.ins, "apply_simple_classification"):
-                self.ins.classificate(df['one'], num_of_classes, r_min, r_max)
+            with assertMethodIsCalled(self.ins, "count_each_num_of_values_belong_to_each_value"):
+                self.ins.count_each_num_of_values_belongs_to_each_class(df['one'], num_of_classes, r_min, r_max)
         else:
-            with assertMethodIsCalled(self.ins, "apply_range_classification"):
-                self.ins.classificate(df['one'], num_of_classes, r_min, r_max)
-
+            with assertMethodIsCalled(self.ins, "count_each_num_of_values_belong_to_each_range"):
+                self.ins.count_each_num_of_values_belongs_to_each_class(df['one'], num_of_classes, r_min, r_max)
 
 
 if __name__ == "__main__":

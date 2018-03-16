@@ -1,55 +1,37 @@
-import pandas as pd
-import pre_process
-import columns_config
 
-#Getting preprocessed Data
-# refined_data = pd.read_csv("first_refined_data.csv")
-refined_data = pd.read_csv("first_refined_data_for_benchmark.csv")
-refined_data = refined_data.drop('Unnamed: 0',axis=1)
-pd.set_option("display.max_colwidth", 1000)
-pd.set_option("display.max_rows", 1000)
+import sys
+import train_and_test
+from lib.results_handler import generate_results,summurize_results
 
+# Getting final inputs and a target variable
+features_final, target_var= train_and_test.get_feature_final_and_target_var(benchmark=True)
 
-#Getting inputs and outputs
-pre_process_obj = pre_process.PreProcess(refined_data,columns_config.columns_config)
-pre_process_obj.df, sleep_quality = pre_process_obj.get_inputs_and_outputs()
+# Specifying information of the result you want.
+result_keys = ['f1_score','random_state']
 
-#Applying one hot encoding
-pre_process_obj.apply_one_hot_encoding()
+# Specifying arguments of the method except for random_state
+other_args = {'features_final':features_final,'target_var': target_var}
 
-#Getting final features
-features_final = pre_process_obj.df
+# Specifying random_states
+random_states = range(10)
 
-def train_and_measure_the_performance(features_final,target_var):
-    # Importing necessary libraries
-    from sklearn.cross_validation import train_test_split
-    from sklearn.metrics import fbeta_score, accuracy_score
-    from sklearn.naive_bayes import GaussianNB
+# Executing the training and testing 10 times with 10 different inputs and getting the results
 
-    # Splitting the data into training and testing sets
-    random_state = 0
-    test_size = 0.2
-    X_train, X_test, y_train, y_test = train_test_split(features_final,
-                                                        target_var,
-                                                        test_size=test_size,
-                                                        random_state=random_state)
+all_res_df = generate_results(train_and_test, 'benchmark_train_and_measure_performance', result_keys, random_states,other_args)
+result_keys.remove('random_state')
 
-    # Making a classifier
-    clf = GaussianNB()
+# Preparation for making a summary for the results
+summary_config = {}
+for result_column in result_keys:
+    summary_config[result_column] = 'mean'
 
-    # Training the classifier and making the predictions for the test dataset
-    predictions = (clf.fit(X_train, y_train)).predict(X_test)
+# Getting summary of the result
+summary_df = summurize_results(all_res_df,summary_config)
 
-    #Testing and showing the result
-    print "Accuracy on testing data: {:.4f}".format(accuracy_score(y_test, predictions))
+# Combining the result and summary and outputting it to csv
+all_res_df_with_summary = all_res_df.append(summary_df,ignore_index=True)
+all_res_df_with_summary.to_csv("benchmark_results.csv")
 
-train_and_measure_the_performance(features_final,sleep_quality['q30'])
-
-
-
-
-
-
-
-
-
+# Printing the results
+print all_res_df_with_summary
+print "Mean of f1_score: {:.4f}".format(all_res_df['f1_score'].mean())

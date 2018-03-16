@@ -3,7 +3,7 @@ makes preprocessed csv files
 """
 
 import pandas as pd
-import pre_process
+from lib import pre_process
 import columns_config
 
 #Getting the dataset
@@ -40,7 +40,7 @@ pre_process_obj.df['Q4Q2DIFQ3Q1DIFTOTAL'] = pre_process_obj.df[['Q4Q2DIF','Q3Q1D
 
 #Applying log transformation
 pre_process_obj.raise_values_to_positive()
-pre_process_obj.set_log_trans_based_on_skewness(1.50)
+pre_process_obj.set_log_trans_based_on_abs_skew(1)
 pre_process_obj.apply_log_trans_according_to_columns_config()
 
 #Extracting data

@@ -1,5 +1,5 @@
 import sys
-# use the code from following site
+# I used this code from following site
 # "Assert that a method was called in a Python unit test"
 #https://stackoverflow.com/questions/1984325/explaining-pythons-enter-and-exit
 class assertMethodIsCalled(object):

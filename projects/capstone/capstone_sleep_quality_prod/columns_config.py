@@ -1,40 +1,34 @@
 columns_config = {
-    'qs1':{#age
+    'qs1':{
         'conversion':{
             'values':{
                 '_NaN':'_mean'
             },
-            # 'log_trans': True
-        },
+         },
         'continuous': True,
-        'available_types':['int','int64','float','float64'],
-
     },
-    'qs2':{#emplyment_status
+    'qs2':{
         'conversion': {
             'values':{
                 '_NaN':94
             }
         },
         'one_hot_encoding': True,
-        'available_values':[1,2,3,4,98,99]
     },
-    'qs3':{ #gender
+    'qs3':{
         'conversion': {
             'values':{
                 '_NaN':94
             }
         },
         'one_hot_encoding': True,
-        'available_values':[1,2]
     },
-    'NORTHEAST':{#ok1
+    'NORTHEAST':{
         'conversion': {
             'values':{
                 '_NaN':0
             }
         },
-        'available_values':[1]
     },
     'MIDWEST':{
         'conversion': {
@@ -42,7 +36,6 @@ columns_config = {
                 '_NaN':0
             }
         },
-        'available_values':[1]
     },
     'SOUTH':{
         'conversion': {
@@ -50,7 +43,6 @@ columns_config = {
                 '_NaN':0
             }
         },
-        'available_values':[1]
     },
     'WEST':{
         'conversion': {
@@ -58,7 +50,6 @@ columns_config = {
                 '_NaN':0
             }
         },
-        'available_values':[1]
     },
     'Q1VALUE':{
         'conversion': {
@@ -66,10 +57,8 @@ columns_config = {
                 9998:'_mean',
                 9999:'_mean'
             },
-            # 'log_trans':True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'Q2VALUE':{
         'conversion': {
@@ -77,30 +66,18 @@ columns_config = {
                 9998:'_mean',
                 9999:'_mean'
             },
-            # 'log_trans':True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'Q2Q1DIF':{
-    #     recalculate
-    #     'recalculation':{
-    #         'subtraction':('Q2VALUE','Q1VALUE')
-    #     },
-        # 'conversion':{
-        #     'log_trans':True
-        # },
         'conversion': {
             'values': {
                 '_NaN':'_mean',
                 9998:'_mean',
                 9999:'_mean'
             },
-            # 'abs':True,
-            # 'log_trans': True
         },
-        'continuous': True,
-        'available_types':['int','float','float64']
+        'continuous': True
     },
     'Q3VALUE':{
         'conversion': {
@@ -108,10 +85,8 @@ columns_config = {
                 9998:'_mean',
                 9999:'_mean'
             },
-            # 'log_trans':True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'Q4VALUE':{
         'conversion': {
@@ -119,114 +94,66 @@ columns_config = {
                 9998:'_mean',
                 9999:'_mean'
             },
-            # 'log_trans': True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'Q4Q3DIF':{
-    #     recalculate
-    #     'recalculation':{
-    #         'subtraction':('Q4VALUE','Q3VALUE')
-    #     },
-        # 'conversion':{
-        #     'log_trans':True
-        # },
         'conversion': {
             'values': {
                 '_NaN':'_mean',
                 9998:'_mean',
                 9999:'_mean'
             },
-            #'abs':True,
-            # 'log_trans': True
         },
         'continuous': True,
         'available_types':['int','float','float64']
     },
     'Q3Q1DIF':{
         'conversion': {
-            # 'values': {
-            #     '_Nan':'_mean',
-            #     # 9998:'_mean',
-            #     # 9999:'_mean'
-            # },
-            #'abs':True,
-            # 'log_trans': True
         },
         'continuous': True,
     },
     'Q4Q2DIF':{
         'conversion': {
-            # 'values': {
-            #     '_Nan':'_mean',
-            #     # 9998:'_mean',
-            #     # 9999:'_mean'
-            # },
-            #'abs':True,
-            # 'log_trans': True
         },
         'continuous': True,
     },
     'Q4Q2DIFQ3Q1DIFTOTAL':{
         'conversion': {
-            # 'values': {
-            #     '_Nan':'_mean',
-            #     # 9998:'_mean',
-            #     # 9999:'_mean'
-            # },
-            #'abs':True,
-            # 'log_trans': True
         },
         'continuous': True,
     },
-    # 'Q4Q3Q2Q1DIFHRS':{
-    #     'recalculation': {
-    #         'subtraction': ('Q2VALUE', 'Q1VALUE')
-    #     }
-    # },make a new colum for this
     'Q5':{
         'conversion': {
             'values': {
                 '_NaN':'_mean'
             },
-            # 'log_trans':True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'Q6':{
         'conversion': {
             'values': {
                 '_NaN':'_mean'
             },
-            # 'log_trans':True
         },
-        'continuous': True,
-        'available_types':['int','float','float64']
+        'continuous': True
     },
     'Q6Q5DIF':{
-        # 'recalculation': {
-        #     'subtraction': ('Q6', 'Q5')
-        # },
         'conversion': {
             'values': {
                 '_NaN': '_mean',
             },
-            #'abs': True,
-            # 'log_trans': True
         },
-        'continuous': True,
-        'available_types':['int','float','float64']
+        'continuous': True
     },
-    'q7':{#ok1
+    'q7':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
         'one_hot_encoding': True,
-        'available_values':[1,2,3,4,5,98,99]
     },
     'q8':{
         'conversion': {
@@ -236,16 +163,14 @@ columns_config = {
             'astype': 'int64'
         },
         'one_hot_encoding': True,
-        'available_values':[1,2,3,4,5,98,99]
     },
-    'q9':{#ok1
+    'q9':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
         'one_hot_encoding': True,
-        'available_values':[1,2,3,4,5,98,99]
     },
     'q10':{
         'conversion': {
@@ -254,8 +179,7 @@ columns_config = {
             },
             'astype': 'int64'
         },
-        'one_hot_encoding': True,
-        'available_values':[1,2,3,4,5,98,99]
+        'one_hot_encoding': True
     },
     'q11':{
         'conversion': {
@@ -263,8 +187,7 @@ columns_config = {
                 '_NaN':94
             }
         },
-        'one_hot_encoding': True,
-        'available_values':[1,2,3,4,98,99]
+        'one_hot_encoding': True
     },
     'q12':{
         'conversion': {
@@ -272,8 +195,7 @@ columns_config = {
                 '_NaN':94
             }
         },
-        'one_hot_encoding': True,
-        'available_values':[1,2,3,4,98,99]
+        'one_hot_encoding': True
     },
     'q13a':{
         'conversion': {
@@ -281,7 +203,6 @@ columns_config = {
                 '_NaN':94
             }
         },
-        'available_values':[0,1,2,3,98,99],
         'one_hot_encoding': True
     },
     'q13b':{
@@ -290,7 +211,6 @@ columns_config = {
                 '_NaN':94
             }
         },
-        'available_values': [0, 1, 2, 3, 98, 99],
         'one_hot_encoding': True
     },
     'q13c':{
@@ -299,7 +219,6 @@ columns_config = {
                 '_NaN':94
             }
         },
-        'available_values': [0, 1, 2, 3, 98, 99],
         'one_hot_encoding': True
     },
     'q13d':{
@@ -308,7 +227,6 @@ columns_config = {
                 '_NaN':94
             }
         },
-        'available_values': [0, 1, 2, 3, 98, 99],
         'one_hot_encoding': True
     },
     'q13e':{
@@ -317,7 +235,6 @@ columns_config = {
                 '_NaN':94
             }
         },
-        'available_values': [0, 1, 2, 3, 98, 99],
         'one_hot_encoding': True
     },
     'q13f':{
@@ -326,7 +243,6 @@ columns_config = {
                 '_NaN':94
             }
         },
-        'available_values': [0, 1, 2, 3, 98, 99],
         'one_hot_encoding': True
     },
     'q13g':{
@@ -335,7 +251,6 @@ columns_config = {
                 '_NaN':94
             }
         },
-        'available_values': [0, 1, 2, 3, 98, 99],
         'one_hot_encoding': True
     },
     'EPWORTH':{
@@ -343,10 +258,8 @@ columns_config = {
             'values': {
                 '_NaN':'_mean'
             },
-            # 'log_trans': True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'q14':{
         'conversion': {
@@ -354,7 +267,6 @@ columns_config = {
                 '_NaN':94
             }
         },
-        'available_values': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 98, 99],
         'one_hot_encoding': True
     },
     'q15':{
@@ -363,52 +275,46 @@ columns_config = {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 98, 99],
         'one_hot_encoding': True
     },
-    'q16a':{#ok1
+    'q16a':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 3, 96, 98, 99],
         'one_hot_encoding': True
     },
-    'q16c':{#ok1
+    'q16c':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 3, 96, 98, 99],
         'one_hot_encoding': True
     },
-    'q16d':{#ok1
+    'q16d':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 3, 96, 98, 99],
         'one_hot_encoding': True
     },
-    'q16e':{#ok1
+    'q16e':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 3, 96, 98, 99],
         'one_hot_encoding': True
     },
-    'q16f':{#ok1
+    'q16f':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 3, 96, 98, 99],
         'one_hot_encoding': True
     },
     'q17':{
@@ -417,7 +323,6 @@ columns_config = {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 3, 4, 5, 6, 7, 96, 98, 99],
         'one_hot_encoding': True
     },
     'q18':{
@@ -426,116 +331,103 @@ columns_config = {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 3, 4, 5, 6, 7, 96, 98, 99],
         'one_hot_encoding': True
     },
-    'q19a':{#ok1
+    'q19a':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 3, 4, 98, 99],
         'one_hot_encoding': True
     },
-    'q19b':{#ok1
+    'q19b':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 3, 4, 98, 99],
         'one_hot_encoding': True
     },
-    'q19c':{#ok1
+    'q19c':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 3, 4, 98, 99],
         'one_hot_encoding': True
     },
-    'q19d':{#ok1
+    'q19d':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 3, 4, 98, 99],
         'one_hot_encoding': True
     },
-    'q20':{#ok1
+    'q20':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 98, 99],
         'one_hot_encoding': True
     },
-    'q21':{#ok1
+    'q21':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 98, 99],
         'one_hot_encoding': True
     },
-    'q22':{#ok1
+    'q22':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 98, 99],
         'one_hot_encoding': True
     },
-    'q23':{#ok1
+    'q23':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 98, 99],
         'one_hot_encoding': True
     },
-    'q24':{#ok1
+    'q24':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 3, 4, 98, 99],
         'one_hot_encoding': True
     },
-    'q25':{#ok1
+    'q25':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 3, 4, 98, 99],
         'one_hot_encoding': True
     },
-    'q26':{#ok1
+    'q26':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 98, 99],
         'one_hot_encoding': True
     },
-    'q27':{#ok1
+    'q27':{
         'conversion': {
             'values': {
                 '_NaN':94
             },
             'astype': 'int64'
         },
-        'available_values': [1, 2, 3, 4, 5, 98, 99],
         'one_hot_encoding': True
     },
     'q28':{
@@ -545,7 +437,6 @@ columns_config = {
             },
             'astype': 'int64'
         },
-        'available_values': [1, 2, 3, 4, 98, 99],
         'one_hot_encoding': True
     },
     'q29a':{
@@ -559,8 +450,6 @@ columns_config = {
             'astype': 'int64'
         },
         'continuous': True,
-        'available_types':['int64','float','float64'],
-        # 'one_hot_encoding': True
 
     },
     'q29b':{
@@ -574,8 +463,6 @@ columns_config = {
             'astype': 'int64'
         },
         'continuous': True,
-        'available_types':['int64','float','float64'],
-        # 'one_hot_encoding': True
     },
     'q29c':{
         'conversion': {
@@ -588,8 +475,6 @@ columns_config = {
             'astype': 'int64'
         },
         'continuous': True,
-        'available_types':['int64','float','float64'],
-        # 'one_hot_encoding': True
     },
     'Q29TOTAL':{
         'conversion': {
@@ -599,55 +484,51 @@ columns_config = {
             }
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
-    'q30':{#ok1
+    'q30':{
         'conversion': {
             'values': {
-                '_NaN':94
+                1:4,
+                2:3,
+                3:2,
+                4:1
             }
         },
-        'available_values': [1, 2, 3, 4, 98, 99],
         'is_target_variable': True
-        # 'one_hot_encoding': True
     },
-    'q31':{#ok1
+    'q31':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 3, 4, 98, 99],
         'one_hot_encoding': True
     },
-    'q32':{#ok1
+    'q32':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 3, 4, 98, 99],
         'one_hot_encoding': True
     },
-    'q33':{#ok1
+    'q33':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 3, 4, 98, 99],
         'one_hot_encoding': True
     },
-    'q34':{#ok1
+    'q34':{
         'conversion': {
             'values': {
                 '_NaN':94
             }
         },
-        'available_values': [1, 2, 3, 4, 98, 99],
         'one_hot_encoding': True
     },
-    'q35':{#ok1
+    'q35':{
         'conversion': {
             'values': {
                 '_NaN':'_mean',
@@ -655,7 +536,6 @@ columns_config = {
                 998:'_mean',
                 999:'_mean'
             },
-            # 'log_trans':True
         },
         'continuous': True,
         'available_types':['int','float','float64']
@@ -667,19 +547,16 @@ columns_config = {
                 99:'_mean',
                 '_NaN':'_mean'
             },
-            # 'log_trans':True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
-    'q3701':{#ok1?
+    'q3701':{
         'conversion': {
             'values': {
                 '_NaN':94
             },
             'astype': 'int64'
         },
-        'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
     },
     'q3702':{
@@ -689,7 +566,6 @@ columns_config = {
             },
             'astype': 'int64'
         },
-        'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
     },
     'q3703':{
@@ -699,7 +575,6 @@ columns_config = {
             },
             'astype': 'int64'
         },
-        'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
     },
 
@@ -710,10 +585,8 @@ columns_config = {
                 99: '_mean',
                 '_NaN': '_mean'
             },
-            # 'log_trans':True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
 
     'q3901': {
@@ -723,7 +596,6 @@ columns_config = {
             },
             'astype': 'int64'
         },
-        'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
     },
     'q3902': {
@@ -733,7 +605,6 @@ columns_config = {
             },
             'astype': 'int64'
         },
-        'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
     },
     'q3903': {
@@ -743,7 +614,6 @@ columns_config = {
             },
             'astype': 'int64'
         },
-        'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
     },
     'Q40':{
@@ -753,19 +623,16 @@ columns_config = {
                 99:'_mean',
                 '_NaN': '_mean'
             },
-            # 'log_trans':True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
-    'q4101':{#ok1
+    'q4101':{
         'conversion': {
             'values': {
                 '_NaN':94
             },
             'astype': 'int64'
         },
-        'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
     },
     'q4102':{
@@ -775,17 +642,15 @@ columns_config = {
             },
             'astype': 'int64'
         },
-        'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
     },
-    'q4103':{#ok1
+    'q4103':{
         'conversion': {
             'values': {
                 '_NaN':94
             },
             'astype': 'int64'
         },
-        'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
     },
     'Q36Q38Q40TOTAL':{
@@ -798,10 +663,8 @@ columns_config = {
                 99: '_mean',
                 '_NaN': '_mean'
             },
-            # 'log_trans':True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'Q43A':{
         'conversion': {
@@ -810,10 +673,8 @@ columns_config = {
                 99: '_mean',
                 '_NaN': '_mean'
             },
-            # 'log_trans':True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'Q43B':{
         'conversion': {
@@ -822,10 +683,8 @@ columns_config = {
                 99: '_mean',
                 '_NaN': '_mean'
             },
-            #'log_trans':True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'Q43C':{
         'conversion': {
@@ -834,10 +693,8 @@ columns_config = {
                 99: '_mean',
                 '_NaN': '_mean'
             },
-            # 'log_trans':True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'Q43D':{
         'conversion': {
@@ -846,10 +703,8 @@ columns_config = {
                 99: '_mean',
                 '_NaN': '_mean'
             },
-            # 'log_trans':True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
 
     'Q43E': {
@@ -859,10 +714,8 @@ columns_config = {
                 99: '_mean',
                 '_NaN': '_mean'
             },
-            # 'log_trans':True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
 
     'Q43F': {
@@ -872,10 +725,8 @@ columns_config = {
                 99: '_mean',
                 '_NaN': '_mean'
             },
-            # 'log_trans':True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'Q43G1': {
         'conversion': {
@@ -884,7 +735,6 @@ columns_config = {
                 99: '_mean',
                 '_NaN': '_mean'
             },
-            # 'log_trans': True
         },
         'continuous': True,
         'available_types':['int','float','float64']
@@ -896,22 +746,18 @@ columns_config = {
                 99: '_mean',
                 '_NaN': '_mean'
             },
-            # 'log_trans':True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
-    'Q43G3': {#ok1
+    'Q43G3': {
         'conversion': {
             'values': {
                 98: '_mean',
                 99: '_mean',
                 '_NaN': '_mean'
             },
-            # 'log_trans':True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'Q43TOTAL':{
         'conversion': {
@@ -920,84 +766,74 @@ columns_config = {
                 99: '_mean',
                 '_NaN': '_mean'
             },
-            # 'log_trans':True
         },
         'continuous': True,
     },
-    'q4401': {#ok1
+    'q4401': {
         'conversion': {
             'values': {
                 '_NaN': 94
             },
             'astype': 'int64'
         },
-
-        'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
     },
-    'q4402': {#ok1
+    'q4402': {
         'conversion': {
             'values': {
                 '_NaN': 94
             },
             'astype': 'int64'
         },
-        'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
     },
-    'q4403': {#ok1
+    'q4403': {
         'conversion': {
             'values': {
                 '_NaN': 94
             },
             'astype': 'int64'
         },
-        'available_values': [1, 2, 3, 98, 99],
         'one_hot_encoding': True
     },
-    'q45': {#ok1
+    'q45': {
         'conversion': {
             'values': {
                 '_NaN': 94
             }
         },
-        'available_values': [1, 2, 3, 96, 98, 99],
         'one_hot_encoding': True
     },
-    'q46': {#ok1
+    'q46': {
         'conversion': {
             'values': {
                 '_NaN': 94
             }
         },
-        'available_values': [1, 2, 3, 96, 98, 99],
         'one_hot_encoding': True
     },
-    'q47': {#ok1
+    'q47': {
         'conversion': {
             'values': {
                 '_NaN': 94
             }
         },
-        'available_values': [1, 2, 3, 4, 5, 96, 98, 99],
         'one_hot_encoding': True
     },
-    'q48': {#ok1
+    'q48': {
         'conversion': {
             'values': {
                 '_NaN': 94
             }
         },
-        'available_values': [1, 2, 3, 4, 5, 96, 98, 99],
         'one_hot_encoding': True
     },
-    'q49': {#ok1
+    'q49': {
         'conversion': {
             'values': {
                 '_NaN': 94
             }
         },
-        'available_values': [1, 2, 3, 4, 96, 98, 99],
         'one_hot_encoding': True
     },
     'q50': {
@@ -1006,14 +842,12 @@ columns_config = {
                 '_NaN': 94
             }
         },
-        'available_values': [1, 2, 3, 4, 5, 96, 98, 99],
         'one_hot_encoding': True
     },
     'q51': {
         'conversion': {
             '_NaN': 94
         },
-        'available_values': [1, 2, 3, 4, 5, 96, 98, 99],# i guess there is a mistake in the questionaries. consider removing
         'one_hot_encoding': True
     },
     'q53': {
@@ -1022,7 +856,6 @@ columns_config = {
                 '_NaN': 94
             }
         },
-        'available_values': [1, 2, 3, 4, 5, 6, 98],
         'one_hot_encoding': True
     },
     'q54': {
@@ -1031,7 +864,6 @@ columns_config = {
                 '_NaN': 94
             }
         },
-        'available_values': [1, 2, 3, 4, 5, 6, 7, 8, 9, 98],
         'one_hot_encoding': True
     },
     'q55': {
@@ -1040,7 +872,6 @@ columns_config = {
                 '_NaN': 94
             }
         },
-        'available_values': [1, 2, 3, 4, 5, 98, 99],
         'one_hot_encoding': True
     },
     'q56': {
@@ -1049,7 +880,6 @@ columns_config = {
                 '_NaN': 94
             }
         },
-        'available_values': [1, 2, 98, 99],
         'one_hot_encoding': True
     },
     'q5701': {
@@ -1060,7 +890,6 @@ columns_config = {
             },
             'astype': 'int64'
         },
-        'available_values': [1, 2, 3, 4, 5, 6, 7, 8, 95, 98, 99],
         'one_hot_encoding': True
     },
     'q5702': {
@@ -1070,7 +899,6 @@ columns_config = {
             },
             'astype': 'int64'
         },
-        'available_values': [1, 2, 3, 4, 5, 6, 7, 8, 95, 98, 99],
         'one_hot_encoding': True
     },
     'q5703': {
@@ -1080,7 +908,6 @@ columns_config = {
             },
             'astype': 'int64'
         },
-        'available_values': [1, 2, 3, 4, 5, 6, 7, 8, 95, 98, 99],
         'one_hot_encoding': True
     },
     'q5704': {
@@ -1089,7 +916,6 @@ columns_config = {
                 '_NaN': 94
             }
         },
-        'available_values': [1, 2, 3, 4, 5, 6, 7, 8, 95, 98, 99]
     },
     'q58': {
         'conversion': {
@@ -1097,7 +923,6 @@ columns_config = {
                 '_NaN': 94
             }
         },
-        'available_values': [1, 2, 98, 99],
     },
     'SHEEWORK': {
         'conversion': {
@@ -1106,8 +931,6 @@ columns_config = {
             }
         },
         'continuous': True,
-        # 'one_hot_encoding': True,
-        'available_types':['int','float','float64']
     },
     'SHEEFAMILY': {
         'conversion': {
@@ -1116,7 +939,6 @@ columns_config = {
             }
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'SHEESOCIAL': {
         'conversion': {
@@ -1125,16 +947,14 @@ columns_config = {
             }
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
-    'SHEEMOOD': {#ok1
+    'SHEEMOOD': {
         'conversion': {
             'values': {
                 '_NaN': '_mean'
             }
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'SHEESEX': {
         'conversion': {
@@ -1143,27 +963,22 @@ columns_config = {
             }
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'SHEETOTAL': {
         'conversion': {
             'values': {
                 '_NaN': '_mean'
             },
-            # 'log_trans': True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'NSFDISABLE': {
         'conversion': {
             'values': {
                 '_NaN': '_mean'
             },
-            # 'log_trans': True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'WEIGHT': {
         'conversion': {
@@ -1172,27 +987,22 @@ columns_config = {
             }
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'HEIGHT': {
         'conversion': {
             'values': {
                 '_NaN': '_mean'
             },
-            # 'log_trans': True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'BMI': {
         'conversion': {
             'values': {
                 '_NaN': '_mean'
             },
-            # 'log_trans': True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'STOPBAG1': {
         'conversion': {
@@ -1200,7 +1010,6 @@ columns_config = {
                 '_NaN': 0
             }
         },
-        'available_values': [1],
     },
     'STOPBAG2': {
         'conversion': {
@@ -1209,7 +1018,6 @@ columns_config = {
             }
         },
         'continuous': True,
-        'available_types':['int64','float','float64']
     },
     'IPAQ36': {
         'conversion': {
@@ -1218,10 +1026,8 @@ columns_config = {
                 98: '_mean',
                 99: '_mean'
             },
-            # 'log_trans':True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'IPAQ38': {
         'conversion': {
@@ -1230,11 +1036,9 @@ columns_config = {
                 98: '_mean',
                 99: '_mean'
             },
-            # 'log_trans':True
 
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'IPAQ40': {
         'conversion': {
@@ -1243,10 +1047,8 @@ columns_config = {
                 98: '_mean',
                 99: '_mean',
             },
-            # 'log_trans':True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     },
     'IPAQTOTAL': {
         'conversion': {
@@ -1255,10 +1057,8 @@ columns_config = {
                 98: '_mean',
                 99: '_mean'
             },
-            # 'log_trans': True
         },
         'continuous': True,
-        'available_types':['int','float','float64']
     }
 }
 
