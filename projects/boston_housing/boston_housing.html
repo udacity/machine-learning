@@ -12277,6 +12277,8 @@ Think about the pros and cons of adding more training points based on if the tra
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong> From the graphs above we can conclude that the max depth should be  3. As more training points are added the score of the training score decreases and the testing score increases. For max depth 3 we see these two curve convere at a better score that max depth 1 and for the larger max depths we can can see that they achieve similar scores in the testing data but better scores int he training data this may indicate that the model starts to memorize the data as the max depth is increased. For max depth of 3 the values converge much more closely.</p>
+<p><strong><em>Added for re-submission</em></strong>
+It appears from the graphs that more training points help up until a point for each max depth setting. Eventually for each the scores on both training and testing data for each level off. The increase in training point from less than 50 to more than 50 makes a large difference for all the max depth settings buts the effect is less dramatic as we continue to increase. More data is always good but at a certain point there will likely be a trade off between how much training on increasing numbers of points improves the score of your model to how computationally intensive it becomes to do so.</p>
 
 </div>
 </div>
@@ -12343,8 +12345,9 @@ Think about the pros and cons of adding more training points based on if the tra
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> With max depth of 1 the model suffers from high variance. We can tell this from the graph by the low and similar score for both the training and validation sets.<br>
-With max depth of 10 the model suffers from high bias this is evidenet by the face that the model performs very well on the training data but poorly on the validation data.</p>
+<p><strong>Answer: </strong> With max depth of 1 the model suffers from high bias. We can tell this from the graph by the low and similar score for both the training and validation sets. It has over simplifed the problem and cannot produce a meaningful indaction of any relationship between input and outputs.
+With max depth of 10 the model suffers from high variance this is evidenet by the fact that the model performs very well on the training data but poorly on the validation data. This indicates it is too sensitive to the data it has been trained on and has possibly picked up noise within the trainging data memorizing it instead of uncovering a more general relationship that will also apply to the validation data.</p>
+<p><strong><em>Above Edited for re submission</em></strong></p>
 
 </div>
 </div>
@@ -12567,7 +12570,9 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong> Hint: </strong> The answer comes from the output of the code snipped above.</p>
-<p><strong>Answer: </strong> 4</p>
+<p><strong>Answer: </strong> 
+<strong><em>Edited for re submission</em></strong>
+The optimal model has a max depth of 4. This is more than my prediction of 3 in Question 6. 3 levels of depth seemed to make the most sense as the data set had 3 elements so maybe we should have expected the model to use at least that level of depth.</p>
 
 </div>
 </div>
