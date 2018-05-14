@@ -1,0 +1,70 @@
+name: dog-project
+channels:
+- defaults
+dependencies:
+- openssl=1.0.2l=0
+- pip=9.0.1=py36_1
+- python=3.6.1=2
+- readline=6.2=2
+- setuptools=27.2.0=py36_0
+- sqlite=3.13.0=0
+- tk=8.5.18=0
+- wheel=0.29.0=py36_0
+- xz=5.2.2=1
+- zlib=1.2.8=3
+- pip:
+  - bleach==2.0.0
+  - cycler==0.10.0
+  - decorator==4.0.11
+  - entrypoints==0.2.3
+  - h5py==2.6.0
+  - html5lib==0.999999999
+  - ipykernel==4.6.1
+  - ipython==6.1.0
+  - ipython-genutils==0.2.0
+  - ipywidgets==6.0.0
+  - jedi==0.10.2
+  - jinja2==2.9.6
+  - jsonschema==2.6.0
+  - jupyter==1.0.0
+  - jupyter-client==5.0.1
+  - jupyter-console==5.1.0
+  - jupyter-core==4.3.0
+  - keras==2.0.2
+  - markupsafe==1.0
+  - matplotlib==2.0.0
+  - mistune==0.7.4
+  - nbconvert==5.2.1
+  - nbformat==4.3.0
+  - notebook==5.0.0
+  - numpy==1.12.0
+  - olefile==0.44
+  - opencv-python==3.2.0.6
+  - pandocfilters==1.4.1
+  - pexpect==4.2.1
+  - pickleshare==0.7.4
+  - pillow==4.0.0
+  - prompt-toolkit==1.0.14
+  - protobuf==3.3.0
+  - ptyprocess==0.5.1
+  - pygments==2.2.0
+  - pyparsing==2.2.0
+  - python-dateutil==2.6.0
+  - pytz==2017.2
+  - pyyaml==3.12
+  - pyzmq==16.0.2
+  - qtconsole==4.3.0
+  - scikit-learn==0.18.1
+  - scipy==0.18.1
+  - simplegeneric==0.8.1
+  - six==1.10.0
+  - tensorflow==1.0.0
+  - terminado==0.6
+  - testpath==0.3.1
+  - theano==0.9.0
+  - tornado==4.5.1
+  - tqdm==4.11.2
+  - traitlets==4.3.2
+  - wcwidth==0.1.7
+  - webencodings==0.5.1
+  - widgetsnbextension==2.0.0
