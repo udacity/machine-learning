@@ -58,10 +58,10 @@ class Simulator(object):
                 self.pygame = importlib.import_module('pygame')
                 self.pygame.init()
                 self.screen = self.pygame.display.set_mode(self.size)
-                self._logo = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("images", "logo.png")), (self.road_width, self.road_width))
+                self._logo = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("smartcab", "images", "logo.png")), (self.road_width, self.road_width))
 
-                self._ew = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("images", "east-west.png")), (self.road_width, self.road_width))
-                self._ns = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("images", "north-south.png")), (self.road_width, self.road_width))
+                self._ew = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("smartcab", "images", "east-west.png")), (self.road_width, self.road_width))
+                self._ns = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("smartcab", "images", "north-south.png")), (self.road_width, self.road_width))
 
                 self.frame_delay = max(1, int(self.update_delay * 1000))  # delay between GUI frames in ms (min: 1)
                 self.agent_sprite_size = (32, 32)
@@ -69,9 +69,9 @@ class Simulator(object):
                 self.agent_circle_radius = 20  # radius of circle, when using simple representation
                 for agent in self.env.agent_states:
                     if agent.color == 'white':
-                        agent._sprite = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("images", "car-{}.png".format(agent.color))), self.primary_agent_sprite_size)
+                        agent._sprite = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("smartcab", "images", "car-{}.png".format(agent.color))), self.primary_agent_sprite_size)
                     else:
-                        agent._sprite = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("images", "car-{}.png".format(agent.color))), self.agent_sprite_size)
+                        agent._sprite = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("smartcab", "images", "car-{}.png".format(agent.color))), self.agent_sprite_size)
                     agent._sprite_size = (agent._sprite.get_width(), agent._sprite.get_height())
 
                 self.font = self.pygame.font.Font(None, 20)
