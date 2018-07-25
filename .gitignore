@@ -63,3 +63,16 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+# misc
+Final_submission/
+udacity_RL_supplement/*
+lab_udacity/*
+Udacity_Machine_Learning_nanodegree_video/*
+Quadcopter_project_LegacyCode/*
+udacity_RL_supplement/*
+OpenAI-Gym-Taxi-v2/*
+
+
+
+
