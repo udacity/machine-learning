@@ -11714,6 +11714,19 @@ ul.typeahead-list > li > a {
 .ansi-bold { font-weight: bold; }
 
     </style>
+<style type="text/css">
+    /*This file contains any manual css for this page that needs to override the global styles.
+This is only required when different pages style the same element differently. This is just
+a hack to deal with our current css styles and no new styling should be added in this file.*/
+
+#ipython-main-app {
+    position: relative;
+}
+#jupyter-main-app {
+    position: relative;
+}
+
+    </style>
 
 
 <style type="text/css">
@@ -12219,8 +12232,7 @@ And we must make use of the residual plots to help us see the bias.</p>
 <p><strong>Answer: </strong></p>
 <p>One reason for splitting data is to prevent overfitting.</p>
 <p>If we build a model with all of the data as the training dataset and selected for its accuracy on this, we are simply building a descriptive model and it's very likely have lower accuracy on an <em>unseen</em> test dataset. The model is <strong>specialized</strong> to the dataset and very likely have lower accuracy on an unseen test dataset. 
-In other words, overfitting.
-That's why we split the dataset into some ratio of training and testing subsets, and use the testing subset to <strong>generalized</strong> the model with new unseen data.</p>
+In other words, overfitting.</p>
 <p>Furthermore, if we split the dataset with the same ratio(e.g. 25% and 75%) many times, it is possible that some data instances are never included for training or testing. That's why we should use K-Fold validation for splitting the dataset. It runs the splitting for k times and ensure each data instance is used with equal times. (k-1 times for training and one time for testing)</p>
 <p>Reference:</p>
 <ol>
