@@ -1,12 +1,13 @@
 # Machine Learning
 Content for Udacity's Machine Learning curriculum, which includes projects and their descriptions.
 
-- [Project 1: Predicting Boston Housing Prices(Model Evaluation and Validation)](#project-1-predicting-boston-housing-prices)
-- [Project 2: Finding Donors for CharityML(Supervised Learning)](#project-2-finding-donors-for-charityml)
-- [Project 3: Dog breed(Deep Learning)](#project-3-dog-breed)
-- [Project 4: Customer Segments(Unsupervised Learning)](#project-4-customer-segments)
-- [Project 5: Teach a Quadcopter How to Fly(Reinforcement Learning)](#project-5-teach-a-quadcopter-how-to-fly)
-- [Project Capstone: Kaggle competition](#project-capstone-kaggle-competition)
+- [Project 1: Predicting Boston Housing Prices (**Model Evaluation and Validation**)](#project-1-predicting-boston-housing-prices)
+- [Project 2: Finding Donors for CharityML (**Supervised Learning**)](#project-2-finding-donors-for-charityml)
+- [Project 3: Dog breed classifier(**Deep
+  Learning**)](#project-3-dog-breed-classifier)
+- [Project 4: Customer Segments (**Unsupervised Learning**)](#project-4-customer-segments)
+- [Project 5: Teach a Quadcopter How to Fly (**Reinforcement Learning**)](#project-5-teach-a-quadcopter-how-to-fly)
+- [Project Capstone (**Kaggle competition**)](#project-capstone-kaggle-competition)
 
 ## Project 1: Predicting Boston Housing Prices
 Check the jupyter notebook here: [boston_housing.ipynb](https://github.com/jo4x962k7JL/udacity_MLND/blob/master/projects/boston_housing/boston_housing.ipynb)
@@ -14,11 +15,11 @@ Check the jupyter notebook here: [boston_housing.ipynb](https://github.com/jo4x9
 - This is the project after learning the **"Model Evaluation and Validation"** section.
 - In this project, we go through the basic ML(machine learning) procedures and get the predicted selling price for clients' home. These procedures include:
   1. Data Exploration(statistically)
-  2. Utilize techniques like GridSearch and CrossValidation to optimize our learning algorithm/model
+  2. Utilize techniques like GridSearch and CrossValidation to optimize our learning algorithms/models
   3. Analyzing Model Performance using Learning Curves and Complexity Curves
   4. Finally, train(fit) the model and predict the selling prices
 - The dataset for this project originates from the "UCI Machine Learning Repository",
-but for simplicity, we only use 489 data points and 3 features(variables) to predict
+but for simplicity here, we only use 489 data points and 3 features(variables) to predict
 the median value of clients' houses.
 - At the first time I passed this project, the R2 score is 0.7435. After I completed whole Udacity Machine Learning Nanodegree, I redesign the model in 5 mins, and get the R2 score of 0.8269.
 You can check the improved version here(only coding part):[boston_housing_version2.ipynb](https://github.com/jo4x962k7JL/udacity_MLND/blob/master/projects/boston_housing/boston_housing_version2.ipynb)
@@ -31,7 +32,7 @@ Check the jupyter notebook here: [finding_donors.ipynb](https://github.com/jo4x9
 
 
 
-## Project 3: Dog breed
+## Project 3: Dog breed classifier
 Check the jupyter notebook here: [dog_app.ipynb](https://github.com/jo4x962k7JL/udacity_MLND/blob/master/projects/dog-project/dog_app.ipynb)
 
 - This is the project after learning the **"Deep Learning"** section.
