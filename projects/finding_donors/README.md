@@ -30,8 +30,12 @@ or
 ```bash
 jupyter notebook finding_donors.ipynb
 ```
+or if you have 'Jupyter Lab' installed
+```bash
+jupyterlab
+```
 
-This will open the iPython Notebook software and project file in your browser.
+This will open the iPython/Jupyter Notebook software and project file in your browser.
 
 ### Data
 
