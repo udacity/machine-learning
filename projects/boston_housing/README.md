@@ -30,6 +30,10 @@ or
 ```bash
 jupyter notebook boston_housing.ipynb
 ```
+or open with Juoyter Lab
+```bash
+jupyter lab
+```
 
 This will open the Jupyter Notebook software and project file in your browser.
 
