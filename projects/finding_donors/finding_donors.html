@@ -14165,7 +14165,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <span class="sd">&#39;&#39;&#39;</span>
 <span class="c1">#Setting the values for True Positive, False Positive, True Negative, False Negative based on the comment and text above.</span>
 <span class="n">TP</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">income</span><span class="p">)</span>
-<span class="n">FP</span> <span class="o">=</span> <span class="n">income</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> 
+<span class="n">FP</span> <span class="o">=</span> <span class="n">income</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">-</span> <span class="n">TP</span>
 <span class="n">TN</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">FN</span> <span class="o">=</span> <span class="mi">0</span> 
 
