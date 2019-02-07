@@ -62,10 +62,13 @@ We could also use a f-score to evaluate our model if all we considered was if we
 
 Firstly we need ot analyse the data and pull out what information we feel is relavent. Answer question such as are the high and low relavent or only the Close price. we can do this through data exploration. And while doing so look for outliers in the data and consider if any of these should be excluded from training our model.
 
-Once we have done this analysis and potentially filtered our data set we will need to do some feature engineering to get ther data into a state to feed into our chossen model/models. 
 
-Using https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html as a guide to consider our various options regards algorithmns.
+Once we have done this analysis and potentially filtered our data set we will need to do some feature engineering to get ther data into a state to feed into our chossen model/models. Here is where we will consider splitting our data into testing and trainging data and cross validation.
+
+Next we will need to select a model that is sutible for this problem using the sklearn documention[4] as a guide to consider our various options regards algorithmns.
 
 Considering first that we are trying to predict a quantiy and not a category with our goal to correctly predict as close to the correct next price as possible we can first consider this as regression problem. We will not have as much as 100K samples of data so our first candidate for a mode could be a SGD regressor. Based on the literature surround this problem a SVM could be reasonable approach. We may suggest trying to traing multiple models and then combining them with a method such a boosting or bagging.
 
+Once we have a trained model we run both it and our benchmark algorithm against our test data. Present and preform analysis the results and try to draw a conclusion of whether we have sucsefully solved the problem we have layed out.
 
+[4] https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html as a
