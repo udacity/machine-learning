@@ -42,8 +42,7 @@ securities.csv: general description of each company with division on sectors
 This price data acts as both our inputs and outs as it is both the prices are both the historical data we need ot feed into our algorithm but also the futures values we are trying to predict for the previous timeseries data.
 
 ### Solution Statement
-
-A solution to his problem would been a trained model that given historical tick data could either sucseffully predict and up and down price movent in the given stock. Or predict the next day value to within a decided margin of Error. 
+A solution to his problem would been a trained model that given historical tick data could either sucseffully predict and up and down price movent in the given stock. Or predict the next day value to within a decided margin of error. 
 To be considered a solution to this problem it must out perform a benchmark model of our choosing.
 
 ### Benchmark Model
@@ -52,8 +51,10 @@ Then theoricatilly the very worst we model we ccould come up with would randomly
 This lends itself well to a Random Forest Regressor so that is what we will use as the benchmark to compare our trained and refined model.
 
 ### Evaluation Metrics
-_(approx. 1-2 paragraphs)_
-
+The evaluation metric we have selected for this problem to quantify its performance is the R-square and root-mean-squared-error. 
+As we will be atempted 
+ RMSE = \sqrt{\frac{1}{n}\Sigma_{i=1}^{n}{\Big(\frac{d_i -f_i}{\sigma_i}\Big)^2}}
+ 
 In this section, propose at least one evaluation metric that can be used to quantify the performance of both the benchmark model and the solution model. The evaluation metric(s) you propose should be appropriate given the context of the data, the problem statement, and the intended solution. Describe how the evaluation metric(s) are derived and provide an example of their mathematical representations (if applicable). Complex evaluation metrics should be clearly defined and quantifiable (can be expressed in mathematical or logical terms).
 
 
