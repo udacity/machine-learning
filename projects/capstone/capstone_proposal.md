@@ -54,6 +54,7 @@ This lends itself well to a Random Forest Regressor so that is what we will use 
 The evaluation metric we have selected for this problem to quantify its performance is the R-square and root-mean-squared-error. 
 As we will be atempted 
  RMSE = \sqrt{\frac{1}{n}\Sigma_{i=1}^{n}{\Big(\frac{d_i -f_i}{\sigma_i}\Big)^2}}
+ <a href="https://www.codecogs.com/eqnedit.php?latex=RMSE&space;=&space;\sqrt{\frac{1}{n}\Sigma_{i=1}^{n}{\Big(\frac{d_i&space;-f_i}{\sigma_i}\Big)^2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?RMSE&space;=&space;\sqrt{\frac{1}{n}\Sigma_{i=1}^{n}{\Big(\frac{d_i&space;-f_i}{\sigma_i}\Big)^2}}" title="RMSE = \sqrt{\frac{1}{n}\Sigma_{i=1}^{n}{\Big(\frac{d_i -f_i}{\sigma_i}\Big)^2}}" /></a>
  
 In this section, propose at least one evaluation metric that can be used to quantify the performance of both the benchmark model and the solution model. The evaluation metric(s) you propose should be appropriate given the context of the data, the problem statement, and the intended solution. Describe how the evaluation metric(s) are derived and provide an example of their mathematical representations (if applicable). Complex evaluation metrics should be clearly defined and quantifiable (can be expressed in mathematical or logical terms).
 
