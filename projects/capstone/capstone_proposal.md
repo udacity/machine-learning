@@ -32,6 +32,7 @@ The source of the data we will be using for this problem is a Kaggle dataset. Fr
 securities.csv: general description of each company with division on sectors
 - fundamentals.csv: metrics extracted from annual SEC 10K fillings (2012-2016), should be enough to derive most of popular fundamental indicators.
 
+We have 851264 records of prices and asjusted prices and 505 different companies with descriptions.
 This price data acts as both our inputs and outs as it is both the prices are both the historical data we need ot feed into our algorithm but also the futures values we are trying to predict for the previous timeseries data.
 
 ### Solution Statement
@@ -46,10 +47,12 @@ This lends itself well to a Random Forest Regressor so that is what we will use 
 ### Evaluation Metrics
 The evaluation metric we have selected for this problem to quantify its performance is the R-square and root-mean-squared-error. 
 As we will be atempting to calculate the exact price of the stack and have an exact value to compare this to we can easily calculate the square root of the average of sqaure errors. Formula:
- 
-$ RMSE = \sqrt{\frac{1}{n}\Sigma_{i=1}^{n}{\Big(\frac{d_i -f_i}{\sigma_i}\Big)^2}} $
 
-https://latex.codecogs.com/gif.latex?RMSE&space;=&space;\sqrt{\frac{1}{n}\Sigma_{i=1}^{n}{\Big(\frac{d_i&space;-f_i}{\sigma_i}\Big)^2}}
+![equation](https://latex.codecogs.com/gif.latex?RMSE&space;=&space;\sqrt{\frac{1}{n}\Sigma_{i=1}^{n}{\Big(\frac{d_i&space;-f_i}{\sigma_i}\Big)^2}})
+
+F1_score Formula:
+
+![equation](https://latex.codecogs.com/gif.latex?F1&space;=&space;\frac{2&space;\cdot&space;precision\cdot&space;recall}{precision&plus;&space;recall})
 
 We could also use a f-score to evaluate our model if all we considered was if we predicted correctly the correct direction of the price movement.
 
