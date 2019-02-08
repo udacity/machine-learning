@@ -47,15 +47,7 @@ This lends itself well to a Random Forest Regressor so that is what we will use 
 The evaluation metric we have selected for this problem to quantify its performance is the R-square and root-mean-squared-error. 
 As we will be atempting to calculate the exact price of the stack and have an exact value to compare this to we can easily calculate the square root of the average of sqaure errors. Formula:
  
-$$
-RMSE = \sqrt{\frac{1}{n}\Sigma_{i=1}^{n}{\Big(\frac{d_i;-f_i}{\sigma_i}\Big)^2}}
-$$
-
-$$
-\mu = \frac{\sum_{i=1}^{n}{x}}{n}
-$$
-
-$RMSE = \sqrt{\frac{1}{n}\Sigma_{i=1}^{n}{\Big(\frac{d_i -f_i}{\sigma_i}\Big)^2}}$
+$ RMSE = \sqrt{\frac{1}{n}\Sigma_{i=1}^{n}{\Big(\frac{d_i -f_i}{\sigma_i}\Big)^2}} $
 
 We could also use a f-score to evaluate our model if all we considered was if we predicted correctly the correct direction of the price movement.
 
