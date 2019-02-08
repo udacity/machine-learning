@@ -35,6 +35,33 @@ securities.csv: general description of each company with division on sectors
 We have 851264 records of prices and asjusted prices and 505 different companies with descriptions.
 This price data acts as both our inputs and outs as it is both the prices are both the historical data we need ot feed into our algorithm but also the futures values we are trying to predict for the previous timeseries data.
 
+What will be key is to arragne to data to try and associate historical data with future data one potential method could be to use TimeSeriesSplit. As demonstrated in this code snippet on the data:
+```
+>>> # Load the Pandas libraries with alias 'pd' 
+... import pandas as pd
+>>> 
+>>> #read in the data parse date values 
+... data = pd.read_csv("prices-split-adjusted.csv", parse_dates=['date'])
+>>> #search for GOOG symbol data using date as the index
+... data = data[data['symbol'] == "GOOG"]
+>>> 
+>>> from sklearn.model_selection import TimeSeriesSplit
+>>> #get the first set of prices as a array
+... prices=data['close'][:10].values
+>>> #set splits to 5
+... tcsv = TimeSeriesSplit(n_splits=5)
+>>> for train_index,test_index in tcsv.split(prices):
+...     X_train, X_test = prices[train_index], prices[test_index]
+...     print("TRAIN:",X_train, "TEST:", X_test )
+... 
+TRAIN: [312.20530836 310.83045863 302.99481256 295.94124207 299.88646989] TEST: [299.433161]
+TRAIN: [312.20530836 310.83045863 302.99481256 295.94124207 299.88646989 299.433161  ] TEST: [294.1380165]
+TRAIN: [312.20530836 310.83045863 302.99481256 295.94124207 299.88646989 299.433161   294.1380165 ] TEST: [292.44932364]
+TRAIN: [312.20530836 310.83045863 302.99481256 295.94124207 299.88646989 299.433161   294.1380165  292.44932364] TEST: [293.82417336]
+TRAIN: [312.20530836 310.83045863 302.99481256 295.94124207 299.88646989 299.433161   294.1380165  292.44932364 293.82417336] TEST: [288.9175486]
+ ```
+Here we can see we have arranged the data such that there is a test value associated with all the previous historical values.
+ 
 ### Solution Statement
 A solution to his problem would been a trained model that given historical tick data could either sucseffully predict and up and down price movent in the given stock. Or predict the next day value to within a decided margin of error. 
 To be considered a solution to this problem it must out perform a benchmark model of our choosing.
