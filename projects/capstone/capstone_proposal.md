@@ -4,7 +4,7 @@ Eoin Cunning
 Febuary 6th, 2019
 
 I propse basing my capstone project around a Kaggle competition, New York Stock Exchange. 
-This is my first experience on Kaggle and hope to appy some of domain knowledge as a developer in finance with technical knowlege from ml course . 
+This is my first experience on Kaggle and hope to appy some of domain knowledge as a developer in finance with technical knowlege from ml course.
 
 Details available at: https://www.kaggle.com/dgawlik/nyse
 
@@ -16,8 +16,6 @@ Wall steet has been attempting this same problem in various forms with various d
 We know this problem is solveable as there are multiple papers written on the subject from using SVMs to model the Indian Stock Market[1] to using LSTM to predict stock price movement [2].
 
 I have selected this problem as it gives me the opportunity to join a Kaggle competition, interact with other machine learning practicioners, and learning from them and also emparting some of my knowledge by writing public available code with Kernels. 
-
-
 
 ### Problem Statement
 
@@ -49,14 +47,19 @@ This lends itself well to a Random Forest Regressor so that is what we will use 
 The evaluation metric we have selected for this problem to quantify its performance is the R-square and root-mean-squared-error. 
 As we will be atempting to calculate the exact price of the stack and have an exact value to compare this to we can easily calculate the square root of the average of sqaure errors. Formula:
  
- <a href="https://www.codecogs.com/eqnedit.php?latex=RMSE&space;=&space;\sqrt{\frac{1}{n}\Sigma_{i=1}^{n}{\Big(\frac{d_i&space;-f_i}{\sigma_i}\Big)^2}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?RMSE&space;=&space;\sqrt{\frac{1}{n}\Sigma_{i=1}^{n}{\Big(\frac{d_i&space;-f_i}{\sigma_i}\Big)^2}}" title="RMSE = \sqrt{\frac{1}{n}\Sigma_{i=1}^{n}{\Big(\frac{d_i -f_i}{\sigma_i}\Big)^2}}" /></a>
+$$
+RMSE = \sqrt{\frac{1}{n}\Sigma_{i=1}^{n}{\Big(\frac{d_i;-f_i}{\sigma_i}\Big)^2}}
+$$
+
+$$
+\mu = \frac{\sum_{i=1}^{n}{x}}{n}
+$$
 
 We could also use a f-score to evaluate our model if all we considered was if we predicted correctly the correct direction of the price movement.
 
 ### Project Design
 
 Firstly we need ot analyse the data and pull out what information we feel is relavent. Answer question such as are the high and low relavent or only the Close price. we can do this through data exploration. And while doing so look for outliers in the data and consider if any of these should be excluded from training our model.
-
 
 Once we have done this analysis and potentially filtered our data set we will need to do some feature engineering to get ther data into a state to feed into our chossen model/models. Here is where we will consider splitting our data into testing and trainging data and cross validation.
 
@@ -66,12 +69,13 @@ Considering first that we are trying to predict a quantiy and not a category wit
 
 Once we have a trained model we run both it and our benchmark algorithm against our test data. Present and preform analysis the results and try to draw a conclusion of whether we have sucsefully solved the problem we have layed out.
 
-# References
+### References
 [1] Support Vector Machines for Prediction of Futures Prices in Indian Stock Market - Shom Prasad Das, Sudarsan Padhy 
+
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.259.969&rep=rep1&type=pdf
 
 [2] Predicting Stock Prices Using LSTM - Murtaza Roondiwala, Harshal Patel, Shraddha Varma
 
-http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.259.969&rep=rep1&type=pdf
 https://www.ijsr.net/archive/v6i4/ART20172755.pdf
 
-[4] https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html as a
+[4] https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html 
