@@ -49,6 +49,8 @@ As we will be atempting to calculate the exact price of the stack and have an ex
  
 $ RMSE = \sqrt{\frac{1}{n}\Sigma_{i=1}^{n}{\Big(\frac{d_i -f_i}{\sigma_i}\Big)^2}} $
 
+https://latex.codecogs.com/gif.latex?RMSE&space;=&space;\sqrt{\frac{1}{n}\Sigma_{i=1}^{n}{\Big(\frac{d_i&space;-f_i}{\sigma_i}\Big)^2}}
+
 We could also use a f-score to evaluate our model if all we considered was if we predicted correctly the correct direction of the price movement.
 
 ### Project Design
