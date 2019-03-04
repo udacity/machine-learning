@@ -5,6 +5,7 @@ import copy
 import random
 from collections import namedtuple, deque
 
+
 class DDPG():
     """Reinforcement Learning agent that learns using DDPG."""
     def __init__(self, task):
@@ -27,7 +28,7 @@ class DDPG():
         self.actor_target.model.set_weights(self.actor_local.model.get_weights())
 
         # Noise process
-        self.exploration_mu = 0
+        self.exploration_mu = 0.001
         self.exploration_theta = 0.15
         self.exploration_sigma = 0.2
         self.noise = OUNoise(self.action_size, self.exploration_mu, self.exploration_theta, self.exploration_sigma)
@@ -39,16 +40,25 @@ class DDPG():
 
         # Algorithm parameters
         self.gamma = 0.99  # discount factor
-        self.tau = 0.01  # for soft update of target parameters
-
+        self.tau = 0.025 # for soft update of target parameters
+        
+        self.best_score = -np.inf
+        self.total_reward = 0.0
+        self.count = 0
+        self.score = 0
+        
     def reset_episode(self):
         self.noise.reset()
         state = self.task.reset()
         self.last_state = state
+        self.count = 0
+        self.total_reward = 0.0
         return state
 
     def step(self, action, reward, next_state, done):
          # Save experience / reward
+        self.count += 1
+        self.total_reward += reward
         self.memory.add(self.last_state, action, reward, next_state, done)
 
         # Learn, if enough samples are available in memory
@@ -68,8 +78,13 @@ class DDPG():
         return list(action + self.noise.sample())  # add some noise for exploration
 
     def learn(self, experiences):
+        self.score = self.total_reward / float(self.count) if self.count else 0.0
+        if self.score > self.best_score:
+            self.best_score = self.score
+        
         """Update policy and value parameters using given batch of experience tuples."""
         # Convert experience tuples to separate arrays for each element (states, actions, rewards, etc.)
+#         print("converting experiences")
         states = np.vstack([e.state for e in experiences if e is not None])
         actions = np.array([e.action for e in experiences if e is not None]).astype(np.float32).reshape(-1, self.action_size)
         rewards = np.array([e.reward for e in experiences if e is not None]).astype(np.float32).reshape(-1, 1)
@@ -78,10 +93,12 @@ class DDPG():
 
         # Get predicted next-state actions and Q values from target models
         #     Q_targets_next = critic_target(next_state, actor_target(next_state))
+#         print("get predicted next-state")
         actions_next = self.actor_target.model.predict_on_batch(next_states)
         Q_targets_next = self.critic_target.model.predict_on_batch([next_states, actions_next])
 
         # Compute Q targets for current states and train critic model (local)
+#         print("Compute Q targets")
         Q_targets = rewards + self.gamma * Q_targets_next * (1 - dones)
         self.critic_local.model.train_on_batch(x=[states, actions], y=Q_targets)
 
@@ -125,7 +142,7 @@ class Actor:
         self.action_range = self.action_high - self.action_low
 
         # Initialize any other variables here
-
+        self.learning_rate = 0.0025
         self.build_model()
 
     def build_model(self):
@@ -137,9 +154,10 @@ class Actor:
         net = layers.Dense(units=32, activation='relu')(states)
         net = layers.Dense(units=64, activation='relu')(net)
         net = layers.Dense(units=32, activation='relu')(net)
-
+        
         # Try different layer sizes, activations, add batch normalization, regularizers, etc.
-
+        net = layers.Dense(units=16, activation='tanh')(net)
+        net = layers.BatchNormalization()(net)
         # Add final output layer with sigmoid activation
         raw_actions = layers.Dense(units=self.action_size, activation='sigmoid',
             name='raw_actions')(net)
@@ -158,7 +176,7 @@ class Actor:
         # Incorporate any additional losses here (e.g. from regularizers)
 
         # Define optimizer and training function
-        optimizer = optimizers.Adam()
+        optimizer = optimizers.Adam(lr=self.learning_rate)
         updates_op = optimizer.get_updates(params=self.model.trainable_weights, loss=loss)
         self.train_fn = K.function(
             inputs=[self.model.input, action_gradients, K.learning_phase()],
@@ -180,7 +198,7 @@ class Critic:
         self.action_size = action_size
 
         # Initialize any other variables here
-
+        self.learning_rate = 0.0025
         self.build_model()
 
     def build_model(self):
@@ -192,16 +210,18 @@ class Critic:
         # Add hidden layer(s) for state pathway
         net_states = layers.Dense(units=32, activation='relu')(states)
         net_states = layers.Dense(units=64, activation='relu')(net_states)
-
+#         
         # Add hidden layer(s) for action pathway
         net_actions = layers.Dense(units=32, activation='relu')(actions)
         net_actions = layers.Dense(units=64, activation='relu')(net_actions)
-
+#         
         # Try different layer sizes, activations, add batch normalization, regularizers, etc.
-
+        net_states = layers.BatchNormalization()(net_states)
+        net_actions = layers.BatchNormalization()(net_actions)
         # Combine state and action pathways
         net = layers.Add()([net_states, net_actions])
-        net = layers.Activation('relu')(net)
+#         net = layers.Activation('relu')(net)
+        net = layers.Activation('sigmoid')(net)
 
         # Add more layers to the combined network if needed
 
@@ -212,7 +232,7 @@ class Critic:
         self.model = models.Model(inputs=[states, actions], outputs=Q_values)
 
         # Define optimizer and compile model for training with built-in loss function
-        optimizer = optimizers.Adam()
+        optimizer = optimizers.Adam(lr=self.learning_rate)
         self.model.compile(optimizer=optimizer, loss='mse')
 
         # Compute action gradients (derivative of Q values w.r.t. to actions)
