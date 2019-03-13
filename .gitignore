@@ -63,3 +63,9 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+projects/dog-project/dogImages/*
+projects/dog-project/saved_models/weights.best.from_scratch.hdf5
+projects/dog-project/saved_models/weights.best.vgg16.hdf5
+projects/dog-project/bottleneck_features/DogVGG16Data.npz
+projects/dog-project/__MACOS*
