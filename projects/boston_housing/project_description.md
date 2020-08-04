@@ -11,6 +11,7 @@ Things you will learn by completing this project:
 
 - How to use NumPy to investigate the latent features of a dataset.
 - How to analyze various learning performance plots for variance and bias.
+- How to interact with algorithm tuning.
 - How to determine the best-guess model for predictions from unseen data.
 - How to evaluate a model's performance on unseen data using previous data.
 
