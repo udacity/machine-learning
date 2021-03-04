@@ -11,7 +11,7 @@ This project requires **Python 2.x or Python 3.x** and the following Python libr
 - [scikit-learn](http://scikit-learn.org/0.17/install.html) (v0.17)
 - [TensorFlow](http://tensorflow.org)
 
-You will also need to have software installed to run and execute a [Jupyter Notebook](http://ipython.org/notebook.html).
+You will also need to have software installed to run and execute a [Jupyter Notebook](http://jupyter.org/index.html).
 
 In addition to the above, for those optionally seeking to use image processing software, you may need one of the following:
 - [PyGame](http://pygame.org/)
